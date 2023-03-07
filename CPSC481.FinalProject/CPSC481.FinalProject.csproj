@@ -12,10 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Theme\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Resource Include="Images\Pencil.png" />
   </ItemGroup>
 
