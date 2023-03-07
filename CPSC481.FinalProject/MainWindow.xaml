@@ -36,7 +36,7 @@
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Grid>
-                        <Ellipse Fill="Violet"/>
+                        <Ellipse Fill="Aqua"/>
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Grid>
                 </ControlTemplate>
@@ -57,7 +57,7 @@
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Grid>
-                        <Ellipse>
+                        <Ellipse Stroke="Black" StrokeThickness="2">
                             <Ellipse.Fill>
                                 <ImageBrush ImageSource="Images/RadialNavigationIcons/InformationIcon.png" Stretch="None"></ImageBrush>
                             </Ellipse.Fill>
@@ -80,7 +80,7 @@
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Grid>
-                        <Ellipse>
+                        <Ellipse Stroke="Black" StrokeThickness="2">
                             <Ellipse.Fill>
                                 <ImageBrush ImageSource="Images/RadialNavigationIcons/ProgressIcon.png" Stretch="None"></ImageBrush>
                             </Ellipse.Fill>
@@ -103,7 +103,7 @@
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Grid>
-                        <Ellipse>
+                        <Ellipse Stroke="Black" StrokeThickness="2">
                             <Ellipse.Fill>
                                 <ImageBrush ImageSource="Images/RadialNavigationIcons/DemoIcon.png" Stretch="None"></ImageBrush>
                             </Ellipse.Fill>
@@ -126,9 +126,10 @@
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Grid>
-                        <Ellipse>
+                        <Ellipse Stroke="Black" StrokeThickness="2">
                             <Ellipse.Fill>
                                 <ImageBrush ImageSource="Images/RadialNavigationIcons/RoutineIcon.png" Stretch="None"></ImageBrush>
+                                
                             </Ellipse.Fill>
                         </Ellipse>
                     </Grid>
