@@ -7,4 +7,18 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Images\RadialNavigationIcons\DemoIcon.png" />
+    <None Remove="Images\RadialNavigationIcons\InformationIcon.png" />
+    <None Remove="Images\RadialNavigationIcons\ProgressIcon.png" />
+    <None Remove="Images\RadialNavigationIcons\RoutineIcon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\RadialNavigationIcons\DemoIcon.png" />
+    <Resource Include="Images\RadialNavigationIcons\InformationIcon.png" />
+    <Resource Include="Images\RadialNavigationIcons\ProgressIcon.png" />
+    <Resource Include="Images\RadialNavigationIcons\RoutineIcon.png" />
+  </ItemGroup>
+
 </Project>

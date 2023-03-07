@@ -5,8 +5,138 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CPSC481.FinalProject"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="800" Width="450">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="15"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="15"/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="NavigationButton"
+                Grid.Row="4" 
+                Grid.Column="2" 
+                Width="100" 
+                Height="100" 
+                Margin="350,700,-65,-56" 
+                Grid.ColumnSpan="2" 
+                Grid.RowSpan="2"
+                Cursor="Hand"
+                Click="NavigationButton_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Fill="Violet"/>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button x:Name="InfoButton"
+                Grid.Row="4" 
+                Grid.Column="2"
+                Grid.ColumnSpan="2" 
+                Grid.RowSpan="2"
+                Width="44" 
+                Height="44"
+                Margin="285,700,91,2"
+                Cursor="Hand"                
+                Visibility="Hidden">
+
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse>
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="Images/RadialNavigationIcons/InformationIcon.png" Stretch="None"></ImageBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button x:Name="ProgressButton"
+                Grid.Row="4" 
+                Grid.Column="2"
+                Grid.ColumnSpan="2" 
+                Grid.RowSpan="2"
+                Width="44" 
+                Height="44"
+                Margin="299,658,73,45"
+                Cursor="Hand"                
+                Visibility="Hidden">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse>
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="Images/RadialNavigationIcons/ProgressIcon.png" Stretch="None"></ImageBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button x:Name="DemoButton"
+                Grid.Row="4" 
+                Grid.Column="2"
+                Grid.ColumnSpan="2" 
+                Grid.RowSpan="2"
+                Width="44" 
+                Height="44"
+                Margin="332,624,44,80"
+                Cursor="Hand"                                
+                Visibility="Hidden">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse>
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="Images/RadialNavigationIcons/DemoIcon.png" Stretch="None"></ImageBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button x:Name="RoutineButton"
+                Grid.Row="4" 
+                Grid.Column="2"
+                Grid.ColumnSpan="2" 
+                Grid.RowSpan="2"
+                Width="44" 
+                Height="44"
+                Margin="372,597,4,103"
+                Cursor="Hand"                                
+                Visibility="Hidden">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse>
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="Images/RadialNavigationIcons/RoutineIcon.png" Stretch="None"></ImageBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
 
     </Grid>
+
 </Window>
