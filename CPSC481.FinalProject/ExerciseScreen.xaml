@@ -29,9 +29,47 @@
         </Button>
 
         <StackPanel Grid.ColumnSpan="2" Grid.Row="1" Background="Gainsboro">
-            <TextBlock Margin="10" FontSize="20" FontWeight="Bold">Knee-To-Chest</TextBlock>
+            <TextBlock Margin="10" FontSize="32" FontWeight="Bold">Knee-To-Chest</TextBlock>
+            <TextBlock Margin="10" HorizontalAlignment="Left" FontSize="24" FontWeight="Bold">Set 0 of 4</TextBlock>
+            <Grid Width="450" Height="50">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Margin="10" HorizontalAlignment="Right" FontSize="24" FontWeight="Bold">Rep 1:</TextBlock>
+                <ProgressBar Margin="10,5,90,5" Grid.Column="1" Width="250" Value="50"/>
+                <TextBlock Margin="10,5,90,5" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                           FontSize="16" FontWeight="Bold">5/10</TextBlock>
+            </Grid>
+            <Grid Width="450" Height="50">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Margin="10" HorizontalAlignment="Right" FontSize="24" FontWeight="Bold">Rep 2:</TextBlock>
+                <ProgressBar Margin="10,5,90,5" Grid.Column="1" Width="250" Value="80"/>
+                <TextBlock Margin="10,5,90,5" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                           FontSize="16" FontWeight="Bold">8/10</TextBlock>
+            </Grid>
+            <Grid Width="450" Height="50">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Margin="10" HorizontalAlignment="Right" FontSize="24" FontWeight="Bold">Rep 3:</TextBlock>
+                <ProgressBar Margin="10,5,90,5" Grid.Column="1" Width="250" Value="100"/>
+                <TextBlock Margin="10,5,90,5" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                           FontSize="16" FontWeight="Bold">10/10</TextBlock>
+            </Grid>
+            <TextBlock Margin="10" HorizontalAlignment="Left" FontSize="24" FontWeight="Bold">Demonstration</TextBlock>
+            <Image Source="/Images/Pencil.png" Width="426" Height="220"/>
+
+
+
         </StackPanel>
 
         <Border Grid.Row="2" Grid.ColumnSpan="2" Background="Gainsboro" BorderBrush="DarkSlateGray" BorderThickness="0,0,0,0"/>
+        <Button Grid.ColumnSpan="2" Grid.Row="2" Width="150" Height="75"
+                BorderThickness="2" BorderBrush="Green"  Background="#06B025">Next</Button>
     </Grid>
 </Page>
