@@ -5,9 +5,9 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:CPSC481.FinalProject"
       mc:Ignorable="d" 
-      d:DesignHeight="800" d:DesignWidth="450"
-      Background="White"
-      Title="ExerciseScreen">
+      WindowHeight="800" Width="450"
+      Title="ExerciseScreen"
+      KeepAlive="True">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -23,42 +23,15 @@
 
         <Border Grid.ColumnSpan="2" Background="Gainsboro" BorderBrush="DarkSlateGray" BorderThickness="0,0,0,3"/>
         <TextBlock Margin="10,0,0,0" Grid.Column="1" VerticalAlignment="Center" FontSize="30" 
-                   FontWeight="Bold" TextTrimming="CharacterEllipsis">Exercise 1</TextBlock>
+                   FontWeight="Bold" TextTrimming="CharacterEllipsis" Text="Exercise 1 of 3" />
         <Button Margin="0" Background="Transparent" BorderBrush="DarkSlateGray" BorderThickness="0,0,3,0">
             <TextBlock FontSize="16" FontWeight="Bold">Back</TextBlock>
         </Button>
 
         <StackPanel Grid.ColumnSpan="2" Grid.Row="1" Background="Gainsboro">
-            <ItemsControl Name="icRoutineList">
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="75"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <Ellipse Margin="20" />
-                            <TextBlock Margin="20" FontSize="20" FontWeight="Bold"
-                                       HorizontalAlignment="Center" VerticalAlignment="Center"
-                                       Text="{Binding Num}"/>
-                            <TextBlock Margin="20" FontSize="20" FontWeight="Bold" 
-                                       Grid.Column="1" Text="{Binding Name}"/>
-                        </Grid>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
+            <TextBlock Margin="10" FontSize="20" FontWeight="Bold">Knee-To-Chest</TextBlock>
         </StackPanel>
 
         <Border Grid.Row="2" Grid.ColumnSpan="2" Background="Gainsboro" BorderBrush="DarkSlateGray" BorderThickness="0,0,0,0"/>
-        <Button Margin="37.5" Grid.Row="2" Grid.ColumnSpan="2" Height="75" Width="75" BorderThickness="1"
-                HorizontalAlignment="Left" VerticalAlignment="Center" Background="Transparent">
-            <Image Source="/Images/Pencil.png"/>
-        </Button>
-
-        <Button Margin="125,550,125,0" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2"
-                Height="125" Width="125" FontSize="22" FontWeight="Bold" Background="#FF499E1E"
-                Style="{StaticResource CircleButton}" Click="StartRoutine">Start
-        </Button>
-
     </Grid>
 </Page>

@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CPSC481.FinalProject"
         mc:Ignorable="d"
-        Title="RoutineStartScreen" Height="800" Width="450">
+        Title="RoutineStartScreen" WindowHeight="800" Width="450"
+        KeepAlive="True">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="75"/>

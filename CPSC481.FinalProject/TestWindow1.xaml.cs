@@ -27,9 +27,9 @@ namespace CPSC481.FinalProject
 
         private void OpenRoutineStartScreen(object sender, RoutedEventArgs e)
         {
-            RoutineStartScreen routineStartScreen = new RoutineStartScreen();
-            
-            this.Content = routineStartScreen;
+            //RoutineStartScreen routineStartScreen = new RoutineStartScreen();
+            ExerciseScreen exerciseScreen = new ExerciseScreen();
+            this.Content = exerciseScreen;//routineStartScreen;
         }
     }
 }

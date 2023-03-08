@@ -20,9 +20,17 @@ namespace CPSC481.FinalProject
     /// </summary>
     public partial class ExerciseScreen : Page
     {
+        int num_of_exercises = 1;
         public ExerciseScreen()
         {
             InitializeComponent();
+
+            List<ExerciseItem> exercises = new List<ExerciseItem>();
+            exercises.Add(new ExerciseItem() { Num = num_of_exercises++, Name = "Knee-To-Chest" });
+            exercises.Add(new ExerciseItem() { Num = num_of_exercises++, Name = "Seated Spinal Twist" });
+            exercises.Add(new ExerciseItem() { Num = num_of_exercises++, Name = "Cat Stretch" });
+
+            icRoutineList.ItemsSource = exercises;
         }
     }
 }
