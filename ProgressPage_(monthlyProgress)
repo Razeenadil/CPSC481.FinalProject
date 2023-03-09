@@ -1,0 +1,116 @@
+<Window x:Class="CPSC481.FinalProject.ProgressPageMonthly"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CPSC481.FinalProject"
+        mc:Ignorable="d"
+        Title="ProgressPage" Height="800" Width="450">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="15"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="15"/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="NavigationButton"
+                Grid.Row="4" 
+                Grid.Column="2" 
+                Width="100" 
+                Height="100" 
+                Margin="350,700,-65,-56" 
+                Grid.ColumnSpan="2" 
+                Grid.RowSpan="2"
+                Cursor="Hand"
+                Click="NavigationButton_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Fill="Aqua"/>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button x:Name="InfoButton"
+                Grid.Row="4" 
+                Grid.Column="2"
+                Grid.ColumnSpan="2" 
+                Grid.RowSpan="2"
+                Width="44" 
+                Height="44"
+                Margin="285,700,91,2"
+                Cursor="Hand"                
+                Visibility="Hidden">
+
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Stroke="Black" StrokeThickness="2">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="Images/RadialNavigationIcons/InformationIcon.png" Stretch="None"></ImageBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button x:Name="ProgressButton"
+                Grid.Row="4" 
+                Grid.Column="2"
+                Grid.ColumnSpan="2" 
+                Grid.RowSpan="2"
+                Width="44" 
+                Height="44"
+                Margin="299,658,73,45"
+                Cursor="Hand"                
+                Visibility="Hidden">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Stroke="Black" StrokeThickness="2">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="Images/RadialNavigationIcons/ProgressIcon.png" Stretch="None"></ImageBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <ProgressBar Grid.Column="2" HorizontalAlignment="Left" Height="24" Margin="139,0,0,0" Grid.Row="4" VerticalAlignment="Center" Width="135" Maximum="60" Minimum="0" Value="60"/>
+        <TextBlock FontSize="13" Grid.Column="2" HorizontalAlignment="Left" Margin="37,399,0,0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="101" Height="37"><Run Text="Routine 1"/><LineBreak/><Run Text="Completion"/></TextBlock>
+        <TextBlock  FontStyle="Oblique" Grid.Column="2" HorizontalAlignment="Left" Height="17" Margin="278,0,0,0" Grid.Row="4" TextWrapping="Wrap" Text="100%" VerticalAlignment="Center" Width="50"/>
+        <Button Content="Back" Grid.ColumnSpan="3" Margin="0,0,389,745" Grid.RowSpan="5" Background="Gainsboro"/>
+        <Menu Grid.Column="2" HorizontalAlignment="Left" Height="21" Margin="364,0,0,0" VerticalAlignment="Top" Width="46" Grid.RowSpan="5"/>
+        <ComboBox Grid.Column="2" HorizontalAlignment="Left" Height="21" Margin="135,295,0,0" Grid.Row="4" VerticalAlignment="Top" Width="142">
+            <ComboBoxItem>This week</ComboBoxItem>
+            <ComboBoxItem IsSelected="True">This Month</ComboBoxItem>
+            <ComboBoxItem>Past Months</ComboBoxItem>
+        </ComboBox>
+        <Calendar DisplayMode="Month" SelectionMode="MultipleRange" Grid.Column="2" HorizontalAlignment="Left" Height="200" Margin="73,59,0,0" Grid.Row="4" VerticalAlignment="Top" Width="247"/>
+        <TextBlock FontSize="13" Grid.Column="2" HorizontalAlignment="Left" Margin="37,0,0,0" Grid.Row="4" TextWrapping="Wrap" Text="Today's Workout" VerticalAlignment="Center" Width="101"/>
+        <ProgressBar Maximum="7" Minimum="0" Value="3" Grid.Column="2" HorizontalAlignment="Left" Height="24" Margin="139,405,0,0" Grid.Row="4" VerticalAlignment="Top" Width="135"/>
+        <TextBlock FontSize="13" Grid.Column="2" HorizontalAlignment="Left" Margin="37,441,0,0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="101" Height="37"><Run Text="Routine 2"/><LineBreak/><Run Text="Completion"/></TextBlock>
+        <ProgressBar Maximum="7" Minimum="0" Value="2" Grid.Column="2" HorizontalAlignment="Left" Height="24" Margin="139,447,0,0" Grid.Row="4" VerticalAlignment="Top" Width="135"/>
+        <TextBlock FontSize="13" Grid.Column="2" HorizontalAlignment="Left" Margin="37,483,0,0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="101" Height="37"><Run Text="Routine 3"/><LineBreak/><Run Text="Completion"/></TextBlock>
+        <ProgressBar Maximum="7" Minimum="0" Value="2" Grid.Column="2" HorizontalAlignment="Left" Height="24" Margin="139,489,0,0" Grid.Row="4" VerticalAlignment="Top" Width="135"/>
+        <TextBlock FontSize="13" Grid.Column="2" HorizontalAlignment="Left" Margin="37,525,0,0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="101" Height="37"><Run Text="Routine 4"/><LineBreak/><Run Text="Completion"/></TextBlock>
+        <ProgressBar Maximum="7" Minimum="0" Value="2" Grid.Column="2" HorizontalAlignment="Left" Height="24" Margin="139,531,0,0" Grid.Row="4" VerticalAlignment="Top" Width="135"/>
+
+
+    </Grid>
+
+</Window>
