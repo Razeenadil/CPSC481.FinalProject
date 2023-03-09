@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace CPSC481.FinalProject
 {
     /// <summary>
-    /// Interaction logic for ExerciseScreen.xaml
+    /// Interaction logic for ExerciseTimerScreen.xaml
     /// </summary>
-    public partial class ExerciseScreen : Page
+    public partial class ExerciseTimerScreen : Page
     {
-        public ExerciseScreen()
+        public ExerciseTimerScreen()
         {
             InitializeComponent();
         }

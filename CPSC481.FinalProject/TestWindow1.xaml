@@ -5,9 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CPSC481.FinalProject"
         mc:Ignorable="d"
-        Title="TestWindow1" Height="830" Width="450" Background="MediumPurple">
-    <Grid>
-        <Button FontSize="22" Click="OpenRoutineStartScreen" Height="250" Width="250">This is the main window.</Button>
-    </Grid>
-    
+        Title="TestWindow1" Height="800" Width="450"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        MouseDown="Window_MouseDown"
+        Background="Transparent"
+        AllowsTransparency="True">
+
+    <Border CornerRadius="50">
+        <Border CornerRadius="50"
+                BorderThickness="3"
+                Opacity="1">
+            <Border.BorderBrush>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#000000" Offset="0"/>
+                    <GradientStop Color="#B2C4D4" Offset="0.5"/>
+                    <GradientStop Color="#000000" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0.25,0.75" EndPoint="1,0.25">
+                    <GradientStop Color="#4F575E" Offset="0"/>
+                    <GradientStop Color="#B2C4D4" Offset="0.5"/>
+                    <GradientStop Color="#4F575E" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <Button Width="100" 
+                    Height="100" 
+                    Click="OpenNextScreen"
+                    Background="Transparent">Start
+            </Button>
+        </Border>
+        
+    </Border>
 </Window>

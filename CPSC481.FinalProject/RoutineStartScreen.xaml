@@ -5,58 +5,140 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CPSC481.FinalProject"
         mc:Ignorable="d"
-        Title="RoutineStartScreen" WindowHeight="800" Width="450"
-        KeepAlive="True">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="75"/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
+        Title="RoutineStartScreen"
+        d:DesignHeight="800" d:DesignWidth="450"
+        Background="Transparent">
+    <Border CornerRadius="25"
+            BorderThickness="3"
+            Opacity="1">
+        <Border.BorderBrush>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#000000" Offset="0"/>
+                <GradientStop Color="#B2C4D4" Offset="0.5"/>
+                <GradientStop Color="#000000" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.BorderBrush>
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="550"/>
-            <RowDefinition Height="200"/>
-        </Grid.RowDefinitions>
+        <Border.Background>
+            <LinearGradientBrush StartPoint="0.25,0.75" EndPoint="1,0.25">
+                <GradientStop Color="#FFFFFF" Offset="0"/>
+                <GradientStop Color="#FFFFFF" Offset="0.5"/>
+                <GradientStop Color="#FFFFFF" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.Background>
 
-        <Border Grid.ColumnSpan="2" Background="Gainsboro" BorderBrush="DarkSlateGray" BorderThickness="0,0,0,3"/>
-        <TextBlock Margin="10,0,0,0" Grid.Column="1" VerticalAlignment="Center" FontSize="30" 
-                   FontWeight="Bold" TextTrimming="CharacterEllipsis">Routine 1</TextBlock>
-        <Button Margin="0" Background="Transparent" BorderBrush="DarkSlateGray" BorderThickness="0,0,3,0">
-            <TextBlock FontSize="16" FontWeight="Bold">Back</TextBlock>
-        </Button>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="650"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Horizontal">
+                <Button Height="50" Width="50" Background="Transparent" BorderBrush="Transparent">Back</Button>
+                <TextBlock Margin="0"
+                           Width="350"
+                           VerticalAlignment="Center"
+                           TextAlignment="Center"
+                           FontSize="20"
+                           FontWeight="Bold">
+                    Routine 1
+                </TextBlock>
+            </StackPanel>
 
-        <StackPanel Grid.ColumnSpan="2" Grid.Row="1" Background="Gainsboro">
-            <ItemsControl Name="icRoutineList">
-                <ItemsControl.ItemTemplate>
+            <ListBox Name="routineListBox" 
+                     Grid.Row="1"
+                     Margin="10"
+                     HorizontalContentAlignment="Stretch"
+                     ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                <ListBox.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </ListBox.Resources>
+                
+                <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="75"/>
+                                <ColumnDefinition Width="107.5"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <Ellipse Margin="20" />
-                            <TextBlock Margin="20" FontSize="20" FontWeight="Bold"
-                                       HorizontalAlignment="Center" VerticalAlignment="Center"
-                                       Text="{Binding Num}"/>
-                            <TextBlock Margin="20" FontSize="20" FontWeight="Bold" 
-                                       Grid.Column="1" Text="{Binding Name}"/>
+                            <Border Grid.Column="0"
+                                    Margin="10"
+                                    Height="25"
+                                    Width="25"
+                                    CornerRadius="5"
+                                    BorderBrush="Black"
+                                    BorderThickness="3"
+                                    Background="Black">
+                                <TextBlock Text="{Binding Num}"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           Foreground="White"/>
+                            </Border>
+
+                            <Border Grid.Column="1"
+                                    Margin="10"
+                                    Height="50"
+                                    Width="250"
+                                    HorizontalAlignment="Left"
+                                    CornerRadius="5"
+                                    BorderBrush="Black"
+                                    BorderThickness="3"
+                                    Background="Black">
+                                <TextBlock Text="{Binding Name}"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           Foreground="White"
+                                           FontSize="20"/>
+                            </Border>
+                            
                         </Grid>
                     </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
-        </StackPanel>
+                </ListBox.ItemTemplate>
+                
+            </ListBox>
 
-        <Border Grid.Row="2" Grid.ColumnSpan="2" Background="Gainsboro" BorderBrush="DarkSlateGray" BorderThickness="0,0,0,0"/>
-        <Button Margin="37.5" Grid.Row="2" Grid.ColumnSpan="2" Height="75" Width="75" BorderThickness="1"
-                HorizontalAlignment="Left" VerticalAlignment="Center" Background="Transparent">
-            <Image Source="/Images/Pencil.png"/>
-        </Button>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Button Margin="0"
+                        Height="75"
+                        FontSize="20"
+                        FontWeight="Medium"
+                        Grid.Column="1"
+                        BorderBrush="Transparent"
+                        Foreground="White">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                    <Button.Background>
+                        <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                            <GradientStop Color="#003622" Offset="0"/>
+                            <GradientStop Color="#008F5A" Offset="0.5"/>
+                            <GradientStop Color="#003622" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                    Start
+                </Button>
+                <Button Margin="25,0,0,0" 
+                        Grid.Row="2" 
+                        Grid.ColumnSpan="2" 
+                        Height="75" 
+                        Width="75" 
+                        BorderThickness="0"
+                        HorizontalAlignment="Left" 
+                        VerticalAlignment="Center" 
+                        Background="Transparent">
+                    <Image Source="/Images/PencilTr.png"/>
+                </Button>
+            </Grid>
 
-        <Button Margin="125,550,125,0" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2"
-                Height="125" Width="125" FontSize="22" FontWeight="Bold" Background="#FF499E1E"
-                Style="{StaticResource CircleButton}" Click="StartRoutine">Start
-        </Button>
-
-    </Grid>
+        </Grid>
+    </Border>
 </Page>
