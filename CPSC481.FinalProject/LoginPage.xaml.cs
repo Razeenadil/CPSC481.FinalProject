@@ -23,5 +23,10 @@ namespace CPSC481.FinalProject
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
