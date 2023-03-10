@@ -8,9 +8,47 @@
         Title="Welcome" Height="800" Width="450" Background="black">
     <Grid>
         <Image Height="NaN" Margin="36,88,36,303" Source="/Images/Green Bold Bull Fitness Center Logo.png" Stretch="Fill" Width="NaN"/>
-        <Button Content="Login" HorizontalAlignment="Center" Margin="0,541,0,0" VerticalAlignment="Top" Click="Button_Click" Height="43" Width="226"/>
-        <Button Content="Continue As Guest" HorizontalAlignment="Center" Margin="0,622,0,0" VerticalAlignment="Top" Click="Button_Click" Height="43" Width="226" RenderTransformOrigin="1.172,-0.288"/>
-        <Image Height="NaN" Margin="28,88,28,302" Source="/Images/Green Bold Bull Fitness Center Logo (1).png" Stretch="Fill" Width="NaN"/>
-        <TextBox HorizontalAlignment="Left" Height="240" Margin="76,45,0,0" TextWrapping="Wrap" Text="&#x9;&#x9;WELCOME" VerticalAlignment="Top" Width="317" TextChanged="TextBox_TextChanged"/>
+        <Image Height="NaN" Margin="28,124,28,266" Source="/Images/Green Bold Bull Fitness Center Logo (1).png" Stretch="Fill" Width="NaN"/>
+
+        <Button Margin="54,499,54,247"
+                        FontSize="20"
+                        FontWeight="Medium"
+                        BorderBrush="Transparent"
+                        Foreground="White">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                    <GradientStop Color="#003622" Offset="0"/>
+                    <GradientStop Color="#008F5A" Offset="0.5"/>
+                    <GradientStop Color="#003622" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            Login
+        </Button>
+
+        <Button Margin="54,610,54,136"
+                        FontSize="20"
+                        FontWeight="Medium"
+                        BorderBrush="Transparent"
+                        Foreground="White" Click="Button_Click_1">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                    <GradientStop Color="#003622" Offset="0"/>
+                    <GradientStop Color="#008F5A" Offset="0.5"/>
+                    <GradientStop Color="#003622" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            Continue As Guest
+        </Button>
+        <Image Margin="64,40,64,640" Source="/Images/2 (1).png" Stretch="Fill"/>
     </Grid>
 </Window>
