@@ -7,25 +7,67 @@
         mc:Ignorable="d"
         Title="Login Page" Height="800" Width="450" Background="black">
     <Grid>
-        <TextBox TextWrapping="Wrap" Text="Enter your e-mail address" Margin="68,352,68,379"  FontSize="24" Foreground="#7F000000"/>
-        <TextBox TextWrapping="Wrap" Text="Enter your password" Margin="68,462,68,269"  FontSize="24" Foreground="#7F000000"/>
-        <TextBlock Text="Timer"
+        <TextBox TextWrapping="Wrap" Text="Enter your e-mail address" Margin="68,289,68,442"  FontSize="24" Foreground="#7F000000"/>
+        <TextBox TextWrapping="Wrap" Text="Enter your password" Margin="68,399,68,332"  FontSize="24" Foreground="#7F000000"/>
+        <TextBlock Text="Email Address"
                            Foreground="White"
                            FontSize="20"
                            FontWeight="Medium"
                            HorizontalAlignment="Left"
-                           Margin="10,0,0,0"/>
-        <Border Margin="68,283,218,453"
-                        Background="Transparent"
-                        BorderBrush="Transparent"
-                        BorderThickness="5"
-                        CornerRadius="5">
-            <TextBlock Margin="0,0,10,10" HorizontalAlignment="Right"
-                               VerticalAlignment="Bottom"
-                               FontSize="20"
-                               FontWeight="Bold">
-                        Email Address
-            </TextBlock>
-            </Border>
+                           Margin="68,250,0,500"/>
+        <TextBlock Text="Password"
+            Foreground="White"
+            FontSize="20"
+            FontWeight="Medium"
+            HorizontalAlignment="Left"
+            Margin="68,365,0,385"/>
+        <Button Background="Transparent" BorderBrush="White" Foreground="White" Margin="0,0,404,741"  Content="Back" Click="Button_Click"  />
+        <Button Margin="245,545,45,204"
+            FontSize="20"
+            FontWeight="Medium"
+            BorderBrush="Transparent"
+            Foreground="White" Content="Submit">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                    <GradientStop Color="#003622" Offset="0"/>
+                    <GradientStop Color="#008F5A" Offset="0.5"/>
+                    <GradientStop Color="#003622" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBlock Text="Dont have an account?"
+            Foreground="White"
+            FontSize="20"
+            FontWeight="Medium"
+            HorizontalAlignment="Left"
+            Margin="20,650,0,99"/>
+        <TextBlock Text="Create an account"
+            Foreground="LightBlue"
+            FontStyle="Italic"
+            FontSize="20"
+            FontWeight="Medium"
+            HorizontalAlignment="Left"
+            Margin="245,650,0,99"/>
+        <Image Margin="10,96,17,602" Source="/Images/loginpage.png" Stretch="Fill"/>
+        <TextBlock Text="Forgot my Password"
+            Foreground="Gray"
+            FontStyle="Normal"
+            FontSize="20"
+            FontWeight="Medium"
+            HorizontalAlignment="Left"
+            Margin="241,471,0,278"/>
+        <TextBlock Text="Remember Me"
+            Foreground="White"
+            FontStyle="Normal"
+            FontSize="20"
+            FontWeight="Medium"
+            HorizontalAlignment="Left"
+            Margin="27,471,0,278"/>
+        <Button Background="Transparent" BorderBrush="White" Foreground="White" Margin="173,475,242,283"  Content="" Click="Button_Click"  />
     </Grid>
 </Window>
