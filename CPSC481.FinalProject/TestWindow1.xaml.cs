@@ -30,11 +30,11 @@ namespace CPSC481.FinalProject
             //ExerciseTimerScreen exerciseTimerScreen = new ExerciseTimerScreen();
             //this.Content = exerciseTimerScreen;
 
-            ExerciseRepScreen exerciseRepScreen = new ExerciseRepScreen();
-            this.Content = exerciseRepScreen;
+            //ExerciseRepScreen exerciseRepScreen = new ExerciseRepScreen();
+            //this.Content = exerciseRepScreen;
 
-            //RoutineStartScreen routineStartScreen = new RoutineStartScreen();
-            //this.Content = routineStartScreen;
+            RoutineStartScreen routineStartScreen = new RoutineStartScreen();
+            this.Content = routineStartScreen;
 
         }
 
