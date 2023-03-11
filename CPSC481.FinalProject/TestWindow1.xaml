@@ -11,11 +11,45 @@
         MouseDown="Window_MouseDown"
         Background="Transparent"
         AllowsTransparency="True">
+    <Window.Resources>
+        <Style x:Key="ComboBoxEditableTextBox" TargetType="{x:Type TextBox}">
+            <Setter Property="OverridesDefaultStyle" Value="true"/>
+            <Setter Property="AllowDrop" Value="true"/>
+            <Setter Property="MinWidth" Value="0"/>
+            <Setter Property="MinHeight" Value="0"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
+            <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <ScrollViewer x:Name="PART_ContentHost" Background="Transparent" Focusable="false"  
+HorizontalScrollBarVisibility="Hidden"  
+VerticalScrollBarVisibility="Hidden"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+            <ControlTemplate x:Key="ComboBoxEditableTemplate" TargetType="{x:Type ComboBox}">
+                <Grid x:Name="templateRoot" SnapsToDevicePixels="true">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition MinWidth="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}" Width="0"/>
+                    </Grid.ColumnDefinitions>
+                    <ToggleButton x:Name="toggleButton" 
+                                  BorderBrush="{TemplateBinding BorderBrush}" 
+                                  BorderThickness="{TemplateBinding BorderThickness}" 
+                                  Background="{TemplateBinding Background}" 
+                                  Grid.ColumnSpan="2" 
+                                  IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"/>
+                </Grid>
+            </ControlTemplate>
+    </Window.Resources>
 
     <Border CornerRadius="50">
         <Border CornerRadius="50"
                 BorderThickness="3"
-                Opacity="1">
+                Opacity="1" ScrollViewer.CanContentScroll="True">
             <Border.BorderBrush>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                     <GradientStop Color="#000000" Offset="0"/>
@@ -31,11 +65,66 @@
                     <GradientStop Color="#4F575E" Offset="1"/>
                 </LinearGradientBrush>
             </Border.Background>
-            <Button Width="100" 
+            
+            <StackPanel>
+                <StackPanel.Resources>
+                    <Style TargetType="ComboBox">
+                        <Setter Property="HorizontalAlignment" Value="Center"/>
+                        <Setter Property="FontFamily" Value="Cascadia Code"/>
+                        <Setter Property="FontSize" Value="14"/>
+                    </Style>
+                    <Style BasedOn="{StaticResource {x:Type ComboBox}}"  
+                           TargetType = "ComboBox" x:Key = "Title">
+                        <Setter Property="FontSize" Value="16"/>
+                        <Setter Property="Foreground">
+                            <Setter.Value>
+                                <LinearGradientBrush StartPoint="0.3,0" EndPoint="0.3,1">
+                                    <LinearGradientBrush.GradientStops>
+                                        <GradientStop Offset="0.0" Color=" #FF00FF"/>
+                                        <GradientStop Offset="0.0" Color=" #BFFF00"/>
+                                    </LinearGradientBrush.GradientStops>
+                                </LinearGradientBrush>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </StackPanel.Resources>
+                <Button Width="100" 
                     Height="100" 
                     Click="OpenNextScreen"
                     Background="Transparent">Start
-            </Button>
+                </Button>
+                <ComboBox Style="{StaticResource Title}" Name="combobox1" Height="20" Width="80" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <ComboBoxItem Content="WPF"/>
+                    <ComboBoxItem Content=" Xamarin"/>
+                </ComboBox>
+                <ComboBox Name="combobox2" Height="20" Width="80" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <ComboBoxItem Content=" MVC"/>
+                    <ComboBoxItem Content=" Angular"/>
+                </ComboBox>
+                <ComboBox Template="{StaticResource ComboBoxEditableTemplate}" 
+                          Margin="0,50,0,0" 
+                          MinWidth="50"
+                          Width="100" 
+                          Height="50"
+                          BorderBrush="Black"
+                          BorderThickness="3"
+                          Background="Beige"
+                          IsDropDownOpen="False"
+                          ScrollViewer.VerticalScrollBarVisibility="Visible">
+                    <ComboBoxItem Content="WPF"/>
+                    <ComboBoxItem Content=" Xamarin"/>
+                    <ComboBoxItem Content="WPF"/>
+                    <ComboBoxItem Content=" Xamarin"/>
+                    <ComboBoxItem Content="WPF"/>
+                    <ComboBoxItem Content=" Xamarin"/>
+                    <ComboBoxItem Content="WPF"/>
+                    <ComboBoxItem Content=" Xamarin"/>
+                </ComboBox>
+                
+
+
+            </StackPanel>
+            
         </Border>
         
     </Border>
