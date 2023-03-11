@@ -151,9 +151,26 @@
         <Image Grid.Column="2" HorizontalAlignment="Right" Height="40" Margin="0,100,10,0" Grid.Row="4" VerticalAlignment="Top" Width="40" Source="/Images/Icons/calendar.png" RenderTransformOrigin="0.65,0"/>
         <Image Grid.Column="2" HorizontalAlignment="Right" Height="40" Margin="0,200,10,0" Grid.Row="4" VerticalAlignment="Top" Width="40" Source="/Images/Icons/repeat-button.png" RenderTransformOrigin="0.65,0"/>
         <Image Grid.Column="2" HorizontalAlignment="Right" Height="40" Margin="0,300,10,0" Grid.Row="4" VerticalAlignment="Top" Width="40" Source="/Images/Icons/muscles.png" RenderTransformOrigin="0.65,0"/>
-        <Rectangle Grid.Column="2" HorizontalAlignment="Center" Height="37" Margin="0,721,0,0" Grid.Row="4" Stroke="Black" VerticalAlignment="Top" Width="106"/>
-        <Label Grid.Column="2" Content="Continue" HorizontalAlignment="Center" Margin="0,722,0,12" Grid.Row="4" VerticalAlignment="Bottom" FontSize="24"/>
-
+        <Button Height="50"
+                        FontSize="20"
+                        FontWeight="Medium"
+                        Grid.Column="2"
+                        BorderBrush="Transparent"
+                        Foreground="White" Margin="163,700,163,20" Grid.Row="4">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                    <GradientStop Color="#003622" Offset="0"/>
+                    <GradientStop Color="#008F5A" Offset="0.5"/>
+                    <GradientStop Color="#003622" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            Next
+        </Button>
     </Grid>
 </Page>
 
