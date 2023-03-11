@@ -90,8 +90,18 @@ VerticalScrollBarVisibility="Hidden"/>
                 </StackPanel.Resources>
                 <Button Width="100" 
                     Height="100" 
-                    Click="OpenNextScreen"
-                    Background="Transparent">Start
+                    Click="OpenRoutineScreen"
+                    Background="Transparent">Routine
+                </Button>
+                <Button Width="100" 
+                    Height="100" 
+                    Click="OpenRepScreen"
+                    Background="Transparent">Rep
+                </Button>
+                <Button Width="100" 
+                    Height="100" 
+                    Click="OpenTimerScreen"
+                    Background="Transparent">Timer
                 </Button>
                 <ComboBox Style="{StaticResource Title}" Name="combobox1" Height="20" Width="80" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <ComboBoxItem Content="WPF"/>

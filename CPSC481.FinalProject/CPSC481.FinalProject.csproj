@@ -8,19 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Images\gymflow.png" />
+    <None Remove="Images\ButtonIcons\edit-button.png" />
     <None Remove="Images\HeaderNavIcons\hamburger.png" />
     <None Remove="Images\HeaderNavIcons\left-arrow.png" />
-    <None Remove="Images\Pencil.png" />
-    <None Remove="Images\PencilTr.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\gymflow.png" />
+    <Resource Include="Images\ButtonIcons\edit-button.png" />
     <Resource Include="Images\HeaderNavIcons\hamburger.png" />
     <Resource Include="Images\HeaderNavIcons\left-arrow.png" />
-    <Resource Include="Images\Pencil.png" />
-    <Resource Include="Images\PencilTr.png" />
   </ItemGroup>
 
 </Project>

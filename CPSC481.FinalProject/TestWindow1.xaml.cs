@@ -25,17 +25,23 @@ namespace CPSC481.FinalProject
             InitializeComponent();
         }
 
-        private void OpenNextScreen(object sender, RoutedEventArgs e)
+        private void OpenRoutineScreen(object sender, RoutedEventArgs e)
         {
-            //ExerciseTimerScreen exerciseTimerScreen = new ExerciseTimerScreen();
-            //this.Content = exerciseTimerScreen;
-
-            //ExerciseRepScreen exerciseRepScreen = new ExerciseRepScreen();
-            //this.Content = exerciseRepScreen;
 
             RoutineStartScreen routineStartScreen = new RoutineStartScreen();
             this.Content = routineStartScreen;
+        }
 
+        private void OpenRepScreen(object sender, RoutedEventArgs e)
+        {
+            ExerciseRepScreen exerciseRepScreen = new ExerciseRepScreen();
+            this.Content = exerciseRepScreen;
+        }
+
+        private void OpenTimerScreen(object sender, RoutedEventArgs e)
+        {
+            ExerciseTimerScreen exerciseTimerScreen = new ExerciseTimerScreen();
+            this.Content = exerciseTimerScreen;
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
