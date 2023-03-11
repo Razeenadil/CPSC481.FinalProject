@@ -148,11 +148,12 @@
         <Image Grid.Column="2" HorizontalAlignment="Right" Height="40" Margin="0,100,20,0" Grid.Row="4" VerticalAlignment="Top" Width="40" Source="/Images/Icons/more.png"/>
         <Separator Grid.Column="2" Margin="0,40,0,670" Grid.Row="4"/>
         <Separator Grid.Column="2" Margin="0,140,0,570" Grid.Row="4"/>
-        <Label Content="1. Barbell Back Squat" HorizontalAlignment="Left" Margin="20,250,0,0" Grid.Row="4" VerticalAlignment="Top" Grid.Column="2" FontSize="16"/>
+        <Label Content="1. Barbell Back Squat" HorizontalAlignment="Left" Margin="45,250,0,0" Grid.Row="4" VerticalAlignment="Top" Grid.Column="2" FontSize="16"/>
         <Label Content="Exercises:" HorizontalAlignment="Left" Margin="20,200,0,0" Grid.Row="4" VerticalAlignment="Top" Grid.Column="2" FontSize="24"/>
         <Separator Grid.Column="2" Margin="20,205,291,505" Grid.Row="4"/>
         <Label Content="Sets" HorizontalAlignment="Right" Margin="0,200,20,0" Grid.Row="4" VerticalAlignment="Top" Grid.Column="2" FontSize="24"/>
         <TextBox Grid.Column="2" HorizontalAlignment="Left" Margin="353,253,0,0" Grid.Row="4" TextWrapping="Wrap" Text="4" VerticalAlignment="Top" Width="40" TextChanged="TextBox_TextChanged_1" FontSize="16" Height="25" TextAlignment="Center"/>
+        <Image Grid.Column="2" HorizontalAlignment="Left" Height="25" Margin="20,253,0,0" Grid.Row="4" VerticalAlignment="Top" Width="25" Source="/Images/Icons/minus.png"/>
 
     </Grid>
 </Page>
