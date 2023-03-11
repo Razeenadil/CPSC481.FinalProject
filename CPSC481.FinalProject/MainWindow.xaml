@@ -129,13 +129,23 @@
                         <Ellipse Stroke="Black" StrokeThickness="2">
                             <Ellipse.Fill>
                                 <ImageBrush ImageSource="Images/RadialNavigationIcons/RoutineIcon.png" Stretch="None"></ImageBrush>
-                                
+
                             </Ellipse.Fill>
                         </Ellipse>
                     </Grid>
                 </ControlTemplate>
             </Button.Template>
         </Button>
+
+
+        <Label Grid.Column="2" Content="Body Part Selector" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Top" FontSize="24" Margin="0,12,0,0" FontWeight="Bold"/>
+        <Image Grid.Column="2" HorizontalAlignment="Left" Height="40" Grid.Row="4" VerticalAlignment="Top" Width="40" Source="/Images/HeaderNavIcons/left-arrow.png" Margin="10,15,0,0"/>
+        <Image Grid.Column="2" HorizontalAlignment="Right" Height="40" Margin="0,15,10,0" Grid.Row="4" VerticalAlignment="Top" Width="40" Source="/Images/HeaderNavIcons/hamburger.png"/>
+        <Separator Grid.Column="2" Margin="0,40,0,670" Grid.Row="4"/>
+        <Separator Grid.Column="2" Margin="0,40,0,670" Grid.Row="4"/>
+        <Separator Grid.Column="2" Margin="0,140,0,570" Grid.Row="4"/>
+
+
 
 
     </Grid>
