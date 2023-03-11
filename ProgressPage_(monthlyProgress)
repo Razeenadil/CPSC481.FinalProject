@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CPSC481.FinalProject"
         mc:Ignorable="d"
-        Title="RoutineStartScreen"
+        Title="ProgressPageMonthly"
         d:DesignHeight="800" d:DesignWidth="450"
         Background="Transparent">
     <Border CornerRadius="25"
