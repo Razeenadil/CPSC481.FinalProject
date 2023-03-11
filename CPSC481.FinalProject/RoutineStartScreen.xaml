@@ -8,7 +8,7 @@
         Title="RoutineStartScreen"
         d:DesignHeight="800" d:DesignWidth="450"
         Background="Transparent">
-    <Border CornerRadius="25"
+    <Border CornerRadius="0,0,25,25"
             BorderThickness="3"
             Opacity="1">
         <Border.BorderBrush>
@@ -27,27 +27,44 @@
             </LinearGradientBrush>
         </Border.Background>
 
-        <Grid>
+        <Grid Margin="15">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
-                <RowDefinition Height="650"/>
+                <RowDefinition Height="620"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <StackPanel Orientation="Horizontal">
-                <Button Height="50" Width="50" Background="Transparent" BorderBrush="Transparent">Back</Button>
-                <TextBlock Margin="0"
-                           Width="350"
-                           VerticalAlignment="Center"
-                           TextAlignment="Center"
-                           FontSize="20"
-                           FontWeight="Bold">
-                    Routine 1
-                </TextBlock>
+                <Button Height="40" 
+                        Width="40" 
+                        Background="Transparent" 
+                        BorderBrush="Transparent"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center">
+                    <Image Source="/Images/HeaderNavIcons/left-arrow.png"/>
+                </Button>
+                <Label Content="Routine 1"
+                       Width="320"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       HorizontalContentAlignment="Center"
+                       VerticalContentAlignment="Center"
+                       FontSize="24"
+                       FontWeight="Bold"/>
+
+                <Button Height="40" 
+                        Width="40" 
+                        Background="Transparent" 
+                        BorderBrush="Transparent"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center">
+                    <Image Source="/Images/HeaderNavIcons/hamburger.png"/>
+                </Button>
             </StackPanel>
+            <Separator Grid.Row="1" VerticalAlignment="Top"/>
 
             <ListBox Name="routineListBox" 
                      Grid.Row="1"
-                     Margin="10"
+                     Margin="0,10,0,0"
                      HorizontalContentAlignment="Stretch"
                      ScrollViewer.VerticalScrollBarVisibility="Disabled">
                 <ListBox.Resources>
@@ -101,8 +118,8 @@
 
             <Grid Grid.Row="2">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="150"/>
-                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="140"/>
+                    <ColumnDefinition Width="140"/>
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
                 <Button Margin="0"
@@ -126,7 +143,7 @@
                     </Button.Background>
                     Start
                 </Button>
-                <Button Margin="25,0,0,0" 
+                <Button Margin="0,0,0,0" 
                         Grid.Row="2" 
                         Grid.ColumnSpan="2" 
                         Height="75" 
