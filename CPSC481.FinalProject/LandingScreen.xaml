@@ -53,12 +53,15 @@
 
             <Grid Grid.ColumnSpan="3"
                   Grid.RowSpan="5">
-                <Image Source="/Images/logo.png/"
-                       Opacity="0.5"
+                <Image Opacity="0.5"
                        HorizontalAlignment="Center"
-                       VerticalAlignment="Center"/>
-                
+                       VerticalAlignment="Center">
+                    <Image.Source>
+                        <BitmapImage UriSource="/Images/logo.png"/>
+                    </Image.Source>
+                </Image>
             </Grid>
+            
             <Label Content="Welcome"
                    Grid.Row="1"
                    Grid.Column="1"
