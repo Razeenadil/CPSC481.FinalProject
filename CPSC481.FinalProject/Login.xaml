@@ -47,7 +47,7 @@
         <Button 
             Grid.Row="4" 
             Grid.Column="2"
-            Margin="213,465,46,249"
+            Margin="126,465,133,249"
             FontSize="20"
             FontWeight="Medium"
             BorderBrush="Transparent"
