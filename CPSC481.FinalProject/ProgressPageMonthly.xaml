@@ -46,6 +46,22 @@
         <TextBlock  FontStyle="Oblique" HorizontalAlignment="Center" Height="18" Margin="0,567,0,0" Grid.Row="1" TextWrapping="Wrap" Text="2/7" VerticalAlignment="Top" Width="24" RenderTransformOrigin="1.49,-5.235"/>
         <Slider HorizontalAlignment="Center" Height="23" Grid.Row="2" VerticalAlignment="Top" Width="84" RenderTransformOrigin="0.488,2.609"/>
 
+        <Button x:Name="NavigationButton"
+                Grid.Row="2" 
+                Width="100" 
+                Height="100" 
+                Margin="398,50,-48,-50"
+                Cursor="Hand"
+                Click="NavigationButton_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Fill="Aqua"/>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
 
     </Grid>
 </Page>
