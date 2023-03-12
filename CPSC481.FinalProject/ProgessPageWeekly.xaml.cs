@@ -24,5 +24,10 @@ namespace CPSC481.FinalProject
         {
             InitializeComponent();
         }
+
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

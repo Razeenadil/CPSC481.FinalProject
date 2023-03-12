@@ -94,7 +94,7 @@
                 Grid.Row="1" 
                 VerticalAlignment="Top" 
                 Width="380" 
-                d:ItemsSource="{d:SampleData ItemCount=7}">
+                d:ItemsSource="{d:SampleData ItemCount=7}" SelectionChanged="DataGrid_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Date"></DataGridTextColumn>
                 <DataGridTextColumn Header="Routine Name"></DataGridTextColumn>
@@ -127,6 +127,35 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
+        <TextBlock FontSize="7" HorizontalAlignment="Left" Height="13" Margin="41,427,0,0" Grid.Row="1" TextWrapping="Wrap" Text="03/05/2023" VerticalAlignment="Top" Width="40"/>
+        <TextBlock FontSize="7" HorizontalAlignment="Left" Height="13" Margin="41,445,0,0" Grid.Row="1" TextWrapping="Wrap" Text="03/06/2023" VerticalAlignment="Top" Width="40"/>
+        <TextBlock FontSize="7" HorizontalAlignment="Left" Height="13" Margin="41,463,0,0" Grid.Row="1" TextWrapping="Wrap" Text="03/07/2023" VerticalAlignment="Top" Width="40"/>
+        <TextBlock FontSize="7" HorizontalAlignment="Left" Height="13" Margin="41,481,0,0" Grid.Row="1" TextWrapping="Wrap" Text="03/08/2023" VerticalAlignment="Top" Width="40"/>
+        <TextBlock FontSize="7" HorizontalAlignment="Left" Height="13" Margin="41,499,0,0" Grid.Row="1" TextWrapping="Wrap" Text="03/09/2023" VerticalAlignment="Top" Width="40"/>
+        <TextBlock FontSize="7" HorizontalAlignment="Left" Height="13" Margin="41,517,0,0" Grid.Row="1" TextWrapping="Wrap" Text="03/10/2023" VerticalAlignment="Top" Width="40"/>
+        <TextBlock FontSize="7" HorizontalAlignment="Left" Height="13" Margin="41,535,0,0" Grid.Row="1" TextWrapping="Wrap" Text="03/11/2023" VerticalAlignment="Top" Width="40"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="96,423,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Arm Day" VerticalAlignment="Top" Width="40"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="96,441,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Leg Day" VerticalAlignment="Top" Width="40"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="96,460,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Chest Day" VerticalAlignment="Top" Width="50"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="96,481,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Cardio Day" VerticalAlignment="Top" Width="50"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="96,499,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Back Day" VerticalAlignment="Top" Width="50"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="96,517,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Leg Day" VerticalAlignment="Top" Width="40"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="96,535,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Chest Day" VerticalAlignment="Top" Width="50"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="166,423,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Skull Crushers" VerticalAlignment="Top" Width="62"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="261,423,0,0" Grid.Row="1" TextWrapping="Wrap" Text="20/8" VerticalAlignment="Top" Width="25" RenderTransformOrigin="0.32,0.385"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="261,460,0,0" Grid.Row="1" TextWrapping="Wrap" Text="20/8" VerticalAlignment="Top" Width="25" RenderTransformOrigin="0.32,0.385"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="261,499,0,0" Grid.Row="1" TextWrapping="Wrap" Text="20/8" VerticalAlignment="Top" Width="25" RenderTransformOrigin="0.32,0.385"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="261,517,0,0" Grid.Row="1" TextWrapping="Wrap" Text="20/8" VerticalAlignment="Top" Width="25" RenderTransformOrigin="0.32,0.385"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="266,532,0,0" Grid.Row="1" TextWrapping="Wrap" Text="--" VerticalAlignment="Top" Width="15" RenderTransformOrigin="0.32,0.385"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="190,532,0,0" Grid.Row="1" TextWrapping="Wrap" Text="--" VerticalAlignment="Top" Width="14" RenderTransformOrigin="0.32,0.385"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="333,532,0,0" Grid.Row="1" TextWrapping="Wrap" Text="--" VerticalAlignment="Top" Width="15" RenderTransformOrigin="0.32,0.385"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="392,532,0,0" Grid.Row="1" TextWrapping="Wrap" Text="--" VerticalAlignment="Top" Width="15" RenderTransformOrigin="0.32,0.385"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="266,477,0,0" Grid.Row="1" TextWrapping="Wrap" Text="--" VerticalAlignment="Top" Width="15" RenderTransformOrigin="0.32,0.385"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="189,477,0,0" Grid.Row="1" TextWrapping="Wrap" Text="--" VerticalAlignment="Top" Width="15" RenderTransformOrigin="0.32,0.385"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="333,478,0,0" Grid.Row="1" TextWrapping="Wrap" Text="--" VerticalAlignment="Top" Width="15" RenderTransformOrigin="0.32,0.385"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="392,478,0,0" Grid.Row="1" TextWrapping="Wrap" Text="--" VerticalAlignment="Top" Width="16" RenderTransformOrigin="0.32,0.385"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="166,442,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Barbell Squat" VerticalAlignment="Top" Width="62"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="261,441,0,0" Grid.Row="1" TextWrapping="Wrap" Text="120/8" VerticalAlignment="Top" Width="25" RenderTransformOrigin="0.32,0.385"/>
 
     </Grid>
 </Page>
