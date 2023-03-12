@@ -140,7 +140,7 @@
         </Button>
 
         <Image Grid.Column="2" HorizontalAlignment="Left" Height="40" Grid.Row="4" VerticalAlignment="Top" Width="40" Source="/Images/HeaderNavIcons/left-arrow.png" Margin="10,15,0,0"/>
-        <Image Grid.Column="2" HorizontalAlignment="Right" Height="40" Margin="0,15,10,0" Grid.Row="4" VerticalAlignment="Top" Width="40" Source="/Images/HeaderNavIcons/hamburger.png"/>
+        <Image Grid.Column="2" HorizontalAlignment="Right" Height="45" Margin="0,15,10,0" Grid.Row="4" VerticalAlignment="Top" Width="45" Source="/Images/RadialNavigationIcons/RoutineIcon.png"/>
         <Label Grid.Column="2" Content="Routines" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Top" FontSize="24" Margin="0,12,0,0" FontWeight="Bold"/>
         <Separator Grid.Column="2" Margin="0,140,0,570" Grid.Row="4"/>
         <Label Content="Monday, Mar 6" HorizontalAlignment="Left" Margin="10,100,0,0" Grid.Row="4" VerticalAlignment="Top" Grid.Column="2" FontSize="16"/>
