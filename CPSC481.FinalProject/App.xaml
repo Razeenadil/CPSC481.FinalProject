@@ -4,10 +4,6 @@
              xmlns:local="clr-namespace:CPSC481.FinalProject"
              StartupUri="TestWindow1.xaml">
     <Application.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/Theme/CircularButton.xaml"/>
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
+        
     </Application.Resources>
 </Application>

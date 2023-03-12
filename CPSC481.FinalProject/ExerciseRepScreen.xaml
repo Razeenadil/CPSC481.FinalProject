@@ -8,7 +8,7 @@
       d:DesignHeight="800" d:DesignWidth="450"
       Title="ExerciseRepScreen">
 
-    <Border CornerRadius="0,0,25,25"
+    <Border CornerRadius="0"
             BorderThickness="3"
             Opacity="1">
         <Border.BorderBrush>
@@ -49,7 +49,8 @@
                         Background="Transparent" 
                         BorderBrush="Transparent"
                         VerticalAlignment="Center"
-                        HorizontalAlignment="Center">
+                        HorizontalAlignment="Center"
+                        Click="Back_Button_Click">
                     <Image Source="/Images/HeaderNavIcons/left-arrow.png"/>
                 </Button>
                 <Label Content="Routine 1"
@@ -94,6 +95,7 @@
                         Background="White"
                         BorderBrush="Black"
                         BorderThickness="3">
+                    <Image Source="/Images/DemoImage.jpg" Opacity="0.5" Stretch="Fill"/>
                 </Border>
 
                 <Grid Margin="0,5,0,0">
@@ -111,7 +113,7 @@
                            FontSize="16"
                            FontWeight="Medium"/>
 
-                    <Label Content="Reps"
+                    <Label Content="Reps Completed"
                            Grid.Column="1"
                            Margin="15,0,0,0"
                            HorizontalAlignment="Left"

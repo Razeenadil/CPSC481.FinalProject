@@ -1,0 +1,151 @@
+﻿<Page x:Class="CPSC481.FinalProject.DemoExerciseScreen"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CPSC481.FinalProject"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="450"
+      Title="DemoExerciseScreen">
+
+    <Border CornerRadius="0"
+            BorderThickness="3"
+            Opacity="1">
+        <Border.BorderBrush>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#000000" Offset="0"/>
+                <GradientStop Color="#B2C4D4" Offset="0.5"/>
+                <GradientStop Color="#000000" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.BorderBrush>
+
+        <Border.Background>
+            <LinearGradientBrush StartPoint="0.25,0.75" EndPoint="1,0.25">
+                <GradientStop Color="#FFFFFF" Offset="0"/>
+                <GradientStop Color="#FFFFFF" Offset="0.5"/>
+                <GradientStop Color="#FFFFFF" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.Background>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="15"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="650"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="15"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="15"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="15"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal"
+                        Grid.Row="1"
+                        Grid.Column="1">
+                <Button Height="40" 
+                        Width="40" 
+                        Background="Transparent" 
+                        BorderBrush="Transparent"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Click="Back_Button_Click">
+                    <Image Source="/Images/HeaderNavIcons/left-arrow.png"/>
+                </Button>
+                <Label Content="Demonstration"
+                       Width="320"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       HorizontalContentAlignment="Center"
+                       VerticalContentAlignment="Center"
+                       FontSize="24"
+                       FontWeight="Bold"/>
+
+                <Button Height="40" 
+                        Width="40" 
+                        Background="Transparent" 
+                        BorderBrush="Transparent"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center">
+                    <Image Source="/Images/HeaderNavIcons/hamburger.png"/>
+                </Button>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical"
+                        Grid.Row="2"
+                        Grid.Column="1">
+                <Separator/>
+                <Label Content="Dumbbell Curls"
+                       VerticalAlignment="Center"
+                       VerticalContentAlignment="Center"
+                       FontSize="24"
+                       FontWeight="Bold"/>
+                <Separator Margin="0,5,0,10"/>
+
+                <Border Height="250"
+                        CornerRadius="5"
+                        Background="White"
+                        BorderBrush="Black"
+                        BorderThickness="3">
+                    <Image Source="/Images/DemoImage.jpg" Opacity="0.5" Stretch="Fill"/>
+                </Border>
+
+                <Separator Margin="0,10,0,0"/>
+                <Label Content="Details"
+                       VerticalAlignment="Center"
+                       VerticalContentAlignment="Center"
+                       FontSize="20"
+                       FontWeight="Bold"
+                       Padding="5"/>
+
+                <TextBlock Text="Level: Beginner"
+                           Padding="5"
+                           FontSize="16"
+                           FontWeight="Medium"/>
+                
+                <TextBlock Text="Target body part: Biceps"
+                           Padding="5"
+                           FontSize="16"
+                           FontWeight="Medium"/>
+                
+                <TextBlock Text="Equipment required: Dumbbells"
+                           Padding="5"
+                           FontSize="16"
+                           FontWeight="Medium"/>
+
+                <Separator/>
+
+                <Label Content="Description"
+                       VerticalAlignment="Center"
+                       VerticalContentAlignment="Center"
+                       FontSize="20"
+                       FontWeight="Bold"
+                       Padding="5"/>
+
+                <TextBlock Text="Bicep curls are a great exercise for beginners. It's a weight resistance exercise that mainly strengthens the upper arm."
+                           Padding="5"
+                           TextWrapping="Wrap"
+                           FontSize="14"/>
+            </StackPanel>
+
+            <Button x:Name="NavigationButton"
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        Grid.RowSpan="2"
+                        Grid.ColumnSpan="3"
+                        Width="100" 
+                        Height="100"
+                        Margin="395,30,0,0"
+                        Cursor="Hand">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Ellipse Fill="Aqua"/>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </Grid>
+    </Border>
+</Page>

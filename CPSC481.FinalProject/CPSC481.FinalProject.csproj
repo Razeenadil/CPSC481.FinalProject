@@ -9,14 +9,20 @@
 
   <ItemGroup>
     <None Remove="Images\ButtonIcons\edit-button.png" />
+    <None Remove="Images\DemoImage.jpg" />
     <None Remove="Images\HeaderNavIcons\hamburger.png" />
     <None Remove="Images\HeaderNavIcons\left-arrow.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Images\ButtonIcons\edit-button.png" />
+    <Resource Include="Images\DemoImage.jpg" />
     <Resource Include="Images\HeaderNavIcons\hamburger.png" />
     <Resource Include="Images\HeaderNavIcons\left-arrow.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Theme\" />
   </ItemGroup>
 
 </Project>

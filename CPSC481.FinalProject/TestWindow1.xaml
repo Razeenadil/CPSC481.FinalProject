@@ -46,8 +46,9 @@ VerticalScrollBarVisibility="Hidden"/>
             </ControlTemplate>
     </Window.Resources>
 
-    <Border CornerRadius="50">
-        <Border CornerRadius="50"
+    <Border>
+        
+        <Border CornerRadius="0"
                 BorderThickness="3"
                 Opacity="1" ScrollViewer.CanContentScroll="True">
             <Border.BorderBrush>
@@ -102,6 +103,11 @@ VerticalScrollBarVisibility="Hidden"/>
                     Height="100" 
                     Click="OpenTimerScreen"
                     Background="Transparent">Timer
+                </Button>
+                <Button Width="100" 
+                    Height="100" 
+                    Click="OpenDemoScreen"
+                    Background="Transparent">Demo Screen
                 </Button>
                 <ComboBox Style="{StaticResource Title}" Name="combobox1" Height="20" Width="80" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <ComboBoxItem Content="WPF"/>

@@ -39,6 +39,11 @@ namespace CPSC481.FinalProject
 
             setRepListBox.ItemsSource = setAndRepCount;
         }
+
+        private void Back_Button_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 
     public class ExerciseSetAndRepCount

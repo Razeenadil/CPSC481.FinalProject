@@ -51,5 +51,11 @@ namespace CPSC481.FinalProject
                 DragMove();
             }
         }
+
+        private void OpenDemoScreen(object sender, RoutedEventArgs e)
+        {
+            DemoExerciseScreen demoExerciseScreen = new DemoExerciseScreen();
+            this.Content = demoExerciseScreen;
+        }
     }
 }
