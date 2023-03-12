@@ -74,11 +74,21 @@
                         Grid.Row="2"
                         Grid.Column="1">
                 <Separator/>
-                <Label Content="Stretches"
-                       VerticalAlignment="Center"
-                       VerticalContentAlignment="Center"
-                       FontSize="24"
-                       FontWeight="Bold"/>
+                <Grid>
+                    <Label Content="Farmer's Walk"
+                           VerticalAlignment="Center"
+                           VerticalContentAlignment="Center"
+                           FontSize="24"
+                           FontWeight="Bold"/>
+                    <Label Content="2/12"
+                           Margin="0,0,10,0"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Right"
+                           HorizontalContentAlignment="Right"
+                           FontSize="20"
+                           FontWeight="Medium"/>
+                </Grid>
+
                 <Separator/>
 
                 <Label Content="Demonstration"
@@ -87,12 +97,20 @@
                        FontSize="20"
                        FontWeight="Medium"/>
 
-                <Border Height="250"
+                <Grid>
+                    <Border Height="250"
                         CornerRadius="5"
                         Background="White"
                         BorderBrush="Black"
                         BorderThickness="3">
-                </Border>
+                        <Image Source="/Images/DemoImage.jpg" Opacity="0.5" Stretch="Fill"/>
+                    </Border>
+                    <Polygon Points="0,0 75,50, 0,100"
+                                 Stroke="Black" 
+                                 Fill="Black"
+                                 HorizontalAlignment="Center"
+                                 VerticalAlignment="Center"/>
+                </Grid>
 
                 <Label Content="Timer"
                        VerticalAlignment="Center"

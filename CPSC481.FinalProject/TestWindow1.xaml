@@ -107,7 +107,12 @@ VerticalScrollBarVisibility="Hidden"/>
                 <Button Width="100" 
                     Height="100" 
                     Click="OpenDemoScreen"
-                    Background="Transparent">Demo Screen
+                    Background="Transparent">Demo
+                </Button>
+                <Button Width="100" 
+                    Height="100" 
+                    Click="OpenLandingScreen"
+                    Background="Transparent">Landing
                 </Button>
                 <ComboBox Style="{StaticResource Title}" Name="combobox1" Height="20" Width="80" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <ComboBoxItem Content="WPF"/>

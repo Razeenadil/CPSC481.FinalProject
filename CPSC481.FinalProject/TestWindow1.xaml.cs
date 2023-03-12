@@ -57,5 +57,11 @@ namespace CPSC481.FinalProject
             DemoExerciseScreen demoExerciseScreen = new DemoExerciseScreen();
             this.Content = demoExerciseScreen;
         }
+
+        private void OpenLandingScreen(object sender, RoutedEventArgs e)
+        {
+            LandingScreen landingScreen = new LandingScreen();
+            this.Content=landingScreen;
+        }
     }
 }

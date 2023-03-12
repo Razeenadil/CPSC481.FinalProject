@@ -87,7 +87,15 @@
                         Background="White"
                         BorderBrush="Black"
                         BorderThickness="3">
-                    <Image Source="/Images/DemoImage.jpg" Opacity="0.5" Stretch="Fill"/>
+                    <Grid>
+                        <Image Source="/Images/DemoImage.jpg" Opacity="0.5" Stretch="Fill"/>
+                        <Polygon Points="0,0 75,50, 0,100"
+                                 Stroke="Black" 
+                                 Fill="Black"
+                                 HorizontalAlignment="Center"
+                                 VerticalAlignment="Center"/>
+                    </Grid>
+                    
                 </Border>
 
                 <Separator Margin="0,10,0,0"/>

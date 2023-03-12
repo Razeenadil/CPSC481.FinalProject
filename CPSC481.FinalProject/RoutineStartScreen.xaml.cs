@@ -25,18 +25,18 @@ namespace CPSC481.FinalProject
         {
             InitializeComponent();
             List<ExerciseItem> exercises = new List<ExerciseItem>();
-            exercises.Add(new ExerciseItem() { Num = ++num_of_exercises, Name = "Knee-To-Chest"});
-            exercises.Add(new ExerciseItem() { Num = ++num_of_exercises, Name = "Seated Spinal Twist" });
-            exercises.Add(new ExerciseItem() { Num = ++num_of_exercises, Name = "Cat Stretch" });
-            exercises.Add(new ExerciseItem() { Num = ++num_of_exercises, Name = "Knee-To-Chest" });
-            exercises.Add(new ExerciseItem() { Num = ++num_of_exercises, Name = "Seated Spinal Twist" });
-            exercises.Add(new ExerciseItem() { Num = ++num_of_exercises, Name = "Cat Stretch" });
-            exercises.Add(new ExerciseItem() { Num = ++num_of_exercises, Name = "Knee-To-Chest" });
-            exercises.Add(new ExerciseItem() { Num = ++num_of_exercises, Name = "Seated Spinal Twist" });
-            exercises.Add(new ExerciseItem() { Num = ++num_of_exercises, Name = "Cat Stretch" });
-            exercises.Add(new ExerciseItem() { Num = ++num_of_exercises, Name = "Knee-To-Chest" });
-            exercises.Add(new ExerciseItem() { Num = ++num_of_exercises, Name = "Seated Spinal Twist" });
-            exercises.Add(new ExerciseItem() { Num = ++num_of_exercises, Name = "Cat Stretch" });
+            exercises.Add(new ExerciseItem() { Num = ++num_of_exercises, Name = "Dumbbell Curls" });
+            exercises.Add(new ExerciseItem() { Num = ++num_of_exercises, Name = "Farmer's Walk" });
+            exercises.Add(new ExerciseItem() { Num = ++num_of_exercises, Name = "Hammer Curls" });
+            exercises.Add(new ExerciseItem() { Num = ++num_of_exercises, Name = "Concentrated Biceps Curls" });
+            exercises.Add(new ExerciseItem() { Num = ++num_of_exercises, Name = "Dumbbell Curls" });
+            exercises.Add(new ExerciseItem() { Num = ++num_of_exercises, Name = "Farmer's Walk" });
+            exercises.Add(new ExerciseItem() { Num = ++num_of_exercises, Name = "Hammer Curls" });
+            exercises.Add(new ExerciseItem() { Num = ++num_of_exercises, Name = "Concentrated Biceps Curls" });
+            exercises.Add(new ExerciseItem() { Num = ++num_of_exercises, Name = "Dumbbell Curls" });
+            exercises.Add(new ExerciseItem() { Num = ++num_of_exercises, Name = "Farmer's Walk" });
+            exercises.Add(new ExerciseItem() { Num = ++num_of_exercises, Name = "Hammer Curls" });
+            exercises.Add(new ExerciseItem() { Num = ++num_of_exercises, Name = "Concentrated Biceps Curls" });
 
             routineListBox.ItemsSource = exercises;
         }

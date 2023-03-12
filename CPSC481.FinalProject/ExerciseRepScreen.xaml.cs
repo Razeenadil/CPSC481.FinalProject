@@ -26,16 +26,11 @@ namespace CPSC481.FinalProject
             InitializeComponent();
 
             List<ExerciseSetAndRepCount> setAndRepCount = new List<ExerciseSetAndRepCount>();
-            setAndRepCount.Add(new ExerciseSetAndRepCount() { SetCount = ++numOfSets, RepCount = 6 });
-            setAndRepCount.Add(new ExerciseSetAndRepCount() { SetCount = ++numOfSets, RepCount = 6 });
             setAndRepCount.Add(new ExerciseSetAndRepCount() { SetCount = ++numOfSets, RepCount = 8 });
             setAndRepCount.Add(new ExerciseSetAndRepCount() { SetCount = ++numOfSets, RepCount = 8 });
             setAndRepCount.Add(new ExerciseSetAndRepCount() { SetCount = ++numOfSets, RepCount = 8 });
-            setAndRepCount.Add(new ExerciseSetAndRepCount() { SetCount = ++numOfSets, RepCount = 10 });
-            setAndRepCount.Add(new ExerciseSetAndRepCount() { SetCount = ++numOfSets, RepCount = 10 });
-            setAndRepCount.Add(new ExerciseSetAndRepCount() { SetCount = ++numOfSets, RepCount = 10 });
-            setAndRepCount.Add(new ExerciseSetAndRepCount() { SetCount = ++numOfSets, RepCount = 5 });
-            setAndRepCount.Add(new ExerciseSetAndRepCount() { SetCount = ++numOfSets, RepCount = 5 });
+            setAndRepCount.Add(new ExerciseSetAndRepCount() { SetCount = ++numOfSets, RepCount = 8 });
+            setAndRepCount.Add(new ExerciseSetAndRepCount() { SetCount = ++numOfSets, RepCount = 8 });
 
             setRepListBox.ItemsSource = setAndRepCount;
         }
