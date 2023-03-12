@@ -337,7 +337,7 @@ namespace CPSC481.FinalProject
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            DemoVideoPage demo = new();
+            LandingScreen demo = new();
             this.Content = demo;
         }
     }
