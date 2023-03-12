@@ -27,18 +27,64 @@ namespace CPSC481.FinalProject
         private bool absIsClicked;
         private bool chestIsClicked;
         private bool backIsClicked;
+        private string _selection;
         public event PropertyChangedEventHandler PropertyChanged;
+
+      
 
 
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = this;
             navigationIsClicked = false;
             armIsClicked = false;
             legIsClicked = false;
             absIsClicked = false;
             chestIsClicked = false;
-            backIsClicked = false;
+            backIsClicked = false;           
+        }
+
+        public string Selection
+        {
+            get { return _selection; }
+            set
+            {
+                if(value != _selection)
+                {
+                    _selection = value;
+                    OnPropertyChanged(nameof(Selection));
+                }
+            }
+        }
+
+        private void SetSelection()
+        {
+            Selection = "";
+            if (armIsClicked)
+            {
+                Selection = "Arms\n";
+            }
+
+            if(legIsClicked)
+            {
+                Selection = Selection + "Legs\n";
+            }
+
+            if (absIsClicked)
+            {
+                Selection = Selection + "Abs\n";
+            }
+
+            if (chestIsClicked)
+            {
+                Selection = Selection + "Chest\n";
+            }
+
+            if (backIsClicked)
+            {
+                Selection = Selection + "Back\n";
+            }
         }
 
         private void NavigationButton_Click(object sender, RoutedEventArgs e)
@@ -64,7 +110,11 @@ namespace CPSC481.FinalProject
 
         protected void OnPropertyChanged(string propertyName)
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            if(PropertyChanged != null)
+            {
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            }
+            
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
@@ -73,11 +123,13 @@ namespace CPSC481.FinalProject
             {
                 Back.Opacity = 0.29;
                 backIsClicked = true;
+                SetSelection();
             }
             else
             {
                 Back.Opacity = 0;
                 backIsClicked = false;
+                SetSelection();
             }
         }
 
@@ -88,12 +140,14 @@ namespace CPSC481.FinalProject
                 RightArm.Opacity = 0.29;
                 LeftArm.Opacity = 0.29;
                 armIsClicked = true;
+                SetSelection();
             }
             else
             {
                 RightArm.Opacity = 0;
                 LeftArm.Opacity = 0;
                 armIsClicked = false;
+                SetSelection();
             }
         }
 
@@ -104,12 +158,14 @@ namespace CPSC481.FinalProject
                 RightArm.Opacity = 0.29;
                 LeftArm.Opacity = 0.29;
                 armIsClicked = true;
+                SetSelection();
             }
             else
             {
                 RightArm.Opacity = 0;
                 LeftArm.Opacity = 0;
                 armIsClicked = false;
+                SetSelection();
             }
 
         }
@@ -121,6 +177,7 @@ namespace CPSC481.FinalProject
                 RightLeg.Opacity = 0.29;
                 LeftLeg.Opacity = 0.29;
                 legIsClicked = true;
+                SetSelection();
             }
             else
             {
@@ -128,6 +185,7 @@ namespace CPSC481.FinalProject
                 RightLeg.Opacity = 0;
                 LeftLeg.Opacity = 0;
                 legIsClicked = false;
+                SetSelection();
             }
         }
 
@@ -138,6 +196,8 @@ namespace CPSC481.FinalProject
                 RightLeg.Opacity = 0.29;
                 LeftLeg.Opacity = 0.29;
                 legIsClicked = true;
+                SetSelection();
+
             }
             else
             {
@@ -145,6 +205,7 @@ namespace CPSC481.FinalProject
                 RightLeg.Opacity = 0;
                 LeftLeg.Opacity = 0;
                 legIsClicked = false;
+                SetSelection();
             }
         }
 
@@ -153,12 +214,14 @@ namespace CPSC481.FinalProject
             if (!absIsClicked)
             {
                 Abs.Opacity = 0.29;
-                absIsClicked = true;    
+                absIsClicked = true; 
+                SetSelection();
             }
             else
             {
                 Abs.Opacity = 0;
                 absIsClicked = false;
+                SetSelection();
             }
         }
 
@@ -168,11 +231,13 @@ namespace CPSC481.FinalProject
             {
                 Chest.Opacity = 0.29;
                 chestIsClicked = true;
+                SetSelection();
             }
             else
             {
                 Chest.Opacity = 0;
                 chestIsClicked = false;
+                SetSelection();
             }
         }
 
@@ -261,6 +326,24 @@ namespace CPSC481.FinalProject
             }
         }
 
-   
+        private void ResetFilter_Click(object sender, RoutedEventArgs e)
+        {
+            armIsClicked = false;
+            legIsClicked = false;
+            chestIsClicked = false;
+            absIsClicked = false;
+            backIsClicked = false;
+
+            RightArm.Opacity = 0;
+            LeftArm.Opacity = 0;
+            RightLeg.Opacity = 0;
+            LeftLeg.Opacity = 0;
+            Chest.Opacity = 0;
+            Abs.Opacity = 0;
+            Back.Opacity = 0;
+
+            SetSelection();
+
+        }
     }
 }

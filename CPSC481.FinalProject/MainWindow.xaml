@@ -389,7 +389,18 @@
             Apply Filters
         </Button>
         <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="10,515,0,0" Grid.Row="4" TextWrapping="Wrap" Text="Selected body parts:" VerticalAlignment="Top" FontSize="18"/>
-        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="30,550,0,0" Grid.Row="4" TextWrapping="Wrap" Text="{Binding Path=selection, Mode=TwoWay}" VerticalAlignment="Top" FontSize="18"/>
+        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="30,545,0,0" Grid.Row="4" TextWrapping="Wrap" Text="{Binding Path=Selection, Mode=TwoWay}" VerticalAlignment="Top" FontSize="18"/>
+        
+        <TextBlock 
+            Grid.Column="2" 
+            HorizontalAlignment="Left" 
+            Margin="325,521,0,0" Grid.Row="4" 
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top">
+            <Hyperlink
+                Name="ResetFilter"
+                Click="ResetFilter_Click">Reset Filters</Hyperlink>
+        </TextBlock>
 
 
     </Grid>
