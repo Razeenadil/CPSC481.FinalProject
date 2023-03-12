@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:CPSC481.FinalProject"
         mc:Ignorable="d"
         Title="MainWindow" Height="800" Width="450" >
-    <Grid>
+    <Grid Name="MainGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="15"/>
             <ColumnDefinition Width="auto"/>
@@ -366,6 +366,30 @@
             </Button.Template>
         </Button>
 
+
+        <Button Height="50"
+                        Width="125"
+                        FontSize="20"
+                        FontWeight="Medium"
+                        Grid.Column="2"
+                        BorderBrush="Transparent"
+                        Foreground="White" Margin="130,649,147,30" Grid.Row="4">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                    <GradientStop Color="#003622" Offset="0"/>
+                    <GradientStop Color="#008F5A" Offset="0.5"/>
+                    <GradientStop Color="#003622" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            Apply Filters
+        </Button>
+        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="10,515,0,0" Grid.Row="4" TextWrapping="Wrap" Text="Selected body parts:" VerticalAlignment="Top" FontSize="18"/>
+        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="30,550,0,0" Grid.Row="4" TextWrapping="Wrap" Text="{Binding Path=selection, Mode=TwoWay}" VerticalAlignment="Top" FontSize="18"/>
 
 
     </Grid>

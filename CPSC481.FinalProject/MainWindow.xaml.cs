@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,7 +19,7 @@ namespace CPSC481.FinalProject
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window, INotifyPropertyChanged
     {
         private bool navigationIsClicked;
         private bool armIsClicked;
@@ -26,6 +27,8 @@ namespace CPSC481.FinalProject
         private bool absIsClicked;
         private bool chestIsClicked;
         private bool backIsClicked;
+        public event PropertyChangedEventHandler PropertyChanged;
+
 
         public MainWindow()
         {
@@ -59,6 +62,11 @@ namespace CPSC481.FinalProject
 
         }
 
+        protected void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             if(!backIsClicked)
@@ -87,7 +95,6 @@ namespace CPSC481.FinalProject
                 LeftArm.Opacity = 0;
                 armIsClicked = false;
             }
-
         }
 
         private void LeftArm_Click(object sender, RoutedEventArgs e)
