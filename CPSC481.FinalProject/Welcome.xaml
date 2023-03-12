@@ -49,6 +49,6 @@
             </Button.Background>
             Continue As Guest
         </Button>
-        <Image Margin="36,40,36,623" Source="/Images/2 (1).png" Stretch="Fill"/>
+        <Image Margin="20,43,20,610" Source="/Images/welcome.png" Stretch="Fill"/>
     </Grid>
 </Window>
