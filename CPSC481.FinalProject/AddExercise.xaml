@@ -152,8 +152,11 @@
         <Label Content="Exercises:" HorizontalAlignment="Left" Margin="20,200,0,0" Grid.Row="4" VerticalAlignment="Top" Grid.Column="2" FontSize="24"/>
         <Separator Grid.Column="2" Margin="20,205,291,505" Grid.Row="4"/>
         <Label Content="Sets" HorizontalAlignment="Right" Margin="0,200,20,0" Grid.Row="4" VerticalAlignment="Top" Grid.Column="2" FontSize="24"/>
+        <Label Content="Reps" HorizontalAlignment="Right" Margin="0,200,80,0" Grid.Row="4" VerticalAlignment="Top" Grid.Column="2" FontSize="24"/>
         <TextBox Grid.Column="2" HorizontalAlignment="Left" Margin="353,253,0,0" Grid.Row="4" TextWrapping="Wrap" Text="4" VerticalAlignment="Top" Width="40" TextChanged="TextBox_TextChanged_1" FontSize="16" Height="25" TextAlignment="Center"/>
         <Image Grid.Column="2" HorizontalAlignment="Left" Height="20" Margin="25,256,0,0" Grid.Row="4" VerticalAlignment="Top" Width="20" Source="/Images/Icons/minus.png"/>
+        <Image Grid.Column="2" HorizontalAlignment="Left" Height="20" Margin="202,256,0,0" Grid.Row="4" VerticalAlignment="Top" Width="20" Source="/Images/Icons/information.png"/>
+        <TextBox Grid.Column="2" HorizontalAlignment="Left" Margin="290,253,0,0" Grid.Row="4" TextWrapping="Wrap" Text="4" VerticalAlignment="Top" Width="40" TextChanged="TextBox_TextChanged_1" FontSize="16" Height="25" TextAlignment="Center"/>
 
         <Button Height="50"
                         FontSize="20"
@@ -175,6 +178,10 @@
             </Button.Background>
             Done
         </Button>
-        <Image Grid.Column="2" HorizontalAlignment="Left" Height="20" Margin="202,256,0,0" Grid.Row="4" VerticalAlignment="Top" Width="20" Source="/Images/Icons/information.png"/>
+        <Label Content="2.Leg Extensions" HorizontalAlignment="Left" Margin="45,300,0,0" Grid.Row="4" VerticalAlignment="Top" Grid.Column="2" FontSize="16"/>
+        <TextBox Grid.Column="2" HorizontalAlignment="Left" Margin="353,303,0,0" Grid.Row="4" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40" TextChanged="TextBox_TextChanged_1" FontSize="16" Height="25" TextAlignment="Center"/>
+        <Image Grid.Column="2" HorizontalAlignment="Left" Height="20" Margin="25,306,0,0" Grid.Row="4" VerticalAlignment="Top" Width="20" Source="/Images/Icons/minus.png"/>
+        <Image Grid.Column="2" HorizontalAlignment="Left" Height="20" Margin="171,306,0,0" Grid.Row="4" VerticalAlignment="Top" Width="20" Source="/Images/Icons/information.png"/>
+        <TextBox Grid.Column="2" HorizontalAlignment="Left" Margin="290,303,0,0" Grid.Row="4" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40" TextChanged="TextBox_TextChanged_1" FontSize="16" Height="25" TextAlignment="Center"/>
     </Grid>
 </Page>
