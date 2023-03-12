@@ -44,9 +44,9 @@
                            FontWeight="Bold" Text="Progress Overview"/>
             </StackPanel>
             <ComboBox  HorizontalContentAlignment="Center" HorizontalAlignment="Center" Height="24" Margin="0,268,0,0" Grid.Row="1" VerticalAlignment="Top" Width="166">
-                <ComboBoxItem IsSelected="True">This week</ComboBoxItem>
-                <ComboBoxItem>This Month</ComboBoxItem>
-                <ComboBoxItem>Past Months</ComboBoxItem>
+                <ComboBoxItem IsSelected="True">Weekly</ComboBoxItem>
+                <ComboBoxItem>Monthly</ComboBoxItem>
+                <ComboBoxItem>Annually</ComboBoxItem>
             </ComboBox>
             <ProgressBar Maximum="7" Minimum="0" Value="5" HorizontalAlignment="Center" Height="24" Grid.Row="1" VerticalAlignment="Center" Width="216"/>
             <TextBlock FontSize="13" HorizontalAlignment="Left" Margin="46,315,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Height="36" Text="Completed"/>
@@ -107,7 +107,20 @@
                 </ProgressBar.RenderTransform>
             </ProgressBar>
             <TextBlock HorizontalAlignment="Left" Margin="41,116,0,0" Grid.Row="1" TextWrapping="Wrap" Text="30min" VerticalAlignment="Top"/>
-            <DataGrid HorizontalAlignment="Left" Height="188" Margin="35,376,0,0" Grid.Row="1" VerticalAlignment="Top" Width="358" d:ItemsSource="{d:SampleData ItemCount=7}"/>
+            <DataGrid 
+                HorizontalAlignment="Left" 
+                Height="188" 
+                Margin="35,376,0,0" 
+                Grid.Row="1" 
+                VerticalAlignment="Top" 
+                Width="358" 
+                d:ItemsSource="{d:SampleData ItemCount=7}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Days"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Exercise Name"></DataGridTextColumn>
+
+                </DataGrid.Columns>
+            </DataGrid>
 
 
 
