@@ -22,7 +22,11 @@
                            TextAlignment="Center"
                            FontSize="20"
                            FontWeight="Bold" Text="Progress Overview"/>
+            
         </StackPanel>
+        <Image Source="/images/HeaderNavIcons/ProgressIcon.png"
+               HorizontalAlignment="Right"
+               Margin="0,0,15,0"/>
         <ComboBox  HorizontalContentAlignment="Center" HorizontalAlignment="Center" Height="24" Margin="0,268,0,0" Grid.Row="1" VerticalAlignment="Top" Width="166">
             <ComboBoxItem IsSelected="True">Weekly</ComboBoxItem>
             <ComboBoxItem>Monthly</ComboBoxItem>
@@ -99,7 +103,7 @@
                 <DataGridTextColumn Header="Date"></DataGridTextColumn>
                 <DataGridTextColumn Header="Routine Name"></DataGridTextColumn>
                 <DataGridTextColumn Header="Exercise Name"></DataGridTextColumn>
-                <DataGridTextColumn Header="Weight/Rep/Set"></DataGridTextColumn>
+                <DataGridTextColumn Header="Rep/Set"></DataGridTextColumn>
 
 
             </DataGrid.Columns>
@@ -141,19 +145,19 @@
         <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="142,512,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="40"><Run Text="Arm Day"/><LineBreak/><Run/></TextBlock>
         <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="142,532,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="50"><Run Text="Arm Day"/><LineBreak/><Run/></TextBlock>
         <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="213,423,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Skull Crushers" VerticalAlignment="Top" Width="62"/>
-        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="324,423,0,0" Grid.Row="1" TextWrapping="Wrap" Text="20/8/1" VerticalAlignment="Top" Width="34" RenderTransformOrigin="0.32,0.385"/>
-        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="324,441,0,0" Grid.Row="1" TextWrapping="Wrap" Text="20/8/2" VerticalAlignment="Top" Width="34" RenderTransformOrigin="0.32,0.385"/>
-        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="324,459,0,0" Grid.Row="1" TextWrapping="Wrap" Text="20/7/3" VerticalAlignment="Top" Width="34" RenderTransformOrigin="0.529,0.538"/>
-        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="324,496,0,0" Grid.Row="1" TextWrapping="Wrap" Text="30/8/2" VerticalAlignment="Top" Width="34" RenderTransformOrigin="0.32,0.385"/>
-        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="324,517,0,0" Grid.Row="1" TextWrapping="Wrap" Text="30/8/3" VerticalAlignment="Top" Width="34" RenderTransformOrigin="0.32,0.385"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="324,423,0,0" Grid.Row="1" TextWrapping="Wrap" Text="8/1" VerticalAlignment="Top" Width="34" RenderTransformOrigin="0.32,0.385"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="324,441,0,0" Grid.Row="1" TextWrapping="Wrap" Text="8/2" VerticalAlignment="Top" Width="34" RenderTransformOrigin="0.32,0.385"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="324,459,0,0" Grid.Row="1" TextWrapping="Wrap" Text="7/3" VerticalAlignment="Top" Width="34" RenderTransformOrigin="0.529,0.538"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="324,496,0,0" Grid.Row="1" TextWrapping="Wrap" Text="8/2" VerticalAlignment="Top" Width="34" RenderTransformOrigin="0.32,0.385"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="324,517,0,0" Grid.Row="1" TextWrapping="Wrap" Text="8/3" VerticalAlignment="Top" Width="34" RenderTransformOrigin="0.32,0.385"/>
         <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="213,441,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Skull Crushers" VerticalAlignment="Top" Width="62"/>
         <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="214,460,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Skull Crushers" VerticalAlignment="Top" Width="62"/>
         <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="213,480,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Bicep Curls" VerticalAlignment="Top" Width="62"/>
         <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="213,498,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Bicep Curls" VerticalAlignment="Top" Width="62"/>
         <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="214,516,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Bicep Curls" VerticalAlignment="Top" Width="62"/>
-        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="324,480,0,0" Grid.Row="1" TextWrapping="Wrap" Text="30/8/1" VerticalAlignment="Top" Width="34" RenderTransformOrigin="0.32,0.385"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="324,480,0,0" Grid.Row="1" TextWrapping="Wrap" Text="8/1" VerticalAlignment="Top" Width="34" RenderTransformOrigin="0.32,0.385"/>
         <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="214,534,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Hammer Curls" VerticalAlignment="Top" Width="71"/>
-        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="324,534,0,0" Grid.Row="1" TextWrapping="Wrap" Text="30/8/1" VerticalAlignment="Top" Width="34" RenderTransformOrigin="0.32,0.385"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="324,534,0,0" Grid.Row="1" TextWrapping="Wrap" Text="8/1" VerticalAlignment="Top" Width="34" RenderTransformOrigin="0.32,0.385"/>
 
     </Grid>
 </Page>

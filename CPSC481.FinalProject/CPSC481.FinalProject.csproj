@@ -7,4 +7,12 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="images\HeaderNavIcons\ProgressIcon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\HeaderNavIcons\ProgressIcon.png" />
+  </ItemGroup>
+
 </Project>
