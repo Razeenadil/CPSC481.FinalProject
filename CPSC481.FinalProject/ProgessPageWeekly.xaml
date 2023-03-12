@@ -93,15 +93,14 @@
                 Margin="0,393,0,0" 
                 Grid.Row="1" 
                 VerticalAlignment="Top" 
-                Width="380" 
+                Width="298" 
                 d:ItemsSource="{d:SampleData ItemCount=7}" SelectionChanged="DataGrid_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Date"></DataGridTextColumn>
                 <DataGridTextColumn Header="Routine Name"></DataGridTextColumn>
-                <DataGridTextColumn Header="Exercise #1"></DataGridTextColumn>
-                <DataGridTextColumn Header="Weight/Rep"></DataGridTextColumn>
-                <DataGridTextColumn Header="Exercise #2"></DataGridTextColumn>
-                <DataGridTextColumn Header="Exercise #2"></DataGridTextColumn>
+                <DataGridTextColumn Header="Exercise Name"></DataGridTextColumn>
+                <DataGridTextColumn Header="Weight/Rep/Set"></DataGridTextColumn>
+
 
             </DataGrid.Columns>
 
@@ -127,35 +126,34 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <TextBlock FontSize="7" HorizontalAlignment="Left" Height="13" Margin="41,427,0,0" Grid.Row="1" TextWrapping="Wrap" Text="03/05/2023" VerticalAlignment="Top" Width="40"/>
-        <TextBlock FontSize="7" HorizontalAlignment="Left" Height="13" Margin="41,445,0,0" Grid.Row="1" TextWrapping="Wrap" Text="03/06/2023" VerticalAlignment="Top" Width="40"/>
-        <TextBlock FontSize="7" HorizontalAlignment="Left" Height="13" Margin="41,463,0,0" Grid.Row="1" TextWrapping="Wrap" Text="03/07/2023" VerticalAlignment="Top" Width="40"/>
-        <TextBlock FontSize="7" HorizontalAlignment="Left" Height="13" Margin="41,481,0,0" Grid.Row="1" TextWrapping="Wrap" Text="03/08/2023" VerticalAlignment="Top" Width="40"/>
-        <TextBlock FontSize="7" HorizontalAlignment="Left" Height="13" Margin="41,499,0,0" Grid.Row="1" TextWrapping="Wrap" Text="03/09/2023" VerticalAlignment="Top" Width="40"/>
-        <TextBlock FontSize="7" HorizontalAlignment="Left" Height="13" Margin="41,517,0,0" Grid.Row="1" TextWrapping="Wrap" Text="03/10/2023" VerticalAlignment="Top" Width="40"/>
-        <TextBlock FontSize="7" HorizontalAlignment="Left" Height="13" Margin="41,535,0,0" Grid.Row="1" TextWrapping="Wrap" Text="03/11/2023" VerticalAlignment="Top" Width="40"/>
-        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="96,423,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Arm Day" VerticalAlignment="Top" Width="40"/>
-        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="96,441,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Leg Day" VerticalAlignment="Top" Width="40"/>
-        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="96,460,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Chest Day" VerticalAlignment="Top" Width="50"/>
-        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="96,481,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Cardio Day" VerticalAlignment="Top" Width="50"/>
-        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="96,499,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Back Day" VerticalAlignment="Top" Width="50"/>
-        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="96,517,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Leg Day" VerticalAlignment="Top" Width="40"/>
-        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="96,535,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Chest Day" VerticalAlignment="Top" Width="50"/>
-        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="166,423,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Skull Crushers" VerticalAlignment="Top" Width="62"/>
-        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="261,423,0,0" Grid.Row="1" TextWrapping="Wrap" Text="20/8" VerticalAlignment="Top" Width="25" RenderTransformOrigin="0.32,0.385"/>
-        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="261,460,0,0" Grid.Row="1" TextWrapping="Wrap" Text="20/8" VerticalAlignment="Top" Width="25" RenderTransformOrigin="0.32,0.385"/>
-        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="261,499,0,0" Grid.Row="1" TextWrapping="Wrap" Text="20/8" VerticalAlignment="Top" Width="25" RenderTransformOrigin="0.32,0.385"/>
-        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="261,517,0,0" Grid.Row="1" TextWrapping="Wrap" Text="20/8" VerticalAlignment="Top" Width="25" RenderTransformOrigin="0.32,0.385"/>
-        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="266,532,0,0" Grid.Row="1" TextWrapping="Wrap" Text="--" VerticalAlignment="Top" Width="15" RenderTransformOrigin="0.32,0.385"/>
-        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="190,532,0,0" Grid.Row="1" TextWrapping="Wrap" Text="--" VerticalAlignment="Top" Width="14" RenderTransformOrigin="0.32,0.385"/>
-        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="333,532,0,0" Grid.Row="1" TextWrapping="Wrap" Text="--" VerticalAlignment="Top" Width="15" RenderTransformOrigin="0.32,0.385"/>
-        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="392,532,0,0" Grid.Row="1" TextWrapping="Wrap" Text="--" VerticalAlignment="Top" Width="15" RenderTransformOrigin="0.32,0.385"/>
-        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="266,477,0,0" Grid.Row="1" TextWrapping="Wrap" Text="--" VerticalAlignment="Top" Width="15" RenderTransformOrigin="0.32,0.385"/>
-        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="189,477,0,0" Grid.Row="1" TextWrapping="Wrap" Text="--" VerticalAlignment="Top" Width="15" RenderTransformOrigin="0.32,0.385"/>
-        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="333,478,0,0" Grid.Row="1" TextWrapping="Wrap" Text="--" VerticalAlignment="Top" Width="15" RenderTransformOrigin="0.32,0.385"/>
-        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="392,478,0,0" Grid.Row="1" TextWrapping="Wrap" Text="--" VerticalAlignment="Top" Width="16" RenderTransformOrigin="0.32,0.385"/>
-        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="166,442,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Barbell Squat" VerticalAlignment="Top" Width="62"/>
-        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="261,441,0,0" Grid.Row="1" TextWrapping="Wrap" Text="120/8" VerticalAlignment="Top" Width="25" RenderTransformOrigin="0.32,0.385"/>
+        <TextBlock FontSize="7" HorizontalAlignment="Left" Height="13" Margin="80,423,0,0" Grid.Row="1" TextWrapping="Wrap" Text="03/05/2023" VerticalAlignment="Top" Width="40"/>
+        <TextBlock FontSize="7" HorizontalAlignment="Left" Height="13" Margin="80,445,0,0" Grid.Row="1" TextWrapping="Wrap" Text="03/05/2023" VerticalAlignment="Top" Width="40"/>
+        <TextBlock FontSize="7" HorizontalAlignment="Left" Height="13" Margin="80,459,0,0" Grid.Row="1" TextWrapping="Wrap" Text="03/05/2023" VerticalAlignment="Top" Width="40"/>
+        <TextBlock FontSize="7" HorizontalAlignment="Left" Height="13" Margin="80,480,0,0" Grid.Row="1" TextWrapping="Wrap" Text="03/05/2023" VerticalAlignment="Top" Width="40"/>
+        <TextBlock FontSize="7" HorizontalAlignment="Left" Height="13" Margin="80,497,0,0" Grid.Row="1" TextWrapping="Wrap" Text="03/05/2023" VerticalAlignment="Top" Width="40"/>
+        <TextBlock FontSize="7" HorizontalAlignment="Left" Height="13" Margin="80,519,0,0" Grid.Row="1" TextWrapping="Wrap" Text="03/5/2023" VerticalAlignment="Top" Width="40"/>
+        <TextBlock FontSize="7" HorizontalAlignment="Left" Height="13" Margin="80,534,0,0" Grid.Row="1" TextWrapping="Wrap" Text="03/5/2023" VerticalAlignment="Top" Width="40"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="142,423,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Arm Day" VerticalAlignment="Top" Width="40"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="142,441,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="40"><Run Text="Arm Day"/><LineBreak/><Run/></TextBlock>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="142,458,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="50"><Run Text="Arm Day"/><LineBreak/><Run/></TextBlock>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="142,477,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="50"><Run Text="Arm Day"/><LineBreak/><Run/></TextBlock>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="142,496,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Arm Day" VerticalAlignment="Top" Width="50"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="142,512,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="40"><Run Text="Arm Day"/><LineBreak/><Run/></TextBlock>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="142,532,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="50"><Run Text="Arm Day"/><LineBreak/><Run/></TextBlock>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="213,423,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Skull Crushers" VerticalAlignment="Top" Width="62"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="324,423,0,0" Grid.Row="1" TextWrapping="Wrap" Text="20/8/1" VerticalAlignment="Top" Width="34" RenderTransformOrigin="0.32,0.385"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="324,441,0,0" Grid.Row="1" TextWrapping="Wrap" Text="20/8/2" VerticalAlignment="Top" Width="34" RenderTransformOrigin="0.32,0.385"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="324,459,0,0" Grid.Row="1" TextWrapping="Wrap" Text="20/7/3" VerticalAlignment="Top" Width="34" RenderTransformOrigin="0.529,0.538"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="324,496,0,0" Grid.Row="1" TextWrapping="Wrap" Text="30/8/2" VerticalAlignment="Top" Width="34" RenderTransformOrigin="0.32,0.385"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="324,517,0,0" Grid.Row="1" TextWrapping="Wrap" Text="30/8/3" VerticalAlignment="Top" Width="34" RenderTransformOrigin="0.32,0.385"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="213,441,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Skull Crushers" VerticalAlignment="Top" Width="62"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="214,460,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Skull Crushers" VerticalAlignment="Top" Width="62"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="213,480,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Bicep Curls" VerticalAlignment="Top" Width="62"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="213,498,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Bicep Curls" VerticalAlignment="Top" Width="62"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="214,516,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Bicep Curls" VerticalAlignment="Top" Width="62"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="324,480,0,0" Grid.Row="1" TextWrapping="Wrap" Text="30/8/1" VerticalAlignment="Top" Width="34" RenderTransformOrigin="0.32,0.385"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="214,534,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Hammer Curls" VerticalAlignment="Top" Width="71"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="324,534,0,0" Grid.Row="1" TextWrapping="Wrap" Text="30/8/1" VerticalAlignment="Top" Width="34" RenderTransformOrigin="0.32,0.385"/>
 
     </Grid>
 </Page>
