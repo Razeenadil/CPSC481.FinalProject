@@ -5,10 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CPSC481.FinalProject"
         mc:Ignorable="d"
-        Title="Welcome" Height="800" Width="450" Background="black">
+        Title="Welcome" Height="800" Width="450" Background="white">
     <Grid>
         <Image Height="NaN" Margin="36,88,36,303" Source="/Images/Green Bold Bull Fitness Center Logo.png" Stretch="Fill" Width="NaN"/>
-        <Image Height="NaN" Margin="28,124,28,266" Source="/Images/Green Bold Bull Fitness Center Logo (1).png" Stretch="Fill" Width="NaN"/>
 
         <Button Margin="54,520,54,226"
                         FontSize="20"
@@ -49,6 +48,6 @@
             </Button.Background>
             Continue As Guest
         </Button>
-        <Image Margin="20,43,20,610" Source="/Images/welcome.png" Stretch="Fill"/>
+        <Image Margin="27,58,27,371" Source="/Images/logo.png" Stretch="Fill"/>
     </Grid>
 </Window>
