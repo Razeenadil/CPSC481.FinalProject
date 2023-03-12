@@ -1,28 +1,21 @@
-﻿<Window x:Class="CPSC481.FinalProject.LoginPage"
+﻿<Window x:Class="CPSC481.FinalProject.Registeration"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CPSC481.FinalProject"
         mc:Ignorable="d"
-        Title="Login Page" Height="800" Width="450" Background="black">
+        Title="Registeration" Height="800" Width="450" Background="Black">
     <Grid>
-        <TextBox TextWrapping="Wrap" Text="Enter your e-mail address" Margin="63,270,73,461"  FontSize="24" Foreground="#7F000000"/>
-        <TextBox TextWrapping="Wrap" Text="Enter your password" Margin="63,380,73,351"  FontSize="24" Foreground="#7F000000"/>
-        <TextBlock Text="Email Address"
-                           Foreground="White"
-                           FontSize="20"
-                           FontWeight="Medium"
-                           HorizontalAlignment="Left"
-                           Margin="63,231,0,519"/>
-        <TextBlock Text="Password"
+        <TextBox TextWrapping="Wrap" Text="Enter your preferred username" Margin="71,270,65,461"  FontSize="22" Foreground="#7F000000"/>
+        <TextBlock Text="Username"
             Foreground="White"
             FontSize="20"
             FontWeight="Medium"
             HorizontalAlignment="Left"
-            Margin="63,346,0,404"/>
+            Margin="71,230,0,519" RenderTransformOrigin="1.131,0.421"/>
         <Button Background="Transparent" BorderBrush="White" Foreground="White" Margin="0,0,404,741"  Content="Back" Click="Button_Click"  />
-        <Button Margin="250,513,40,236"
+        <Button Margin="259,631,31,118"
             FontSize="20"
             FontWeight="Medium"
             BorderBrush="Transparent"
@@ -40,34 +33,44 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <TextBlock Text="Dont have an account?"
+        <TextBlock Text="Agree with"
             Foreground="White"
+            FontStyle="Normal"
             FontSize="20"
             FontWeight="Medium"
             HorizontalAlignment="Left"
-            Margin="20,650,0,99"/>
-        <TextBlock Text="Create an account"
+            Margin="34,572,0,177"/>
+
+        <TextBlock Text="Terms and Conditions"
             Foreground="LightBlue"
-            FontStyle="Italic"
-            FontSize="20"
-            FontWeight="Medium"
-            HorizontalAlignment="Left"
-            Margin="245,650,0,99"/>
-        <Image Margin="14,77,14,621" Source="/Images/loginpage.png" Stretch="Fill"/>
-        <TextBlock Text="Forgot my Password"
-            Foreground="Gray"
             FontStyle="Normal"
             FontSize="20"
             FontWeight="Medium"
             HorizontalAlignment="Left"
-            Margin="238,452,0,297"/>
-        <TextBlock Text="Remember Me"
+            Margin="141,572,0,177" RenderTransformOrigin="0.884,-0.757"/>
+        <Button Background="Transparent" BorderBrush="White" Foreground="White" Margin="350,574,65,183"  Content="" Click="Button_Click"  />
+        <Image Margin="44,76,16,590" Source="/Images/registration.png" Stretch="Fill"/>
+        <TextBox TextWrapping="Wrap" Text="Enter your e-mail address" Margin="71,385,65,346"  FontSize="24" Foreground="#7F000000"/>
+        <TextBox TextWrapping="Wrap" Text="Enter your password" Margin="71,495,65,236"  FontSize="24" Foreground="#7F000000"/>
+        <TextBlock Text="Email Address"
             Foreground="White"
-            FontStyle="Normal"
             FontSize="20"
             FontWeight="Medium"
             HorizontalAlignment="Left"
-            Margin="24,452,0,297"/>
-        <Button Background="Transparent" BorderBrush="White" Foreground="White" Margin="170,456,245,302"  Content="" Click="Button_Click"  />
+            Margin="71,346,0,404"/>
+        <TextBlock Text="Password"
+            Foreground="White"
+            FontSize="20"
+            FontWeight="Medium"
+            HorizontalAlignment="Left"
+            Margin="71,461,0,289"/>
+        <TextBlock Text="I already have an account"
+            Foreground="White"
+            FontSize="20"
+            FontWeight="Medium"
+            TextDecorations="Underline"
+            HorizontalAlignment="Left"
+            Margin="71,715,0,34"/>
+
     </Grid>
 </Window>

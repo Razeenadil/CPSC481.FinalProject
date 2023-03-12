@@ -9,9 +9,9 @@
 
     <Grid>
         <Button Background="Transparent" BorderBrush="White" Foreground="White" Margin="0,0,404,741"  >Back</Button>
-        <TextBox TextWrapping="Wrap" Text="Enter your e-mail address" Margin="55,511,82,220"  FontSize="24" Foreground="#7F000000"/>
+        <TextBox TextWrapping="Wrap" Text="Enter your e-mail address" Margin="55,519,82,212"  FontSize="24" Foreground="#7F000000"/>
         <Image Height="NaN" Margin="28,148,28,278" Source="/Images/Green Bold Bull Fitness Center Logo (1).png" Stretch="Fill" Width="NaN"/>
-        <Button Margin="225,590,65,159"
+        <Button Margin="225,598,65,151"
                         FontSize="20"
                         FontWeight="Medium"
                         BorderBrush="Transparent"
@@ -30,6 +30,7 @@
             </Button.Background>
             Submit
         </Button>
-        <Image Margin="55,52,55,623" Source="/Images/Screenshot 2023-03-10 013950.png" Stretch="Fill"/>
+        <Image Margin="55,62,55,613" Source="/Images/Screenshot 2023-03-10 013950.png" Stretch="Fill"/>
+        <Image Margin="20,52,28,603" Source="/Images/guest login.png" Stretch="Fill"/>
     </Grid>
 </Window>

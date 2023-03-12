@@ -10,7 +10,7 @@
         <Image Height="NaN" Margin="36,88,36,303" Source="/Images/Green Bold Bull Fitness Center Logo.png" Stretch="Fill" Width="NaN"/>
         <Image Height="NaN" Margin="28,124,28,266" Source="/Images/Green Bold Bull Fitness Center Logo (1).png" Stretch="Fill" Width="NaN"/>
 
-        <Button Margin="54,499,54,247"
+        <Button Margin="54,520,54,226"
                         FontSize="20"
                         FontWeight="Medium"
                         BorderBrush="Transparent"
@@ -30,7 +30,7 @@
             Login
         </Button>
 
-        <Button Margin="54,610,54,136"
+        <Button Margin="54,612,54,134"
                         FontSize="20"
                         FontWeight="Medium"
                         BorderBrush="Transparent"
@@ -49,6 +49,6 @@
             </Button.Background>
             Continue As Guest
         </Button>
-        <Image Margin="64,40,64,640" Source="/Images/2 (1).png" Stretch="Fill"/>
+        <Image Margin="36,40,36,623" Source="/Images/2 (1).png" Stretch="Fill"/>
     </Grid>
 </Window>
