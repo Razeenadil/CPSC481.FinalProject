@@ -25,6 +25,8 @@ namespace CPSC481.FinalProject
         public BodyPartSelectorPage()
         {
             InitializeComponent();
+            this.DataContext = this;
+
             navigationIsClicked = false;
             armIsClicked = false;
             legIsClicked = false;

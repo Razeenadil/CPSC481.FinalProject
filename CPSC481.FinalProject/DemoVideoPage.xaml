@@ -10,6 +10,198 @@
       Background="White">
 
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="15"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="15"/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="NavigationButton"
+                Grid.Row="4" 
+                Grid.Column="2" 
+                Width="100" 
+                Height="100" 
+                Margin="340,650,-65,-56" 
+                Grid.ColumnSpan="2" 
+                Grid.RowSpan="2"
+                Cursor="Hand"
+                Click="NavigationButton_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Fill="Aqua"/>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button x:Name="InfoButton"
+                Grid.Row="4" 
+                Grid.Column="2"
+                Grid.ColumnSpan="2" 
+                Grid.RowSpan="2"
+                Width="44" 
+                Height="44"
+                Margin="285,670,96,2"
+                Cursor="Hand"                
+                Visibility="Hidden">
+
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Stroke="Black" StrokeThickness="2">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="Images/RadialNavigationIcons/InformationIcon.png" Stretch="None"></ImageBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button x:Name="ProgressButton"
+                Grid.Row="4" 
+                Grid.Column="2"
+                Grid.ColumnSpan="2" 
+                Grid.RowSpan="2"
+                Width="44" 
+                Height="44"
+                Margin="298,627,73,45"
+                Cursor="Hand"                
+                Visibility="Hidden">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Stroke="Black" StrokeThickness="2">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="Images/RadialNavigationIcons/ProgressIcon.png" Stretch="None"></ImageBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button x:Name="DemoButton"
+                Grid.Row="4" 
+                Grid.Column="2"
+                Grid.ColumnSpan="2" 
+                Grid.RowSpan="2"
+                Width="44" 
+                Height="44"
+                Margin="329,590,44,80"
+                Cursor="Hand"                                
+                Visibility="Hidden">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Stroke="Black" StrokeThickness="2">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="Images/RadialNavigationIcons/DemoIcon.png" Stretch="None"></ImageBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button x:Name="RoutineButton"
+                Grid.Row="4" 
+                Grid.Column="2"
+                Grid.ColumnSpan="2" 
+                Grid.RowSpan="2"
+                Width="44" 
+                Height="44"
+                Margin="372,575,4,103"
+                Cursor="Hand"                                
+                Visibility="Hidden">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Stroke="Black" StrokeThickness="2">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="Images/RadialNavigationIcons/RoutineIcon.png" Stretch="None"></ImageBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Label Grid.Column="2" Content="Exercise Demos" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Top" FontSize="24" Margin="0,12,0,0" FontWeight="Bold"/>
+        <Separator Grid.Column="2" Margin="0,140,0,570" Grid.Row="4" BorderThickness="11" BorderBrush="Black"/>
+        <Label Content="Choose Body Part" HorizontalAlignment="Left" Margin="10,100,0,0" Grid.Row="4" VerticalAlignment="Top" Grid.Column="2" FontSize="16"/>
+
+        <Image Grid.Column="2" HorizontalAlignment="Left" Height="40" Grid.Row="4" VerticalAlignment="Top" Width="40" Source="/Images/HeaderNavIcons/left-arrow.png" Margin="10,15,0,0"/>
+
+
+        <Separator Grid.Column="2" Margin="0,40,0,670" Grid.Row="4"/>
+        <Image Grid.Column="2" HorizontalAlignment="Right" Height="40" Margin="0,100,10,0" Grid.Row="4" VerticalAlignment="Top" Width="40" Source="/Images/Icons/muscles.png" RenderTransformOrigin="0.65,0"/>
+
+
+
+
+        <Border Background="Green" Width="5" Grid.Column="2" Grid.Row="4" Margin="25,184,390,44"/>
+
+        <TextBlock Grid.Column="2" 
+                   HorizontalAlignment="Left" 
+                   Margin="65,210,0,0" 
+                   Grid.Row="4" 
+                   TextWrapping="Wrap" 
+                   Text="Arms" 
+                   VerticalAlignment="Top"
+                   FontSize="20"
+                   FontWeight="Bold"/>
+
+
+        <Separator Grid.Column="2" Margin="30,127,0,415" Grid.Row="4" BorderThickness="11" BorderBrush="Black"/>
+        <TextBlock Grid.Column="2" 
+                   HorizontalAlignment="Left" 
+                   Margin="90,248,0,0" 
+                   Grid.Row="4" 
+                   TextWrapping="Wrap" 
+                   Text="Bicep Curls"
+                   FontSize="18"
+                   FontWeight="Medium"
+                   VerticalAlignment="Top"/>
+
+        <Separator Grid.Column="2" Margin="30,151,0,360" Grid.Row="4" BorderThickness="11" BorderBrush="Black"/>
+        <TextBlock Grid.Column="2" 
+                   HorizontalAlignment="Left" 
+                   Margin="90,289,0,0" 
+                   Grid.Row="4" 
+                   TextWrapping="Wrap" 
+                   Text="Hammer Curls" 
+                   FontSize="18"
+                   FontWeight="Medium"
+                   VerticalAlignment="Top"/>
+
+        <Separator Grid.Column="2" Margin="30,180,0,304" Grid.Row="4" BorderThickness="11" BorderBrush="Black"/>
+        <TextBlock Grid.Column="2" 
+                   HorizontalAlignment="Left" 
+                   Margin="90,330,0,0"
+                   Grid.Row="4" 
+                   TextWrapping="Wrap" 
+                   Text="Bicep Pull Downs"
+                   FontSize="18"
+                   FontWeight="Medium"
+                   VerticalAlignment="Top"/>
+
+        <Separator Grid.Column="2" Margin="30,194,0,236" Grid.Row="4" BorderThickness="11" BorderBrush="Black"/>
+
+
+
+
+
     </Grid>
 </Page>

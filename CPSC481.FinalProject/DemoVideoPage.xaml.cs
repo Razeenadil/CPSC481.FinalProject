@@ -20,9 +20,34 @@ namespace CPSC481.FinalProject
     /// </summary>
     public partial class DemoVideoPage : Page
     {
+        private bool navigationIsClicked;
+
         public DemoVideoPage()
         {
             InitializeComponent();
+            navigationIsClicked = false;
+
+        }
+
+        private void NavigationButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (!navigationIsClicked)
+            {
+                InfoButton.Visibility = Visibility.Visible;
+                DemoButton.Visibility = Visibility.Visible;
+                ProgressButton.Visibility = Visibility.Visible;
+                RoutineButton.Visibility = Visibility.Visible;
+                navigationIsClicked = true;
+            }
+            else
+            {
+                InfoButton.Visibility = Visibility.Hidden;
+                DemoButton.Visibility = Visibility.Hidden;
+                ProgressButton.Visibility = Visibility.Hidden;
+                RoutineButton.Visibility = Visibility.Hidden;
+                navigationIsClicked = false;
+            }
+
         }
     }
 }

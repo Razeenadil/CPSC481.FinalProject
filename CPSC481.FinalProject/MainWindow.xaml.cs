@@ -334,5 +334,11 @@ namespace CPSC481.FinalProject
             SetSelection();
 
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            DemoVideoPage demo = new();
+            this.Content = demo;
+        }
     }
 }

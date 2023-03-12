@@ -371,7 +371,10 @@
                         FontWeight="Medium"
                         Grid.Column="2"
                         BorderBrush="Transparent"
-                        Foreground="White" Margin="130,649,147,30" Grid.Row="4">
+                        Foreground="White" 
+                        Margin="130,649,147,30" 
+                        Grid.Row="4"
+                        Click="Button_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>
