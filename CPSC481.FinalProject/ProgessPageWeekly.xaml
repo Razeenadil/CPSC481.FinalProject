@@ -107,6 +107,25 @@
         </DataGrid>
         <Image HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Source="/Images/HeaderNavIcons/left-arrow.png" Margin="17,0,0,0" RenderTransformOrigin="0.539,0.546"/>
 
-        
+        <Button x:Name="NavigationButton"
+                Grid.Row="4" 
+                Grid.Column="2" 
+                Width="100" 
+                Height="100" 
+                Margin="350,10,-65,-56" 
+                Grid.ColumnSpan="2" 
+                Grid.RowSpan="2"
+                Cursor="Hand"
+                Click="NavigationButton_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Fill="Aqua"/>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
     </Grid>
 </Page>
