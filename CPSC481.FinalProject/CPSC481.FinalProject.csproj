@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\BodyPartSelector\BodyView1.jpg" />
+    <None Remove="Images\BodyPartSelector\BodyView2.jpg" />
+    <None Remove="Images\HeaderNavIcons\hamburger.png" />
+    <None Remove="Images\HeaderNavIcons\left-arrow.png" />
     <None Remove="Images\RadialNavigationIcons\DemoIcon.png" />
     <None Remove="Images\RadialNavigationIcons\InformationIcon.png" />
     <None Remove="Images\RadialNavigationIcons\ProgressIcon.png" />
@@ -15,6 +19,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\BodyPartSelector\BodyView2.jpg" />
+    <Resource Include="Images\BodyPartSelector\BodyView1.jpg" />
+    <Resource Include="Images\HeaderNavIcons\hamburger.png" />
+    <Resource Include="Images\HeaderNavIcons\left-arrow.png" />
     <Resource Include="Images\RadialNavigationIcons\DemoIcon.png" />
     <Resource Include="Images\RadialNavigationIcons\InformationIcon.png" />
     <Resource Include="Images\RadialNavigationIcons\ProgressIcon.png" />

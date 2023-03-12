@@ -16,9 +16,9 @@ using System.Windows.Shapes;
 namespace CPSC481.FinalProject
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for BodyPartSelectorPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class BodyPartSelectorPage : Page
     {
         private bool navigationIsClicked;
         private bool armIsClicked;
@@ -27,7 +27,7 @@ namespace CPSC481.FinalProject
         private bool chestIsClicked;
         private bool backIsClicked;
 
-        public MainWindow()
+        public BodyPartSelectorPage()
         {
             InitializeComponent();
             navigationIsClicked = false;
@@ -61,7 +61,7 @@ namespace CPSC481.FinalProject
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            if(!backIsClicked)
+            if (!backIsClicked)
             {
                 Back.Opacity = 0.29;
                 backIsClicked = true;
@@ -146,7 +146,7 @@ namespace CPSC481.FinalProject
             if (!absIsClicked)
             {
                 Abs.Opacity = 0.29;
-                absIsClicked = true;    
+                absIsClicked = true;
             }
             else
             {
@@ -157,7 +157,7 @@ namespace CPSC481.FinalProject
 
         private void Chest_Click(object sender, RoutedEventArgs e)
         {
-            if(!chestIsClicked)
+            if (!chestIsClicked)
             {
                 Chest.Opacity = 0.29;
                 chestIsClicked = true;
@@ -171,7 +171,7 @@ namespace CPSC481.FinalProject
 
         private void NextButton_Click(object sender, RoutedEventArgs e)
         {
-            if(!BackButton.IsEnabled && NextButton.IsEnabled)
+            if (!BackButton.IsEnabled && NextButton.IsEnabled)
             {
                 ImageHolder.Source = new BitmapImage(new Uri(@"Images/BodyPartSelector/BodyView2.jpg", UriKind.Relative));
                 BackButton.IsEnabled = true;
@@ -197,7 +197,7 @@ namespace CPSC481.FinalProject
                 //set the back body parts to enables 
                 Back.IsEnabled = true;
 
-                if(backIsClicked)
+                if (backIsClicked)
                 {
                     Back.Opacity = 0.29;
                 }
@@ -208,12 +208,12 @@ namespace CPSC481.FinalProject
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            if(!NextButton.IsEnabled && BackButton.IsEnabled)
+            if (!NextButton.IsEnabled && BackButton.IsEnabled)
             {
                 ImageHolder.Source = new BitmapImage(new Uri(@"Images/BodyPartSelector/BodyView1.jpg", UriKind.Relative));
                 NextButton.IsEnabled = true;
                 BackButton.IsEnabled = false;
-                NextButton.Opacity = 1; 
+                NextButton.Opacity = 1;
                 BackButton.Opacity = 0.365;
 
 
@@ -230,7 +230,7 @@ namespace CPSC481.FinalProject
                 Abs.IsEnabled = true;
                 Chest.IsEnabled = true;
 
-                if(armIsClicked)
+                if (armIsClicked)
                 {
                     RightArm.Opacity = 0.29;
                     LeftArm.Opacity = 0.29;
@@ -254,6 +254,5 @@ namespace CPSC481.FinalProject
             }
         }
 
-   
     }
 }
