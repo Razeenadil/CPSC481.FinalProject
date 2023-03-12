@@ -40,7 +40,7 @@
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Grid>
-                        <Ellipse Fill="Aqua"/>
+                        <Ellipse Fill="ForestGreen"/>
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Grid>
                 </ControlTemplate>
@@ -142,9 +142,9 @@
 
 
         <Label Grid.Column="2" Content="Body Part Selector" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Top" FontSize="24" Margin="0,12,0,0" FontWeight="Bold"/>
-        <Separator Grid.Column="2" Margin="0,55,10,0" Grid.Row="4" VerticalAlignment="Top" BorderBrush="Black" BorderThickness="25"/>
+        <Separator Grid.Column="2" Margin="0,55,10,0" Grid.Row="4" VerticalAlignment="Top"/>
         <Image Grid.Column="2" HorizontalAlignment="Left" Height="40" Grid.Row="4" VerticalAlignment="Top" Width="40" Source="/Images/HeaderNavIcons/left-arrow.png" Margin="10,15,0,0"/>
-
+        <Image Grid.Column="2" HorizontalAlignment="Right" Height="44" Margin="0,12,10,0" Grid.Row="4" VerticalAlignment="Top" Width="46" Source="/Images/RadialNavigationIcons/DemoIcon.png"/>
 
 
         <Border 
@@ -400,7 +400,7 @@
                    VerticalAlignment="Top" 
                    FontSize="20"
                    FontWeight="Bold"/>
-        <Separator Grid.Column="2" Margin="0,551,10,0" Grid.Row="4" VerticalAlignment="Top" BorderBrush="Black" BorderThickness="25"/>
+        <Separator Grid.Column="2" Margin="0,551,10,0" Grid.Row="4" VerticalAlignment="Top" />
         <TextBlock Grid.Column="2" 
                    HorizontalAlignment="Left" 
                    Margin="30,560,0,0"
