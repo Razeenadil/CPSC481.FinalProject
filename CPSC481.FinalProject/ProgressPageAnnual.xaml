@@ -289,6 +289,23 @@
         <Ellipse Fill="LightGray" Height="10" Margin="52,580,319,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Grid.Column="1"/>
         <Ellipse Fill="Red" Height="10" Margin="11,580,360,0" Grid.Row="1" Stroke="Red" VerticalAlignment="Top" Grid.Column="1"/>
         <Ellipse Fill="Black" Height="10" Margin="45,570,8,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top"/>
+        <Button x:Name="NavigationButton"
+                Grid.Row="2" 
+                Grid.Column="1" 
+                Width="100" 
+                Height="100" 
+                Margin="329,50,-43,-50"
+                Cursor="Hand"
+                Click="NavigationButton_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Fill="Aqua"/>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
 
     </Grid>
 </Page>
