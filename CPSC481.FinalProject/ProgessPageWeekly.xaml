@@ -9,122 +9,102 @@
       Title="ProgessPageWeekly"
       Background="White">
 
-    <Border CornerRadius="25"
-            BorderThickness="3"
-            Opacity="1">
-        <Border.BorderBrush>
-            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                <GradientStop Color="#000000" Offset="0"/>
-                <GradientStop Color="#B2C4D4" Offset="0.5"/>
-                <GradientStop Color="#000000" Offset="1"/>
-            </LinearGradientBrush>
-        </Border.BorderBrush>
-
-        <Border.Background>
-            <LinearGradientBrush StartPoint="0.25,0.75" EndPoint="1,0.25">
-                <GradientStop Color="#FFFFFF" Offset="0"/>
-                <GradientStop Color="#FFFFFF" Offset="0.5"/>
-                <GradientStop Color="#FFFFFF" Offset="1"/>
-            </LinearGradientBrush>
-        </Border.Background>
-
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="650"/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <StackPanel Orientation="Horizontal">
-                <Button Height="50" Width="50" Background="Transparent" BorderBrush="Transparent">Back</Button>
-                <TextBlock Margin="0"
-                           Width="350"
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="650"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Margin="0"
+                           Width="448"
                            VerticalAlignment="Center"
                            TextAlignment="Center"
                            FontSize="20"
                            FontWeight="Bold" Text="Progress Overview"/>
-            </StackPanel>
-            <ComboBox  HorizontalContentAlignment="Center" HorizontalAlignment="Center" Height="24" Margin="0,268,0,0" Grid.Row="1" VerticalAlignment="Top" Width="166">
-                <ComboBoxItem IsSelected="True">Weekly</ComboBoxItem>
-                <ComboBoxItem>Monthly</ComboBoxItem>
-                <ComboBoxItem>Annually</ComboBoxItem>
-            </ComboBox>
-            <ProgressBar Maximum="7" Minimum="0" Value="5" HorizontalAlignment="Center" Height="24" Grid.Row="1" VerticalAlignment="Center" Width="216"/>
-            <TextBlock FontSize="13" HorizontalAlignment="Left" Margin="46,315,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Height="36" Text="Completed"/>
-            <TextBlock  FontStyle="Oblique" HorizontalAlignment="Center" Height="18" Grid.Row="1" TextWrapping="Wrap" Text="5/7" VerticalAlignment="Center" Width="24" RenderTransformOrigin="1.49,-5.235"/>
-            <Slider HorizontalAlignment="Center" Height="37" Grid.Row="2" VerticalAlignment="Top" Width="103" RenderTransformOrigin="0.488,2.609" Margin="0,10,0,0"/>
-            <Rectangle HorizontalAlignment="Center" Height="204" Margin="0,30,0,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="298"/>
-            <ProgressBar BorderBrush="White"  Maximum="60" Minimum="0" Value="60" Background="White"  HorizontalAlignment="Left" Height="24" Margin="-10,120,0,0" Grid.Row="1" VerticalAlignment="Top" Width="200" RenderTransformOrigin="0.5,0.5">
-                <ProgressBar.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="-90.00"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </ProgressBar.RenderTransform>
-            </ProgressBar>
-            <TextBlock FontSize ="11" HorizontalAlignment="Left" Height="14" Margin="86,234,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" Text="S&#x9;M&#x9;T&#x9;W&#x9;Th&#x9;F&#x9;S"/>
-            <TextBlock HorizontalAlignment="Left" Margin="35,30,0,0" Grid.Row="1" TextWrapping="Wrap" Text="60min" VerticalAlignment="Top"/>
-            <ProgressBar BorderBrush="White" Maximum="60" Minimum="0" Value="60" Background="White"  HorizontalAlignment="Left" Height="24" Margin="76,120,0,0" Grid.Row="1" VerticalAlignment="Top" Width="200" RenderTransformOrigin="0.5,0.5">
-                <ProgressBar.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="-90.00"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </ProgressBar.RenderTransform>
-            </ProgressBar>
-            <ProgressBar BorderBrush="White" Maximum="60" Minimum="0" Value="40" Background="White"  HorizontalAlignment="Left" Height="24" Margin="36,120,0,0" Grid.Row="1" VerticalAlignment="Top" Width="200" RenderTransformOrigin="0.5,0.5">
-                <ProgressBar.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="-90.00"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </ProgressBar.RenderTransform>
-            </ProgressBar>
-            <TextBlock HorizontalAlignment="Left" Margin="41,218,0,0" Grid.Row="1" TextWrapping="Wrap" Text="0min" VerticalAlignment="Top"/>
-            <ProgressBar BorderBrush="White" Maximum="60" Minimum="0" Value="50" Background="White"  HorizontalAlignment="Left" Height="24" Margin="170,120,0,0" Grid.Row="1" VerticalAlignment="Top" Width="200" RenderTransformOrigin="0.5,0.5">
-                <ProgressBar.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="-90.00"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </ProgressBar.RenderTransform>
-            </ProgressBar>
-            <ProgressBar BorderBrush="White" Maximum="60" Minimum="0" Value="60" Background="White"  HorizontalAlignment="Left" Height="24" Margin="211,120,0,0" Grid.Row="1" VerticalAlignment="Top" Width="200" RenderTransformOrigin="0.5,0.5">
-                <ProgressBar.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="-90.00"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </ProgressBar.RenderTransform>
-            </ProgressBar>
-            <TextBlock HorizontalAlignment="Left" Margin="41,116,0,0" Grid.Row="1" TextWrapping="Wrap" Text="30min" VerticalAlignment="Top"/>
-            <DataGrid 
-                HorizontalAlignment="Left" 
+        </StackPanel>
+        <ComboBox  HorizontalContentAlignment="Center" HorizontalAlignment="Center" Height="24" Margin="0,268,0,0" Grid.Row="1" VerticalAlignment="Top" Width="166">
+            <ComboBoxItem IsSelected="True">Weekly</ComboBoxItem>
+            <ComboBoxItem>Monthly</ComboBoxItem>
+            <ComboBoxItem>Annually</ComboBoxItem>
+        </ComboBox>
+        <ProgressBar Maximum="7" Minimum="0" Value="5" HorizontalAlignment="Center" Height="24" Grid.Row="1" VerticalAlignment="Center" Width="216"/>
+        <TextBlock FontSize="13" HorizontalAlignment="Left" Margin="46,315,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Height="36" Text="Completed"/>
+        <TextBlock  FontStyle="Oblique" HorizontalAlignment="Center" Height="18" Grid.Row="1" TextWrapping="Wrap" Text="5/7" VerticalAlignment="Center" Width="24" RenderTransformOrigin="1.49,-5.235"/>
+        <Slider HorizontalAlignment="Center" Height="37" Grid.Row="2" VerticalAlignment="Top" Width="103" RenderTransformOrigin="0.488,2.609" Margin="0,10,0,0"/>
+        <Rectangle HorizontalAlignment="Center" Height="204" Margin="0,30,0,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="298"/>
+        <ProgressBar BorderBrush="White"  Maximum="60" Minimum="0" Value="60" Background="White"  HorizontalAlignment="Left" Height="24" Margin="-10,120,0,0" Grid.Row="1" VerticalAlignment="Top" Width="200" RenderTransformOrigin="0.5,0.5">
+            <ProgressBar.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.00"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ProgressBar.RenderTransform>
+        </ProgressBar>
+        <TextBlock FontSize ="11" HorizontalAlignment="Left" Height="14" Margin="86,234,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" Text="S&#x9;M&#x9;T&#x9;W&#x9;Th&#x9;F&#x9;S"/>
+        <TextBlock HorizontalAlignment="Left" Margin="35,30,0,0" Grid.Row="1" TextWrapping="Wrap" Text="60min" VerticalAlignment="Top"/>
+        <ProgressBar BorderBrush="White" Maximum="60" Minimum="0" Value="60" Background="White"  HorizontalAlignment="Left" Height="24" Margin="76,120,0,0" Grid.Row="1" VerticalAlignment="Top" Width="200" RenderTransformOrigin="0.5,0.5">
+            <ProgressBar.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.00"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ProgressBar.RenderTransform>
+        </ProgressBar>
+        <ProgressBar BorderBrush="White" Maximum="60" Minimum="0" Value="40" Background="White"  HorizontalAlignment="Left" Height="24" Margin="36,120,0,0" Grid.Row="1" VerticalAlignment="Top" Width="200" RenderTransformOrigin="0.5,0.5">
+            <ProgressBar.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.00"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ProgressBar.RenderTransform>
+        </ProgressBar>
+        <TextBlock HorizontalAlignment="Left" Margin="41,218,0,0" Grid.Row="1" TextWrapping="Wrap" Text="0min" VerticalAlignment="Top"/>
+        <ProgressBar BorderBrush="White" Maximum="60" Minimum="0" Value="50" Background="White"  HorizontalAlignment="Left" Height="24" Margin="170,120,0,0" Grid.Row="1" VerticalAlignment="Top" Width="200" RenderTransformOrigin="0.5,0.5">
+            <ProgressBar.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.00"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ProgressBar.RenderTransform>
+        </ProgressBar>
+        <ProgressBar BorderBrush="White" Maximum="60" Minimum="0" Value="60" Background="White"  HorizontalAlignment="Left" Height="24" Margin="211,120,0,0" Grid.Row="1" VerticalAlignment="Top" Width="200" RenderTransformOrigin="0.5,0.5">
+            <ProgressBar.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.00"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ProgressBar.RenderTransform>
+        </ProgressBar>
+        <TextBlock HorizontalAlignment="Left" Margin="41,116,0,0" Grid.Row="1" TextWrapping="Wrap" Text="30min" VerticalAlignment="Top"/>
+        <DataGrid 
+                HorizontalAlignment="Center" 
                 Height="188" 
-                Margin="35,376,0,0" 
+                Margin="0,393,0,0" 
                 Grid.Row="1" 
                 VerticalAlignment="Top" 
-                Width="358" 
+                Width="380" 
                 d:ItemsSource="{d:SampleData ItemCount=7}">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Days"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Exercise Name"></DataGridTextColumn>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Date"></DataGridTextColumn>
+                <DataGridTextColumn Header="Routine Name"></DataGridTextColumn>
+                <DataGridTextColumn Header="Exercise #1"></DataGridTextColumn>
+                <DataGridTextColumn Header="Weight/Rep"></DataGridTextColumn>
+                <DataGridTextColumn Header="Exercise #2"></DataGridTextColumn>
+                <DataGridTextColumn Header="Exercise #2"></DataGridTextColumn>
 
-                </DataGrid.Columns>
-            </DataGrid>
+            </DataGrid.Columns>
+        </DataGrid>
 
-
-
-
-        </Grid>
-    </Border>
+    </Grid>
 </Page>
