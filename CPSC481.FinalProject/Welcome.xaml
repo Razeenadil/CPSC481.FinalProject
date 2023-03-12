@@ -5,11 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CPSC481.FinalProject"
         mc:Ignorable="d"
-        Title="Welcome" Height="800" Width="450" Background="white">
+        Title="Welcome" Height="800" Width="450" Background="White">
     <Grid>
-        <Image Height="NaN" Margin="36,88,36,303" Source="/Images/Green Bold Bull Fitness Center Logo.png" Stretch="Fill" Width="NaN"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="15"/>
+        </Grid.ColumnDefinitions>
 
-        <Button Margin="54,520,54,226"
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="15"/>
+        </Grid.RowDefinitions>
+
+        <Button 
+                        Grid.Row="4" 
+                        Grid.Column="2" 
+                        Margin="54,443,54,272"
                         FontSize="20"
                         FontWeight="Medium"
                         BorderBrush="Transparent"
@@ -29,7 +46,10 @@
             Login
         </Button>
 
-        <Button Margin="54,612,54,134"
+        <Button 
+                        Grid.Row="4" 
+                        Grid.Column="2" 
+                        Margin="54,535,54,178"
                         FontSize="20"
                         FontWeight="Medium"
                         BorderBrush="Transparent"
@@ -48,6 +68,12 @@
             </Button.Background>
             Continue As Guest
         </Button>
-        <Image Margin="27,58,27,371" Source="/Images/logo.png" Stretch="Fill"/>
+        <Image  
+                Grid.Row="4" 
+                Grid.Column="2"  
+                Margin="27,52,27,377" 
+                Source="/Images/Logo/logo.png" 
+                Stretch="Fill"/>
+
     </Grid>
 </Window>

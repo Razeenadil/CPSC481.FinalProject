@@ -5,17 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CPSC481.FinalProject"
         mc:Ignorable="d"
-        Title="Registeration" Height="800" Width="450" Background="Black">
+        Title="Registeration" Height="800" Width="450" Background="White">
     <Grid>
-        <TextBox TextWrapping="Wrap" Text="Enter your preferred username" Margin="71,270,65,461"  FontSize="22" Foreground="#7F000000"/>
+        <TextBox TextWrapping="Wrap" Text=" Enter your username" Margin="73,171,63,560"  FontSize="24" Foreground="DarkGray"  BorderThickness="2" BorderBrush="Black"/>
         <TextBlock Text="Username"
-            Foreground="White"
+            Foreground="Black"
             FontSize="20"
             FontWeight="Medium"
             HorizontalAlignment="Left"
-            Margin="71,230,0,519" RenderTransformOrigin="1.131,0.421"/>
+            Margin="73,131,0,618" RenderTransformOrigin="1.131,0.421"/>
         <Button Background="Transparent" BorderBrush="White" Foreground="White" Margin="0,0,404,741"  Content="Back" Click="Button_Click"  />
-        <Button Margin="259,631,31,118"
+        <Button Margin="261,536,29,213"
             FontSize="20"
             FontWeight="Medium"
             BorderBrush="Transparent"
@@ -34,43 +34,45 @@
             </Button.Background>
         </Button>
         <TextBlock Text="Agree with"
-            Foreground="White"
+            Foreground="Black"
             FontStyle="Normal"
             FontSize="20"
             FontWeight="Medium"
             HorizontalAlignment="Left"
-            Margin="34,572,0,177"/>
+            Margin="36,473,0,276"/>
 
         <TextBlock Text="Terms and Conditions"
-            Foreground="LightBlue"
+            Foreground="DarkBlue"
             FontStyle="Normal"
             FontSize="20"
             FontWeight="Medium"
             HorizontalAlignment="Left"
-            Margin="141,572,0,177" RenderTransformOrigin="0.884,-0.757"/>
-        <Button Background="Transparent" BorderBrush="White" Foreground="White" Margin="350,574,65,183"  Content="" Click="Button_Click"  />
-        <Image Margin="44,76,16,590" Source="/Images/registration.png" Stretch="Fill"/>
-        <TextBox TextWrapping="Wrap" Text="Enter your e-mail address" Margin="71,385,65,346"  FontSize="24" Foreground="#7F000000"/>
-        <TextBox TextWrapping="Wrap" Text="Enter your password" Margin="71,495,65,236"  FontSize="24" Foreground="#7F000000"/>
+            Margin="143,473,0,276" RenderTransformOrigin="0.884,-0.757"/>
+        <Button Background="Transparent"  Foreground="Black" Margin="352,475,63,282"  Content="" Click="Button_Click"  BorderThickness="2" BorderBrush="Black"  />
+        <TextBox TextWrapping="Wrap" Text=" Enter your e-mail address" Margin="73,286,63,445"  FontSize="24" Foreground="DarkGray"  BorderThickness="2" BorderBrush="Black"/>
         <TextBlock Text="Email Address"
-            Foreground="White"
+            Foreground="Black"
             FontSize="20"
             FontWeight="Medium"
             HorizontalAlignment="Left"
-            Margin="71,346,0,404"/>
+            Margin="73,247,0,503"/>
+        <TextBox TextWrapping="Wrap" Text=" Enter your password" Margin="73,396,63,335"  FontSize="24" Foreground="DarkGray"  BorderThickness="2" BorderBrush="Black"/>
         <TextBlock Text="Password"
-            Foreground="White"
+            Foreground="Black"
             FontSize="20"
             FontWeight="Medium"
             HorizontalAlignment="Left"
-            Margin="71,461,0,289"/>
+            Margin="73,362,0,388"/>
         <TextBlock Text="I already have an account"
-            Foreground="White"
+            Foreground="Black"
             FontSize="20"
             FontWeight="Medium"
             TextDecorations="Underline"
             HorizontalAlignment="Left"
-            Margin="71,715,0,34"/>
+            Margin="115,613,0,136"/>
 
+        <Label Grid.Column="2" Content="Create an account" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Top" FontSize="24" Margin="0,12,0,0" FontWeight="Bold"/>
+        <Separator Margin="0,43,0,667"  BorderBrush="Black" BorderThickness="4" />
+        <Image Grid.Column="2" HorizontalAlignment="Left" Height="40" Grid.Row="4" VerticalAlignment="Top" Width="40" Source="/Images/HeaderNavIcons/left-arrow.png" Margin="10,15,0,0"/>
     </Grid>
 </Window>

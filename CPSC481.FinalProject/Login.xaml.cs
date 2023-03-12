@@ -15,16 +15,16 @@ using System.Windows.Shapes;
 namespace CPSC481.FinalProject
 {
     /// <summary>
-    /// Interaction logic for LoginPage.xaml
+    /// Interaction logic for Login.xaml
     /// </summary>
-    public partial class LoginPage : Window
+    public partial class Login : Window
     {
-        public LoginPage()
+        public Login()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
