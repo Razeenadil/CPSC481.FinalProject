@@ -69,22 +69,12 @@
             Text="Dont have an account?"
              Grid.Row="4" 
             Grid.Column="2"
-            Foreground="Black"
+            Foreground="DarkBlue"
             FontSize="20"
-            FontWeight="Medium"
-            HorizontalAlignment="Left"
-            Margin="6,608,0,105"/>
-        <TextBlock 
-            Grid.Row="4" 
-            Grid.Column="2"
-            Text="Create an account"
-            Foreground="DarkBlue" 
-            FontStyle="Italic"
             TextDecorations="Underline"
-            FontSize="20"
             FontWeight="Medium"
-            HorizontalAlignment="Left"
-            Margin="231,608,0,107"/>
+            HorizontalAlignment="Center"
+            Margin="0,598,0,115"/>
 
         <TextBlock 
             Grid.Row="4" 

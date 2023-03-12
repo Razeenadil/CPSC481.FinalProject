@@ -7,15 +7,37 @@
         mc:Ignorable="d"
         Title="Registeration" Height="800" Width="450" Background="White">
     <Grid>
-        <TextBox TextWrapping="Wrap" Text=" Enter your username" Margin="73,171,63,560"  FontSize="24" Foreground="DarkGray"  BorderThickness="2" BorderBrush="Black"/>
-        <TextBlock Text="Username"
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="15"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="15"/>
+        </Grid.RowDefinitions>
+
+        <TextBox Grid.Row="4" Grid.Column="2" TextWrapping="Wrap" Text=" Enter your username" Margin="73,176,63,539"  FontSize="24" Foreground="DarkGray"  BorderThickness="2" BorderBrush="Black"/>
+        <TextBlock 
+            Grid.Row="4" 
+            Grid.Column="2"
+            Text="Username"
             Foreground="Black"
             FontSize="20"
             FontWeight="Medium"
             HorizontalAlignment="Left"
-            Margin="73,131,0,618" RenderTransformOrigin="1.131,0.421"/>
+            Margin="73,128,0,598" RenderTransformOrigin="1.131,0.421"/>
         <Button Background="Transparent" BorderBrush="White" Foreground="White" Margin="0,0,404,741"  Content="Back" Click="Button_Click"  />
-        <Button Margin="261,536,29,213"
+        <Button 
+            Grid.Row="4" 
+            Grid.Column="2"
+            Margin="257,520,33,198"
             FontSize="20"
             FontWeight="Medium"
             BorderBrush="Transparent"
@@ -33,46 +55,65 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <TextBlock Text="Agree with"
+        <TextBlock 
+            Grid.Row="4" 
+            Grid.Column="2"
+            Text="Agree with"
             Foreground="Black"
             FontStyle="Normal"
             FontSize="20"
             FontWeight="Medium"
             HorizontalAlignment="Left"
-            Margin="36,473,0,276"/>
+            Margin="33,463,0,286"/>
 
-        <TextBlock Text="Terms and Conditions"
+        <Button 
+            Grid.Row="4" 
+            Grid.Column="2"
+            Background="Transparent" BorderBrush="Black" Foreground="White" Margin="277,469,123,265"  Content="Back" Click="Button_Click" RenderTransformOrigin="1.286,0.468"  />
+        <TextBlock 
+            Grid.Row="4" 
+            Grid.Column="2"
+            Text="Terms and Conditions"
             Foreground="DarkBlue"
             FontStyle="Normal"
             FontSize="20"
             FontWeight="Medium"
             HorizontalAlignment="Left"
-            Margin="143,473,0,276" RenderTransformOrigin="0.884,-0.757"/>
-        <Button Background="Transparent"  Foreground="Black" Margin="352,475,63,282"  Content="" Click="Button_Click"  BorderThickness="2" BorderBrush="Black"  />
-        <TextBox TextWrapping="Wrap" Text=" Enter your e-mail address" Margin="73,286,63,445"  FontSize="24" Foreground="DarkGray"  BorderThickness="2" BorderBrush="Black"/>
-        <TextBlock Text="Email Address"
+            Margin="70,463,0,255" RenderTransformOrigin="0.884,-0.757" Width="202"/>
+
+        <TextBox Grid.Row="4" Grid.Column="2" TextWrapping="Wrap" Text=" Enter your e-mail address" Margin="73,286,63,432"  FontSize="24" Foreground="DarkGray"  BorderThickness="2" BorderBrush="Black"/>
+        <TextBlock 
+            Text="Email Address"
+            Grid.Row="4" 
+            Grid.Column="2"
             Foreground="Black"
             FontSize="20"
             FontWeight="Medium"
             HorizontalAlignment="Left"
-            Margin="73,247,0,503"/>
-        <TextBox TextWrapping="Wrap" Text=" Enter your password" Margin="73,396,63,335"  FontSize="24" Foreground="DarkGray"  BorderThickness="2" BorderBrush="Black"/>
-        <TextBlock Text="Password"
+            Margin="73,247,0,479"/>
+        <TextBox Grid.Row="4" Grid.Column="2" TextWrapping="Wrap" Text=" Enter your password" Margin="73,392,63,323"  FontSize="24" Foreground="DarkGray"  BorderThickness="2" BorderBrush="Black"/>
+        <TextBlock 
+            Text="Password"
+            Grid.Row="4" 
+            Grid.Column="2"
             Foreground="Black"
             FontSize="20"
             FontWeight="Medium"
             HorizontalAlignment="Left"
-            Margin="73,362,0,388"/>
-        <TextBlock Text="I already have an account"
+            Margin="73,358,0,362"/>
+        <TextBlock 
+            Text="I already have an account"
+            Grid.Row="4" 
+            Grid.Column="2"
             Foreground="Black"
             FontSize="20"
             FontWeight="Medium"
             TextDecorations="Underline"
-            HorizontalAlignment="Left"
-            Margin="115,613,0,136"/>
+            HorizontalAlignment="Center"
+            Margin="0,626,0,103"/>
 
         <Label Grid.Column="2" Content="Create an account" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Top" FontSize="24" Margin="0,12,0,0" FontWeight="Bold"/>
-        <Separator Margin="0,43,0,667"  BorderBrush="Black" BorderThickness="4" />
+        <Separator Grid.Column="2" Margin="0,50,0,660" Grid.Row="4" BorderBrush="Black" BorderThickness="4"/>
         <Image Grid.Column="2" HorizontalAlignment="Left" Height="40" Grid.Row="4" VerticalAlignment="Top" Width="40" Source="/Images/HeaderNavIcons/left-arrow.png" Margin="10,15,0,0"/>
     </Grid>
 </Window>
