@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CPSC481.FinalProject"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="450">
+        Title="MainWindow" Height="800" Width="450"
+        WindowStyle="None">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="15"/>
@@ -36,7 +37,7 @@
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Grid>
-                        <Ellipse Fill="Aqua"/>
+                        <Ellipse Fill="ForestGreen"/>
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Grid>
                 </ControlTemplate>
@@ -136,6 +137,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
+        <Button Grid.Column="2" Content="Open Occurence" HorizontalAlignment="Left" Margin="200,79,0,0" Grid.Row="4" VerticalAlignment="Top" Height="63" Width="100" Click="OpenOccurence"/>
 
 
     </Grid>

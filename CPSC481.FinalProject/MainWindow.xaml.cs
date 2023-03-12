@@ -47,5 +47,11 @@ namespace CPSC481.FinalProject
             }
         
         }
+
+        private void OpenOccurence(object sender, RoutedEventArgs e)
+        {
+            RoutineOccurence routineOccurence= new RoutineOccurence();
+            this.Content = routineOccurence;
+        }
     }
 }

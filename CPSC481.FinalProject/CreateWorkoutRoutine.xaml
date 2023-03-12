@@ -30,15 +30,15 @@
                 Grid.Column="2" 
                 Width="100" 
                 Height="100" 
-                Margin="350,700,-65,-56" 
+                Margin="385,735,-50,-50" 
                 Grid.ColumnSpan="2" 
                 Grid.RowSpan="2"
                 Cursor="Hand"
-                Click="NavigationButton_Click">
+                >
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Grid>
-                        <Ellipse Fill="Aqua"/>
+                        <Ellipse Fill="ForestGreen"/>
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Grid>
                 </ControlTemplate>
@@ -139,24 +139,24 @@
             </Button.Template>
         </Button>
         <Label Grid.Column="2" Content="Create Routine" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Top" FontSize="24" Margin="0,12,0,0" FontWeight="Bold"/>
-        <Separator Grid.Column="2" Margin="0,140,0,570" Grid.Row="4"/>
-        <Label Content="Choose Date/Time" HorizontalAlignment="Left" Margin="10,100,0,0" Grid.Row="4" VerticalAlignment="Top" Grid.Column="2" FontSize="16"/>
-        <Label Grid.Column="2" Content="Choose Occurrence" HorizontalAlignment="Left" Margin="10,200,0,0" Grid.Row="4" VerticalAlignment="Top" RenderTransformOrigin="-0.126,0.502" FontSize="16"/>
-        <Label Grid.Column="2" Content="Choose Body Part" HorizontalAlignment="Left" Margin="10,300,0,0" Grid.Row="4" VerticalAlignment="Top" RenderTransformOrigin="-0.126,0.502" FontSize="16"/>
+        <Separator Margin="0,240,0,470" Grid.Row="4" Grid.Column="2"/>
+        <Label Content="Choose Date/Time" HorizontalAlignment="Left" Margin="10,200,0,0" Grid.Row="4" VerticalAlignment="Top" Grid.Column="2" FontSize="16"/>
+        <Label Grid.Column="2" Content="Choose Occurrence" HorizontalAlignment="Left" Margin="10,300,0,0" Grid.Row="4" VerticalAlignment="Top" RenderTransformOrigin="-0.126,0.502" FontSize="16"/>
+        <Label Grid.Column="2" Content="Choose Body Part" HorizontalAlignment="Left" Margin="10,400,0,0" Grid.Row="4" VerticalAlignment="Top" RenderTransformOrigin="-0.126,0.502" FontSize="16"/>
         <Image Grid.Column="2" HorizontalAlignment="Left" Height="40" Grid.Row="4" VerticalAlignment="Top" Width="40" Source="/Images/HeaderNavIcons/left-arrow.png" Margin="10,15,0,0"/>
         <Image Grid.Column="2" HorizontalAlignment="Right" Height="44" Margin="0,15,10,0" Grid.Row="4" VerticalAlignment="Top" Width="46" Source="/Images/RadialNavigationIcons/RoutineIcon.png"/>
-        <Separator Grid.Column="2" Margin="0,240,0,470" Grid.Row="4"/>
-        <Separator Grid.Column="2" Margin="0,340,0,370" Grid.Row="4"/>
-        <Separator Grid.Column="2" Margin="0,40,0,670" Grid.Row="4"/>
-        <Image Grid.Column="2" HorizontalAlignment="Right" Height="40" Margin="0,100,10,0" Grid.Row="4" VerticalAlignment="Top" Width="40" Source="/Images/Icons/calendar.png" RenderTransformOrigin="0.65,0"/>
-        <Image Grid.Column="2" HorizontalAlignment="Right" Height="40" Margin="0,200,10,0" Grid.Row="4" VerticalAlignment="Top" Width="40" Source="/Images/Icons/repeat-button.png" RenderTransformOrigin="0.65,0"/>
-        <Image Grid.Column="2" HorizontalAlignment="Right" Height="40" Margin="0,300,10,0" Grid.Row="4" VerticalAlignment="Top" Width="40" Source="/Images/Icons/muscles.png" RenderTransformOrigin="0.65,0"/>
+        <Separator Margin="0,340,0,370" Grid.Row="4" Grid.Column="2"/>
+        <Separator Margin="0,440,0,270" Grid.Row="4" Grid.Column="2"/>
+        <Separator Margin="0,140,0,570" Grid.Row="4" Grid.Column="2"/>
+        <Image Grid.Column="2" HorizontalAlignment="Right" Height="40" Margin="0,200,10,0" Grid.Row="4" VerticalAlignment="Top" Width="40" Source="/Images/Icons/calendar.png" RenderTransformOrigin="0.65,0"/>
+        <Image Grid.Column="2" HorizontalAlignment="Right" Height="40" Margin="0,300,10,0" Grid.Row="4" VerticalAlignment="Top" Width="40" Source="/Images/Icons/repeat-button.png" RenderTransformOrigin="0.65,0"/>
+        <Image Grid.Column="2" HorizontalAlignment="Right" Height="40" Margin="0,400,10,0" Grid.Row="4" VerticalAlignment="Top" Width="40" Source="/Images/Icons/muscles.png" RenderTransformOrigin="0.65,0"/>
         <Button Height="50"
                         FontSize="20"
                         FontWeight="Medium"
                         Grid.Column="2"
                         BorderBrush="Transparent"
-                        Foreground="White" Margin="163,700,163,20" Grid.Row="4">
+                        Foreground="White" Margin="140,702,140,18" Grid.Row="4">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>
@@ -169,8 +169,11 @@
                     <GradientStop Color="#003622" Offset="1"/>
                 </LinearGradientBrush>
             </Button.Background>
-            Next
+            Add Exercises
         </Button>
+        <Separator Grid.Column="2" Margin="0,40,0,670" Grid.Row="4"/>
+        <Label Content="Enter routine name:" HorizontalAlignment="Left" Margin="10,100,0,0" Grid.Row="4" VerticalAlignment="Top" Grid.Column="2" FontSize="16"/>
+        <TextBox Grid.Column="2" HorizontalAlignment="Right" Margin="0,104,10,0" Grid.Row="4" TextWrapping="Wrap" Text="Routine 1" VerticalAlignment="Top" Width="200" Height="24" TextChanged="TextBox_TextChanged" FontSize="16" Foreground="#7F000000"/>
     </Grid>
 </Page>
 

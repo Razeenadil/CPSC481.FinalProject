@@ -32,15 +32,15 @@
                 Grid.Column="2" 
                 Width="100" 
                 Height="100" 
-                Margin="350,700,-65,-56" 
+                Margin="385,735,-50,-50" 
                 Grid.ColumnSpan="2" 
                 Grid.RowSpan="2"
                 Cursor="Hand"
-                Click="NavigationButton_Click">
+                >
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Grid>
-                        <Ellipse Fill="Aqua"/>
+                        <Ellipse Fill="ForestGreen"/>
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Grid>
                 </ControlTemplate>
@@ -141,7 +141,7 @@
             </Button.Template>
         </Button>
         <Label Grid.Column="2" Content="Choose Occurrence" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Top" FontSize="24" Margin="0,12,0,0" FontWeight="Bold"/>
-        <Image Grid.Column="2" HorizontalAlignment="Left" Height="40" Grid.Row="4" VerticalAlignment="Top" Width="40" Source="/Images/HeaderNavIcons/left-arrow.png" Margin="10,15,0,0"/>
+        <Image Grid.Column="2" HorizontalAlignment="Left" Height="45" Grid.Row="4" VerticalAlignment="Top" Width="45" Source="/Images/HeaderNavIcons/left-arrow.png" Margin="10,15,0,0"/>
         <Image Grid.Column="2" HorizontalAlignment="Right" Height="45" Margin="0,15,10,0" Grid.Row="4" VerticalAlignment="Top" Width="45" Source="/Images/RadialNavigationIcons/RoutineIcon.png"/>
         <Separator Grid.Column="2" Margin="0,40,0,670" Grid.Row="4"/>
         <Label Content="Occurrence" HorizontalAlignment="Center" Margin="0,200,0,0" Grid.Row="4" VerticalAlignment="Top" Grid.Column="2" FontSize="24"/>

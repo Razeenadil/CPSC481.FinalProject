@@ -30,15 +30,15 @@
                 Grid.Column="2" 
                 Width="100" 
                 Height="100" 
-                Margin="350,700,-65,-56" 
+                Margin="385,735,-50,-50" 
                 Grid.ColumnSpan="2" 
                 Grid.RowSpan="2"
                 Cursor="Hand"
-                Click="NavigationButton_Click">
+                >
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Grid>
-                        <Ellipse Fill="Aqua"/>
+                        <Ellipse Fill="ForestGreen"/>
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Grid>
                 </ControlTemplate>

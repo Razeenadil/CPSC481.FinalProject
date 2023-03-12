@@ -10,24 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace CPSC481.FinalProject
 {
     /// <summary>
-    /// Interaction logic for CreateWorkoutRoutine.xaml
+    /// Interaction logic for TempTestWindow.xaml
     /// </summary>
-    public partial class CreateWorkoutRoutine : Page
+    public partial class TempTestWindow : Window
     {
-        public CreateWorkoutRoutine()
+        public TempTestWindow()
         {
             InitializeComponent();
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
         }
     }
 }
