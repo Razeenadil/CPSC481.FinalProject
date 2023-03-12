@@ -104,6 +104,7 @@
                 <DataGridTextColumn Header="Exercise #2"></DataGridTextColumn>
 
             </DataGrid.Columns>
+
         </DataGrid>
         <Image HorizontalAlignment="Left" Height="40" VerticalAlignment="Center" Width="40" Source="/images/HeaderNavIcons/left-arrow.png" Margin="17,0,0,0" RenderTransformOrigin="0.539,0.546"/>
 

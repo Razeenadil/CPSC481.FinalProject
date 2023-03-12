@@ -159,8 +159,8 @@
 
         <Line VerticalAlignment="Bottom" Stroke="Black" X2="{Binding ActualWidth, RelativeSource={RelativeSource Self}}" StrokeDashArray="2 2" StrokeThickness="2" Grid.Row="1" Margin="33,0,32,259" Grid.ColumnSpan="2" />
         <TextBlock HorizontalAlignment="Left" Height="15" Margin="15,381,0,0" Grid.Row="1" TextWrapping="Wrap" Text="0%" VerticalAlignment="Top" Width="54" Grid.ColumnSpan="2"/>
-        <Ellipse Fill="Green" Height="10" Margin="11,370,360,0" Grid.Row="1" Stroke="Green" VerticalAlignment="Top" Grid.Column="1"/>
-        <Ellipse Fill="LightGray" Height="10" Margin="52,370,319,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Grid.Column="1"/>
+        <Ellipse Fill="Green" Width="10" Height="10" Margin="11,370,360,0" Grid.Row="1" Stroke="Green" VerticalAlignment="Top" Grid.Column="1"/>
+        <Ellipse Fill="LightGray"  Width="10"  Height="10" Margin="52,370,319,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Grid.Column="1"/>
 
         <Rectangle RadiusX="10" RadiusY="10" HorizontalAlignment="Left" Height="100" Margin="32,507,0,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="380" Grid.ColumnSpan="2"/>
         <TextBlock FontSize="16" HorizontalAlignment="Left" Height="20" Margin="43,0,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Avg. Rep/Time Interval Increment" VerticalAlignment="Top" Width="244" Grid.Column="1" RenderTransformOrigin="0.489,4.8"/>
@@ -286,8 +286,8 @@
             </TextBlock.RenderTransform>
         </TextBlock>
         <TextBlock HorizontalAlignment="Left" Height="15" Margin="15,567,0,0" Grid.Row="1" TextWrapping="Wrap" Text="0%" VerticalAlignment="Top" Width="54" Grid.ColumnSpan="2"/>
-        <Ellipse Fill="LightGray" Height="10" Margin="52,580,319,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Grid.Column="1"/>
-        <Ellipse Fill="Red" Height="10" Margin="11,580,360,0" Grid.Row="1" Stroke="Red" VerticalAlignment="Top" Grid.Column="1"/>
+        <Ellipse Fill="LightGray" Width="10" Height="10" Margin="52,580,319,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Grid.Column="1"/>
+        <Ellipse Fill="Red" Width="10" Height="10" Margin="11,580,360,0" Grid.Row="1" Stroke="Red" VerticalAlignment="Top" Grid.Column="1"/>
         <Ellipse Fill="Black" Height="10" Margin="45,570,8,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top"/>
         <Button x:Name="NavigationButton"
                 Grid.Row="2" 
