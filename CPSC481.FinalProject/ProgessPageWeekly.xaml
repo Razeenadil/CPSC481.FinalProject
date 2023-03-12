@@ -105,6 +105,8 @@
 
             </DataGrid.Columns>
         </DataGrid>
+        <Image HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Source="/Images/HeaderNavIcons/left-arrow.png" Margin="17,0,0,0" RenderTransformOrigin="0.539,0.546"/>
 
+        
     </Grid>
 </Page>
