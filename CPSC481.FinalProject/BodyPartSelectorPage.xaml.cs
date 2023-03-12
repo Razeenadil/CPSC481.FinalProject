@@ -1,24 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.ComponentModel;
 
 namespace CPSC481.FinalProject
 {
     /// <summary>
     /// Interaction logic for BodyPartSelectorPage.xaml
     /// </summary>
-    public partial class BodyPartSelectorPage : Page
+    public partial class BodyPartSelectorPage : Page, INotifyPropertyChanged
     {
         private bool navigationIsClicked;
         private bool armIsClicked;
@@ -26,6 +17,10 @@ namespace CPSC481.FinalProject
         private bool absIsClicked;
         private bool chestIsClicked;
         private bool backIsClicked;
+        private string _selection;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
 
         public BodyPartSelectorPage()
         {
@@ -36,6 +31,15 @@ namespace CPSC481.FinalProject
             absIsClicked = false;
             chestIsClicked = false;
             backIsClicked = false;
+        }
+
+        protected void OnPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            }
+
         }
 
         private void NavigationButton_Click(object sender, RoutedEventArgs e)
@@ -59,17 +63,63 @@ namespace CPSC481.FinalProject
 
         }
 
+        public string Selection
+        {
+            get { return _selection; }
+            set
+            {
+                if (value != _selection)
+                {
+                    _selection = value;
+                    OnPropertyChanged(nameof(Selection));
+                }
+            }
+        }
+
+        private void SetSelection()
+        {
+            Selection = "";
+            if (armIsClicked)
+            {
+                Selection = "Arms\n";
+            }
+
+            if (legIsClicked)
+            {
+                Selection = Selection + "Legs\n";
+            }
+
+            if (absIsClicked)
+            {
+                Selection = Selection + "Abs\n";
+            }
+
+            if (chestIsClicked)
+            {
+                Selection = Selection + "Chest\n";
+            }
+
+            if (backIsClicked)
+            {
+                Selection = Selection + "Back\n";
+            }
+        }
+
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             if (!backIsClicked)
             {
                 Back.Opacity = 0.29;
                 backIsClicked = true;
+                SetSelection();
+
             }
             else
             {
                 Back.Opacity = 0;
                 backIsClicked = false;
+                SetSelection();
+
             }
         }
 
@@ -80,12 +130,16 @@ namespace CPSC481.FinalProject
                 RightArm.Opacity = 0.29;
                 LeftArm.Opacity = 0.29;
                 armIsClicked = true;
+                SetSelection();
+
             }
             else
             {
                 RightArm.Opacity = 0;
                 LeftArm.Opacity = 0;
                 armIsClicked = false;
+                SetSelection();
+
             }
 
         }
@@ -97,12 +151,16 @@ namespace CPSC481.FinalProject
                 RightArm.Opacity = 0.29;
                 LeftArm.Opacity = 0.29;
                 armIsClicked = true;
+                SetSelection();
+
             }
             else
             {
                 RightArm.Opacity = 0;
                 LeftArm.Opacity = 0;
                 armIsClicked = false;
+                SetSelection();
+
             }
 
         }
@@ -114,6 +172,8 @@ namespace CPSC481.FinalProject
                 RightLeg.Opacity = 0.29;
                 LeftLeg.Opacity = 0.29;
                 legIsClicked = true;
+                SetSelection();
+
             }
             else
             {
@@ -121,6 +181,8 @@ namespace CPSC481.FinalProject
                 RightLeg.Opacity = 0;
                 LeftLeg.Opacity = 0;
                 legIsClicked = false;
+                SetSelection();
+
             }
         }
 
@@ -131,6 +193,8 @@ namespace CPSC481.FinalProject
                 RightLeg.Opacity = 0.29;
                 LeftLeg.Opacity = 0.29;
                 legIsClicked = true;
+                SetSelection();
+
             }
             else
             {
@@ -138,6 +202,8 @@ namespace CPSC481.FinalProject
                 RightLeg.Opacity = 0;
                 LeftLeg.Opacity = 0;
                 legIsClicked = false;
+                SetSelection();
+
             }
         }
 
@@ -147,11 +213,15 @@ namespace CPSC481.FinalProject
             {
                 Abs.Opacity = 0.29;
                 absIsClicked = true;
+                SetSelection();
+
             }
             else
             {
                 Abs.Opacity = 0;
                 absIsClicked = false;
+                SetSelection();
+
             }
         }
 
@@ -161,11 +231,15 @@ namespace CPSC481.FinalProject
             {
                 Chest.Opacity = 0.29;
                 chestIsClicked = true;
+                SetSelection();
+
             }
             else
             {
                 Chest.Opacity = 0;
                 chestIsClicked = false;
+                SetSelection();
+
             }
         }
 
@@ -252,6 +326,26 @@ namespace CPSC481.FinalProject
                     Chest.Opacity = 0.29;
                 }
             }
+        }
+
+        private void ResetFilter_Click(object sender, RoutedEventArgs e)
+        {
+            armIsClicked = false;
+            legIsClicked = false;
+            chestIsClicked = false;
+            absIsClicked = false;
+            backIsClicked = false;
+
+            RightArm.Opacity = 0;
+            LeftArm.Opacity = 0;
+            RightLeg.Opacity = 0;
+            LeftLeg.Opacity = 0;
+            Chest.Opacity = 0;
+            Abs.Opacity = 0;
+            Back.Opacity = 0;
+
+            SetSelection();
+
         }
 
     }

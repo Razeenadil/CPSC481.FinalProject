@@ -140,10 +140,8 @@
         <Label Grid.Column="2" Content="Muscle Group Selector" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Top" FontSize="24" Margin="0,12,0,0" FontWeight="Bold"/>
         <Separator Grid.Column="2" Margin="0,50,0,660" Grid.Row="4"/>
         <Image Grid.Column="2" HorizontalAlignment="Left" Height="40" Grid.Row="4" VerticalAlignment="Top" Width="40" Source="/Images/HeaderNavIcons/left-arrow.png" Margin="10,15,0,0"/>
-        <Image Grid.Column="2" HorizontalAlignment="Right" Height="40" Margin="0,15,10,0" Grid.Row="4" VerticalAlignment="Top" Width="40" Source="/Images/HeaderNavIcons/hamburger.png"/>
-
-
-
+       
+        
         <Border 
             BorderThickness="2"
             BorderBrush="#FF000000"
@@ -388,7 +386,8 @@
             </Button.Background>
             Apply Filters
         </Button>
-        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="10,515,0,0" Grid.Row="4" TextWrapping="Wrap" Text="Selected body parts:" VerticalAlignment="Top" FontSize="18"/>
+        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="10,515,0,0" Grid.Row="4" TextWrapping="Wrap" Text="Selected body parts" VerticalAlignment="Top" FontSize="18"/>
+        <Separator Grid.Column="2" Margin="0,50,0,190" Grid.Row="4" VerticalAlignment="Bottom" BorderBrush="Black" BorderThickness="25"/>
         <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="30,545,0,0" Grid.Row="4" TextWrapping="Wrap" Text="{Binding Path=Selection, Mode=TwoWay}" VerticalAlignment="Top" FontSize="18"/>
         
         <TextBlock 
