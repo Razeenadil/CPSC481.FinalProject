@@ -13,6 +13,8 @@
     <None Remove="Images\HeaderNavIcons\hamburger.png" />
     <None Remove="Images\HeaderNavIcons\left-arrow.png" />
     <None Remove="Images\logo.png" />
+    <None Remove="Images\RadialNavigationIcons\DemoIcon.png" />
+    <None Remove="Images\RadialNavigationIcons\RoutineIcon.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,6 +23,8 @@
     <Resource Include="Images\HeaderNavIcons\hamburger.png" />
     <Resource Include="Images\HeaderNavIcons\left-arrow.png" />
     <Resource Include="Images\logo.png" />
+    <Resource Include="Images\RadialNavigationIcons\DemoIcon.png" />
+    <Resource Include="Images\RadialNavigationIcons\RoutineIcon.png" />
   </ItemGroup>
 
   <ItemGroup>
