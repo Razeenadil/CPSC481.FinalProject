@@ -33,7 +33,7 @@
                            FontWeight="Bold" Text="Progress Overview"/>
         </StackPanel>
 
-        <ComboBox  HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="24" Margin="77,246,0,0" Grid.Row="1" VerticalAlignment="Top" Width="166" Grid.Column="1">
+        <ComboBox  HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="24" Margin="78,282,0,0" Grid.Row="1" VerticalAlignment="Top" Width="166" Grid.Column="1">
             <ComboBoxItem>Weekly</ComboBoxItem>
             <ComboBoxItem>Monthly</ComboBoxItem>
             <ComboBoxItem IsSelected="True">Annually</ComboBoxItem>
@@ -42,8 +42,8 @@
                  Grid.ColumnSpan="2"
                  VerticalAlignment="Top"
                  HorizontalAlignment="Center"
-                 Width="300"
-                 Height="300"
+                 Width="260"
+                 Height="260"
                  Margin="0,15,0,0">
             <Calendar DisplayMode="Year" SelectionMode="MultipleRange"/>
         </Viewbox>
