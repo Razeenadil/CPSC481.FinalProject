@@ -164,7 +164,7 @@
                    FontWeight="Bold"/>
 
 
-        <Separator Grid.Column="2" Margin="30,127,0,415" Grid.Row="4" BorderThickness="11" BorderBrush="Black"/>
+        <Separator Grid.Column="2" Margin="30,127,10,415" Grid.Row="4" BorderThickness="11" BorderBrush="Black"/>
         <TextBlock Grid.Column="2" 
                    HorizontalAlignment="Left" 
                    Margin="90,248,0,0" 
@@ -175,7 +175,7 @@
                    FontWeight="Medium"
                    VerticalAlignment="Top"/>
 
-        <Separator Grid.Column="2" Margin="30,151,0,360" Grid.Row="4" BorderThickness="11" BorderBrush="Black"/>
+        <Separator Grid.Column="2" Margin="30,151,10,360" Grid.Row="4" BorderThickness="7" BorderBrush="Black"/>
         <TextBlock Grid.Column="2" 
                    HorizontalAlignment="Left" 
                    Margin="90,289,0,0" 
@@ -186,7 +186,7 @@
                    FontWeight="Medium"
                    VerticalAlignment="Top"/>
 
-        <Separator Grid.Column="2" Margin="30,180,0,304" Grid.Row="4" BorderThickness="11" BorderBrush="Black"/>
+        <Separator Grid.Column="2" Margin="30,180,10,304" Grid.Row="4" BorderThickness="7" BorderBrush="Black"/>
         <TextBlock Grid.Column="2" 
                    HorizontalAlignment="Left" 
                    Margin="90,330,0,0"
@@ -197,7 +197,28 @@
                    FontWeight="Medium"
                    VerticalAlignment="Top"/>
 
-        <Separator Grid.Column="2" Margin="30,194,0,236" Grid.Row="4" BorderThickness="11" BorderBrush="Black"/>
+        <Separator Grid.Column="2" Margin="30,194,10,236" Grid.Row="4" BorderThickness="7" BorderBrush="Black"/>
+        <Ellipse 
+            HorizontalAlignment="Left" 
+            Height="25" 
+            Width="25" 
+            Margin="15,201,0,0" 
+            Grid.Row="4" 
+            Stroke="Black" 
+            VerticalAlignment="Top" 
+            Grid.Column="2"
+            Fill="Black"
+            Visibility="Hidden"/>
+
+        <Rectangle 
+            HorizontalAlignment="Left" 
+            Height="35" 
+            Width="22" 
+            Margin="17,211,0,0" 
+            Grid.Row="4" 
+            Stroke="Black" 
+            Fill="Black"
+            VerticalAlignment="Top" Grid.Column="2"/>
 
 
 
