@@ -17,16 +17,14 @@ namespace CPSC481.FinalProject
     /// <summary>
     /// Interaction logic for LoginPage.xaml
     /// </summary>
-    public partial class LoginPage : Window
+    public partial class Welcome : Window
     {
-        public LoginPage()
+        public Welcome()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
 
         }
+
+       
     }
 }

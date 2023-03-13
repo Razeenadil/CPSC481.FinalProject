@@ -53,7 +53,7 @@
                         FontSize="20"
                         FontWeight="Medium"
                         BorderBrush="Transparent"
-                        Foreground="White" Click="Button_Click_1">
+                        Foreground="White">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>

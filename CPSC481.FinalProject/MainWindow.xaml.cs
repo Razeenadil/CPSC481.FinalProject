@@ -23,6 +23,13 @@ namespace CPSC481.FinalProject
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = this;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Registeration login = new();
+            this.Content = login;
         }
     }
 }

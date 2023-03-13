@@ -17,7 +17,7 @@ namespace CPSC481.FinalProject
     /// <summary>
     /// Interaction logic for Registeration.xaml
     /// </summary>
-    public partial class Registeration : Window
+    public partial class Registeration : Page
     {
         public Registeration()
         {
@@ -33,5 +33,7 @@ namespace CPSC481.FinalProject
         {
 
         }
+
+  
     }
 }

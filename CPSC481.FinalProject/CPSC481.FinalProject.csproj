@@ -17,15 +17,4 @@
     <None Remove="Images\welcome.png" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Resource Include="Images\registration.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="Images\Green Bold Bull Fitness Center Logo (1).png" />
-    <Resource Include="Images\guest login.png" />
-    <Resource Include="Images\loginpage.png" />
-    <Resource Include="Images\welcome.png" />
-  </ItemGroup>
-
 </Project>
