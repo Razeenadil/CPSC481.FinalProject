@@ -15,6 +15,10 @@
             <RowDefinition Height="650"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        <Image Source="/images/HeaderNavIcons/ProgressIcon.png"
+               HorizontalAlignment="Right"
+               Margin="0,0,15,0"/>
+        <Separator Grid.Row="1" Margin="15,0,15,0" VerticalAlignment="Top"/>
         <StackPanel Orientation="Horizontal">
             <TextBlock Margin="0"
                            Width="446"
@@ -23,12 +27,27 @@
                            FontSize="20"
                            FontWeight="Bold" Text="Progress Overview"/>
         </StackPanel>
-        <ComboBox  HorizontalContentAlignment="Center" HorizontalAlignment="Center" Height="24" Margin="0,276,0,0" Grid.Row="1" VerticalAlignment="Top" Width="166">
+
+        <ComboBox  HorizontalContentAlignment="Center" HorizontalAlignment="Center" Height="24" Margin="0,268,0,0" Grid.Row="1" VerticalAlignment="Top" Width="166">
             <ComboBoxItem >Weekly</ComboBoxItem>
             <ComboBoxItem IsSelected="True">Monthly</ComboBoxItem>
             <ComboBoxItem>Annually</ComboBoxItem>
         </ComboBox>
-        <Calendar DisplayMode="Month" SelectionMode="MultipleRange" HorizontalAlignment="Center" Height="192" Margin="0,79,0,0" Grid.Row="1" VerticalAlignment="Top" Width="215"/>
+        <Separator Grid.Row="1" Margin="15,68,15,66" Grid.RowSpan="2"/>
+        <Separator Grid.Row="1" Margin="15,0,15,0" VerticalAlignment="Bottom"/>
+        <Slider HorizontalAlignment="Center" Height="37" Grid.Row="1" VerticalAlignment="Top" Width="103" RenderTransformOrigin="0.488,2.609" Margin="0,437,0,0">
+            <Slider.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180.056"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Slider.RenderTransform>
+        </Slider>
+        <Viewbox VerticalAlignment="Top" Height="350" Width="350" Stretch="Fill" StretchDirection="UpOnly" Margin="50,0,50,0" Grid.RowSpan="2">
+            <Calendar DisplayMode="Month" SelectionMode="MultipleRange" HorizontalAlignment="Center" Height="192" Margin="0,38,0,0" Grid.Row="1" VerticalAlignment="Top" Width="214"/>
+        </Viewbox>
         <ProgressBar HorizontalAlignment="Center" Height="24" Margin="0,335,0,0" Grid.Row="1" VerticalAlignment="Top" Width="216" Maximum="60" Minimum="0" Value="60"/>
         <TextBlock FontSize="13" HorizontalAlignment="Left" Margin="14,339,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Today's Workout" VerticalAlignment="Top" Width="101"/>
         <ProgressBar Maximum="7" Minimum="0" Value="3" HorizontalAlignment="Center" Height="24" Margin="0,432,0,0" Grid.Row="1" VerticalAlignment="Top" Width="215"/>
@@ -39,12 +58,12 @@
         <ProgressBar Maximum="7" Minimum="0" Value="2" HorizontalAlignment="Center" Height="24" Margin="0,522,0,0" Grid.Row="1" VerticalAlignment="Top" Width="215"/>
         <TextBlock FontSize="13" HorizontalAlignment="Left" Margin="14,557,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="101" Height="37"><Run Text="Routine 4"/><LineBreak/><Run Text="Completion"/></TextBlock>
         <ProgressBar Maximum="7" Minimum="0" Value="2" HorizontalAlignment="Center" Height="24" Margin="0,564,0,0" Grid.Row="1" VerticalAlignment="Top" Width="215"/>
-        <TextBlock  FontStyle="Oblique" HorizontalAlignment="Center" Height="18" Margin="0,338,0,0" Grid.Row="1" TextWrapping="Wrap" Text="100%" VerticalAlignment="Top" Width="50" RenderTransformOrigin="1.49,-5.235"/>
+        <TextBlock  FontStyle="Oblique" HorizontalAlignment="Center" Height="18" Margin="20,338,0,0" Grid.Row="1" TextWrapping="Wrap" Text="100%" VerticalAlignment="Top" Width="50" RenderTransformOrigin="1.49,-5.235"/>
         <TextBlock  FontStyle="Oblique" HorizontalAlignment="Left" Height="18" Margin="214,438,0,0" Grid.Row="1" TextWrapping="Wrap" Text="3/7" VerticalAlignment="Top" Width="25" RenderTransformOrigin="1.49,-5.235"/>
         <TextBlock  FontStyle="Oblique" HorizontalAlignment="Left" Height="18" Margin="214,483,0,0" Grid.Row="1" TextWrapping="Wrap" Text="2/7" VerticalAlignment="Top" Width="26" RenderTransformOrigin="1.49,-5.235"/>
         <TextBlock  FontStyle="Oblique" HorizontalAlignment="Center" Height="18" Margin="0,525,0,0" Grid.Row="1" TextWrapping="Wrap" Text="2/7" VerticalAlignment="Top" Width="25" RenderTransformOrigin="1.49,-5.235"/>
         <TextBlock  FontStyle="Oblique" HorizontalAlignment="Center" Height="18" Margin="0,567,0,0" Grid.Row="1" TextWrapping="Wrap" Text="2/7" VerticalAlignment="Top" Width="24" RenderTransformOrigin="1.49,-5.235"/>
-        <Slider HorizontalAlignment="Center" Height="23" Grid.Row="2" VerticalAlignment="Top" Width="84" RenderTransformOrigin="0.488,2.609"/>
+
         <Button x:Name="NavigationButton"
                 Grid.Row="2" 
                 Width="100" 
