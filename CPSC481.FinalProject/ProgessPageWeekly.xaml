@@ -130,13 +130,13 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <TextBlock FontSize="7" HorizontalAlignment="Left" Height="13" Margin="80,423,0,0" Grid.Row="1" TextWrapping="Wrap" Text="03/05" VerticalAlignment="Top" Width="40"/>
-        <TextBlock FontSize="7" HorizontalAlignment="Left" Height="13" Margin="80,445,0,0" Grid.Row="1" TextWrapping="Wrap" Text="03/05" VerticalAlignment="Top" Width="40"/>
-        <TextBlock FontSize="7" HorizontalAlignment="Left" Height="13" Margin="80,459,0,0" Grid.Row="1" TextWrapping="Wrap" Text="03/05" VerticalAlignment="Top" Width="40"/>
-        <TextBlock FontSize="7" HorizontalAlignment="Left" Height="13" Margin="80,480,0,0" Grid.Row="1" TextWrapping="Wrap" Text="03/05" VerticalAlignment="Top" Width="40"/>
-        <TextBlock FontSize="7" HorizontalAlignment="Left" Height="13" Margin="80,497,0,0" Grid.Row="1" TextWrapping="Wrap" Text="03/05" VerticalAlignment="Top" Width="40"/>
-        <TextBlock FontSize="7" HorizontalAlignment="Left" Height="13" Margin="84,519,0,0" Grid.Row="1" TextWrapping="Wrap" Text="03/5" VerticalAlignment="Top" Width="40"/>
-        <TextBlock FontSize="7" HorizontalAlignment="Left" Height="13" Margin="84,534,0,0" Grid.Row="1" TextWrapping="Wrap" Text="03/5" VerticalAlignment="Top" Width="40"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="87,420,0,0" Grid.Row="1" TextWrapping="Wrap" Text="03/05" VerticalAlignment="Top" Width="40"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="87,438,0,0" Grid.Row="1" TextWrapping="Wrap" Text="03/05" VerticalAlignment="Top" Width="40"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="87,458,0,0" Grid.Row="1" TextWrapping="Wrap" Text="03/05" VerticalAlignment="Top" Width="40"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="87,477,0,0" Grid.Row="1" TextWrapping="Wrap" Text="03/05" VerticalAlignment="Top" Width="40"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="87,496,0,0" Grid.Row="1" TextWrapping="Wrap" Text="03/05" VerticalAlignment="Top" Width="40"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="87,514,0,0" Grid.Row="1" TextWrapping="Wrap" Text="03/05" VerticalAlignment="Top" Width="40"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="87,534,0,0" Grid.Row="1" TextWrapping="Wrap" Text="03/05" VerticalAlignment="Top" Width="40"/>
         <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="142,423,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Arm Day" VerticalAlignment="Top" Width="40"/>
         <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="142,441,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="40"><Run Text="Arm Day"/><LineBreak/><Run/></TextBlock>
         <TextBlock FontSize="10" HorizontalAlignment="Left" Height="13" Margin="142,458,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="50"><Run Text="Arm Day"/><LineBreak/><Run/></TextBlock>

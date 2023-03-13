@@ -32,6 +32,7 @@
                            FontSize="20"
                            FontWeight="Bold" Text="Progress Overview"/>
         </StackPanel>
+
         <ComboBox  HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="24" Margin="77,246,0,0" Grid.Row="1" VerticalAlignment="Top" Width="166" Grid.Column="1">
             <ComboBoxItem>Weekly</ComboBoxItem>
             <ComboBoxItem>Monthly</ComboBoxItem>
@@ -46,9 +47,9 @@
                  Margin="0,15,0,0">
             <Calendar DisplayMode="Year" SelectionMode="MultipleRange"/>
         </Viewbox>
-        
-        <Rectangle RadiusX="10" RadiusY="10" HorizontalAlignment="Left" Height="100" Margin="33,325,0,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="379" Grid.ColumnSpan="2"/>
-        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="20,423,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Jan." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445">
+
+        <Rectangle RadiusX="10" RadiusY="10" HorizontalAlignment="Left" Height="100" Margin="50,324,0,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="379" Grid.ColumnSpan="2"/>
+        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="37,422,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Jan." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.ColumnSpan="2">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -58,7 +59,7 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="55,423,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Feb." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.ColumnSpan="2">
+        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="8,422,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Feb." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -68,7 +69,7 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="27,423,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Mar." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
+        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="44,422,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Mar." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -78,7 +79,7 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="57,423,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Apr." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
+        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="74,422,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Apr." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -88,7 +89,7 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="87,433,0,0" Grid.Row="1" TextWrapping="Wrap" Text="May." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
+        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="104,432,0,0" Grid.Row="1" TextWrapping="Wrap" Text="May." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -98,7 +99,7 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="117,433,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Jun." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
+        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="134,432,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Jun." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -108,7 +109,7 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="147,433,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Jul." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
+        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="164,432,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Jul." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -118,7 +119,7 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="177,433,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Aug." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
+        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="194,432,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Aug." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -128,7 +129,7 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="207,433,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Sep." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
+        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="224,432,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Sep." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -138,7 +139,7 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="242,433,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Oct." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
+        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="259,432,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Oct." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -148,7 +149,7 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="272,433,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Nov." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
+        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="289,432,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Nov." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -158,7 +159,7 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="307,433,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Dec." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
+        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="324,432,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Dec." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -168,18 +169,19 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <TextBlock FontSize="16" HorizontalAlignment="Left" Height="20" Margin="52,463,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Avg. Routine Weight Increment" VerticalAlignment="Top" Width="225" Grid.Column="1"/>
-        <Ellipse   Fill="Black" HorizontalAlignment="Left" Height="10" Margin="45,385,0,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="10"/>
 
-        <Line VerticalAlignment="Bottom" Stroke="Black" X2="{Binding ActualWidth, RelativeSource={RelativeSource Self}}" StrokeDashArray="2 2" StrokeThickness="2" Grid.Row="1" Margin="33,0,32,259" Grid.ColumnSpan="2" />
-        <TextBlock HorizontalAlignment="Left" Height="15" Margin="15,381,0,0" Grid.Row="1" TextWrapping="Wrap" Text="0%" VerticalAlignment="Top" Width="54" Grid.ColumnSpan="2"/>
-        <Ellipse Fill="Green" Width="10" Height="10" Margin="11,370,360,0" Grid.Row="1" Stroke="Green" VerticalAlignment="Top" Grid.Column="1"/>
-        <Ellipse Fill="LightGray"  Width="10"  Height="10" Margin="52,370,319,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Grid.Column="1"/>
+        <TextBlock FontSize="16" HorizontalAlignment="Left" Height="20" Margin="69,462,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Avg. Routine Completion Rate" VerticalAlignment="Top" Width="225" Grid.Column="1"/>
+        <Ellipse   Fill="Black" HorizontalAlignment="Left" Height="10" Margin="62,407,0,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="10" RenderTransformOrigin="-0.4,5" Grid.ColumnSpan="2"/>
 
-        <Rectangle RadiusX="10" RadiusY="10" HorizontalAlignment="Left" Height="100" Margin="32,507,0,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="380" Grid.ColumnSpan="2"/>
-        <TextBlock FontSize="16" HorizontalAlignment="Left" Height="20" Margin="43,0,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Avg. Rep/Time Interval Increment" VerticalAlignment="Top" Width="244" Grid.Column="1" RenderTransformOrigin="0.489,4.8"/>
-        <Line VerticalAlignment="Bottom" Stroke="Black" X2="{Binding ActualWidth, RelativeSource={RelativeSource Self}}" StrokeDashArray="2 2" StrokeThickness="2" Grid.Row="1" Margin="32,0,33,75" Grid.ColumnSpan="2" />
-        <TextBlock FontSize="14" Height="17" Margin="20,618,1,0" Grid.Row="1" TextWrapping="Wrap" Text="Jan." VerticalAlignment="Top" RenderTransformOrigin="1.415,-2.445">
+        <Line VerticalAlignment="Bottom" Stroke="Black" X2="{Binding ActualWidth, RelativeSource={RelativeSource Self}}" StrokeDashArray="2 2" StrokeThickness="2" Grid.Row="1" Margin="50,0,24,236" Grid.ColumnSpan="2" Width="NaN" />
+        <TextBlock HorizontalAlignment="Left" Height="15" Margin="32,404,0,0" Grid.Row="1" TextWrapping="Wrap" Text="0%" VerticalAlignment="Top" Width="54" Grid.ColumnSpan="2"/>
+        <Ellipse Fill="Green" Width="10" Height="10" Margin="30,334,346,0" Grid.Row="1" Stroke="Green" VerticalAlignment="Top" Grid.Column="1"/>
+        <Ellipse Fill="LightGray"  Width="10"  Height="10" Margin="65,369,305,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Grid.Column="1" RenderTransformOrigin="-0.693,-1.3"/>
+
+        <Rectangle RadiusX="10" RadiusY="10" HorizontalAlignment="Left" Height="100" Margin="49,506,0,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="380" Grid.ColumnSpan="2"/>
+        <TextBlock FontSize="16" HorizontalAlignment="Left" Height="20" Margin="60,649,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Avg. Rep/Time Interval Increment" VerticalAlignment="Top" Width="244" Grid.Column="1" RenderTransformOrigin="0.489,4.8" Grid.RowSpan="2"/>
+        <Line VerticalAlignment="Bottom" Stroke="Black" X2="{Binding ActualWidth, RelativeSource={RelativeSource Self}}" StrokeDashArray="2 2" StrokeThickness="2" Grid.Row="1" Margin="50,0,21,55" Grid.ColumnSpan="2" Width="NaN" />
+        <TextBlock FontSize="14" Height="17" Margin="37,617,370,0" Grid.Row="1" TextWrapping="Wrap" Text="Jan." VerticalAlignment="Top" RenderTransformOrigin="1.415,-2.445" Grid.ColumnSpan="2">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -189,7 +191,7 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="55,618,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Feb." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.ColumnSpan="2">
+        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="8,617,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Feb." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -199,7 +201,7 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="27,618,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Mar." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
+        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="44,617,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Mar." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -209,7 +211,7 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="57,618,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Apr." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
+        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="74,617,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Apr." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -219,7 +221,7 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="87,628,0,0" Grid.Row="1" TextWrapping="Wrap" Text="May." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
+        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="104,627,0,0" Grid.Row="1" TextWrapping="Wrap" Text="May." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -229,7 +231,7 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="117,628,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Jun." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
+        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="134,627,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Jun." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -239,7 +241,7 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="147,628,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Jul." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
+        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="164,627,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Jul." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -249,7 +251,7 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="177,628,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Aug." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
+        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="194,627,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Aug." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -259,7 +261,7 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="207,628,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Sep." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
+        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="224,627,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Sep." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -269,7 +271,7 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="242,628,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Oct." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
+        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="259,627,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Oct." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -279,7 +281,7 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="272,628,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Nov." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
+        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="289,627,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Nov." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -289,7 +291,7 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="307,628,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Dec." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
+        <TextBlock FontSize="14" HorizontalAlignment="Left" Height="17" Margin="324,627,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Dec." VerticalAlignment="Top" Width="42" RenderTransformOrigin="1.415,-2.445" Grid.Column="1">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -299,10 +301,10 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <TextBlock HorizontalAlignment="Left" Height="15" Margin="15,567,0,0" Grid.Row="1" TextWrapping="Wrap" Text="0%" VerticalAlignment="Top" Width="54" Grid.ColumnSpan="2"/>
-        <Ellipse Fill="LightGray" Width="10" Height="10" Margin="52,580,319,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Grid.Column="1"/>
-        <Ellipse Fill="Red" Width="10" Height="10" Margin="11,580,360,0" Grid.Row="1" Stroke="Red" VerticalAlignment="Top" Grid.Column="1"/>
-        <Ellipse Fill="Black" Height="10" Margin="45,570,8,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Height="15" Margin="32,584,0,0" Grid.Row="1" TextWrapping="Wrap" Text="0%" VerticalAlignment="Top" Width="54" Grid.ColumnSpan="2"/>
+        <Ellipse Fill="LightGray" Width="10" Height="10" Margin="65,579,305,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Grid.Column="1"/>
+        <Ellipse Fill="Red" Width="10" Height="10" Margin="30,589,346,0" Grid.Row="1" Stroke="Red" VerticalAlignment="Top" Grid.Column="1"/>
+        <Ellipse Fill="Black" Height="10" Margin="61,589,378,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
         <Button x:Name="NavigationButton"
                 Grid.Row="2" 
                 Grid.Column="1" 
@@ -320,6 +322,10 @@
             </Button.Template>
         </Button>
         <Image HorizontalAlignment="Left" Height="40" VerticalAlignment="Center" Width="40" Source="/images/HeaderNavIcons/left-arrow.png" Margin="17,0,0,0" RenderTransformOrigin="0.539,0.546"/>
+        <TextBlock HorizontalAlignment="Left" Height="15" Margin="27,366,0,0" Grid.Row="1" TextWrapping="Wrap" Text="50%" VerticalAlignment="Top" Width="54" Grid.ColumnSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" Height="15" Margin="21,324,0,0" Grid.Row="1" TextWrapping="Wrap" Text="100%" VerticalAlignment="Top" Width="54" Grid.ColumnSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" Height="15" Margin="21,506,0,0" Grid.Row="1" TextWrapping="Wrap" Text="100%" VerticalAlignment="Top" Width="54" Grid.ColumnSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" Height="15" Margin="27,548,0,0" Grid.Row="1" TextWrapping="Wrap" Text="50%" VerticalAlignment="Top" Width="54" Grid.ColumnSpan="2"/>
 
 
     </Grid>
