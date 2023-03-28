@@ -16,25 +16,34 @@ using System.Windows.Shapes;
 namespace CPSC481.FinalProject
 {
     /// <summary>
-    /// Interaction logic for Welcome.xaml
+    /// Interaction logic for Registeration.xaml
     /// </summary>
-    public partial class Welcome : Page
+    public partial class Registeration : Page
     {
-        public Welcome()
+        public Registeration()
         {
             InitializeComponent();
         }
 
-        private void Login_Button_Click(object sender, RoutedEventArgs e)
+        private void Back_Button_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = (MainWindow)Application.Current.MainWindow;
             mainWindow?.ChangeView(new Login());
         }
 
-        private void Guest_Button_Click(object sender, RoutedEventArgs e)
+        private void Create_Account_Button_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = (MainWindow)Application.Current.MainWindow;
-            mainWindow?.ChangeView(new LandingScreen());
+            mainWindow?.ChangeView(new Login());
+        }
+
+        private void Have_Account_Click(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = (MainWindow)Application.Current.MainWindow;
+            mainWindow?.ChangeView(new Login());
         }
     }
+
+ 
+
 }

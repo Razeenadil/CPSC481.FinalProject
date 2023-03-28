@@ -9,12 +9,22 @@
 
   <ItemGroup>
     <None Remove="Images\HeaderNavIcons\left-arrow.png" />
+    <None Remove="Images\logo.png" />
     <None Remove="Images\Logo\logo.png" />
+    <None Remove="Images\RadialNavigationIcons\DemoIcon.png" />
+    <None Remove="Images\RadialNavigationIcons\InformationIcon.png" />
+    <None Remove="Images\RadialNavigationIcons\ProgressIcon.png" />
+    <None Remove="Images\RadialNavigationIcons\RoutineIcon.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Images\HeaderNavIcons\left-arrow.png" />
+    <Resource Include="Images\logo.png" />
     <Resource Include="Images\Logo\logo.png" />
+    <Resource Include="Images\RadialNavigationIcons\DemoIcon.png" />
+    <Resource Include="Images\RadialNavigationIcons\InformationIcon.png" />
+    <Resource Include="Images\RadialNavigationIcons\ProgressIcon.png" />
+    <Resource Include="Images\RadialNavigationIcons\RoutineIcon.png" />
   </ItemGroup>
 
 </Project>

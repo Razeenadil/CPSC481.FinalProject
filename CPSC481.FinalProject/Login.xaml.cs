@@ -29,6 +29,8 @@ namespace CPSC481.FinalProject
 
         private void Login_Button_Click(object sender, RoutedEventArgs e)
         {
+            var mainWindow = (MainWindow)Application.Current.MainWindow;
+            mainWindow?.ChangeView(new LandingScreen());
         }
 
         private void ForgotPassword_Click(object sender, RoutedEventArgs e)
@@ -37,10 +39,14 @@ namespace CPSC481.FinalProject
 
         private void CreateAccount_Click(object sender, RoutedEventArgs e)
         {
+            var mainWindow = (MainWindow)Application.Current.MainWindow;
+            mainWindow?.ChangeView(new Registeration());
         }
 
         private void Guest_Button_Click(object sender, RoutedEventArgs e)
         {
+            var mainWindow = (MainWindow)Application.Current.MainWindow;
+            mainWindow?.ChangeView(new LandingScreen());
         }
 
         private void Back_Button_Click(object sender, RoutedEventArgs e)
