@@ -7,79 +7,11 @@
         mc:Ignorable="d"
         Title="Welcome" Height="800" Width="450" Background="White">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="15"/>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="15"/>
-        </Grid.ColumnDefinitions>
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="15"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="15"/>
-        </Grid.RowDefinitions>
-
-        <Button 
-                        Grid.Row="4" 
-                        Grid.Column="2" 
-                        Margin="54,410,54,272"
-                        FontSize="26"
-                        FontWeight="Medium"
-                        BorderBrush="Transparent"
-                        Foreground="White"
-                        Grid.RowSpan="2"
-                        Grid.ColumnSpan="2"
-                        Height="50">
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="5"/>
-                </Style>
-            </Button.Resources>
-            <Button.Background>
-                <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
-                    <GradientStop Color="#003622" Offset="0"/>
-                    <GradientStop Color="#008F5A" Offset="0.5"/>
-                    <GradientStop Color="#003622" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-            Login
-        </Button>
-
-        <Button 
-                        Grid.Row="4" 
-                        Grid.Column="2" 
-                        Margin="54,515,54,178"
-                        FontSize="26"
-                        FontWeight="Medium"
-                        BorderBrush="Transparent"
-                        Foreground="White"
-                        Grid.RowSpan="2"
-                        Grid.ColumnSpan="2"
-                        Height="50">
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="5"/>
-                </Style>
-            </Button.Resources>
-            <Button.Background>
-                <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
-                    <GradientStop Color="#003622" Offset="0"/>
-                    <GradientStop Color="#008F5A" Offset="0.5"/>
-                    <GradientStop Color="#003622" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-            Continue As Guest
-        </Button>
-        <Image  
-                Grid.Row="4" 
-                Grid.Column="2"  
-                Margin="27,52,27,377" 
-                Source="/Images/Logo/logo.png" 
-                Stretch="Fill"/>
-
+        <Frame 
+        Name="MainFrame"
+        Background="White"
+        NavigationUIVisibility="Hidden"/>
+       
     </Grid>
 </Window>

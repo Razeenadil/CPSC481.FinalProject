@@ -16,27 +16,24 @@ using System.Windows.Shapes;
 namespace CPSC481.FinalProject
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Welcome.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Welcome : Page
     {
-        public MainWindow()
+        public Welcome()
         {
             InitializeComponent();
-            //this.DataContext = this;
-            Application.Current.MainWindow = this;
-            Loaded += OnMainWindowLoaded;
         }
 
-        private void OnMainWindowLoaded(object sender, RoutedEventArgs e)
+        private void Login_Button_Click(object sender, RoutedEventArgs e)
         {
-            ChangeView(new Welcome());
+            var mainWindow = (MainWindow)Application.Current.MainWindow;
+            mainWindow?.ChangeView(new Login());
         }
 
-        public void ChangeView(Page view)
+        private void Guest_Button_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.NavigationService.Navigate(view);
-        }
 
+        }
     }
 }
