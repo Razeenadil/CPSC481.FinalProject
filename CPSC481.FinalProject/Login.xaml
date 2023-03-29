@@ -145,7 +145,7 @@
             Grid.ColumnSpan="3"
             Grid.RowSpan="2"
             Foreground="DarkBlue"
-            FontSize="20"
+            FontSize="24"
             TextDecorations="Underline"
             FontWeight="Medium"
             HorizontalAlignment="Center"
@@ -171,10 +171,31 @@
                 Click="ForgotPassword_Click">Forgot Password?</Hyperlink>
         </TextBlock>
 
-        <Button Grid.Column="2" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" Height="50" Width="50" Margin="5 10 0 0"  Click="Back_Button_Click" Cursor="Hand"/>
+        <Button
+            Name="NavBackButton"
+            Grid.Column="2" 
+            HorizontalAlignment="Left" 
+            Grid.Row="4" 
+            VerticalAlignment="Top" 
+            Height="50" Width="50" 
+            Margin="5 10 0 0"  
+            Click="Back_Button_Click" 
+            Cursor="Hand" 
+            Visibility="Visible" 
+            Grid.RowSpan="3" 
+            Grid.ColumnSpan="3">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image Source="/Images/HeaderNavIcons/left-arrow.png"></Image>
+                </ControlTemplate>
+            </Button.Template>
+
+        </Button>
+        
+
+        
         <Label Grid.Column="2" Content="Login" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Top" FontSize="32" Margin="0,12,0,0" FontWeight="Bold"/>
         <Separator Grid.Column="2" Margin="0,65,0,660" Grid.Row="4" BorderBrush="Black" BorderThickness="4"/>
-        <Image Grid.Column="2" HorizontalAlignment="Left" Height="40" Grid.Row="4" VerticalAlignment="Top" Width="40" Source="/Images/HeaderNavIcons/left-arrow.png" Margin="10,15,0,0"/>
-       
+
     </Grid>
 </Page>
