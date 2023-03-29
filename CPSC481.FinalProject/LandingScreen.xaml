@@ -41,16 +41,7 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="15"/>
             </Grid.ColumnDefinitions>
-            <Label Content=""
-                   Grid.Row="1"
-                   Grid.Column="1"
-                   HorizontalAlignment="Center"
-                   Width="Auto"
-                   VerticalAlignment="Center"
-                   HorizontalContentAlignment="Center"
-                   VerticalContentAlignment="Center"
-                   FontSize="24"
-                   FontWeight="Bold"/>
+
 
             <Grid Grid.ColumnSpan="3"
                   Grid.RowSpan="5">
@@ -68,12 +59,11 @@
             <Label Content="Welcome"
                    Grid.Row="1"
                    Grid.Column="1"
-                   Width="320"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"
                    HorizontalContentAlignment="Center"
                    VerticalContentAlignment="Center"
-                   FontSize="24"
+                   FontSize="32"
                    FontWeight="Bold"/>
             <Separator Grid.Row="2"
                        Grid.Column="1"
@@ -82,13 +72,15 @@
 
             <TextBlock Grid.Row="2"
                        Grid.Column="1"
-                       Text="Click the green navigation button in the bottom right to start!"
-                       Height="75"
-                       Width="250"
+                       Grid.RowSpan="3"
+                       Grid.ColumnSpan="2"
+                       Text="Click the green navigation button in the bottom right to start!"                                            
                        TextWrapping="Wrap"
                        VerticalAlignment="Bottom"
-                       FontSize="16"
-                       FontWeight="Medium"/>
+                       FontSize="24"
+                       FontWeight="Medium"
+                       HorizontalAlignment="Center"
+                       Margin="0 0 10 185"/>
 
             <Button x:Name="NavigationButton"
                         Grid.Row="3"
@@ -97,8 +89,9 @@
                         Grid.ColumnSpan="3"
                         Width="100" 
                         Height="100"
-                        Margin="375,-15,0,0"
-                        Cursor="Hand">
+                        Margin="360,-25,0,0"
+                        Cursor="Hand"
+                        Click="NavigationButton_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Grid>
@@ -114,12 +107,12 @@
                 Grid.Column="1"
                 Grid.ColumnSpan="2"
                 Grid.RowSpan="2"
-                Width="44" 
-                Height="44"
-                Margin="280,-10,85,6"
+                Width="55" 
+                Height="55"
+                Margin="220,-20,85,6"
                 Cursor="Hand"                
-                Visibility="Visible">
-
+                Visibility="Hidden"
+                Click="InfoButton_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Grid>
@@ -138,11 +131,12 @@
                 Grid.Column="1" 
                 Grid.ColumnSpan="2"
                 Grid.RowSpan="2"
-                Width="44" 
-                Height="44"
-                Margin="290,-58,64,51"
+                Width="55" 
+                Height="55"
+                Margin="250,-90,64,51"
                 Cursor="Hand"                
-                Visibility="Visible">
+                Visibility="Hidden"
+                Click="ProgressButton_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Grid>
@@ -161,11 +155,12 @@
                 Grid.Column="1"
                 Grid.ColumnSpan="2"
                 Grid.RowSpan="2"
-                Width="44" 
-                Height="44"
-                Margin="290,-180,0,0"
+                Width="55" 
+                Height="55"
+                Margin="245,-247,0,0"
                 Cursor="Hand"                                
-                Visibility="Visible">
+                Visibility="Hidden"
+                Click="DemoButton_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Grid>
@@ -185,11 +180,12 @@
                 Grid.Column="1"
                 Grid.ColumnSpan="2"
                 Grid.RowSpan="2"
-                Width="44" 
-                Height="44"
-                Margin="372,-240,0,0"
+                Width="55" 
+                Height="55"
+                Margin="345,-320,0,0"
                 Cursor="Hand"                                
-                Visibility="Visible">
+                Visibility="Hidden"
+                Click="RoutineButton_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Grid>

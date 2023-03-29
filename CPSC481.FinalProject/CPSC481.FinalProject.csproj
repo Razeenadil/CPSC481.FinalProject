@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <None Remove="Images\HeaderNavIcons\left-arrow.png" />
+    <None Remove="Images\HeaderNavIcons\ProgressIcon.png" />
     <None Remove="Images\logo.png" />
     <None Remove="Images\Logo\logo.png" />
     <None Remove="Images\RadialNavigationIcons\DemoIcon.png" />
@@ -19,6 +20,7 @@
 
   <ItemGroup>
     <Resource Include="Images\HeaderNavIcons\left-arrow.png" />
+    <Resource Include="Images\HeaderNavIcons\ProgressIcon.png" />
     <Resource Include="Images\logo.png" />
     <Resource Include="Images\Logo\logo.png" />
     <Resource Include="Images\RadialNavigationIcons\DemoIcon.png" />

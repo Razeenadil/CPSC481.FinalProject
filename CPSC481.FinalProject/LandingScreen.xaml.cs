@@ -20,9 +20,70 @@ namespace CPSC481.FinalProject
     /// </summary>
     public partial class LandingScreen : Page
     {
+        private bool navigationIsClicked;
         public LandingScreen()
         {
             InitializeComponent();
+            this.DataContext = this;
+
+            navigationIsClicked = false;
+        }
+
+        private void NavigationButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (!navigationIsClicked)
+            {
+                InfoButton.IsEnabled = true;
+                DemoButton.IsEnabled = true;
+                ProgressButton.IsEnabled = true;
+                RoutineButton.IsEnabled = true; 
+
+
+                InfoButton.Visibility = Visibility.Visible;
+                DemoButton.Visibility = Visibility.Visible;
+                ProgressButton.Visibility = Visibility.Visible;
+                RoutineButton.Visibility = Visibility.Visible;
+
+                navigationIsClicked = true;
+            }
+            else
+            {
+                InfoButton.IsEnabled = false;
+                DemoButton.IsEnabled = false;
+                ProgressButton.IsEnabled = false;
+                RoutineButton.IsEnabled = false;
+
+                InfoButton.Visibility = Visibility.Hidden;
+                DemoButton.Visibility = Visibility.Hidden;
+                ProgressButton.Visibility = Visibility.Hidden;
+                RoutineButton.Visibility = Visibility.Hidden;
+
+                navigationIsClicked = false;
+            }
+
+        }
+
+        //this is the logout button was to lazy to rename
+        private void InfoButton_Click(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = (MainWindow)Application.Current.MainWindow;
+            mainWindow?.ChangeView(new Welcome());
+        }
+
+        private void ProgressButton_Click(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = (MainWindow)Application.Current.MainWindow;
+            mainWindow?.ChangeView(new ProgressPageWeekly());
+        }
+
+        private void DemoButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RoutineButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
