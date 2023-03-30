@@ -93,7 +93,7 @@
                 Height="55"
                 Margin="190,690,85,6"
                 Cursor="Hand"                
-                Visibility="Visible"
+                Visibility="Hidden"
                 Click="InfoButton_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
@@ -117,7 +117,7 @@
                 Height="55"
                 Margin="250,630,64,51"
                 Cursor="Hand"                
-                Visibility="Visible"
+                Visibility="Hidden"
                 Click="ProgressButton_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
@@ -141,7 +141,7 @@
                 Height="55"
                 Margin="270,480,0,0"
                 Cursor="Hand"                                
-                Visibility="Visible"
+                Visibility="Hidden"
                 Click="DemoButton_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
@@ -166,7 +166,7 @@
                 Height="55"
                 Margin="370,400,0,0"
                 Cursor="Hand"                                
-                Visibility="Visible"
+                Visibility="Hidden"
                 Click="RoutineButton_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">

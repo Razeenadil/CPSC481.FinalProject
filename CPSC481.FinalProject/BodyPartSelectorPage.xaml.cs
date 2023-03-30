@@ -59,6 +59,8 @@ namespace CPSC481.FinalProject
                 ProgressButton.Visibility = Visibility.Visible;
                 RoutineButton.Visibility = Visibility.Visible;
                 ellipseHack.Visibility = Visibility.Visible;
+                ellipseHack1.Visibility = Visibility.Visible;
+
 
                 navigationIsClicked = true;
             }
@@ -74,6 +76,8 @@ namespace CPSC481.FinalProject
                 ProgressButton.Visibility = Visibility.Hidden;
                 RoutineButton.Visibility = Visibility.Hidden;
                 ellipseHack.Visibility = Visibility.Hidden;
+                ellipseHack1.Visibility = Visibility.Hidden;
+
 
 
                 navigationIsClicked = false;
@@ -110,6 +114,12 @@ namespace CPSC481.FinalProject
         {
             var mainWindow = (MainWindow)Application.Current.MainWindow;
             mainWindow?.ChangeView(new LandingScreen());
+        }
+
+        private void Apply_Filter_Button(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = (MainWindow)Application.Current.MainWindow;
+            mainWindow?.ChangeView(new DemoVideoPage());
         }
 
         public string Selection
