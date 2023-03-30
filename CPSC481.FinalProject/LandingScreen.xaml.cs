@@ -79,7 +79,7 @@ namespace CPSC481.FinalProject
         private void DemoButton_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = (MainWindow)Application.Current.MainWindow;
-            mainWindow?.ChangeView(new ProgressPageWeekly());   //change this up
+            mainWindow?.ChangeView(new BodyPartSelectorPage());   
         }
 
         private void RoutineButton_Click(object sender, RoutedEventArgs e)
