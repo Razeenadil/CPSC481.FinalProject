@@ -28,15 +28,15 @@
         </Grid.RowDefinitions>
 
         <Button x:Name="NavigationButton"
-                Grid.Row="4" 
-                Grid.Column="2" 
-                Width="100" 
-                Height="100" 
-                Margin="340,650,-65,-56" 
-                Grid.ColumnSpan="2" 
-                Grid.RowSpan="2"
-                Cursor="Hand"
-                Click="NavigationButton_Click">
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Grid.RowSpan="6"
+                        Grid.ColumnSpan="4"
+                        Width="150" 
+                        Height="150"
+                        Margin="350,670,0,0"
+                        Cursor="Hand"
+                        Click="NavigationButton_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Grid>
@@ -48,16 +48,17 @@
         </Button>
 
         <Button x:Name="InfoButton"
-                Grid.Row="4" 
-                Grid.Column="2"
-                Grid.ColumnSpan="2" 
-                Grid.RowSpan="2"
-                Width="44" 
-                Height="44"
-                Margin="285,670,96,2"
+                Grid.Row="0" 
+                Grid.Column="0"
+                Grid.ColumnSpan="4"
+                Grid.RowSpan="6"
+                Width="55" 
+                Height="55"
+                Margin="190,690,85,6"
                 Cursor="Hand"                
-                Visibility="Hidden">
-
+                Visibility="Hidden"
+                Click="InfoButton_Click"
+                Panel.ZIndex="2">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Grid>
@@ -71,16 +72,31 @@
             </Button.Template>
         </Button>
 
+        <Ellipse 
+            Name="ellipseHack"
+            Fill="White"
+            Grid.Row="0" 
+            Grid.Column="0"
+            Grid.ColumnSpan="4"
+            Grid.RowSpan="6"
+            Width="55" 
+            Height="55"
+            Margin="190,690,85,6"
+            Panel.ZIndex="1"
+            Visibility="Hidden">
+        </Ellipse>
+
         <Button x:Name="ProgressButton"
-                Grid.Row="4" 
-                Grid.Column="2"
-                Grid.ColumnSpan="2" 
-                Grid.RowSpan="2"
-                Width="44" 
-                Height="44"
-                Margin="298,627,73,45"
+                Grid.Row="0" 
+                Grid.Column="0" 
+                Grid.ColumnSpan="4"
+                Grid.RowSpan="6"
+                Width="55" 
+                Height="55"
+                Margin="250,630,64,51"
                 Cursor="Hand"                
-                Visibility="Hidden">
+                Visibility="Hidden"
+                Click="ProgressButton_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Grid>
@@ -95,15 +111,16 @@
         </Button>
 
         <Button x:Name="DemoButton"
-                Grid.Row="4" 
-                Grid.Column="2"
-                Grid.ColumnSpan="2" 
-                Grid.RowSpan="2"
-                Width="44" 
-                Height="44"
-                Margin="329,590,44,80"
+                Grid.Row="0" 
+                Grid.Column="0"
+                Grid.ColumnSpan="4"
+                Grid.RowSpan="6"
+                Width="55" 
+                Height="55"
+                Margin="270,480,0,0"
                 Cursor="Hand"                                
-                Visibility="Hidden">
+                Visibility="Hidden"
+                Click="DemoButton_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Grid>
@@ -117,16 +134,18 @@
             </Button.Template>
         </Button>
 
+
         <Button x:Name="RoutineButton"
-                Grid.Row="4" 
-                Grid.Column="2"
-                Grid.ColumnSpan="2" 
-                Grid.RowSpan="2"
-                Width="44" 
-                Height="44"
-                Margin="372,575,4,103"
+                Grid.Row="0" 
+                Grid.Column="0"
+                Grid.ColumnSpan="4"
+                Grid.RowSpan="6"
+                Width="55" 
+                Height="55"
+                Margin="370,400,0,0"
                 Cursor="Hand"                                
-                Visibility="Hidden">
+                Visibility="Hidden"
+                Click="RoutineButton_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Grid>
@@ -143,9 +162,29 @@
 
         <Label Grid.Column="2" Content="Body Part Selector" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Top" FontSize="24" Margin="0,12,0,0" FontWeight="Bold"/>
         <Separator Grid.Column="2" Margin="0,55,10,0" Grid.Row="4" VerticalAlignment="Top"/>
-        <Image Grid.Column="2" HorizontalAlignment="Left" Height="40" Grid.Row="4" VerticalAlignment="Top" Width="40" Source="/Images/HeaderNavIcons/left-arrow.png" Margin="10,15,0,0"/>
         <Image Grid.Column="2" HorizontalAlignment="Right" Height="44" Margin="0,12,10,0" Grid.Row="4" VerticalAlignment="Top" Width="46" Source="/Images/RadialNavigationIcons/DemoIcon.png"/>
 
+
+        <Button
+            Name="NavBackButton"
+            Grid.Column="2" 
+            HorizontalAlignment="Left" 
+            Grid.Row="4" 
+            VerticalAlignment="Top" 
+            Height="50" Width="50" 
+            Margin="5 10 0 0"  
+            Click="Back_Button_Click" 
+            Cursor="Hand" 
+            Visibility="Visible" 
+            Grid.RowSpan="3" 
+            Grid.ColumnSpan="3">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image Source="/Images/HeaderNavIcons/left-arrow.png"></Image>
+                </ControlTemplate>
+            </Button.Template>
+
+        </Button>
 
         <Border 
             BorderThickness="2"
@@ -375,7 +414,8 @@
                         FontWeight="Medium"
                         Grid.Column="2"
                         BorderBrush="Transparent"
-                        Foreground="White" Margin="148,675,147,20" Grid.Row="4">
+                        Foreground="White" Margin="148,675,147,20" Grid.Row="4"
+                        Panel.ZIndex="0">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>
