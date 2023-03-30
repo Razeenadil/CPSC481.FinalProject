@@ -183,7 +183,6 @@
                     <Image Source="/Images/HeaderNavIcons/left-arrow.png"></Image>
                 </ControlTemplate>
             </Button.Template>
-
         </Button>
 
         <Border 
