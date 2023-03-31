@@ -25,7 +25,8 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="15"/>
         </Grid.RowDefinitions>
-        <TextBox Grid.Row="4" 
+        <TextBox x:Name="usernameTB"
+                 Grid.Row="4" 
                  Grid.Column="2" 
                  Grid.ColumnSpan="3"
                  Grid.RowSpan="2" 
@@ -48,6 +49,7 @@
                 Margin="74,130,0,579"/>
         
         <PasswordBox 
+            x:Name="passwordTB"
             Grid.Row="4" 
             Grid.Column="2" 
             Grid.ColumnSpan="3"

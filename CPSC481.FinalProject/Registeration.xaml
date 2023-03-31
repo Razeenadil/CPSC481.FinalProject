@@ -25,6 +25,7 @@
         </Grid.RowDefinitions>
 
         <TextBox 
+            x:Name="usernameTB"
             Grid.Row="4" 
             Grid.Column="2" 
             Grid.ColumnSpan="3"
@@ -34,18 +35,16 @@
             BorderThickness="2" 
             BorderBrush="Black"
             Height="40"/>
-        
+
         <TextBlock 
             Grid.Row="4" 
             Grid.Column="2"
-            Grid.ColumnSpan="3"
-            Grid.RowSpan="2"
             Text="Username:"
             Foreground="Black"
             FontSize="24"
             FontWeight="Medium"
             HorizontalAlignment="Left"
-            Margin="74,130,0,579"/>
+            Margin="74,130,0,604"/>
 
 
         <Button 
@@ -76,10 +75,11 @@
         </Button>
 
         <CheckBox 
+                  x:Name="termsCheckbox"
                   Grid.Column="2" 
                   Content="Terms and Conditons" 
                   HorizontalAlignment="Left" 
-                  Margin="74,430,0,255"
+                  Margin="74,430,0,291"
                   Grid.Row="4"         
                   Foreground="DarkBlue"
                   FontStyle="Normal"
@@ -90,6 +90,7 @@
         </CheckBox>
 
         <TextBox 
+            x:Name="emailTB"
             Grid.Row="4" 
             Grid.Column="2" 
             Grid.ColumnSpan="3"
@@ -103,15 +104,14 @@
             Text="Email Address:"
             Grid.Row="4" 
             Grid.Column="2"
-            Grid.ColumnSpan="3"
-            Grid.RowSpan="2"
             Foreground="Black"
             FontSize="24"
             FontWeight="Medium"
             HorizontalAlignment="Left"
-            Margin="74,229,0,470"/>
-        
+            Margin="74,229,0,505"/>
+
         <PasswordBox 
+            x:Name="passwordTB"
             Grid.Row="4" 
             Grid.Column="2" 
             Grid.ColumnSpan="3"
@@ -121,19 +121,17 @@
             BorderThickness="2" 
             BorderBrush="Black"
             Height="40"/>
-        
-     
+
+
         <TextBlock 
             Text="Password:"
             Grid.Row="4" 
             Grid.Column="2"
-            Grid.ColumnSpan="3"
-            Grid.RowSpan="2"
             Foreground="Black"
             FontSize="24"
             FontWeight="Medium"
             HorizontalAlignment="Left"
-            Margin="74,325,0,357"/>
+            Margin="74,325,0,402"/>
 
 
         <TextBlock 

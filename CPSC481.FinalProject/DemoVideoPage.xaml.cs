@@ -20,7 +20,13 @@ namespace CPSC481.FinalProject
         private bool navigationIsClicked;
         public event PropertyChangedEventHandler PropertyChanged;
         private string _selection;
-        ObservableCollection<Exercises> exercises = new();
+        private ObservableCollection<Exercises> exercises = new();
+        private string _filter;
+        private bool _arms;
+        private bool _legs;
+        private bool _back;
+        private bool _chest;
+        private bool _abs;
 
 
         public class Exercises
@@ -36,6 +42,24 @@ namespace CPSC481.FinalProject
         {
             InitializeComponent();
             this.DataContext = this;
+            
+            _filter = filterSelection;
+            if(!arms && !legs && !back && !chest && !abs)
+            {
+                _arms = true;
+                _legs = true;
+                _back = true;
+                _chest = true;
+                _abs = true;
+            }
+            else
+            {
+                _arms = arms;
+                _legs = legs;
+                _back = back;   
+                _chest = chest;
+                _abs = abs;
+            }
 
             SetSelection(filterSelection);
             navigationIsClicked = false;
@@ -61,21 +85,21 @@ namespace CPSC481.FinalProject
                 exercises.Add(new Exercises()
                 {
                     BodyPart = "Arms",
-                    TargetMuscleGroup = "Biceps",
+                    TargetMuscleGroup = "Target Body Part: Biceps",
                     Name = "Dumbbell Curls",
                     Description = "Also known as the bicep curls or arm curls, dumbbell curls are an isolation exercise that is aimed at strengthening your upper arms.",
-                    Level = "Beginner",
-                    Equipment = "Dumbells"
+                    Level = "Level: Beginner",
+                    Equipment = "Equipment Required: Dumbells"
                 });
 
                 exercises.Add(new Exercises()
                 {
                     BodyPart = "Arms",
-                    TargetMuscleGroup = "Triceps",
+                    TargetMuscleGroup = "Target Body Part: Triceps",
                     Name = "Triceps PushDown",
-                    Description = "The triceps pushdown can help to increase upper body arm size, enhance general pressing strength, and ultimately improve performance of the shoulders and chest muscles as they are often the secondary muscle group for most mass building movements.",
-                    Level = "Beginner",
-                    Equipment = "Cable Pulley Machine"
+                    Description = "The triceps pushdown can help to increase upper body arm size, enhance general pressing strength.",
+                    Level = "Level: Beginner",
+                    Equipment = "Equipment Required: Cable Pulley Machine"
                 });
             }
 
@@ -84,21 +108,21 @@ namespace CPSC481.FinalProject
                 exercises.Add(new Exercises()
                 {
                     BodyPart = "Legs",
-                    TargetMuscleGroup = "Glutes and Quadriceps",
+                    TargetMuscleGroup = "Target Body Part: Glutes and Quadriceps",
                     Name = "Barbell Squats",
-                    Description = "Whether you’re an experienced powerlifter or a novice lifter, the barbell squat is a comprehensive squat variation to include in your strength training. As you exercise, the movement strengthens your tendons, bones, and ligaments around the leg muscles.",
-                    Level = "Advance",
-                    Equipment = "Barbell, Squat Rack, Weight Plates"
+                    Description = "Whether you’re an experienced powerlifter or a novice lifter, the barbell squat is a comprehensive squat variation to include in your strength training.",
+                    Level = "Level: Advance",
+                    Equipment = "Equipment Required: Barbell, Squat Rack, Weight Plates"
                 });
 
                 exercises.Add(new Exercises()
                 {
                     BodyPart = "Legs",
-                    TargetMuscleGroup = "Quadriceps, Hamstrings, Glutes and Calves",
+                    TargetMuscleGroup = "Target Body Part: Quadriceps, Hamstrings, Glutes and Calves",
                     Name = "Lunges",
-                    Description = "The lunge is a multi-joint exercise that can help tone and strengthen many muscles in the lower body. This includes the quads (front of the thighs), hamstrings (back of the thighs), glutes (buttocks), and calves (back of the lower leg).",
-                    Level = "Beginner",
-                    Equipment = "None"
+                    Description = "The lunge is a multi-joint exercise that can help tone and strengthen many muscles in the lower body. This includes the quads, hamstrings, glutes, and calves.",
+                    Level = "Level: Beginner",
+                    Equipment = "Equipment Required: None"
                 });
             }
 
@@ -107,21 +131,21 @@ namespace CPSC481.FinalProject
                 exercises.Add(new Exercises()
                 {
                     BodyPart = "Chest",
-                    TargetMuscleGroup = "Pectorals, Arms, and Shoulders",
+                    TargetMuscleGroup = "Target Body Part: Pectorals, Arms, and Shoulders",
                     Name = "Bench Press",
-                    Description = "A bench press is an exercise that can be used to strengthen the muscles of the upper body, including the pectorals, arms, and shoulders. It involves lying on a bench and pressing weight upward using either a barbell or a pair of dumbbells. During a bench press, you lower the weight down to chest level and then press upwards while extending your arms. This movement is considered one repetition, or rep.",
-                    Level = "Intermediate",
-                    Equipment = "Barbell, Weight Bench, Weight Plates"
+                    Description = "A bench press is an exercise that can be used to strengthen the muscles of the upper body, including the pectorals, arms, and shoulders.",
+                    Level = "Level: Intermediate",
+                    Equipment = "Equipment Required: Barbell, Weight Bench, Weight Plates"
                 });
 
                 exercises.Add(new Exercises()
                 {
                     BodyPart = "Chest",
-                    TargetMuscleGroup = "Pectorals and Triceps",
+                    TargetMuscleGroup = "Target Body Part: Pectorals and Triceps",
                     Name = "Dips",
-                    Description = "Dips are a compound exercise meaning they work multiple muscle groups at a time. This can be beneficial for building upper body strength and building muscle mass. This effective upper body workout targets the muscles in your arms, chest, and back and can be adjusted to target one specific area to a greater degree.",
-                    Level = "Beginner",
-                    Equipment = "Dip Bar"
+                    Description = "Dips are a compound exercise meaning they work multiple muscle groups at a time. This can be beneficial for building upper body strength and building muscle mass.",
+                    Level = "Level: Beginner",
+                    Equipment = "Equipment Required: Dip Bar"
                 });
             }
 
@@ -130,22 +154,22 @@ namespace CPSC481.FinalProject
                 exercises.Add(new Exercises()
                 {
                     BodyPart = "Abs",
-                    TargetMuscleGroup = "Lower abdomen",
+                    TargetMuscleGroup = "Target Body Part: Lower abdomen",
                     Name = "Flutter Kicks",
-                    Description = "Flutter kicks are an exercise that works the muscles of your core, specifically the lower rectus abdominal muscles, plus the hip flexors. They mimic a swimming stroke, but are performed on dry land.",
-                    Level = "Beginner",
-                    Equipment = "None"
+                    Description = "Flutter kicks are an exercise that works the muscles of your core, specifically the lower rectus abdominal muscles, plus the hip flexors.",
+                    Level = "Level: Beginner",
+                    Equipment = "Equipment Required: None"
                 });
 
                  exercises.Add(new Exercises()
                 {
                     BodyPart = "Abs",
-                    TargetMuscleGroup = "Oblique, Pelvis, Lower Back, and Hips",
+                    TargetMuscleGroup = "Target Body Part: Oblique, Pelvis, Lower Back, and Hips",
                     Name = "Crunches",
-                    Description = "The crunch is a classic core exercise. It specifically trains your abdominal muscles, which are part of your core. Your core consists not only of your abs. It also includes your oblique muscles on the sides of your trunk, as well as the muscles in your pelvis, lower back, and hips. Together, these muscles help stabilize your body.",
-                    Level = "Beginner",
-                    Equipment = "None"
-                });
+                    Description = "The crunch is a classic core exercise. It specifically trains your abdominal muscles, which are part of your core.",
+                    Level = "Level: Beginner",
+                    Equipment = "Equipment Required: None"
+                 });
             }
 
             if(back)
@@ -153,21 +177,21 @@ namespace CPSC481.FinalProject
                 exercises.Add(new Exercises()
                 {
                     BodyPart = "Back",
-                    TargetMuscleGroup = "Upper Back, Latissimus Dorsi, and Teres Major",
+                    TargetMuscleGroup = "Target Body Part: Upper Back, Latissimus Dorsi, and Teres Major",
                     Name = "Lat Pull Down",
-                    Description = "The lat pulldown is a fantastic exercise to strengthen the latissimus dorsi muscle, the broadest muscle in your back, which promotes good postures and spinal stability. Form is crucial when performing a lat pulldown to prevent injury and reap the best results.",
-                    Level = "Beginner",
-                    Equipment = "Cable Pulley Machine"
+                    Description = "The lat pulldown is a fantastic exercise to strengthen the latissimus dorsi muscle, the broadest muscle in your back, which promotes good postures and spinal stability.",
+                    Level = "Level: Beginner",
+                    Equipment = "Equipment Required: Cable Pulley Machine"
                 });
 
                 exercises.Add(new Exercises()
                 {
                     BodyPart = "Back",
-                    TargetMuscleGroup = "Lower Back, Glutes, and Hamstrings",
+                    TargetMuscleGroup = "Target Body Part: Lower Back, Glutes, and Hamstrings",
                     Name = "Deadlift",
-                    Description = "Dead lifts are considered a compound exercise, meaning they involve the use of multiple, large muscle groups. They can be excellent for improving strength, power, and improving lean muscle mass. Due to the involvement of multiple body areas they are also excellent for increasing heart rate and can be ideal for a cardiovascular focused weight circuits.",
-                    Level = "Advance",
-                    Equipment = "Barbell, Weight Plates"
+                    Description = "Dead lifts are considered a compound exercise, meaning they involve the use of multiple, large muscle groups. They can be excellent for improving strength and power.",
+                    Level = "Level: Advance",
+                    Equipment = "Equipment Required: Barbell, Weight Plates"
                 });
             }
 
@@ -287,7 +311,8 @@ namespace CPSC481.FinalProject
             ICollectionView view = CollectionViewSource.GetDefaultView(exercises);
             Exercises ss = (Exercises)view.CurrentItem;
 
-            MessageBox.Show(ss.Name);
+            var mainWindow = (MainWindow)Application.Current.MainWindow;
+            mainWindow?.ChangeView(new DemoExerciseScreen(_filter, _arms, _legs, _back, _chest, _abs, ss.Name, ss.Description, ss.Level, ss.TargetMuscleGroup, ss.Equipment));
         }
     }
 }

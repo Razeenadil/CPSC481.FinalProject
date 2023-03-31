@@ -134,6 +134,7 @@
                 Margin="270,480,0,0"
                 Cursor="Hand"                                
                 Visibility="Hidden"
+                Panel.ZIndex="2"
                 Click="DemoButton_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
@@ -159,6 +160,7 @@
                 Margin="370,400,10,0"
                 Cursor="Hand"                                
                 Visibility="Hidden"
+                Panel.ZIndex="2"                
                 Click="RoutineButton_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
@@ -196,7 +198,7 @@
             Grid.Row="4" 
             VerticalAlignment="Top" 
             Height="50" Width="50" 
-            Margin="5 10 0 0"  
+            Margin="5 15 0 0"  
             Click="Back_Button_Click" 
             Cursor="Hand" 
             Visibility="Visible" 
@@ -212,7 +214,7 @@
 
         <Separator Grid.Column="2" Margin="0,40,10,670" Grid.Row="4"/>
         <Image Grid.Column="2" HorizontalAlignment="Right" Height="40" Margin="0,109,10,0" Grid.Row="4" VerticalAlignment="Top" Width="40" Source="/Images/Icons/muscles.png" RenderTransformOrigin="0.65,0"/>
-        <Image Grid.Column="2" HorizontalAlignment="Right" Height="44" Margin="0,12,10,0" Grid.Row="4" VerticalAlignment="Top" Width="46" Source="/Images/RadialNavigationIcons/DemoIcon.png"/>
+        <Image Grid.Column="2" HorizontalAlignment="Right" Height="44" Margin="0,20,10,0" Grid.Row="4" VerticalAlignment="Top" Width="46" Source="/Images/RadialNavigationIcons/DemoIcon.png"/>
 
 
         <ListBox Name="exerciseListBox" 
