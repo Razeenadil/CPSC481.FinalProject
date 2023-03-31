@@ -435,7 +435,6 @@ namespace CPSC481.FinalProject
             Back.Opacity = 0;
 
             SetSelection();
-
         }
 
     }

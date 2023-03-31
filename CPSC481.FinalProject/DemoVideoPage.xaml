@@ -215,75 +215,65 @@
         <Image Grid.Column="2" HorizontalAlignment="Right" Height="44" Margin="0,12,10,0" Grid.Row="4" VerticalAlignment="Top" Width="46" Source="/Images/RadialNavigationIcons/DemoIcon.png"/>
 
 
+        <ListBox Name="routineListBox" 
+                     Grid.Row="4"
+                     Grid.Column="1"
+                     Grid.ColumnSpan="2"
+                     Margin="0,184,10,219"
+                     HorizontalContentAlignment="Stretch"
+                     ScrollViewer.VerticalScrollBarVisibility="Visible">
+            <ListBox.Resources>
 
-        <Border Background="Green" Width="5" Grid.Column="2" Grid.Row="4" Margin="25,184,390,44"/>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
 
-        <TextBlock Grid.Column="2" 
-                   HorizontalAlignment="Left" 
-                   Margin="65,210,0,0" 
-                   Grid.Row="4" 
-                   TextWrapping="Wrap" 
-                   Text="Arms" 
-                   VerticalAlignment="Top"
-                   FontSize="20"
-                   FontWeight="Bold"/>
+                </Style>
+            </ListBox.Resources>
+            <ListBox.GroupStyle>
+                <GroupStyle ContainerStyle="{StaticResource ContainerStyle}"/>
+            </ListBox.GroupStyle>
+
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="75"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Border Grid.Column="1"
+                                    Margin="-29,10,10,10"
+                                    Height="50"
+                                    Width="250"
+                                    HorizontalAlignment="Left"
+                                    CornerRadius="5"
+                                    BorderBrush="Black"
+                                    BorderThickness="3"
+                                    Background="Black">
+                            <TextBlock Text="{Binding Name}"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           Foreground="White"
+                                           FontSize="26"
+                                           TextTrimming="CharacterEllipsis"/>
+                        </Border>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+
+        </ListBox>
 
 
-        <Separator Grid.Column="2" Margin="30,127,10,415" Grid.Row="4" BorderThickness="11" BorderBrush="Black"/>
-        <TextBlock Grid.Column="2" 
-                   HorizontalAlignment="Left" 
-                   Margin="90,248,0,0" 
-                   Grid.Row="4" 
-                   TextWrapping="Wrap" 
-                   Text="Dumbell Curls"
-                   FontSize="18"
-                   FontWeight="Medium"
-                   VerticalAlignment="Top"/>
 
-        <Separator Grid.Column="2" Margin="30,151,10,360" Grid.Row="4" BorderThickness="7" BorderBrush="Black"/>
-        <TextBlock Grid.Column="2" 
-                   HorizontalAlignment="Left" 
-                   Margin="90,289,0,0" 
-                   Grid.Row="4" 
-                   TextWrapping="Wrap" 
-                   Text="Hammer Curls" 
-                   FontSize="18"
-                   FontWeight="Medium"
-                   VerticalAlignment="Top"/>
 
-        <Separator Grid.Column="2" Margin="30,180,10,304" Grid.Row="4" BorderThickness="7" BorderBrush="Black"/>
-        <TextBlock Grid.Column="2" 
-                   HorizontalAlignment="Left" 
-                   Margin="90,330,0,0"
-                   Grid.Row="4" 
-                   TextWrapping="Wrap" 
-                   Text="Bicep Pull Downs"
-                   FontSize="18"
-                   FontWeight="Medium"
-                   VerticalAlignment="Top"/>
 
-        <Separator Grid.Column="2" Margin="30,194,10,236" Grid.Row="4" BorderThickness="7" BorderBrush="Black"/>
-        <Ellipse 
-            HorizontalAlignment="Left" 
-            Height="25" 
-            Width="25" 
-            Margin="15,201,0,0" 
-            Grid.Row="4" 
-            Stroke="Black" 
-            VerticalAlignment="Top" 
-            Grid.Column="2"
-            Fill="Black"
-            Visibility="Hidden"/>
 
-        <Rectangle 
-            HorizontalAlignment="Left" 
-            Height="35" 
-            Width="22" 
-            Margin="17,211,0,0" 
-            Grid.Row="4" 
-            Stroke="Black" 
-            Fill="Black"
-            VerticalAlignment="Top" Grid.Column="2"/>
+
+
+
+
+
+
 
 
 
