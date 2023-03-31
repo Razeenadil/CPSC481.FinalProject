@@ -19,12 +19,12 @@ namespace CPSC481.FinalProject
 
 
 
-        public DemoVideoPage(string value)
+        public DemoVideoPage(string filterSelection, bool arms, bool legs, bool back, bool chest, bool abs)
         {
             InitializeComponent();
             this.DataContext = this;
 
-            SetSelection(value);
+            SetSelection(filterSelection);
             navigationIsClicked = false;
         }
 

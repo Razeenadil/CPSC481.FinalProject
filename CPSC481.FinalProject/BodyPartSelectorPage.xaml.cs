@@ -17,6 +17,7 @@ namespace CPSC481.FinalProject
         private bool absIsClicked;
         private bool chestIsClicked;
         private bool backIsClicked;
+        private bool arms, legs, chest, back, abs;
         private string _selection;
         private string selectionParameter;
 
@@ -132,7 +133,7 @@ namespace CPSC481.FinalProject
 
 
             var mainWindow = (MainWindow)Application.Current.MainWindow;
-            mainWindow?.ChangeView(new DemoVideoPage(selectionParameter));
+            mainWindow?.ChangeView(new DemoVideoPage(selectionParameter, arms, legs, back, chest, abs));
         }
 
         public string Selection
@@ -150,50 +151,47 @@ namespace CPSC481.FinalProject
 
         private void SetSelection()
         {
-            int c = 0;
             Selection = "";
             selectionParameter = "Selection: ";
+            arms = false;
+            legs = false;
+            chest = false;
+            abs = false;
+            back = false;
 
             if (armIsClicked)
             {
-          
+                arms = true;
                 Selection = "Arms\n";
                 selectionParameter = selectionParameter + "Arms / ";
-              
-                
-                c++;
             }
 
             if (legIsClicked)
             {
+                legs = true;
                 Selection = Selection + "Legs\n";
                 selectionParameter = selectionParameter + "Legs / ";
-                c++;
-
             }
 
             if (absIsClicked)
             {
+                abs = true;
                 Selection = Selection + "Abs\n";
                 selectionParameter = selectionParameter + "Abs / ";
-                c++;
-
             }
 
             if (chestIsClicked)
             {
+                chest = true;
                 Selection = Selection + "Chest\n";
                 selectionParameter = selectionParameter + "Chest / ";
-                c++;
-
             }
 
             if (backIsClicked)
             {
+                back = true;
                 Selection = Selection + "Back\n";
                 selectionParameter = selectionParameter + "Back / ";
-                c++;
-
             }
         }
 
