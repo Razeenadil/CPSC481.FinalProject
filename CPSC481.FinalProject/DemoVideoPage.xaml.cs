@@ -281,12 +281,6 @@ namespace CPSC481.FinalProject
 
 
         //https://stackoverflow.com/questions/5745349/get-name-of-selected-listbox-item-wpf-c
-    
-
-
-   
-
-        
 
         private void exerciseListBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
