@@ -54,7 +54,7 @@
                 Grid.RowSpan="6"
                 Width="55" 
                 Height="55"
-                Margin="190,690,85,6"
+                Margin="195,675,85,6"
                 Cursor="Hand"                
                 Visibility="Hidden"
                 Click="InfoButton_Click"
@@ -81,7 +81,7 @@
             Grid.RowSpan="6"
             Width="55" 
             Height="55"
-            Margin="190,690,85,6"
+            Margin="195,675,85,6"
             Panel.ZIndex="1"
             Visibility="Hidden">
         </Ellipse>
@@ -96,7 +96,8 @@
                 Margin="250,630,64,51"
                 Cursor="Hand"                
                 Visibility="Hidden"
-                Click="ProgressButton_Click">
+                Click="ProgressButton_Click"
+                Panel.ZIndex="2">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Grid>
@@ -109,6 +110,20 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
+
+        <Ellipse 
+            Name="ellipseHack1"
+            Fill="White"
+            Grid.Row="0" 
+            Grid.Column="0"
+            Grid.ColumnSpan="4"
+            Grid.RowSpan="6"
+            Width="55" 
+            Height="55"
+            Margin="250,630,64,51"
+            Panel.ZIndex="1"
+            Visibility="Hidden">
+        </Ellipse>
 
         <Button x:Name="DemoButton"
                 Grid.Row="0" 
@@ -142,7 +157,7 @@
                 Grid.RowSpan="6"
                 Width="55" 
                 Height="55"
-                Margin="370,400,0,0"
+                Margin="370,400,10,0"
                 Cursor="Hand"                                
                 Visibility="Hidden"
                 Click="RoutineButton_Click">
@@ -160,7 +175,7 @@
         </Button>
 
 
-        <Label Grid.Column="2" Content="Body Part Selector" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Top" FontSize="24" Margin="0,12,0,0" FontWeight="Bold"/>
+        <Label Grid.Column="2" Content="Body Part Selector" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Top" FontSize="32" Margin="0,5,0,0" FontWeight="Bold"/>
         <Separator Grid.Column="2" Margin="0,55,10,0" Grid.Row="4" VerticalAlignment="Top"/>
         <Image Grid.Column="2" HorizontalAlignment="Right" Height="44" Margin="0,12,10,0" Grid.Row="4" VerticalAlignment="Top" Width="46" Source="/Images/RadialNavigationIcons/DemoIcon.png"/>
 
@@ -183,7 +198,6 @@
                     <Image Source="/Images/HeaderNavIcons/left-arrow.png"></Image>
                 </ControlTemplate>
             </Button.Template>
-
         </Button>
 
         <Border 
@@ -306,7 +320,7 @@
             Opacity="0"
             Width="80"
             Height="100"
-            Margin="10,140,0,0"
+            Margin="0,140,0,0"
             Cursor="Hand"
             IsEnabled="False"
             Click="Back_Click">
@@ -368,8 +382,8 @@
                 Grid.Row="4" 
                 HorizontalAlignment="Right" 
                 VerticalAlignment="Top"
-                Width="17"
-                Height="17"
+                Width="25"
+                Height="25"
                 Click="NextButton_Click"
                 Margin="0,281,21,0"
                 Cursor="Hand" 
@@ -394,8 +408,8 @@
                 Grid.Row="4"               
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Top"
-                Width="17"
-                Height="17"
+                Width="25"
+                Height="25"
                 Click="BackButton_Click"
                 Margin="21,281,0,0"
                 Cursor="Hand"
@@ -408,14 +422,20 @@
             </Button.Template>
         </Button>
 
+        
         <Button Height="50"
-                        Width="125"
-                        FontSize="20"
+                        Width="165"
+                        FontSize="26"
                         FontWeight="Medium"
                         Grid.Column="2"
                         BorderBrush="Transparent"
-                        Foreground="White" Margin="148,675,147,20" Grid.Row="4"
-                        Panel.ZIndex="0">
+                        Foreground="White" 
+                        Grid.Row="4"
+                        Panel.ZIndex="0"
+                        Grid.ColumnSpan="3"
+                        VerticalAlignment="Bottom"
+                        Margin="0 0 0 35"
+                        Click="Apply_Filter_Button">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>
@@ -431,32 +451,35 @@
             Apply Filters
         </Button>
 
+
         <TextBlock Grid.Column="2" 
                    HorizontalAlignment="Left" 
-                   Margin="10,515,0,0" 
+                   Margin="10,495,0,0" 
                    Grid.Row="4" 
                    TextWrapping="Wrap" 
                    Text="Selected body parts" 
                    VerticalAlignment="Top" 
-                   FontSize="20"
+                   FontSize="24"
                    FontWeight="Bold"/>
-        <Separator Grid.Column="2" Margin="0,551,10,0" Grid.Row="4" VerticalAlignment="Top" />
+        <Separator Grid.Column="2" Margin="0,530,10,0" Grid.Row="4" VerticalAlignment="Top" />
+        
         <TextBlock Grid.Column="2" 
                    HorizontalAlignment="Left" 
-                   Margin="30,560,0,0"
+                   Margin="30,532,0,0"
                    Grid.Row="4" 
                    TextWrapping="Wrap" 
                    Text="{Binding Path=Selection, Mode=TwoWay}" 
                    VerticalAlignment="Top" 
-                   FontSize="16"
+                   FontSize="24"
                    FontWeight="Medium"/>
 
         <TextBlock 
             Grid.Column="2" 
             HorizontalAlignment="Left" 
-            Margin="325,521,0,0" Grid.Row="4" 
+            Margin="325,502,0,0" Grid.Row="4" 
             TextWrapping="Wrap" 
-            VerticalAlignment="Top">
+            VerticalAlignment="Top"
+            FontSize="17">
             <Hyperlink
                 Name="ResetFilter"
                 Click="ResetFilter_Click">Reset Filters</Hyperlink>

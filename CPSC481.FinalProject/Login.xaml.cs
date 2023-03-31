@@ -29,8 +29,42 @@ namespace CPSC481.FinalProject
 
         private void Login_Button_Click(object sender, RoutedEventArgs e)
         {
-            var mainWindow = (MainWindow)Application.Current.MainWindow;
-            mainWindow?.ChangeView(new LandingScreen());
+            if(string.IsNullOrEmpty(usernameTB.Text))
+            {
+                usernameTB.BorderBrush = new SolidColorBrush(Colors.Red);
+                usernameTB.BorderThickness = new Thickness(3, 3, 3, 3);
+            }
+            else
+            {
+                usernameTB.BorderBrush = new SolidColorBrush(Colors.Black);
+            }
+
+            if(string.IsNullOrEmpty(passwordTB.Password.ToString()))
+            {
+                passwordTB.BorderBrush = new SolidColorBrush(Colors.Red);
+                passwordTB.BorderThickness = new Thickness(3, 3, 3, 3);
+            }
+            else
+            {
+                passwordTB.BorderBrush = new SolidColorBrush(Colors.Black);
+
+            }
+
+            if (!string.IsNullOrEmpty(usernameTB.Text) && !string.IsNullOrEmpty(passwordTB.Password.ToString()))
+            {
+                if(usernameTB.Text == "admin" && passwordTB.Password.ToString() == "admin")
+                {
+                    var mainWindow = (MainWindow)Application.Current.MainWindow;
+                    mainWindow?.ChangeView(new LandingScreen());
+                }
+                else
+                {
+                    MessageBox.Show("Username or Password is incorrect!", "Login Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+
+
+          
         }
 
         private void ForgotPassword_Click(object sender, RoutedEventArgs e)

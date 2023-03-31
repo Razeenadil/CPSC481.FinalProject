@@ -17,7 +17,9 @@ namespace CPSC481.FinalProject
         private bool absIsClicked;
         private bool chestIsClicked;
         private bool backIsClicked;
+        private bool arms, legs, chest, back, abs;
         private string _selection;
+        private string selectionParameter;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -59,6 +61,8 @@ namespace CPSC481.FinalProject
                 ProgressButton.Visibility = Visibility.Visible;
                 RoutineButton.Visibility = Visibility.Visible;
                 ellipseHack.Visibility = Visibility.Visible;
+                ellipseHack1.Visibility = Visibility.Visible;
+
 
                 navigationIsClicked = true;
             }
@@ -74,6 +78,8 @@ namespace CPSC481.FinalProject
                 ProgressButton.Visibility = Visibility.Hidden;
                 RoutineButton.Visibility = Visibility.Hidden;
                 ellipseHack.Visibility = Visibility.Hidden;
+                ellipseHack1.Visibility = Visibility.Hidden;
+
 
 
                 navigationIsClicked = false;
@@ -112,6 +118,24 @@ namespace CPSC481.FinalProject
             mainWindow?.ChangeView(new LandingScreen());
         }
 
+        private void Apply_Filter_Button(object sender, RoutedEventArgs e)
+        {
+            if(string.IsNullOrEmpty(selectionParameter))
+            {
+                selectionParameter = "Selection: No filters applied";
+            }
+            else
+            {
+                selectionParameter = selectionParameter.Trim();
+                selectionParameter = selectionParameter.TrimEnd('/');
+            }
+
+
+
+            var mainWindow = (MainWindow)Application.Current.MainWindow;
+            mainWindow?.ChangeView(new DemoVideoPage(selectionParameter, arms, legs, back, chest, abs));
+        }
+
         public string Selection
         {
             get { return _selection; }
@@ -128,29 +152,46 @@ namespace CPSC481.FinalProject
         private void SetSelection()
         {
             Selection = "";
+            selectionParameter = "Selection: ";
+            arms = false;
+            legs = false;
+            chest = false;
+            abs = false;
+            back = false;
+
             if (armIsClicked)
             {
+                arms = true;
                 Selection = "Arms\n";
+                selectionParameter = selectionParameter + "Arms / ";
             }
 
             if (legIsClicked)
             {
+                legs = true;
                 Selection = Selection + "Legs\n";
+                selectionParameter = selectionParameter + "Legs / ";
             }
 
             if (absIsClicked)
             {
+                abs = true;
                 Selection = Selection + "Abs\n";
+                selectionParameter = selectionParameter + "Abs / ";
             }
 
             if (chestIsClicked)
             {
+                chest = true;
                 Selection = Selection + "Chest\n";
+                selectionParameter = selectionParameter + "Chest / ";
             }
 
             if (backIsClicked)
             {
+                back = true;
                 Selection = Selection + "Back\n";
+                selectionParameter = selectionParameter + "Back / ";
             }
         }
 
@@ -394,7 +435,6 @@ namespace CPSC481.FinalProject
             Back.Opacity = 0;
 
             SetSelection();
-
         }
 
     }
