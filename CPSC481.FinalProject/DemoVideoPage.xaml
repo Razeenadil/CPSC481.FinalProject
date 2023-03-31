@@ -176,7 +176,18 @@
         
         <Label Grid.Column="2" Content="Exercise Demos" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Top" FontSize="32" Margin="0,12,0,0" FontWeight="Bold"/>
         <Separator Grid.Column="2" Margin="0,140,10,570" Grid.Row="4"/>
-        <Label Content="Selection : Arms" HorizontalAlignment="Left" Margin="10,100,0,0" Grid.Row="4" VerticalAlignment="Top" Grid.Column="2" FontSize="26"/>
+
+        <TextBlock 
+            Grid.Column="2" 
+            HorizontalAlignment="Left" 
+            Margin="3,95,0,0"
+            Grid.Row="4" 
+            Text="{Binding Path=Selection, Mode=TwoWay}" 
+            VerticalAlignment="Top" 
+            FontSize="24"
+            FontWeight="Medium"
+            Width="350"
+            TextWrapping="WrapWithOverflow"/>
 
         <Button
             Name="NavBackButton"
@@ -200,7 +211,7 @@
 
 
         <Separator Grid.Column="2" Margin="0,40,10,670" Grid.Row="4"/>
-        <Image Grid.Column="2" HorizontalAlignment="Right" Height="40" Margin="0,100,10,0" Grid.Row="4" VerticalAlignment="Top" Width="40" Source="/Images/Icons/muscles.png" RenderTransformOrigin="0.65,0"/>
+        <Image Grid.Column="2" HorizontalAlignment="Right" Height="40" Margin="0,109,10,0" Grid.Row="4" VerticalAlignment="Top" Width="40" Source="/Images/Icons/muscles.png" RenderTransformOrigin="0.65,0"/>
         <Image Grid.Column="2" HorizontalAlignment="Right" Height="44" Margin="0,12,10,0" Grid.Row="4" VerticalAlignment="Top" Width="46" Source="/Images/RadialNavigationIcons/DemoIcon.png"/>
 
 

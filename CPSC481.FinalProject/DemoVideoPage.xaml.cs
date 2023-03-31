@@ -1,35 +1,58 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.ComponentModel;
+
 
 namespace CPSC481.FinalProject
 {
     /// <summary>
     /// Interaction logic for DemoVideoPage.xaml
     /// </summary>
-    public partial class DemoVideoPage : Page
+    public partial class DemoVideoPage : Page, INotifyPropertyChanged
     {
 
         private bool navigationIsClicked;
+        public event PropertyChangedEventHandler PropertyChanged;
+        private string _selection;
 
 
-        public DemoVideoPage()
+
+        public DemoVideoPage(string value)
         {
             InitializeComponent();
             this.DataContext = this;
 
+            SetSelection(value);
             navigationIsClicked = false;
+        }
+
+        protected void OnPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            }
+
+        }
+
+        public string Selection
+        {
+            get { return _selection; }
+            set
+            {
+                if (value != _selection)
+                {
+                    _selection = value;
+                    OnPropertyChanged(nameof(Selection));
+                }
+            }
+        }
+
+        private void SetSelection(string value)
+        {
+            Selection = value;
         }
 
 

@@ -454,17 +454,18 @@
 
         <TextBlock Grid.Column="2" 
                    HorizontalAlignment="Left" 
-                   Margin="10,515,0,0" 
+                   Margin="10,495,0,0" 
                    Grid.Row="4" 
                    TextWrapping="Wrap" 
                    Text="Selected body parts" 
                    VerticalAlignment="Top" 
                    FontSize="24"
                    FontWeight="Bold"/>
-        <Separator Grid.Column="2" Margin="0,551,10,0" Grid.Row="4" VerticalAlignment="Top" />
+        <Separator Grid.Column="2" Margin="0,530,10,0" Grid.Row="4" VerticalAlignment="Top" />
+        
         <TextBlock Grid.Column="2" 
                    HorizontalAlignment="Left" 
-                   Margin="30,560,0,0"
+                   Margin="30,532,0,0"
                    Grid.Row="4" 
                    TextWrapping="Wrap" 
                    Text="{Binding Path=Selection, Mode=TwoWay}" 
@@ -475,7 +476,7 @@
         <TextBlock 
             Grid.Column="2" 
             HorizontalAlignment="Left" 
-            Margin="325,521,0,0" Grid.Row="4" 
+            Margin="325,502,0,0" Grid.Row="4" 
             TextWrapping="Wrap" 
             VerticalAlignment="Top"
             FontSize="17">

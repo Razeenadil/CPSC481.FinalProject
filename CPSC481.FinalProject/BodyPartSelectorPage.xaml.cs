@@ -18,6 +18,7 @@ namespace CPSC481.FinalProject
         private bool chestIsClicked;
         private bool backIsClicked;
         private string _selection;
+        private string selectionParameter;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -118,8 +119,20 @@ namespace CPSC481.FinalProject
 
         private void Apply_Filter_Button(object sender, RoutedEventArgs e)
         {
+            if(string.IsNullOrEmpty(selectionParameter))
+            {
+                selectionParameter = "Selection: No filters applied";
+            }
+            else
+            {
+                selectionParameter = selectionParameter.Trim();
+                selectionParameter = selectionParameter.TrimEnd('/');
+            }
+
+
+
             var mainWindow = (MainWindow)Application.Current.MainWindow;
-            mainWindow?.ChangeView(new DemoVideoPage());
+            mainWindow?.ChangeView(new DemoVideoPage(selectionParameter));
         }
 
         public string Selection
@@ -137,30 +150,50 @@ namespace CPSC481.FinalProject
 
         private void SetSelection()
         {
+            int c = 0;
             Selection = "";
+            selectionParameter = "Selection: ";
+
             if (armIsClicked)
             {
+          
                 Selection = "Arms\n";
+                selectionParameter = selectionParameter + "Arms / ";
+              
+                
+                c++;
             }
 
             if (legIsClicked)
             {
                 Selection = Selection + "Legs\n";
+                selectionParameter = selectionParameter + "Legs / ";
+                c++;
+
             }
 
             if (absIsClicked)
             {
                 Selection = Selection + "Abs\n";
+                selectionParameter = selectionParameter + "Abs / ";
+                c++;
+
             }
 
             if (chestIsClicked)
             {
                 Selection = Selection + "Chest\n";
+                selectionParameter = selectionParameter + "Chest / ";
+                c++;
+
             }
 
             if (backIsClicked)
             {
                 Selection = Selection + "Back\n";
+                selectionParameter = selectionParameter + "Back / ";
+                c++;
+
             }
         }
 
