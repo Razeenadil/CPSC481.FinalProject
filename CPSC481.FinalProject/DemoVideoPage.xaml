@@ -215,18 +215,19 @@
         <Image Grid.Column="2" HorizontalAlignment="Right" Height="44" Margin="0,12,10,0" Grid.Row="4" VerticalAlignment="Top" Width="46" Source="/Images/RadialNavigationIcons/DemoIcon.png"/>
 
 
-        <ListBox Name="routineListBox" 
+        <ListBox Name="exerciseListBox" 
                      Grid.Row="4"
                      Grid.Column="1"
                      Grid.ColumnSpan="2"
                      Margin="0,184,10,219"
                      HorizontalContentAlignment="Stretch"
-                     ScrollViewer.VerticalScrollBarVisibility="Visible">
+                     ScrollViewer.VerticalScrollBarVisibility="Visible"
+                     IsSynchronizedWithCurrentItem="True"
+                     SelectedItem="{Binding Exercises}"
+                     MouseDoubleClick="exerciseListBox_MouseDoubleClick">
             <ListBox.Resources>
-
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"/>
-
                 </Style>
             </ListBox.Resources>
             <ListBox.GroupStyle>
