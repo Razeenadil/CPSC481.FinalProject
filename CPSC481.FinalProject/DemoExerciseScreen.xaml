@@ -70,7 +70,7 @@
             <TextBlock Text="{Binding Path=ExerciseName, Mode=TwoWay}"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Left"
-                    FontSize="32"
+                    FontSize="28"
                     FontWeight="Bold"
                     Width="350"
                     TextWrapping="Wrap"
@@ -103,7 +103,7 @@
                     Padding="3"/>
 
             <TextBlock Text="{Binding Path=Level, Mode=TwoWay}"                         
-                        FontSize="19"
+                        FontSize="18"
                         Padding="3"                           
                         FontWeight="Medium"
                         Width="402"
@@ -111,7 +111,7 @@
                         Margin="10 0 0 0"/>
 
             <TextBlock Text="{Binding Path=TargetMuscleGroup, Mode=TwoWay}"                           
-                        FontSize="19"
+                        FontSize="18"
                         Padding="3"                           
                         FontWeight="Medium"
                         Width="402"
@@ -121,7 +121,7 @@
 
             <TextBlock Text="{Binding Path=Equipment, Mode=TwoWay}"
                         Padding="3"
-                        FontSize="19"
+                        FontSize="18"
                         FontWeight="Medium"
                         Width="402"
                         HorizontalAlignment="Left"
@@ -136,14 +136,14 @@
                     HorizontalAlignment="Left"
                     FontSize="26"
                     FontWeight="Bold"
-                    Padding="0"/>
+                    Padding="3"/>
 
             <TextBlock Text="{Binding Path=Description, Mode=TwoWay}"
-                        Padding="0"
+                        Padding="3"
                         FontSize="18"
                         Panel.ZIndex="0"
                         TextWrapping="Wrap"
-                        Width="400"                       
+                        Width="350"                       
                         HorizontalAlignment="Left"
                         Margin="10 0 0 0"
                         FontWeight="Medium"/>
