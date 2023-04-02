@@ -17,6 +17,7 @@ namespace CPSC481.FinalProject
 {
     public static class Global_Data
     {
+        public static string routine_chosen = "Routine 1";
         public struct exercise_info
         {
             public string exercise_name;
@@ -37,16 +38,43 @@ namespace CPSC481.FinalProject
             }
         }
 
-        public static Dictionary<int, exercise_info> exercise_dict = new Dictionary<int, exercise_info>();
-
         public static Dictionary<string, Dictionary<int, exercise_info>> routine_dict = new Dictionary<string, Dictionary<int, exercise_info>>();
 
         public static void Add_routine(string routine_name)
         {
-
+            routine_dict.Add(routine_name, new Dictionary<int, exercise_info>());
         }
 
+        public static void Remove_routine(string routine_name)
+        {
+            routine_dict.Remove(routine_name);
+        }
+
+        public static void Add_rep_exercise(string routine, int num, string name, int set_total, int rep_total)
+        {
+            exercise_info Info = new exercise_info();
+            Info.exercise_name = name;
+            Info.exercise_type = 0;
+            Info.rep_count = rep_total;
+            Info.rep_total = rep_total;
+            Info.set_total = set_total;
+            routine_dict[routine].Add(num, Info);
+        }
+
+        public static void Add_timed_exercise(string routine, int num, string name)
+        {
+            exercise_info Info = new exercise_info();
+            Info.exercise_name = name;
+            Info.exercise_type = 1;
+            routine_dict[routine].Add(num, Info);
+        }
+
+        public static void Remove_exercise(string routine, int num) 
+        {
+            routine_dict[routine].Remove(num);
+        }
     }
+
     /// <summary>
     /// Interaction logic for RoutineStartScreen.xaml
     /// </summary>
@@ -61,21 +89,26 @@ namespace CPSC481.FinalProject
 
             navigationIsClicked = false;
 
-
+            Global_Data.Add_routine("Routine 1");
+            Global_Data.Add_rep_exercise("Routine 1", 1, "Dumbbell Curls", 8, 8);
+            Global_Data.Add_rep_exercise("Routine 1", 2, "Farmer's Walk", 8, 8);
+            Global_Data.Add_rep_exercise("Routine 1", 3, "Hammer Curls", 8, 8);
+            Global_Data.Add_rep_exercise("Routine 1", 4, "Concentrated Biceps Curls", 8, 8);
+            Global_Data.Add_rep_exercise("Routine 1", 5, "Dumbbell Curls", 8, 8);
+            Global_Data.Add_rep_exercise("Routine 1", 6, "Farmer's Walk", 8, 8);
+            Global_Data.Add_rep_exercise("Routine 1", 7, "Hammer Curls", 8, 8);
+            Global_Data.Add_rep_exercise("Routine 1", 8, "Concentrated Biceps Curls", 8, 8);
+            Global_Data.Add_rep_exercise("Routine 1", 9, "Dumbbell Curls", 8, 8);
+            Global_Data.Add_rep_exercise("Routine 1", 10, "Farmer's Walk", 8, 8);
+            Global_Data.Add_rep_exercise("Routine 1", 11, "Hammer Curls", 8, 8);
+            Global_Data.Add_rep_exercise("Routine 1", 12, "Concentrated Biceps Curls EX", 8, 8);
 
             List<ExerciseItem> exercises = new List<ExerciseItem>();
-            exercises.Add(new ExerciseItem() { Num = ++num_of_exercises, Name = "Dumbbell Curls" });
-            exercises.Add(new ExerciseItem() { Num = ++num_of_exercises, Name = "Farmer's Walk" });
-            exercises.Add(new ExerciseItem() { Num = ++num_of_exercises, Name = "Hammer Curls" });
-            exercises.Add(new ExerciseItem() { Num = ++num_of_exercises, Name = "Concentrated Biceps Curls" });
-            exercises.Add(new ExerciseItem() { Num = ++num_of_exercises, Name = "Dumbbell Curls" });
-            exercises.Add(new ExerciseItem() { Num = ++num_of_exercises, Name = "Farmer's Walk" });
-            exercises.Add(new ExerciseItem() { Num = ++num_of_exercises, Name = "Hammer Curls" });
-            exercises.Add(new ExerciseItem() { Num = ++num_of_exercises, Name = "Concentrated Biceps Curls" });
-            exercises.Add(new ExerciseItem() { Num = ++num_of_exercises, Name = "Dumbbell Curls" });
-            exercises.Add(new ExerciseItem() { Num = ++num_of_exercises, Name = "Farmer's Walk" });
-            exercises.Add(new ExerciseItem() { Num = ++num_of_exercises, Name = "Hammer Curls" });
-            exercises.Add(new ExerciseItem() { Num = ++num_of_exercises, Name = "Concentrated Biceps Curls" });
+
+            foreach (KeyValuePair<int, Global_Data.exercise_info> entry in Global_Data.routine_dict[Global_Data.routine_chosen])
+            {
+                exercises.Add(new ExerciseItem() { Num = entry.Key, Name = entry.Value.exercise_name });
+            }
 
             routineListBox.ItemsSource = exercises;
         }
