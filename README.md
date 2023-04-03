@@ -6,7 +6,7 @@
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Functionality ](#functionality)
-- [Navigating in the App](#navigation)
+- [Walkthrough](#walkthrough)
 - [Authors](#authors)
 - [License](#license)
 
@@ -52,7 +52,7 @@ Here is the list of fully working features that our app presents to users:
 - User can check new exercises, watch their tutorials and add them to their routine.
 - User can track their daily, weekly and monthly progress based on their workout and exercise history.
 
-## Navigation 
+## Walkthrough 
 ((HAVE TO BE UPDATED))
 
 Please follow the instructions below to navigate throughout the app:
