@@ -197,12 +197,14 @@
                     <ColumnDefinition Width="140"/>
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
-                <Button Height="50"
+                <Button Name="TransitionButton"
+                        Height="50"
                         FontSize="20"
                         FontWeight="Medium"
                         Grid.Column="1"
                         BorderBrush="Transparent"
-                        Foreground="White">
+                        Foreground="White"
+                        Click="TransitionButton_Click">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="5"/>

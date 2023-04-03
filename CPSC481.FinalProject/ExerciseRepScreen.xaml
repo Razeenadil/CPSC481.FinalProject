@@ -194,7 +194,7 @@
                                               VerticalContentAlignment="Top"
                                               HorizontalContentAlignment="Center">
                                         <ComboBox.Resources>
-                                            <sys:Double x:Key="{x:Static SystemParameters.VerticalScrollBarWidthKey}">0</sys:Double>
+                                            <sys:Double x:Key="{x:Static SystemParameters.VerticalScrollBarWidthKey}">7</sys:Double>
                                         </ComboBox.Resources>
                                         
                                         <ComboBoxItem>0</ComboBoxItem>
@@ -235,12 +235,15 @@
                     <ColumnDefinition Width="140"/>
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
-                <Button Height="50"
+                <Button Name="TransitionButton"
+                        Height="50"
                         FontSize="20"
                         FontWeight="Medium"
                         Grid.Column="1"
                         BorderBrush="Transparent"
-                        Foreground="White">
+                        Foreground="White"
+                        Content="Next"
+                        Click="TransitionButton_Click">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="5"/>
@@ -253,7 +256,6 @@
                             <GradientStop Color="#003622" Offset="1"/>
                         </LinearGradientBrush>
                     </Button.Background>
-                    Next
                 </Button>
             </Grid>
 
