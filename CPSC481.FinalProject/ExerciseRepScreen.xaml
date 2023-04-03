@@ -44,13 +44,14 @@
             <StackPanel Orientation="Horizontal"
                         Grid.Row="1"
                         Grid.Column="1">
-                <Button Height="40" 
+                <Button Name="BackButton"
+                        Height="40" 
                         Width="40" 
                         Background="Transparent" 
                         BorderBrush="Transparent"
                         VerticalAlignment="Center"
                         HorizontalAlignment="Center"
-                        Click="Back_Button_Click">
+                        Click="BackButton_Click">
                     <Image Source="/Images/HeaderNavIcons/left-arrow.png"/>
                 </Button>
                 <Label Name="routineLabel"

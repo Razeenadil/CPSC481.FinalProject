@@ -124,5 +124,30 @@ namespace CPSC481.FinalProject
                 mainWindow?.ChangeView(new ExerciseTimerScreen());
             }
         }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = (MainWindow)Application.Current.MainWindow;
+
+            // if it's the first exercise in the list
+            if (Global_Data.exercise_number == 1)
+            {
+                mainWindow?.ChangeView(new RoutineStartScreen());
+            }
+            else
+            {
+                Global_Data.exercise_number--;
+                // check what type of exercise then go to next exercise
+                if (Global_Data.routine_dict[Global_Data.routine_chosen][Global_Data.exercise_number].exercise_type == 0)
+                {
+                    mainWindow?.ChangeView(new ExerciseRepScreen());
+                }
+                // else it must be time based
+                else
+                {
+                    mainWindow?.ChangeView(new ExerciseTimerScreen());
+                }
+            }
+        }
     }
 }

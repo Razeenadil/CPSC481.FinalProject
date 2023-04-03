@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -24,17 +25,14 @@ namespace CPSC481.FinalProject
         {
             public string exercise_name;
             public int exercise_type;  // rep = 0, timed = 1
-            public int set_count;
-            public int rep_count;
             public int set_total;
             public int rep_total;
+            public List<int> rep_results = new List<int>();
 
             public exercise_info()
             {
                 exercise_name = "";
                 exercise_type = 0;
-                set_count = 0;
-                rep_count = 0;
                 set_total = 0;
                 rep_total = 0;
             }
@@ -57,9 +55,12 @@ namespace CPSC481.FinalProject
             exercise_info Info = new exercise_info();
             Info.exercise_name = name;
             Info.exercise_type = 0;
-            Info.rep_count = rep_total;
             Info.rep_total = rep_total;
             Info.set_total = set_total;
+            for (int i = 0; i < set_total; i++)
+            {
+                Info.rep_results.Add(rep_total);
+            }
             routine_dict[routine].Add(num, Info);
         }
 
