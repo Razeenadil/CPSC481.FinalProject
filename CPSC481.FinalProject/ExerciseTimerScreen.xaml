@@ -51,7 +51,7 @@
                         HorizontalAlignment="Center">
                     <Image Source="/Images/HeaderNavIcons/left-arrow.png"/>
                 </Button>
-                <Label Content="Routine 1"
+                <Label Name="routineName"
                        Width="320"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"
@@ -75,12 +75,12 @@
                         Grid.Column="1">
                 <Separator/>
                 <Grid>
-                    <Label Content="Farmer's Walk"
+                    <Label Name="exerciseName"
                            VerticalAlignment="Center"
                            VerticalContentAlignment="Center"
                            FontSize="24"
                            FontWeight="Bold"/>
-                    <Label Content="2/12"
+                    <Label Name="exerciseCount"
                            Margin="0,0,10,0"
                            VerticalAlignment="Center"
                            HorizontalAlignment="Right"

@@ -52,10 +52,11 @@
                         Background="Transparent" 
                         BorderBrush="Transparent"
                         VerticalAlignment="Center"
-                        HorizontalAlignment="Center">
+                        HorizontalAlignment="Center"
+                        Click="Back_Button_Click">
                     <Image Source="/Images/HeaderNavIcons/left-arrow.png"/>
                 </Button>
-                <Label Content="Routine 1"
+                <Label Name="routineLabel"
                        Width="320"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"
@@ -170,7 +171,7 @@
                         HorizontalAlignment="Left" 
                         VerticalAlignment="Center" 
                         Background="Transparent">
-                    <Image Source="/Images/ButtonIcons/edit-button.png"/>
+                    <Image Source="/Images/Icons/edit-button.png"/>
                 </Button>
             </Grid>
 

@@ -13,6 +13,7 @@
     <None Remove="Images\DemoImage.jpg" />
     <None Remove="Images\HeaderNavIcons\left-arrow.png" />
     <None Remove="Images\HeaderNavIcons\ProgressIcon.png" />
+    <None Remove="Images\Icons\edit-button.png" />
     <None Remove="Images\Icons\muscles.png" />
     <None Remove="Images\Logo\logo.png" />
     <None Remove="Images\RadialNavigationIcons\DemoIcon.png" />
@@ -27,6 +28,7 @@
     <Resource Include="Images\DemoImage.jpg" />
     <Resource Include="Images\HeaderNavIcons\left-arrow.png" />
     <Resource Include="Images\HeaderNavIcons\ProgressIcon.png" />
+    <Resource Include="Images\Icons\edit-button.png" />
     <Resource Include="Images\Icons\muscles.png" />
     <Resource Include="Images\Logo\logo.png" />
     <Resource Include="Images\RadialNavigationIcons\DemoIcon.png" />

@@ -15,66 +15,6 @@ using System.Windows.Shapes;
 
 namespace CPSC481.FinalProject
 {
-    public static class Global_Data
-    {
-        public static string routine_chosen = "Routine 1";
-        public struct exercise_info
-        {
-            public string exercise_name;
-            public int exercise_type;  // rep = 0, timed = 1
-            public int set_count;
-            public int rep_count;
-            public int set_total;
-            public int rep_total;
-
-            public exercise_info()
-            {
-                exercise_name = "";
-                exercise_type = 0;
-                set_count = 0;
-                rep_count = 0;
-                set_total = 0;
-                rep_total = 0;
-            }
-        }
-
-        public static Dictionary<string, Dictionary<int, exercise_info>> routine_dict = new Dictionary<string, Dictionary<int, exercise_info>>();
-
-        public static void Add_routine(string routine_name)
-        {
-            routine_dict.Add(routine_name, new Dictionary<int, exercise_info>());
-        }
-
-        public static void Remove_routine(string routine_name)
-        {
-            routine_dict.Remove(routine_name);
-        }
-
-        public static void Add_rep_exercise(string routine, int num, string name, int set_total, int rep_total)
-        {
-            exercise_info Info = new exercise_info();
-            Info.exercise_name = name;
-            Info.exercise_type = 0;
-            Info.rep_count = rep_total;
-            Info.rep_total = rep_total;
-            Info.set_total = set_total;
-            routine_dict[routine].Add(num, Info);
-        }
-
-        public static void Add_timed_exercise(string routine, int num, string name)
-        {
-            exercise_info Info = new exercise_info();
-            Info.exercise_name = name;
-            Info.exercise_type = 1;
-            routine_dict[routine].Add(num, Info);
-        }
-
-        public static void Remove_exercise(string routine, int num) 
-        {
-            routine_dict[routine].Remove(num);
-        }
-    }
-
     /// <summary>
     /// Interaction logic for RoutineStartScreen.xaml
     /// </summary>
@@ -89,20 +29,26 @@ namespace CPSC481.FinalProject
 
             navigationIsClicked = false;
 
-            Global_Data.Add_routine("Routine 1");
-            Global_Data.Add_rep_exercise("Routine 1", 1, "Dumbbell Curls", 8, 8);
-            Global_Data.Add_rep_exercise("Routine 1", 2, "Farmer's Walk", 8, 8);
-            Global_Data.Add_rep_exercise("Routine 1", 3, "Hammer Curls", 8, 8);
-            Global_Data.Add_rep_exercise("Routine 1", 4, "Concentrated Biceps Curls", 8, 8);
-            Global_Data.Add_rep_exercise("Routine 1", 5, "Dumbbell Curls", 8, 8);
-            Global_Data.Add_rep_exercise("Routine 1", 6, "Farmer's Walk", 8, 8);
-            Global_Data.Add_rep_exercise("Routine 1", 7, "Hammer Curls", 8, 8);
-            Global_Data.Add_rep_exercise("Routine 1", 8, "Concentrated Biceps Curls", 8, 8);
-            Global_Data.Add_rep_exercise("Routine 1", 9, "Dumbbell Curls", 8, 8);
-            Global_Data.Add_rep_exercise("Routine 1", 10, "Farmer's Walk", 8, 8);
-            Global_Data.Add_rep_exercise("Routine 1", 11, "Hammer Curls", 8, 8);
-            Global_Data.Add_rep_exercise("Routine 1", 12, "Concentrated Biceps Curls EX", 8, 8);
-
+            // hardcoded dummy data - this is usually already set in create routine screen - REMOVE LATER**
+            if (!Global_Data.routine_dict.ContainsKey(Global_Data.routine_chosen))
+            {
+                Global_Data.Add_routine(Global_Data.routine_chosen);
+                Global_Data.Add_rep_exercise(Global_Data.routine_chosen, 1, "Dumbbell Curls", 8, 8);
+                Global_Data.Add_timed_exercise(Global_Data.routine_chosen, 2, "Farmer's Walk");
+                
+                
+                Global_Data.Add_rep_exercise(Global_Data.routine_chosen, 3, "Hammer Curls", 8, 8);
+                Global_Data.Add_rep_exercise(Global_Data.routine_chosen, 4, "Concentrated Biceps Curls", 8, 8);
+                Global_Data.Add_rep_exercise(Global_Data.routine_chosen, 5, "Dumbbell Curls", 8, 8);
+                Global_Data.Add_timed_exercise(Global_Data.routine_chosen, 6, "Farmer's Walk");
+                Global_Data.Add_rep_exercise(Global_Data.routine_chosen, 7, "Hammer Curls", 8, 8);
+                Global_Data.Add_rep_exercise(Global_Data.routine_chosen, 8, "Concentrated Biceps Curls", 8, 8);
+                Global_Data.Add_rep_exercise(Global_Data.routine_chosen, 9, "Dumbbell Curls", 8, 8);
+                Global_Data.Add_timed_exercise(Global_Data.routine_chosen, 10, "Farmer's Walk");
+                Global_Data.Add_rep_exercise(Global_Data.routine_chosen, 11, "Hammer Curls", 8, 8);
+                Global_Data.Add_rep_exercise(Global_Data.routine_chosen, 12, "Concentrated Biceps Curls EX", 8, 8);
+            }
+            
             List<ExerciseItem> exercises = new List<ExerciseItem>();
 
             foreach (KeyValuePair<int, Global_Data.exercise_info> entry in Global_Data.routine_dict[Global_Data.routine_chosen])
@@ -111,6 +57,7 @@ namespace CPSC481.FinalProject
             }
 
             routineListBox.ItemsSource = exercises;
+            routineLabel.Content = Global_Data.routine_chosen;
         }
 
         private void NavigationButton_Click(object sender, RoutedEventArgs e)
@@ -152,7 +99,12 @@ namespace CPSC481.FinalProject
 
                 navigationIsClicked = false;
             }
+        }
 
+        private void Back_Button_Click(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = (MainWindow)Application.Current.MainWindow;
+            mainWindow?.ChangeView(new ViewRoutines());
         }
 
         //this is the logout button was to lazy to rename
@@ -183,8 +135,18 @@ namespace CPSC481.FinalProject
 
         private void StartRoutine(object sender, RoutedEventArgs e)
         {
+            Global_Data.exercise_number = 1;
             var mainWindow = (MainWindow)Application.Current.MainWindow;
-            mainWindow?.ChangeView(new ExerciseRepScreen());
+            // if first exercise is rep based
+            if (Global_Data.routine_dict[Global_Data.routine_chosen][Global_Data.exercise_number].exercise_type == 0)
+            {
+                mainWindow?.ChangeView(new ExerciseRepScreen());
+            }
+            // else it must be time based
+            else
+            {
+                mainWindow?.ChangeView(new ExerciseTimerScreen());
+            }
         }
     }
 

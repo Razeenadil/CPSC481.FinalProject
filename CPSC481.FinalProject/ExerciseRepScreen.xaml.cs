@@ -38,6 +38,10 @@ namespace CPSC481.FinalProject
             setAndRepCount.Add(new ExerciseSetAndRepCount() { SetCount = ++numOfSets, RepCount = 8 });
 
             setRepListBox.ItemsSource = setAndRepCount;
+
+            routineLabel.Content = Global_Data.routine_chosen;
+            exerciseName.Content = Global_Data.routine_dict[Global_Data.routine_chosen][Global_Data.exercise_number].exercise_name;
+            exerciseCount.Content = Global_Data.exercise_number.ToString() + "/" + Global_Data.routine_dict[Global_Data.routine_chosen].Count.ToString();
         }
 
         private void Back_Button_Click(object sender, RoutedEventArgs e)

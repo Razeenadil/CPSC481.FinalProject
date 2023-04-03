@@ -27,6 +27,10 @@ namespace CPSC481.FinalProject
             this.DataContext = this;
 
             navigationIsClicked = false;
+
+            routineName.Content = Global_Data.routine_chosen;
+            exerciseName.Content = Global_Data.routine_dict[Global_Data.routine_chosen][Global_Data.exercise_number].exercise_name;
+            exerciseCount.Content = Global_Data.exercise_number.ToString() + "/" + Global_Data.routine_dict[Global_Data.routine_chosen].Count.ToString();
         }
 
         private void NavigationButton_Click(object sender, RoutedEventArgs e)
