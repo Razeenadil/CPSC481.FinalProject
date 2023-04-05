@@ -132,7 +132,8 @@
                             <ColumnDefinition Width="250"/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock Text="60"
+                        <TextBlock Name="SecondsText"
+                                   Text="0"
                                    Margin="0,0,10,0"
                                    HorizontalAlignment="Right"
                                    VerticalAlignment="Bottom"
@@ -152,30 +153,57 @@
                         <ColumnDefinition Width="210"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Button Margin="75,0,25,0"
-                            FontSize="20"
-                            FontWeight="Medium"
-                            BorderBrush="Transparent">
-                        <Button.Resources>
-                            <Style TargetType="Border">
-                                <Setter Property="CornerRadius" Value="5"/>
-                            </Style>
-                        </Button.Resources>
-                        <Button.Background>
-                            <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
-                                <GradientStop Color="#0F9C15" Offset="0"/>
-                                <GradientStop Color="#17F020" Offset="0.5"/>
-                                <GradientStop Color="#0F9C15" Offset="1"/>
-                            </LinearGradientBrush>
-                        </Button.Background>
-                        Start
-                    </Button>
+                        <Button Name="Start_Button"
+                                Margin="75,0,25,0"
+                                FontSize="20"
+                                FontWeight="Medium"
+                                BorderBrush="Transparent"
+                                Click="Start_Button_Click"
+                                Visibility="Visible">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="5"/>
+                                </Style>
+                            </Button.Resources>
+                            <Button.Background>
+                                <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                                    <GradientStop Color="#0F9C15" Offset="0"/>
+                                    <GradientStop Color="#17F020" Offset="0.5"/>
+                                    <GradientStop Color="#0F9C15" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+                            Start
+                        </Button>
+           
+                        <Button Name="Stop_Button"
+                                Margin="75,0,25,0"
+                                FontSize="20"
+                                FontWeight="Medium"
+                                BorderBrush="Transparent"
+                                Foreground="White"
+                                Click="Stop_Button_Click"
+                                Visibility="Hidden">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="5"/>
+                                </Style>
+                            </Button.Resources>
+                            <Button.Background>
+                                <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                                    <GradientStop Color="Red" Offset="0"/>
+                                    <GradientStop Color="Tomato"  Offset="0.5"/>
+                                    <GradientStop Color="Red" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+                            Stop
+                        </Button>
 
-                    <Button Margin="25,0,75,0"
+                        <Button Margin="25,0,75,0"
                             FontSize="20"
                             FontWeight="Medium"
                             Grid.Column="1"
-                            BorderBrush="Transparent">
+                            BorderBrush="Transparent"
+                            Click="Reset_Button_Click">
                         <Button.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="5"/>

@@ -37,7 +37,7 @@ namespace CPSC481.FinalProject
 
             for (int i = 1; i <= Global_Data.routine_dict[Global_Data.routine_chosen][Global_Data.exercise_number].set_total; i++)
             {
-                setAndRepCount.Add(new ExerciseSetAndRepCount() { SetCount = i, RepCount = rep_total });
+                setAndRepCount.Add(new ExerciseSetAndRepCount() { SetCount = i, RepsCompleted = Global_Data.routine_dict[Global_Data.routine_chosen][Global_Data.exercise_number].rep_results[i-1], RepCount = rep_total });
             }
 
             setRepListBox.ItemsSource = setAndRepCount;
@@ -95,7 +95,6 @@ namespace CPSC481.FinalProject
 
                 navigationIsClicked = false;
             }
-
         }
 
         //this is the logout button was to lazy to rename
@@ -170,11 +169,22 @@ namespace CPSC481.FinalProject
                 }
             }
         }
+
+        private void MinusButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void PlusButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 
     public class ExerciseSetAndRepCount
     {
         public int SetCount { get; set; }
+        public int RepsCompleted { get; set; }
         public int RepCount { get; set; }
     }
 }

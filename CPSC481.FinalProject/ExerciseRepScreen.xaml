@@ -179,43 +179,54 @@
                             <Border Grid.Column="1"
                                         Margin="45,10,10,10"
                                         Height="50"
-                                        Width="150"
+                                        Width="175"
                                         HorizontalAlignment="Left"
                                         CornerRadius="0"
                                         BorderBrush="Black"
                                         BorderThickness="0,0,0,1"
                                         Background="Transparent">
                                 <StackPanel Orientation="Horizontal">
-                                    <ComboBox xmlns:sys="clr-namespace:System;assembly=mscorlib"
-                                              IsEditable="True"
-                                              MaxDropDownHeight="100"
-                                              Height="33"
-                                              Width="50"
-                                              FontSize="20"
-                                              VerticalContentAlignment="Top"
-                                              HorizontalContentAlignment="Center">
-                                        <ComboBox.Resources>
-                                            <sys:Double x:Key="{x:Static SystemParameters.VerticalScrollBarWidthKey}">7</sys:Double>
-                                        </ComboBox.Resources>
-                                        
-                                        <ComboBoxItem>0</ComboBoxItem>
-                                        <ComboBoxItem>1</ComboBoxItem>
-                                        <ComboBoxItem>2</ComboBoxItem>
-                                        <ComboBoxItem>3</ComboBoxItem>
-                                        <ComboBoxItem>4</ComboBoxItem>
-                                        <ComboBoxItem>5</ComboBoxItem>
-                                        <ComboBoxItem>6</ComboBoxItem>
-                                        <ComboBoxItem>7</ComboBoxItem>
-                                        <ComboBoxItem>8</ComboBoxItem>
-                                        <ComboBoxItem>9</ComboBoxItem>
-                                        <ComboBoxItem>10</ComboBoxItem>
-                                    </ComboBox>
+                                    <Button Name="MinusButton"
+                                            Width="35"
+                                            Height="35"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Center"
+                                            Content="-"
+                                            FontSize="24"
+                                            HorizontalContentAlignment="Center"
+                                            VerticalContentAlignment="Center"
+                                            Background="Tomato"
+                                            Foreground="White"
+                                            Click="MinusButton_Click">
+                                    </Button>
+                                    <TextBlock Name="RepsCompleted"
+                                               HorizontalAlignment="Center"
+                                               VerticalAlignment="Center"
+                                               Foreground="Black"
+                                               FontSize="24">
+                                        <TextBlock.Text>
+                                            <Binding Path="RepsCompleted" StringFormat="  {0}  "/>
+                                        </TextBlock.Text>
+                                    </TextBlock>
+                                    <Button Name="PlusButton"
+                                            Width="35"
+                                            Height="35"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Center"
+                                            Content="+"
+                                            FontSize="24"
+                                            HorizontalContentAlignment="Center"
+                                            VerticalContentAlignment="Top"
+                                            Background="ForestGreen"
+                                            Foreground="White"
+                                            Click="PlusButton_Click">
+                                    </Button>
                                     <TextBlock HorizontalAlignment="Center"
                                                VerticalAlignment="Center"
                                                Foreground="Black"
-                                               FontSize="20">
+                                               FontSize="24">
                                         <TextBlock.Text>
-                                            <Binding Path="RepCount" StringFormat="   of   {0}"/>
+                                            <Binding Path="RepCount" StringFormat="  of  {0}"/>
                                         </TextBlock.Text>
                                     </TextBlock>
                                     

@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -12,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace CPSC481.FinalProject
 {
@@ -20,11 +24,20 @@ namespace CPSC481.FinalProject
     /// </summary>
     public partial class ExerciseTimerScreen : Page
     {
+        private int default_time = 5;
+        private int curr_seconds;
+        private System.Timers.Timer timer;
+
         private bool navigationIsClicked;
         public ExerciseTimerScreen()
         {
             InitializeComponent();
             this.DataContext = this;
+
+            curr_seconds = default_time;
+            SecondsText.Text = curr_seconds.ToString();
+            timer = new System.Timers.Timer(1000);
+            timer.Elapsed += OnTimerElapsed;
 
             navigationIsClicked = false;
 
@@ -40,6 +53,30 @@ namespace CPSC481.FinalProject
             {
                 TransitionButton.Content = "Next";
             }
+        }
+
+        private void OnTimerElapsed(object sender, ElapsedEventArgs e)
+        {
+            if (curr_seconds > 0)
+            {
+                curr_seconds--;
+                SecondsText.Dispatcher.Invoke(() =>
+                {
+                    SecondsText.Text = curr_seconds.ToString();
+                });
+            } 
+            else if (curr_seconds == 0)
+            {
+                timer.Stop();
+                Stop_Button.Dispatcher.Invoke(() =>
+                {
+                    Stop_Button.Visibility = Visibility.Hidden;
+                });
+                Start_Button.Dispatcher.Invoke(() =>
+                {
+                    Start_Button.Visibility = Visibility.Visible;
+                });                
+            }            
         }
 
         private void NavigationButton_Click(object sender, RoutedEventArgs e)
@@ -148,6 +185,32 @@ namespace CPSC481.FinalProject
                     mainWindow?.ChangeView(new ExerciseTimerScreen());
                 }
             }
+        }
+
+        private void Start_Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (curr_seconds >= 0)
+            {
+                timer.Start();
+                Start_Button.Visibility = Visibility.Hidden;
+                Stop_Button.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void Stop_Button_Click(object sender, RoutedEventArgs e)
+        {
+            timer.Stop();
+            Stop_Button.Visibility = Visibility.Hidden;
+            Start_Button.Visibility = Visibility.Visible;
+        }
+
+        private void Reset_Button_Click(object sender, RoutedEventArgs e)
+        {
+            timer.Stop();
+            Stop_Button.Visibility = Visibility.Hidden;
+            Start_Button.Visibility = Visibility.Visible;
+            curr_seconds = default_time;
+            SecondsText.Text = curr_seconds.ToString();
         }
     }
 }
