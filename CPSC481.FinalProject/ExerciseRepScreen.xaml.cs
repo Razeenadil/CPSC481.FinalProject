@@ -31,16 +31,12 @@ namespace CPSC481.FinalProject
 
             navigationIsClicked = false;
 
-            List<ExerciseSetAndRepCount> setAndRepCount = new List<ExerciseSetAndRepCount>();
-
             int rep_total = Global_Data.routine_dict[Global_Data.routine_chosen][Global_Data.exercise_number].rep_total;
 
             for (int i = 1; i <= Global_Data.routine_dict[Global_Data.routine_chosen][Global_Data.exercise_number].set_total; i++)
             {
-                setAndRepCount.Add(new ExerciseSetAndRepCount() { SetCount = i, RepsCompleted = Global_Data.routine_dict[Global_Data.routine_chosen][Global_Data.exercise_number].rep_results[i-1], RepCount = rep_total });
+                RepListPanel.Children.Add(new RepItem() { SetNumber = i, RepsDone = Global_Data.routine_dict[Global_Data.routine_chosen][Global_Data.exercise_number].rep_results[i - 1], TotalReps = rep_total} );
             }
-
-            setRepListBox.ItemsSource = setAndRepCount;
 
             routineLabel.Content = Global_Data.routine_chosen;
             exerciseName.Content = Global_Data.routine_dict[Global_Data.routine_chosen][Global_Data.exercise_number].exercise_name;
@@ -169,22 +165,5 @@ namespace CPSC481.FinalProject
                 }
             }
         }
-
-        private void MinusButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void PlusButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-    }
-
-    public class ExerciseSetAndRepCount
-    {
-        public int SetCount { get; set; }
-        public int RepsCompleted { get; set; }
-        public int RepCount { get; set; }
     }
 }

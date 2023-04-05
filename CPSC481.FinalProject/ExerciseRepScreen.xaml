@@ -141,105 +141,19 @@
                 </Grid>
             </StackPanel>
 
-            <ListBox Name="setRepListBox" 
-                     Grid.Row="3"
-                     Grid.Column="1"
-                     HorizontalContentAlignment="Stretch"
-                     BorderThickness="3"
-                     BorderBrush="Black"
-                     ScrollViewer.VerticalScrollBarVisibility="Visible">
-                <ListBox.Resources>
-                    <Style TargetType="Border">
-                        <Setter Property="CornerRadius" Value="10"/>
-                    </Style>
-                </ListBox.Resources>
-
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="107.5"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            
-                            <Border Grid.Column="0"
-                                    Margin="10"
-                                    Height="25"
-                                    Width="25"
-                                    CornerRadius="5"
-                                    BorderBrush="Black"
-                                    BorderThickness="3"
-                                    Background="Black">
-                                <TextBlock Text="{Binding SetCount}"
-                                           HorizontalAlignment="Center"
-                                           VerticalAlignment="Center"
-                                           Foreground="White"/>
-                            </Border>
-
-                            <Border Grid.Column="1"
-                                        Margin="45,10,10,10"
-                                        Height="50"
-                                        Width="175"
-                                        HorizontalAlignment="Left"
-                                        CornerRadius="0"
-                                        BorderBrush="Black"
-                                        BorderThickness="0,0,0,1"
-                                        Background="Transparent">
-                                <StackPanel Orientation="Horizontal">
-                                    <Button Name="MinusButton"
-                                            Width="35"
-                                            Height="35"
-                                            HorizontalAlignment="Center"
-                                            VerticalAlignment="Center"
-                                            Content="-"
-                                            FontSize="24"
-                                            HorizontalContentAlignment="Center"
-                                            VerticalContentAlignment="Center"
-                                            Background="Tomato"
-                                            Foreground="White"
-                                            Click="MinusButton_Click">
-                                    </Button>
-                                    <TextBlock Name="RepsCompleted"
-                                               HorizontalAlignment="Center"
-                                               VerticalAlignment="Center"
-                                               Foreground="Black"
-                                               FontSize="24">
-                                        <TextBlock.Text>
-                                            <Binding Path="RepsCompleted" StringFormat="  {0}  "/>
-                                        </TextBlock.Text>
-                                    </TextBlock>
-                                    <Button Name="PlusButton"
-                                            Width="35"
-                                            Height="35"
-                                            HorizontalAlignment="Center"
-                                            VerticalAlignment="Center"
-                                            Content="+"
-                                            FontSize="24"
-                                            HorizontalContentAlignment="Center"
-                                            VerticalContentAlignment="Top"
-                                            Background="ForestGreen"
-                                            Foreground="White"
-                                            Click="PlusButton_Click">
-                                    </Button>
-                                    <TextBlock HorizontalAlignment="Center"
-                                               VerticalAlignment="Center"
-                                               Foreground="Black"
-                                               FontSize="24">
-                                        <TextBlock.Text>
-                                            <Binding Path="RepCount" StringFormat="  of  {0}"/>
-                                        </TextBlock.Text>
-                                    </TextBlock>
-                                    
-                                </StackPanel>
-
-                            </Border>
-
-                        </Grid>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-
-            </ListBox>
-
+            <Border Grid.Row="3"
+                    Grid.Column="1"
+                    BorderThickness="3"
+                    BorderBrush="Black"
+                    CornerRadius="10">
+                <ScrollViewer HorizontalContentAlignment="Stretch">
+                    <StackPanel Name="RepListPanel"
+                                Orientation="Vertical"
+                                Width="350">
+                    </StackPanel>
+                </ScrollViewer>
+            </Border>
+            
             <Grid Grid.Row="4"
                   Grid.Column="1">
                 <Grid.ColumnDefinitions>
