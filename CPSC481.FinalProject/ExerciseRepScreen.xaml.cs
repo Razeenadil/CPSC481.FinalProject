@@ -22,8 +22,6 @@ namespace CPSC481.FinalProject
     public partial class ExerciseRepScreen : Page
     {
         private bool navigationIsClicked;
-
-        int numOfSets = 0;
         public ExerciseRepScreen()
         {
             InitializeComponent();

@@ -24,7 +24,7 @@ namespace CPSC481.FinalProject
     /// </summary>
     public partial class ExerciseTimerScreen : Page
     {
-        private int default_time = 5;
+        private int default_time = 20;
         private int curr_seconds;
         private System.Timers.Timer timer;
 

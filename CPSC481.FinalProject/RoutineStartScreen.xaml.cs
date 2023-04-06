@@ -21,7 +21,6 @@ namespace CPSC481.FinalProject
     public partial class RoutineStartScreen : Page
     {
         private bool navigationIsClicked;
-        int num_of_exercises = 0;
         public RoutineStartScreen()
         {
             InitializeComponent();

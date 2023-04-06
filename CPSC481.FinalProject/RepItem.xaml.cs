@@ -49,7 +49,6 @@ namespace CPSC481.FinalProject
             set
             {
                 total_reps = value;
-                this.RepTotal.Text = "  of  " + this.total_reps.ToString();
             }
         }
 

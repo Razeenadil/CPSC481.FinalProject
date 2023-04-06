@@ -13,29 +13,33 @@
             <StackPanel Orientation="Horizontal"
                         Margin="10">
                 <Border Grid.Column="0"
-                        Margin="10,0,50,0"
-                        Height="50"
-                        Width="50"
+                        Margin="20,0,80,0"
+                        Height="40"
+                        Width="40"
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
                         CornerRadius="5"
                         BorderBrush="Black"
-                        BorderThickness="3"
-                        Background="Black">
+                        BorderThickness="1"
+                        Background="White">
                     <TextBlock Name="SetNum"
                                HorizontalAlignment="Center"
                                VerticalAlignment="Center"
-                               Foreground="White"/>
+                               Foreground="Black"
+                               FontSize="32"
+                               FontWeight="Medium"/>
                 </Border>
 
                 <Button Name="MinusButton"
                         Margin="0,0,0,0"
                         Width="50"
-                        Height="50"
+                        Height="50"                        
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
                         Content="-"
-                        FontSize="24"
+                        Padding="0,-25,0,0"
+                        FontSize="60"
+                        FontWeight="Medium"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
                         Background="Tomato"
@@ -48,20 +52,22 @@
                     </Button.Resources>
                 </Button>
                 <TextBlock Name="RepsComplete"
-                           Margin="10,0,10,0"
+                           Margin="20,0,20,0"
                            HorizontalAlignment="Center"
                            VerticalAlignment="Center"
                            Foreground="Black"
-                           FontSize="24">
+                           FontSize="32"
+                           FontWeight="Medium">
                 </TextBlock>
                 <Button Name="PlusButton"
                         Margin="0,0,0,0"
                         Width="50"
                         Height="50"
-                        HorizontalAlignment="Center"
+                        HorizontalAlignment="Right"
                         VerticalAlignment="Center"
                         Content="+"
-                        FontSize="24"
+                        Padding="0,-25,0,0"
+                        FontSize="60"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
                         Background="ForestGreen"
@@ -73,13 +79,6 @@
                         </Style>
                     </Button.Resources>
                 </Button>
-                <TextBlock Name="RepTotal"
-                           Margin="25,0,0,0"
-                           HorizontalAlignment="Center"
-                           VerticalAlignment="Center"
-                           Foreground="Black"
-                           FontSize="24">
-                </TextBlock>
             </StackPanel>
         </Border>
     </Grid>

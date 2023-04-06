@@ -8,233 +8,135 @@
       d:DesignHeight="800" d:DesignWidth="450"
       Title="ExerciseTimerScreen"
       Background="Transparent">
-    <Border CornerRadius="0"
-            BorderThickness="3"
-            Opacity="1">
-        <Border.BorderBrush>
-            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                <GradientStop Color="#000000" Offset="0"/>
-                <GradientStop Color="Black" Offset="0.5"/>
-                <GradientStop Color="#000000" Offset="1"/>
-            </LinearGradientBrush>
-        </Border.BorderBrush>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="600"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="15"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="15"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Height="60">
+            <Button Name="BackButton"
+                    Height="50" 
+                    Width="50"
+                    Margin="10,0,0,0"
+                    Background="Transparent" 
+                    BorderBrush="Transparent"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Click="BackButton_Click">
+                <Image Source="/Images/HeaderNavIcons/left-arrow.png"/>
+            </Button>
+            
+            <Label Name="routineName"
+                   Width="300"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center"
+                   FontSize="32"
+                   FontWeight="Bold"/>
 
-        <Border.Background>
-            <LinearGradientBrush StartPoint="0.25,0.75" EndPoint="1,0.25">
-                <GradientStop Color="#FFFFFF" Offset="0"/>
-                <GradientStop Color="#FFFFFF" Offset="0.5"/>
-                <GradientStop Color="#FFFFFF" Offset="1"/>
-            </LinearGradientBrush>
-        </Border.Background>
+            <Image Margin="0,0,10,0"
+                   Height="45"
+                   Width="45"
+                   Source="/Images/RadialNavigationIcons/RoutineIcon.png"/>
+        </StackPanel>
 
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="15"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="650"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="15"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="15"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="15"/>
-            </Grid.ColumnDefinitions>
-            <StackPanel Orientation="Horizontal"
-                        Grid.Row="1"
-                        Grid.Column="1">
-                <Button Name="BackButton"
-                        Height="40" 
-                        Width="40" 
-                        Background="Transparent" 
-                        BorderBrush="Transparent"
-                        VerticalAlignment="Center"
-                        HorizontalAlignment="Center"
-                        Click="BackButton_Click">
-                    <Image Source="/Images/HeaderNavIcons/left-arrow.png"/>
-                </Button>
-                <Label Name="routineName"
-                       Width="320"
-                       HorizontalAlignment="Center"
+        <StackPanel Orientation="Vertical"
+                    Grid.Row="2"
+                    Grid.Column="1">
+            <Separator/>
+            
+            <Grid>
+                <Label Name="exerciseName"
                        VerticalAlignment="Center"
-                       HorizontalContentAlignment="Center"
                        VerticalContentAlignment="Center"
                        FontSize="24"
                        FontWeight="Bold"/>
-
-                <Button Height="40" 
-                        Width="40" 
-                        Background="Transparent" 
-                        BorderBrush="Transparent"
-                        VerticalAlignment="Center"
-                        HorizontalAlignment="Center">
-                    <Image Source="/Images/RadialNavigationIcons/RoutineIcon.png"/>
-                </Button>
-            </StackPanel>
-            
-            <StackPanel Orientation="Vertical"
-                        Grid.Row="2"
-                        Grid.Column="1">
-                <Separator/>
-                <Grid>
-                    <Label Name="exerciseName"
-                           VerticalAlignment="Center"
-                           VerticalContentAlignment="Center"
-                           FontSize="24"
-                           FontWeight="Bold"/>
-                    <Label Name="exerciseCount"
-                           Margin="0,0,10,0"
-                           VerticalAlignment="Center"
-                           HorizontalAlignment="Right"
-                           HorizontalContentAlignment="Right"
-                           FontSize="20"
-                           FontWeight="Medium"/>
-                </Grid>
-
-                <Separator/>
-
-                <Label Content="Demonstration"
+                <Label Name="exerciseCount"
                        VerticalAlignment="Center"
-                       VerticalContentAlignment="Center"
-                       FontSize="20"
-                       FontWeight="Medium"/>
+                       HorizontalAlignment="Right"
+                       HorizontalContentAlignment="Right"
+                       FontSize="24"
+                       FontWeight="Bold"/>
+            </Grid>
 
-                <Grid>
-                    <Border Height="250"
+            <Separator/>
+
+            <Grid>
+                <Border Margin="0,10,0,10"
+                        Height="250"
                         CornerRadius="5"
                         Background="White"
                         BorderBrush="Black"
                         BorderThickness="3">
-                        <Image Source="/Images/DemoImage.jpg" Opacity="0.5" Stretch="Fill"/>
-                    </Border>
-                    <Polygon Points="0,0 75,50, 0,100"
-                                 Stroke="Black" 
-                                 Fill="Black"
-                                 HorizontalAlignment="Center"
-                                 VerticalAlignment="Center"/>
-                </Grid>
-
-                <Label Content="Timer"
-                       VerticalAlignment="Center"
-                       VerticalContentAlignment="Center"
-                       FontSize="20"
-                       FontWeight="Medium"/>
-
-                <Border Margin="10,0,10,10" 
-                        Height="100"
-                        Width="300"
-                        Background="White"
-                        BorderBrush="Black"
-                        BorderThickness="3"
-                        CornerRadius="3">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="250"/>
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
-                        <TextBlock Name="SecondsText"
-                                   Text="0"
-                                   Margin="0,0,10,0"
-                                   HorizontalAlignment="Right"
-                                   VerticalAlignment="Bottom"
-                                   FontSize="70"/>
-                        <TextBlock Text="Sec"
-                                   Grid.Column="1"
-                                   Margin="0,0,10,10"
-                                   HorizontalAlignment="Right"
-                                   VerticalAlignment="Bottom"
-                                   FontSize="20"
-                                   FontWeight="Bold"/>
-                    </Grid>
+                    <Image Source="/Images/DemoImage.jpg" Opacity="0.5" Stretch="Fill"/>
                 </Border>
+                <Polygon Points="0,0 75,50, 0,100"
+                         Stroke="Black" 
+                         Fill="Black"
+                         HorizontalAlignment="Center"
+                         VerticalAlignment="Center"/>
+            </Grid>
 
-                <Grid Height="75">
+            <Label Margin="50,0,0,0"
+                   Content="Timer"
+                   VerticalAlignment="Center"
+                   VerticalContentAlignment="Center"
+                   FontSize="24"
+                   FontWeight="Medium"/>
+
+            <Border Name="TimerBorder"
+                    Margin="10,0,10,10" 
+                    Height="120"
+                    Width="300"
+                    Background="White"
+                    BorderBrush="Black"
+                    BorderThickness="3"
+                    CornerRadius="3">
+                <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="210"/>
-                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="220"/>
+                        <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                        <Button Name="Start_Button"
-                                Margin="75,0,25,0"
-                                FontSize="20"
-                                FontWeight="Medium"
-                                BorderBrush="Transparent"
-                                Click="Start_Button_Click"
-                                Visibility="Visible">
-                            <Button.Resources>
-                                <Style TargetType="Border">
-                                    <Setter Property="CornerRadius" Value="5"/>
-                                </Style>
-                            </Button.Resources>
-                            <Button.Background>
-                                <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
-                                    <GradientStop Color="#0F9C15" Offset="0"/>
-                                    <GradientStop Color="#17F020" Offset="0.5"/>
-                                    <GradientStop Color="#0F9C15" Offset="1"/>
-                                </LinearGradientBrush>
-                            </Button.Background>
-                            Start
-                        </Button>
-           
-                        <Button Name="Stop_Button"
-                                Margin="75,0,25,0"
-                                FontSize="20"
-                                FontWeight="Medium"
-                                BorderBrush="Transparent"
-                                Foreground="White"
-                                Click="Stop_Button_Click"
-                                Visibility="Hidden">
-                            <Button.Resources>
-                                <Style TargetType="Border">
-                                    <Setter Property="CornerRadius" Value="5"/>
-                                </Style>
-                            </Button.Resources>
-                            <Button.Background>
-                                <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
-                                    <GradientStop Color="Red" Offset="0"/>
-                                    <GradientStop Color="Tomato"  Offset="0.5"/>
-                                    <GradientStop Color="Red" Offset="1"/>
-                                </LinearGradientBrush>
-                            </Button.Background>
-                            Stop
-                        </Button>
-
-                        <Button Margin="25,0,75,0"
-                            FontSize="20"
-                            FontWeight="Medium"
-                            Grid.Column="1"
-                            BorderBrush="Transparent"
-                            Click="Reset_Button_Click">
-                        <Button.Resources>
-                            <Style TargetType="Border">
-                                <Setter Property="CornerRadius" Value="5"/>
-                            </Style>
-                        </Button.Resources>
-                        <Button.Background>
-                            <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
-                                <GradientStop Color="#5C5C5C" Offset="0"/>
-                                <GradientStop Color="#C7C7C7" Offset="0.5"/>
-                                <GradientStop Color="#5C5C5C" Offset="1"/>
-                            </LinearGradientBrush>
-                        </Button.Background>
-                        Reset
-                    </Button>
+                    <TextBlock Name="SecondsText"
+                               Text="0"
+                               Margin="0,0,0,10"
+                               HorizontalAlignment="Right"
+                               VerticalAlignment="Center"
+                               FontSize="100"/>
+                    <TextBlock Text="Sec"
+                               Grid.Column="1"
+                               Margin="10,0,10,15"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Bottom"
+                               FontSize="24"
+                               FontWeight="Bold"/>
                 </Grid>
-            </StackPanel>
-            <Grid Grid.Row="3"
-                  Grid.Column="1">
+            </Border>
+
+            <Grid Height="75">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="140"/>
-                    <ColumnDefinition Width="140"/>
-                    <ColumnDefinition />
+                    <ColumnDefinition Width="225"/>
+                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Button Name="TransitionButton"
-                        Height="50"
-                        FontSize="20"
+                <Button Name="Start_Button"
+                        Margin="60,0,20,0"
+                        FontSize="26"
                         FontWeight="Medium"
-                        Grid.Column="1"
                         BorderBrush="Transparent"
-                        Foreground="White"
-                        Click="TransitionButton_Click">
+                        Click="Start_Button_Click"
+                        Visibility="Visible">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="5"/>
@@ -242,16 +144,91 @@
                     </Button.Resources>
                     <Button.Background>
                         <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
-                            <GradientStop Color="#003622" Offset="0"/>
-                            <GradientStop Color="#008F5A" Offset="0.5"/>
-                            <GradientStop Color="#003622" Offset="1"/>
+                            <GradientStop Color="#0F9C15" Offset="0"/>
+                            <GradientStop Color="#17F020" Offset="0.5"/>
+                            <GradientStop Color="#0F9C15" Offset="1"/>
                         </LinearGradientBrush>
                     </Button.Background>
-                    Next
+                    Start
+                </Button>
+
+                <Button Name="Stop_Button"
+                        Margin="60,0,20,0"
+                        FontSize="26"
+                        FontWeight="Medium"
+                        BorderBrush="Transparent"
+                        Foreground="White"
+                        Click="Stop_Button_Click"
+                        Visibility="Hidden">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                    <Button.Background>
+                        <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                            <GradientStop Color="Red" Offset="0"/>
+                            <GradientStop Color="Tomato"  Offset="0.5"/>
+                            <GradientStop Color="Red" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                    Stop
+                </Button>
+
+                <Button Margin="20,0,60,0"
+                        FontSize="26"
+                        FontWeight="Medium"
+                        Grid.Column="1"
+                        BorderBrush="Transparent"
+                        Click="Reset_Button_Click">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                    <Button.Background>
+                        <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                            <GradientStop Color="#5C5C5C" Offset="0"/>
+                            <GradientStop Color="#C7C7C7" Offset="0.5"/>
+                            <GradientStop Color="#5C5C5C" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                    Reset
                 </Button>
             </Grid>
+        </StackPanel>
+        <Grid Grid.Row="3"
+                  Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="140"/>
+                <ColumnDefinition Width="140"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button Name="TransitionButton"
+                    Height="60"
+                    FontSize="26"
+                    FontWeight="Medium"
+                    Grid.Column="1"
+                    BorderBrush="Transparent"
+                    Foreground="White"
+                    Click="TransitionButton_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Background>
+                    <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                        <GradientStop Color="#003622" Offset="0"/>
+                        <GradientStop Color="#008F5A" Offset="0.5"/>
+                        <GradientStop Color="#003622" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+                Next
+            </Button>
+        </Grid>
 
-            <Button x:Name="NavigationButton"
+        <Button x:Name="NavigationButton"
                         Grid.Row="0"
                         Grid.Column="0"
                         Grid.RowSpan="5"
@@ -261,17 +238,17 @@
                         Margin="350,670,0,0"
                         Cursor="Hand"
                         Click="NavigationButton_Click">
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Grid>
-                            <Ellipse Fill="ForestGreen"/>
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Grid>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Fill="ForestGreen"/>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
 
-            <Ellipse 
+        <Ellipse 
                 Name="ellipseHack"
                 Fill="White"
                 Grid.Row="0" 
@@ -283,9 +260,9 @@
                 Margin="190,690,85,6"
                 Panel.ZIndex="1"
                 Visibility="Hidden">
-            </Ellipse>
+        </Ellipse>
 
-            <Button x:Name="InfoButton"
+        <Button x:Name="InfoButton"
                 Grid.Row="0" 
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
@@ -297,20 +274,20 @@
                 Visibility="Hidden"
                 Panel.ZIndex="2"
                 Click="InfoButton_Click">
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Grid>
-                            <Ellipse Stroke="Black" StrokeThickness="2">
-                                <Ellipse.Fill>
-                                    <ImageBrush ImageSource="Images/RadialNavigationIcons/InformationIcon.png" Stretch="None"></ImageBrush>
-                                </Ellipse.Fill>
-                            </Ellipse>
-                        </Grid>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Stroke="Black" StrokeThickness="2">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="Images/RadialNavigationIcons/InformationIcon.png" Stretch="None"></ImageBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
 
-            <Ellipse 
+        <Ellipse 
                 Name="ellipseHack1"
                 Fill="White"
                 Grid.Row="0" 
@@ -322,9 +299,9 @@
                 Margin="250,630,64,51"
                 Panel.ZIndex="1"
                 Visibility="Hidden">
-            </Ellipse>
+        </Ellipse>
 
-            <Button x:Name="ProgressButton"
+        <Button x:Name="ProgressButton"
                 Grid.Row="0" 
                 Grid.Column="0" 
                 Grid.ColumnSpan="3"
@@ -336,20 +313,20 @@
                 Visibility="Hidden"
                 Panel.ZIndex="2"
                 Click="ProgressButton_Click">
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Grid>
-                            <Ellipse Stroke="Black" StrokeThickness="2">
-                                <Ellipse.Fill>
-                                    <ImageBrush ImageSource="Images/RadialNavigationIcons/ProgressIcon.png" Stretch="None"></ImageBrush>
-                                </Ellipse.Fill>
-                            </Ellipse>
-                        </Grid>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Stroke="Black" StrokeThickness="2">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="Images/RadialNavigationIcons/ProgressIcon.png" Stretch="None"></ImageBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
 
-            <Ellipse 
+        <Ellipse 
                 Name="ellipseHack2"
                 Fill="White"
                 Grid.Row="0" 
@@ -361,9 +338,9 @@
                 Margin="270,480,0,0"
                 Panel.ZIndex="1"
                 Visibility="Hidden">
-            </Ellipse>
+        </Ellipse>
 
-            <Button x:Name="DemoButton"
+        <Button x:Name="DemoButton"
                 Grid.Row="0" 
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
@@ -375,20 +352,20 @@
                 Visibility="Hidden"
                 Panel.ZIndex="2"
                 Click="DemoButton_Click">
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Grid>
-                            <Ellipse Stroke="Black" StrokeThickness="2">
-                                <Ellipse.Fill>
-                                    <ImageBrush ImageSource="Images/RadialNavigationIcons/DemoIcon.png" Stretch="None"></ImageBrush>
-                                </Ellipse.Fill>
-                            </Ellipse>
-                        </Grid>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Stroke="Black" StrokeThickness="2">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="Images/RadialNavigationIcons/DemoIcon.png" Stretch="None"></ImageBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
 
-            <Ellipse 
+        <Ellipse 
                 Name="ellipseHack3"
                 Fill="White"
                 Grid.Row="0" 
@@ -400,9 +377,9 @@
                 Margin="370,400,0,0"
                 Panel.ZIndex="1"
                 Visibility="Hidden">
-            </Ellipse>
+        </Ellipse>
 
-            <Button x:Name="RoutineButton"
+        <Button x:Name="RoutineButton"
                 Grid.Row="0" 
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
@@ -414,19 +391,18 @@
                 Visibility="Hidden"
                 Panel.ZIndex="2"
                 Click="RoutineButton_Click">
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Grid>
-                            <Ellipse Stroke="Black" StrokeThickness="2">
-                                <Ellipse.Fill>
-                                    <ImageBrush ImageSource="Images/RadialNavigationIcons/RoutineIcon.png" Stretch="None"></ImageBrush>
-                                </Ellipse.Fill>
-                            </Ellipse>
-                        </Grid>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-        </Grid>
-    </Border>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Stroke="Black" StrokeThickness="2">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="Images/RadialNavigationIcons/RoutineIcon.png" Stretch="None"></ImageBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+    </Grid>
 </Page>
 

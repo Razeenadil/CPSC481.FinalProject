@@ -7,205 +7,178 @@
       mc:Ignorable="d" 
       d:DesignHeight="800" d:DesignWidth="450"
       Title="ExerciseRepScreen">
-
-    <Border CornerRadius="0"
-            BorderThickness="3"
-            Opacity="1">
-        <Border.BorderBrush>
-            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                <GradientStop Color="#000000" Offset="0"/>
-                <GradientStop Color="Black" Offset="0.5"/>
-                <GradientStop Color="#000000" Offset="1"/>
-            </LinearGradientBrush>
-        </Border.BorderBrush>
-
-        <Border.Background>
-            <LinearGradientBrush StartPoint="0.25,0.75" EndPoint="1,0.25">
-                <GradientStop Color="#FFFFFF" Offset="0"/>
-                <GradientStop Color="#FFFFFF" Offset="0.5"/>
-                <GradientStop Color="#FFFFFF" Offset="1"/>
-            </LinearGradientBrush>
-        </Border.Background>
-
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="15"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="375"/>
-                <RowDefinition Height="275"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="15"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="15"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="15"/>
-            </Grid.ColumnDefinitions>
-            <StackPanel Orientation="Horizontal"
-                        Grid.Row="1"
-                        Grid.Column="1">
-                <Button Name="BackButton"
-                        Height="40" 
-                        Width="40" 
-                        Background="Transparent" 
-                        BorderBrush="Transparent"
-                        VerticalAlignment="Center"
-                        HorizontalAlignment="Center"
-                        Click="BackButton_Click">
-                    <Image Source="/Images/HeaderNavIcons/left-arrow.png"/>
-                </Button>
-                <Label Name="routineLabel"
-                       Width="320"
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="350"/>
+            <RowDefinition Height="250"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="15"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="15"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Height ="60">
+            <Button Name="BackButton"
+                    Height="50" 
+                    Width="50"
+                    Margin="10,0,0,0"
+                    Background="Transparent" 
+                    BorderBrush="Transparent"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Click="BackButton_Click">
+                <Image Source="/Images/HeaderNavIcons/left-arrow.png"/>
+            </Button>
+            
+            <Label Name="routineLabel"
+                       Width="300"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"
                        HorizontalContentAlignment="Center"
                        VerticalContentAlignment="Center"
-                       FontSize="24"
+                       FontSize="32"
                        FontWeight="Bold"/>
 
-                <Button Height="40" 
-                        Width="40" 
-                        Background="Transparent" 
-                        BorderBrush="Transparent"
-                        VerticalAlignment="Center"
-                        HorizontalAlignment="Center">
-                    <Image Source="/Images/RadialNavigationIcons/RoutineIcon.png"/>
-                </Button>
-            </StackPanel>
-            
+            <Image Margin="0,0,10,0"
+                   Height="45"
+                   Width="45"
+                   Source="/Images/RadialNavigationIcons/RoutineIcon.png"/>
+        </StackPanel>
 
-            <StackPanel Orientation="Vertical"
+        <StackPanel Orientation="Vertical"
                         Grid.Row="2"
                         Grid.Column="1">
-                <Separator/>
-                <Grid>
-                    <Label Name="exerciseName"
-                           VerticalAlignment="Center"
-                           VerticalContentAlignment="Center"
-                           FontSize="24"
-                           FontWeight="Bold"/>
-                    <Label Name="exerciseCount"
-                           Margin="0,0,10,0"
-                           VerticalAlignment="Center"
-                           HorizontalAlignment="Right"
-                           HorizontalContentAlignment="Right"
-                           FontSize="20"
-                           FontWeight="Medium"/>
-                </Grid>
-                <Separator/>
-
-                <Label Content="Demonstration"
+            <Separator/>
+            <Grid>
+                <Label Name="exerciseName"
                        VerticalAlignment="Center"
                        VerticalContentAlignment="Center"
-                       FontSize="20"
-                       FontWeight="Medium"/>
+                       FontSize="24"
+                       FontWeight="Bold"/>
+                <Label Name="exerciseCount"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Right"
+                       HorizontalContentAlignment="Right"
+                       FontSize="24"
+                       FontWeight="Bold"/>
+            </Grid>
+            <Separator/>
 
-                <Grid>
-                    <Border Height="250"
+            <Grid>
+                <Border Margin="0,10,0,10"
+                        Height="250"
                         CornerRadius="5"
                         Background="White"
                         BorderBrush="Black"
                         BorderThickness="3">
-                        <Image Source="/Images/DemoImage.jpg" Opacity="0.5" Stretch="Fill"/>
-                    </Border>
-                    <Polygon Points="0,0 75,50, 0,100"
-                                 Stroke="Black" 
-                                 Fill="Black"
-                                 HorizontalAlignment="Center"
-                                 VerticalAlignment="Center"/>
-                </Grid>
-
-                <Grid Margin="0,5,0,0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="107.5"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-
-                    <Label Content="Set"
-                           Grid.Column="0"
-                           Margin="0,0,30,0"
-                           HorizontalAlignment="Right"
-                           VerticalAlignment="Center"
-                           VerticalContentAlignment="Center"
-                           FontSize="16"
-                           FontWeight="Medium"/>
-
-                    <Label Content="Reps Completed"
-                           Grid.Column="1"
-                           Margin="50,0,0,0"
-                           HorizontalAlignment="Left"
-                           VerticalAlignment="Center"
-                           VerticalContentAlignment="Center"
-                           FontSize="16"
-                           FontWeight="Medium"/>
-                </Grid>
-            </StackPanel>
-
-            <Border Grid.Row="3"
-                    Grid.Column="1"
-                    BorderThickness="3"
-                    BorderBrush="Black"
-                    CornerRadius="10">
-                <ScrollViewer HorizontalContentAlignment="Stretch">
-                    <StackPanel Name="RepListPanel"
-                                Orientation="Vertical"
-                                Width="350">
-                    </StackPanel>
-                </ScrollViewer>
-            </Border>
-            
-            <Grid Grid.Row="4"
-                  Grid.Column="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="140"/>
-                    <ColumnDefinition Width="140"/>
-                    <ColumnDefinition />
-                </Grid.ColumnDefinitions>
-                <Button Name="TransitionButton"
-                        Height="50"
-                        FontSize="20"
-                        FontWeight="Medium"
-                        Grid.Column="1"
-                        BorderBrush="Transparent"
-                        Foreground="White"
-                        Content="Next"
-                        Click="TransitionButton_Click">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="5"/>
-                        </Style>
-                    </Button.Resources>
-                    <Button.Background>
-                        <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
-                            <GradientStop Color="#003622" Offset="0"/>
-                            <GradientStop Color="#008F5A" Offset="0.5"/>
-                            <GradientStop Color="#003622" Offset="1"/>
-                        </LinearGradientBrush>
-                    </Button.Background>
-                </Button>
+                    <Image Source="/Images/DemoImage.jpg" Opacity="0.5" Stretch="Fill"/>
+                </Border>
+                <Polygon Points="0,0 75,50, 0,100"
+                         Fill="Black"
+                         Stroke="Black" 
+                         HorizontalAlignment="Center"
+                         VerticalAlignment="Center"/>
             </Grid>
 
-            <Button x:Name="NavigationButton"
-                        Grid.Row="0"
-                        Grid.Column="0"
-                        Grid.RowSpan="6"
-                        Grid.ColumnSpan="3"
-                        Width="150" 
-                        Height="150"
-                        Margin="350,670,0,0"
-                        Cursor="Hand"
-                        Click="NavigationButton_Click">
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Grid>
-                            <Ellipse Fill="ForestGreen"/>
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Grid>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
+            <Grid Margin="-15,-10,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="107.5"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
-            <Ellipse 
+                <Label Content="Set"
+                       Grid.Column="0"
+                       Margin="0"
+                       HorizontalAlignment="Right"
+                       VerticalAlignment="Center"
+                       VerticalContentAlignment="Center"
+                       FontSize="24"
+                       FontWeight="Medium"/>
+
+                <Label Content="Reps Completed"
+                       Grid.Column="1"
+                       Margin="65,0,0,0"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       VerticalContentAlignment="Center"
+                       FontSize="24"
+                       FontWeight="Medium"/>
+            </Grid>
+        </StackPanel>
+
+        <Border Grid.Row="3"
+                Grid.Column="1"
+                Margin="0,0,0,0"
+                BorderThickness="3"
+                BorderBrush="Black"
+                CornerRadius="10">
+            <ScrollViewer HorizontalContentAlignment="Stretch">
+                <StackPanel Name="RepListPanel"
+                            Orientation="Vertical"
+                            Width="350">
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+
+        <Grid Grid.Row="4"
+              Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="140"/>
+                <ColumnDefinition Width="140"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button Name="TransitionButton"
+                    Height="60"
+                    FontSize="26"
+                    FontWeight="Medium"
+                    Grid.Column="1"
+                    BorderBrush="Transparent"
+                    Foreground="White"
+                    Content="Next"
+                    Click="TransitionButton_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Background>
+                    <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                        <GradientStop Color="#003622" Offset="0"/>
+                        <GradientStop Color="#008F5A" Offset="0.5"/>
+                        <GradientStop Color="#003622" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Grid>
+
+        <Button x:Name="NavigationButton"
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.RowSpan="6"
+                Grid.ColumnSpan="3"
+                Width="150" 
+                Height="150"
+                Margin="350,670,0,0"
+                Cursor="Hand"
+                Click="NavigationButton_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Fill="ForestGreen"/>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Ellipse 
                 Name="ellipseHack"
                 Fill="White"
                 Grid.Row="0" 
@@ -217,9 +190,9 @@
                 Margin="190,690,85,6"
                 Panel.ZIndex="1"
                 Visibility="Hidden">
-            </Ellipse>
+        </Ellipse>
 
-            <Button x:Name="InfoButton"
+        <Button x:Name="InfoButton"
                 Grid.Row="0" 
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
@@ -231,20 +204,20 @@
                 Visibility="Hidden"
                 Panel.ZIndex="2"
                 Click="InfoButton_Click">
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Grid>
-                            <Ellipse Stroke="Black" StrokeThickness="2">
-                                <Ellipse.Fill>
-                                    <ImageBrush ImageSource="Images/RadialNavigationIcons/InformationIcon.png" Stretch="None"></ImageBrush>
-                                </Ellipse.Fill>
-                            </Ellipse>
-                        </Grid>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Stroke="Black" StrokeThickness="2">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="Images/RadialNavigationIcons/InformationIcon.png" Stretch="None"></ImageBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
 
-            <Ellipse 
+        <Ellipse 
                 Name="ellipseHack1"
                 Fill="White"
                 Grid.Row="0" 
@@ -256,9 +229,9 @@
                 Margin="250,630,64,51"
                 Panel.ZIndex="1"
                 Visibility="Hidden">
-            </Ellipse>
+        </Ellipse>
 
-            <Button x:Name="ProgressButton"
+        <Button x:Name="ProgressButton"
                 Grid.Row="0" 
                 Grid.Column="0" 
                 Grid.ColumnSpan="3"
@@ -270,20 +243,20 @@
                 Visibility="Hidden"
                 Panel.ZIndex="2"
                 Click="ProgressButton_Click">
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Grid>
-                            <Ellipse Stroke="Black" StrokeThickness="2">
-                                <Ellipse.Fill>
-                                    <ImageBrush ImageSource="Images/RadialNavigationIcons/ProgressIcon.png" Stretch="None"></ImageBrush>
-                                </Ellipse.Fill>
-                            </Ellipse>
-                        </Grid>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Stroke="Black" StrokeThickness="2">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="Images/RadialNavigationIcons/ProgressIcon.png" Stretch="None"></ImageBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
 
-            <Ellipse 
+        <Ellipse 
                 Name="ellipseHack2"
                 Fill="White"
                 Grid.Row="0" 
@@ -295,9 +268,9 @@
                 Margin="270,480,0,0"
                 Panel.ZIndex="1"
                 Visibility="Hidden">
-            </Ellipse>
+        </Ellipse>
 
-            <Button x:Name="DemoButton"
+        <Button x:Name="DemoButton"
                 Grid.Row="0" 
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
@@ -309,20 +282,20 @@
                 Visibility="Hidden"
                 Panel.ZIndex="2"
                 Click="DemoButton_Click">
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Grid>
-                            <Ellipse Stroke="Black" StrokeThickness="2">
-                                <Ellipse.Fill>
-                                    <ImageBrush ImageSource="Images/RadialNavigationIcons/DemoIcon.png" Stretch="None"></ImageBrush>
-                                </Ellipse.Fill>
-                            </Ellipse>
-                        </Grid>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Stroke="Black" StrokeThickness="2">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="Images/RadialNavigationIcons/DemoIcon.png" Stretch="None"></ImageBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
 
-            <Ellipse 
+        <Ellipse 
                 Name="ellipseHack3"
                 Fill="White"
                 Grid.Row="0" 
@@ -334,9 +307,9 @@
                 Margin="370,400,0,0"
                 Panel.ZIndex="1"
                 Visibility="Hidden">
-            </Ellipse>
+        </Ellipse>
 
-            <Button x:Name="RoutineButton"
+        <Button x:Name="RoutineButton"
                 Grid.Row="0" 
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
@@ -348,19 +321,18 @@
                 Visibility="Hidden"
                 Panel.ZIndex="2"
                 Click="RoutineButton_Click">
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Grid>
-                            <Ellipse Stroke="Black" StrokeThickness="2">
-                                <Ellipse.Fill>
-                                    <ImageBrush ImageSource="Images/RadialNavigationIcons/RoutineIcon.png" Stretch="None"></ImageBrush>
-                                </Ellipse.Fill>
-                            </Ellipse>
-                        </Grid>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            
-        </Grid>
-    </Border>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Stroke="Black" StrokeThickness="2">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="Images/RadialNavigationIcons/RoutineIcon.png" Stretch="None"></ImageBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+    </Grid>
 </Page>
