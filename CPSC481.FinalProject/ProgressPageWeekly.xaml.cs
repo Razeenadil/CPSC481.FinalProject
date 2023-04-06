@@ -33,34 +33,34 @@ namespace CPSC481.FinalProject
         /*You can uncomment the code inside once you created the rest of the buttons*/
         private void NavigationButton_Click(object sender, RoutedEventArgs e)
         {
-           // if (!navigationIsClicked)
+            // if (!navigationIsClicked)
             //{
-                //InfoButton.IsEnabled = true;
-                //DemoButton.IsEnabled = true;
-                //ProgressButton.IsEnabled = true;
-                //RoutineButton.IsEnabled = true;
+            //InfoButton.IsEnabled = true;
+            //DemoButton.IsEnabled = true;
+            //ProgressButton.IsEnabled = true;
+            //RoutineButton.IsEnabled = true;
 
 
-               // InfoButton.Visibility = Visibility.Visible;
-               // DemoButton.Visibility = Visibility.Visible;
-                //ProgressButton.Visibility = Visibility.Visible;
-               // RoutineButton.Visibility = Visibility.Visible;
+            // InfoButton.Visibility = Visibility.Visible;
+            // DemoButton.Visibility = Visibility.Visible;
+            //ProgressButton.Visibility = Visibility.Visible;
+            // RoutineButton.Visibility = Visibility.Visible;
 
-               // navigationIsClicked = true;
-           // }
-           // else
+            // navigationIsClicked = true;
+            // }
+            // else
             //{
-               // InfoButton.IsEnabled = false;
-               // DemoButton.IsEnabled = false;
-               // ProgressButton.IsEnabled = false;
-               // RoutineButton.IsEnabled = false;
+            // InfoButton.IsEnabled = false;
+            // DemoButton.IsEnabled = false;
+            // ProgressButton.IsEnabled = false;
+            // RoutineButton.IsEnabled = false;
 
-              //  InfoButton.Visibility = Visibility.Hidden;
-              //  DemoButton.Visibility = Visibility.Hidden;
-              //  ProgressButton.Visibility = Visibility.Hidden;
-              //  RoutineButton.Visibility = Visibility.Hidden;
+            //  InfoButton.Visibility = Visibility.Hidden;
+            //  DemoButton.Visibility = Visibility.Hidden;
+            //  ProgressButton.Visibility = Visibility.Hidden;
+            //  RoutineButton.Visibility = Visibility.Hidden;
 
-              //  navigationIsClicked = false;
+            //  navigationIsClicked = false;
             //}
 
         }
