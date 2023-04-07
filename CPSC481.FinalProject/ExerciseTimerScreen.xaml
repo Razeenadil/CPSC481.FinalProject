@@ -58,11 +58,14 @@
             <Separator/>
             
             <Grid>
-                <Label Name="exerciseName"
-                       VerticalAlignment="Center"
-                       VerticalContentAlignment="Center"
-                       FontSize="24"
-                       FontWeight="Bold"/>
+                <TextBlock Name="exerciseName"
+                           Margin="5,0,0,0"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"
+                           FontSize="24"
+                           FontWeight="Bold"
+                           Width="325"
+                           TextTrimming="CharacterEllipsis"/>
                 <Label Name="exerciseCount"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Right"

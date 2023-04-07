@@ -37,7 +37,7 @@ namespace CPSC481.FinalProject
             }
 
             routineLabel.Content = Global_Data.routine_chosen;
-            exerciseName.Content = Global_Data.routine_dict[Global_Data.routine_chosen][Global_Data.exercise_number].exercise_name;
+            exerciseName.Text = Global_Data.routine_dict[Global_Data.routine_chosen][Global_Data.exercise_number].exercise_name;
             exerciseCount.Content = Global_Data.exercise_number.ToString() + "/" + Global_Data.routine_dict[Global_Data.routine_chosen].Count.ToString();
 
             if (Global_Data.exercise_number == Global_Data.routine_dict[Global_Data.routine_chosen].Count)
@@ -118,14 +118,16 @@ namespace CPSC481.FinalProject
 
         private void TransitionButton_Click(object sender, RoutedEventArgs e)
         {
+            var mainWindow = (MainWindow)Application.Current.MainWindow;
             if (Global_Data.exercise_number == Global_Data.routine_dict[Global_Data.routine_chosen].Count)
             {
                 // go to the overview screen
+                mainWindow?.ChangeView(new RoutineOverview());
             }
             else
             {
                 Global_Data.exercise_number++;
-                var mainWindow = (MainWindow)Application.Current.MainWindow;
+                
                 // check what type of exercise then go to next exercise
                 if (Global_Data.routine_dict[Global_Data.routine_chosen][Global_Data.exercise_number].exercise_type == 0)
                 {
