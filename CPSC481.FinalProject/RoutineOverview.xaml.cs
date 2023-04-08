@@ -16,12 +16,12 @@ using System.Windows.Shapes;
 namespace CPSC481.FinalProject
 {
     /// <summary>
-    /// Interaction logic for LandingScreen.xaml
+    /// Interaction logic for RoutineOverview.xaml
     /// </summary>
-    public partial class LandingScreen : Page
+    public partial class RoutineOverview : Page
     {
         private bool navigationIsClicked;
-        public LandingScreen()
+        public RoutineOverview()
         {
             InitializeComponent();
             this.DataContext = this;
@@ -36,13 +36,17 @@ namespace CPSC481.FinalProject
                 InfoButton.IsEnabled = true;
                 DemoButton.IsEnabled = true;
                 ProgressButton.IsEnabled = true;
-                RoutineButton.IsEnabled = true; 
+                RoutineButton.IsEnabled = true;
 
 
                 InfoButton.Visibility = Visibility.Visible;
                 DemoButton.Visibility = Visibility.Visible;
                 ProgressButton.Visibility = Visibility.Visible;
                 RoutineButton.Visibility = Visibility.Visible;
+                ellipseHack.Visibility = Visibility.Visible;
+                ellipseHack1.Visibility = Visibility.Visible;
+                ellipseHack2.Visibility = Visibility.Visible;
+                ellipseHack3.Visibility = Visibility.Visible;
 
                 navigationIsClicked = true;
             }
@@ -57,10 +61,13 @@ namespace CPSC481.FinalProject
                 DemoButton.Visibility = Visibility.Hidden;
                 ProgressButton.Visibility = Visibility.Hidden;
                 RoutineButton.Visibility = Visibility.Hidden;
+                ellipseHack.Visibility = Visibility.Hidden;
+                ellipseHack2.Visibility = Visibility.Hidden;
+                ellipseHack3.Visibility = Visibility.Hidden;
+                ellipseHack1.Visibility = Visibility.Hidden;
 
                 navigationIsClicked = false;
             }
-
         }
 
         //this is the logout button was to lazy to rename
@@ -79,14 +86,38 @@ namespace CPSC481.FinalProject
         private void DemoButton_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = (MainWindow)Application.Current.MainWindow;
-            mainWindow?.ChangeView(new BodyPartSelectorPage());   
+            mainWindow?.ChangeView(new BodyPartSelectorPage());
         }
 
         private void RoutineButton_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = (MainWindow)Application.Current.MainWindow;
             mainWindow?.ChangeView(new ViewRoutines());
-            //mainWindow?.ChangeView(new RoutineStartScreen());
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = (MainWindow)Application.Current.MainWindow;
+
+            // if it's the first exercise in the list
+            if (Global_Data.exercise_number == 1)
+            {
+                mainWindow?.ChangeView(new RoutineStartScreen());
+            }
+            else
+            {
+                Global_Data.exercise_number--;
+                // check what type of exercise then go to next exercise
+                if (Global_Data.routine_dict[Global_Data.routine_chosen][Global_Data.exercise_number].exercise_type == 0)
+                {
+                    mainWindow?.ChangeView(new ExerciseRepScreen());
+                }
+                // else it must be time based
+                else
+                {
+                    mainWindow?.ChangeView(new ExerciseTimerScreen());
+                }
+            }
         }
     }
 }
