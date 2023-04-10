@@ -38,5 +38,12 @@ namespace CPSC481.FinalProject
             MainFrame.NavigationService.Navigate(view);
         }
 
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
+        }
     }
 }
