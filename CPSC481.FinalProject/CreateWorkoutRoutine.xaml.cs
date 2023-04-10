@@ -16,15 +16,15 @@ using System.Windows.Shapes;
 namespace CPSC481.FinalProject
 {
     /// <summary>
-    /// Interaction logic for ViewRoutines.xaml
+    /// Interaction logic for CreateWorkoutRoutine.xaml
     /// </summary>
-    public partial class ViewRoutines : Page
+    public partial class CreateWorkoutRoutine : Page
     {
 
         private bool navigationIsClicked;
 
 
-        public ViewRoutines()
+        public CreateWorkoutRoutine()
         {
             InitializeComponent();
             navigationIsClicked = false;
@@ -100,13 +100,13 @@ namespace CPSC481.FinalProject
         private void Back_Button_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = (MainWindow)Application.Current.MainWindow;
-            mainWindow?.ChangeView(new LandingScreen());
+            mainWindow?.ChangeView(new ViewRoutines());
         }
 
-        private void Create_Workout_Routine_Click(object sender, RoutedEventArgs e)
+        private void AddExercises_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = (MainWindow)Application.Current.MainWindow;
-            mainWindow?.ChangeView(new CreateWorkoutRoutine());
+            mainWindow?.ChangeView(new AddExercise());
         }
     }
 }

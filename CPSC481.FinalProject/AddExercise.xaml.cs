@@ -16,19 +16,18 @@ using System.Windows.Shapes;
 namespace CPSC481.FinalProject
 {
     /// <summary>
-    /// Interaction logic for ViewRoutines.xaml
+    /// Interaction logic for AddExercise.xaml
     /// </summary>
-    public partial class ViewRoutines : Page
+    public partial class AddExercise : Page
     {
 
         private bool navigationIsClicked;
 
 
-        public ViewRoutines()
+        public AddExercise()
         {
             InitializeComponent();
             navigationIsClicked = false;
-
         }
 
         private void NavigationButton_Click(object sender, RoutedEventArgs e)
@@ -101,12 +100,6 @@ namespace CPSC481.FinalProject
         {
             var mainWindow = (MainWindow)Application.Current.MainWindow;
             mainWindow?.ChangeView(new LandingScreen());
-        }
-
-        private void Create_Workout_Routine_Click(object sender, RoutedEventArgs e)
-        {
-            var mainWindow = (MainWindow)Application.Current.MainWindow;
-            mainWindow?.ChangeView(new CreateWorkoutRoutine());
         }
     }
 }
