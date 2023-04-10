@@ -57,8 +57,26 @@ Here is the list of fully working features that our app presents to users:
 
 Please follow the instructions below to navigate throughout the app:
 - **Welcome Page** 
-    + Click on the `Login` button to navigate to the login page.
-    + Click on the `Create Account` button to navigate to the create account page.
+    + When the app is first launched the user will land on the welcome page. There are two options on this page: `Login` or `Continue As Guest`.
+        +  If the user clicks `Continue As Guest` they will be taken to the main Landing page.
+        + If the user clicks `Login` they will be taken to the Login page where they will enter their username and password to login to their account. Once they click `Submit` the user will be taken to the main Landing page. In order to access the app using the Login page you must use the following credentials:
+            + Username: `admin`
+            + Password: `admin`
+- **Exercise Demonstration Page** 
+    + Once user is logged in and on the main landing page, they can click on the `Navigation button` which is on the bottom right of the screen. 
+        + Once the button is clicked, four other buttons will be displayed on the radial navigation button. In order to navigate to the `Exercise Demonstration Page` user must click on the play icon. 
+        + Once the user clicks on the play icon, they will be taken to the `2D Body Part Selector Page`. On this page a human body will be shown for user to select a body part. 
+            + The user can toggle between the front and back view of the human body by clicking on the `arrows` and also click and select a specific body part ( `Arms`,`Legs`,`Abs`,`Chest`, `Back`).
+            + Once the user selects a body part, the body part will be automatically highlighted and will be displayed to the user in text. 
+            + If user is not happy with their selections, they can click on `Reset Filters` to unselect all the options and start over.
+        + Once the user is happy with their selections, they can click on `Apply Filters` to be taken to the Exercise Demonstration page.
+        + On the Exercise Demonstration page, the user will be able to see all of their selected filters from the previous page. List of exercises will be grouped per body part and demonstrated in a list format. 
+            + The user can click on the `Exercise Name` to be taken to the Exercise Tutorial page. 
+                + On the Exercise Tutorial page, the user will be able to see the exercise name, equipment needed, a video tutorial of the exercise and a description of the exercise.     
+                + The user can click on the `back` button to be taken to previous page where the selected exercises will be remembered based on the selected filters from the `Body Part Selector Page`. 
+- **Progress Page** 
+
+- **Routine Page** 
 
 ## AUTHORS:
 * Anthony Dam
