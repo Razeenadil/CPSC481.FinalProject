@@ -99,7 +99,7 @@ namespace CPSC481.FinalProject
         private void Back_Button_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = (MainWindow)Application.Current.MainWindow;
-            mainWindow?.ChangeView(new LandingScreen());
+            mainWindow?.ChangeView(new CreateWorkoutRoutine());
         }
     }
 }

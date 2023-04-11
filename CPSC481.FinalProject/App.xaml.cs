@@ -40,6 +40,7 @@ namespace CPSC481.FinalProject
 
         public static Dictionary<string, Dictionary<int, exercise_info>> routine_dict = new Dictionary<string, Dictionary<int, exercise_info>>();
 
+
         public static void Add_routine(string routine_name)
         {
             routine_dict.Add(routine_name, new Dictionary<int, exercise_info>());

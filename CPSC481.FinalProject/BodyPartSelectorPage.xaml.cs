@@ -23,6 +23,7 @@ namespace CPSC481.FinalProject
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        public static bool cameFromCreateWorkout = false;
 
         public BodyPartSelectorPage()
         {
@@ -36,6 +37,7 @@ namespace CPSC481.FinalProject
             chestIsClicked = false;
             backIsClicked = false;
         }
+
 
         protected void OnPropertyChanged(string propertyName)
         {
@@ -115,12 +117,24 @@ namespace CPSC481.FinalProject
         private void Back_Button_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = (MainWindow)Application.Current.MainWindow;
-            mainWindow?.ChangeView(new LandingScreen());
+
+            if (cameFromCreateWorkout)
+            {
+                cameFromCreateWorkout = false;
+                CreateWorkoutRoutine.newRoutineBodyParts = "Choose Body Part";
+                mainWindow?.ChangeView(new CreateWorkoutRoutine());
+            }
+            else
+            {
+                mainWindow?.ChangeView(new LandingScreen());
+
+            }
+
         }
 
         private void Apply_Filter_Button(object sender, RoutedEventArgs e)
         {
-            if(string.IsNullOrEmpty(selectionParameter))
+            if (string.IsNullOrEmpty(selectionParameter))
             {
                 selectionParameter = "Selection: No filters applied";
             }
@@ -130,10 +144,18 @@ namespace CPSC481.FinalProject
                 selectionParameter = selectionParameter.TrimEnd('/');
             }
 
-
-
             var mainWindow = (MainWindow)Application.Current.MainWindow;
-            mainWindow?.ChangeView(new DemoVideoPage(selectionParameter, arms, legs, back, chest, abs));
+
+            if (cameFromCreateWorkout)
+            {
+                cameFromCreateWorkout = false;
+                CreateWorkoutRoutine.newRoutineBodyParts = selectionParameter;
+                mainWindow?.ChangeView(new CreateWorkoutRoutine());
+            }
+            else
+            {
+                mainWindow?.ChangeView(new DemoVideoPage(selectionParameter, arms, legs, back, chest, abs));
+            }
         }
 
         public string Selection

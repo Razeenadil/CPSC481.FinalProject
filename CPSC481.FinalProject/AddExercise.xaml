@@ -193,31 +193,158 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        
-        <Label Grid.Column="2" Content="Add Exercises" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Top" FontSize="24" Margin="0,12,0,0" FontWeight="Bold"/>
+
+
+        <Label Grid.Column="2" Content="Add Exercises" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Top" FontSize="32" Margin="0,12,0,0" FontWeight="Bold"/>
         <Image Grid.Column="2" HorizontalAlignment="Right" Height="45" Margin="0,15,10,0" Grid.Row="4" VerticalAlignment="Top" Width="45" Source="/Images/RadialNavigationIcons/RoutineIcon.png"/>
-        <Separator Grid.Column="2" Margin="0,40,0,670" Grid.Row="4"/>
-        <TextBox TextWrapping="Wrap" Text="       Find Exercises" Grid.Column="2" Margin="20,100,100,630" Grid.Row="4" FontSize="24" Foreground="#7F000000"/>
-        <Image Grid.Column="2" HorizontalAlignment="Left" Height="26" Grid.Row="4" VerticalAlignment="Top" Width="25" Source="/Images/Icons/search-interface-symbol.png" Margin="30,107,0,0" Opacity="0.5"/>
+        <Separator Grid.Column="2" Margin="0,60,0,650" Grid.Row="4"/>
+
+
+        <TextBox TextWrapping="Wrap" Text="Find Exercises" Grid.Column="2" Margin="20,100,100,590" Grid.Row="4" FontSize="24" Foreground="#7F000000" Padding="0,0,50,0"/>
+        <Image Grid.Column="2" HorizontalAlignment="Right" Height="26" Grid.Row="4" VerticalAlignment="Top" Width="25" Source="/Images/Icons/search-interface-symbol.png" Margin="0,107,110,0" Opacity="0.5"/>
         <Image Grid.Column="2" HorizontalAlignment="Right" Height="40" Margin="0,100,20,0" Grid.Row="4" VerticalAlignment="Top" Width="40" Source="/Images/Icons/more.png"/>
-        <Separator Grid.Column="2" Margin="0,40,0,670" Grid.Row="4"/>
-        <Separator Grid.Column="2" Margin="0,140,0,570" Grid.Row="4"/>
-        <Label Content="1. Dumbell Curls" HorizontalAlignment="Left" Margin="45,250,0,0" Grid.Row="4" VerticalAlignment="Top" Grid.Column="2" FontSize="16"/>
+        <Separator Grid.Column="2" Margin="0,160,0,550" Grid.Row="4"/>
+
         <Label Content="Exercises:" HorizontalAlignment="Left" Margin="20,200,0,0" Grid.Row="4" VerticalAlignment="Top" Grid.Column="2" FontSize="24"/>
-        <Separator Grid.Column="2" Margin="20,205,291,505" Grid.Row="4"/>
-        <Label Content="Sets" HorizontalAlignment="Right" Margin="0,200,20,0" Grid.Row="4" VerticalAlignment="Top" Grid.Column="2" FontSize="24"/>
-        <Label Content="Reps" HorizontalAlignment="Right" Margin="0,200,80,0" Grid.Row="4" VerticalAlignment="Top" Grid.Column="2" FontSize="24"/>
-        <TextBox Grid.Column="2" HorizontalAlignment="Left" Margin="353,253,0,0" Grid.Row="4" TextWrapping="Wrap" Text="4" VerticalAlignment="Top" Width="40" FontSize="16" Height="25" TextAlignment="Center"/>
-        <Image Grid.Column="2" HorizontalAlignment="Left" Height="20" Margin="25,256,0,0" Grid.Row="4" VerticalAlignment="Top" Width="20" Source="/Images/Icons/minus.png"/>
-        <Image Grid.Column="2" HorizontalAlignment="Left" Height="20" Margin="171,256,0,0" Grid.Row="4" VerticalAlignment="Top" Width="20" Source="/Images/Icons/information.png"/>
-        <TextBox Grid.Column="2" HorizontalAlignment="Left" Margin="290,253,0,0" Grid.Row="4" TextWrapping="Wrap" Text="4" VerticalAlignment="Top" Width="40"  FontSize="16" Height="25" TextAlignment="Center"/>
+        <Label Content="Sets" HorizontalAlignment="Right" Margin="0,200,5,0" Grid.Row="4" VerticalAlignment="Top" Grid.Column="2" FontSize="24"/>
+        <Label Content="Reps" HorizontalAlignment="Right" Margin="0,200, 65,0" Grid.Row="4" VerticalAlignment="Top" Grid.Column="2" FontSize="24"/>
+        <Separator Grid.Column="2" Margin="20,225,280,485" Grid.Row="4"/>
+
+
+        <StackPanel
+            Grid.Column="2"
+            Grid.Row="4"
+            Margin="0, 250, 0, 180"
+            >
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type Grid}">
+                    <Setter Property="Margin" Value="0,20,0,0"/>
+                </Style>
+            </StackPanel.Resources>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="30"></ColumnDefinition>
+                    <ColumnDefinition Width="60"></ColumnDefinition>
+                    <ColumnDefinition Width="60"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button 
+                    Grid.Column="0" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center"
+                    Background="Transparent"
+                    Cursor="Hand"
+                    >
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Image  Height="25" Width="25" Source="/Images/Icons/minus.png"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <TextBlock Grid.Column="1" Text="Dumbell Curls" TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="24"/>
+                <Button 
+                    Grid.Column="2" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center"
+                    Background="Transparent"
+                    Cursor="Hand"
+                    >
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Image  Height="25" Width="25" Source="/Images/Icons/information.png"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>                <TextBox Grid.Column="3" HorizontalAlignment="Center" TextWrapping="Wrap" Text="4" VerticalAlignment="Center" Width="40" FontSize="24" Height="35" TextAlignment="Center"/>
+                <TextBox Grid.Column="4" HorizontalAlignment="Center" TextWrapping="Wrap" Text="4" VerticalAlignment="Center" Width="40"  FontSize="24" Height="35" TextAlignment="Center"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="30"></ColumnDefinition>
+                    <ColumnDefinition Width="60"></ColumnDefinition>
+                    <ColumnDefinition Width="60"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button 
+                    Grid.Column="0" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center"
+                    Background="Transparent"
+                    Cursor="Hand"
+                    >
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Image  Height="25" Width="25" Source="/Images/Icons/minus.png"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <TextBlock Grid.Column="1" Text="Dumbell Curls" TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="24"/>
+                <Button 
+                    Grid.Column="2" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center"
+                    Background="Transparent"
+                    Cursor="Hand"
+                    >
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Image  Height="25" Width="25" Source="/Images/Icons/information.png"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <TextBox Grid.Column="3" HorizontalAlignment="Center" TextWrapping="Wrap" Text="4" VerticalAlignment="Center" Width="40" FontSize="24" Height="35" TextAlignment="Center"/>
+                <TextBox Grid.Column="4" HorizontalAlignment="Center" TextWrapping="Wrap" Text="4" VerticalAlignment="Center" Width="40"  FontSize="24" Height="35" TextAlignment="Center"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="30"></ColumnDefinition>
+                    <ColumnDefinition Width="60"></ColumnDefinition>
+                    <ColumnDefinition Width="60"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button 
+                    Grid.Column="0" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center"
+                    Background="Transparent"
+                    Cursor="Hand"
+                    >
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Image  Height="25" Width="25" Source="/Images/Icons/minus.png"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <TextBlock Grid.Column="1" Text="Dumbell Curls" TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="24"/>
+                <Button 
+                    Grid.Column="2" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center"
+                    Background="Transparent"
+                    Cursor="Hand"
+                    >
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Image  Height="25" Width="25" Source="/Images/Icons/information.png"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <TextBox Grid.Column="3" HorizontalAlignment="Center" TextWrapping="Wrap" Text="4" VerticalAlignment="Center" Width="40" FontSize="24" Height="35" TextAlignment="Center"/>
+                <TextBox Grid.Column="4" HorizontalAlignment="Center" TextWrapping="Wrap" Text="4" VerticalAlignment="Center" Width="40"  FontSize="24" Height="35" TextAlignment="Center"/>
+            </Grid>
+        </StackPanel>
+
+
+
 
         <Button Height="50"
-                        FontSize="20"
+                        FontSize="26"
                         FontWeight="Medium"
                         Grid.Column="2"
                         BorderBrush="Transparent"
-                        Foreground="White" Margin="163,700,163,20" Grid.Row="4">
+                        Foreground="White" Margin="110,600,110,18" Grid.Row="4">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>
@@ -232,18 +359,5 @@
             </Button.Background>
             Done
         </Button>
-        <Label Content="2. Farmer's Walk" HorizontalAlignment="Left" Margin="45,295,0,0" Grid.Row="4" VerticalAlignment="Top" Grid.Column="2" FontSize="16"/>
-        <Image Grid.Column="2" HorizontalAlignment="Left" Height="20" Margin="25,301,0,0" Grid.Row="4" VerticalAlignment="Top" Width="20" Source="/Images/Icons/minus.png"/>
-        <Image Grid.Column="2" HorizontalAlignment="Left" Height="20" Margin="171,301,0,0" Grid.Row="4" VerticalAlignment="Top" Width="20" Source="/Images/Icons/information.png"/>
-        <Label Content="3. Hammer Curls" HorizontalAlignment="Left" Margin="45,340,0,0" Grid.Row="4" VerticalAlignment="Top" Grid.Column="2" FontSize="16"/>
-        <TextBox Grid.Column="2" HorizontalAlignment="Left" Margin="353,343,0,0" Grid.Row="4" TextWrapping="Wrap" Text="4" VerticalAlignment="Top" Width="40" FontSize="16" Height="25" TextAlignment="Center"/>
-        <Image Grid.Column="2" HorizontalAlignment="Left" Height="20" Margin="25,346,0,0" Grid.Row="4" VerticalAlignment="Top" Width="20" Source="/Images/Icons/minus.png"/>
-        <Image Grid.Column="2" HorizontalAlignment="Left" Height="20" Margin="171,346,0,0" Grid.Row="4" VerticalAlignment="Top" Width="20" Source="/Images/Icons/information.png"/>
-        <TextBox Grid.Column="2" HorizontalAlignment="Left" Margin="290,343,0,0" Grid.Row="4" TextWrapping="Wrap" Text="4" VerticalAlignment="Top" Width="40"  FontSize="16" Height="25" TextAlignment="Center"/>
-        <Label Content="4. Concentrated Bicep Curls" HorizontalAlignment="Left" Margin="45,383,0,0" Grid.Row="4" VerticalAlignment="Top" Grid.Column="2" FontSize="16"/>
-        <TextBox Grid.Column="2" HorizontalAlignment="Left" Margin="353,386,0,0" Grid.Row="4" TextWrapping="Wrap" Text="4" VerticalAlignment="Top" Width="40" FontSize="16" Height="25" TextAlignment="Center"/>
-        <Image Grid.Column="2" HorizontalAlignment="Left" Height="20" Margin="25,389,0,0" Grid.Row="4" VerticalAlignment="Top" Width="20" Source="/Images/Icons/minus.png"/>
-        <Image Grid.Column="2" HorizontalAlignment="Left" Height="20" Margin="249,388,0,0" Grid.Row="4" VerticalAlignment="Top" Width="20" Source="/Images/Icons/information.png"/>
-        <TextBox Grid.Column="2" HorizontalAlignment="Left" Margin="290,386,0,0" Grid.Row="4" TextWrapping="Wrap" Text="4" VerticalAlignment="Top" Width="40"  FontSize="16" Height="25" TextAlignment="Center"/>
     </Grid>
 </Page>

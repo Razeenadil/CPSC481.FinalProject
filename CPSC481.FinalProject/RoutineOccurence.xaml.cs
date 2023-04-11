@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,28 +13,22 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Diagnostics;
 
 namespace CPSC481.FinalProject
 {
     /// <summary>
-    /// Interaction logic for ViewRoutines.xaml
+    /// Interaction logic for RoutineOccurence.xaml
     /// </summary>
-    public partial class ViewRoutines : Page
+    public partial class RoutineOccurence : Page
     {
-
         private bool navigationIsClicked;
 
 
-        public ViewRoutines()
+        public RoutineOccurence()
         {
             InitializeComponent();
             navigationIsClicked = false;
-            /*
-            routineLabel1Date.Content = "Today";
-            routineLabel1Name.Content = Global_Data.routine_chosen;
-            */
-            foreach (var routine in Global_Data.routine_dict) { }
+
         }
 
         private void NavigationButton_Click(object sender, RoutedEventArgs e)
@@ -105,14 +100,22 @@ namespace CPSC481.FinalProject
         private void Back_Button_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = (MainWindow)Application.Current.MainWindow;
-            mainWindow?.ChangeView(new LandingScreen());
+            mainWindow?.ChangeView(new CreateWorkoutRoutine());
         }
 
-        private void Create_Workout_Routine_Click(object sender, RoutedEventArgs e)
+        private void Save_Click(object sender, RoutedEventArgs e)
         {
-            var mainWindow = (MainWindow)Application.Current.MainWindow;
-            mainWindow?.ChangeView(new CreateWorkoutRoutine());
+            Debug.WriteLine(occurenceSelect.Text);
+            CreateWorkoutRoutine.newRoutineOccurence = occurenceSelect.Text;
+            if (occurenceSelect.Text != "")
+            {
+                var mainWindow = (MainWindow)Application.Current.MainWindow;
+                mainWindow?.ChangeView(new CreateWorkoutRoutine());
 
+            } else
+            {
+                CreateWorkoutRoutine.newRoutineOccurence = "Choose Occurrence";
+            }
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,13 +23,28 @@ namespace CPSC481.FinalProject
     {
 
         private bool navigationIsClicked;
-
+        public static string newRoutineName = "";
+        public static DateTime newRoutineDateTime = new();
+        public static string newRoutineOccurence = "Choose occurrence";
+        public static string newRoutineBodyParts = "Choose Body Part";
 
         public CreateWorkoutRoutine()
         {
             InitializeComponent();
             navigationIsClicked = false;
-
+            routineNameTextBox.Text = newRoutineName;
+            if (newRoutineDateTime != new DateTime())
+            {
+                dateLabel.Content = newRoutineDateTime.ToString().Split(' ')[0];
+            }
+            if (newRoutineOccurence != "Choose occurrence")
+            {
+                occurrenceLabel.Content = newRoutineOccurence;
+            }
+            if (newRoutineBodyParts != "Choose Body Part")
+            {
+                bodyPartLabel.Text = newRoutineBodyParts;
+            }
         }
 
         private void NavigationButton_Click(object sender, RoutedEventArgs e)
@@ -74,24 +90,29 @@ namespace CPSC481.FinalProject
 
         private void InfoButton_Click(object sender, RoutedEventArgs e)
         {
+            Reset_Fields();
             var mainWindow = (MainWindow)Application.Current.MainWindow;
             mainWindow?.ChangeView(new Welcome());
         }
 
         private void ProgressButton_Click(object sender, RoutedEventArgs e)
         {
+            Reset_Fields();
             var mainWindow = (MainWindow)Application.Current.MainWindow;
             mainWindow?.ChangeView(new ProgressPageWeekly());
         }
 
         private void DemoButton_Click(object sender, RoutedEventArgs e)
         {
+
+            Reset_Fields();
             var mainWindow = (MainWindow)Application.Current.MainWindow;
             mainWindow?.ChangeView(new BodyPartSelectorPage());
         }
 
         private void RoutineButton_Click(object sender, RoutedEventArgs e)
         {
+            Reset_Fields();
             var mainWindow = (MainWindow)Application.Current.MainWindow;
             mainWindow?.ChangeView(new ViewRoutines());
         }
@@ -99,14 +120,54 @@ namespace CPSC481.FinalProject
 
         private void Back_Button_Click(object sender, RoutedEventArgs e)
         {
+            Reset_Fields();
             var mainWindow = (MainWindow)Application.Current.MainWindow;
             mainWindow?.ChangeView(new ViewRoutines());
+        }
+
+        private void Reset_Fields()
+        {
+            newRoutineName = "";
+            newRoutineDateTime = new();
+            newRoutineOccurence = "Choose Occurrence";
+            newRoutineBodyParts = "Choose Body Part";
+            BodyPartSelectorPage.cameFromCreateWorkout = false;
+
         }
 
         private void AddExercises_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = (MainWindow)Application.Current.MainWindow;
             mainWindow?.ChangeView(new AddExercise());
+        }
+
+        private void routineNameChange(object sender, TextChangedEventArgs e)
+        {
+            newRoutineName = routineNameTextBox.Text;
+            Debug.WriteLine(newRoutineName);
+        }
+
+
+        private void DateTimeButton_Click(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = (MainWindow)Application.Current.MainWindow;
+            mainWindow?.ChangeView(new RoutineCalendar());
+        }
+
+        private void OccurenceButton_Click(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = (MainWindow)Application.Current.MainWindow;
+            mainWindow?.ChangeView(new RoutineOccurence());
+        }
+
+        private void BodyPartButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Connect to razeen page
+
+            BodyPartSelectorPage.cameFromCreateWorkout = true;
+
+            var mainWindow = (MainWindow)Application.Current.MainWindow;
+            mainWindow?.ChangeView(new BodyPartSelectorPage());
         }
     }
 }
