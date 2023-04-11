@@ -85,8 +85,8 @@ namespace CPSC481.FinalProject
         private void RoutineButton_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = (MainWindow)Application.Current.MainWindow;
-            mainWindow?.ChangeView(new ViewRoutines());
-            //mainWindow?.ChangeView(new RoutineStartScreen());
+            //mainWindow?.ChangeView(new ViewRoutines());
+            mainWindow?.ChangeView(new RoutineStartScreen());
         }
     }
 }

@@ -35,7 +35,6 @@ namespace CPSC481.FinalProject
                 Global_Data.Add_rep_exercise(Global_Data.routine_chosen, 1, "Dumbbell Curls", 5, 8);
                 Global_Data.Add_timed_exercise(Global_Data.routine_chosen, 2, "Farmer's Walk");
                 
-                
                 Global_Data.Add_rep_exercise(Global_Data.routine_chosen, 3, "Hammer Curls", 8, 8);
                 Global_Data.Add_rep_exercise(Global_Data.routine_chosen, 4, "Concentrated Biceps Curls", 8, 8);
                 Global_Data.Add_rep_exercise(Global_Data.routine_chosen, 5, "Dumbbell Curls", 8, 8);
