@@ -69,6 +69,8 @@ namespace CPSC481.FinalProject
 
         private void ForgotPassword_Click(object sender, RoutedEventArgs e)
         {
+            MessageBox.Show("This page is under development", "Under Development", MessageBoxButton.OK, MessageBoxImage.Information);
+
         }
 
         private void CreateAccount_Click(object sender, RoutedEventArgs e)
