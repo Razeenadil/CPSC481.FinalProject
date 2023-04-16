@@ -5,10 +5,11 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:CPSC481.FinalProject"
              mc:Ignorable="d" 
-             d:DesignHeight="250" d:DesignWidth="200">
+             d:DesignHeight="230" d:DesignWidth="200">
     <Grid>
 
-        <Ellipse Height="180"
+        <Ellipse Name="CompletionCircle"
+                 Height="180"
                  Width="180"
                  VerticalAlignment="Top"
                  HorizontalAlignment="Center"
@@ -57,11 +58,11 @@
 
         <TextBlock Name="ExerciseNameText"
                    Text="Exercise Name"
-                   Margin="0,0,0,20"
+                   Margin="0,195,0,0"
                    FontSize="24"
                    FontWeight="Medium"
                    HorizontalAlignment="Center"
-                   VerticalAlignment="Bottom"
+                   VerticalAlignment="Top"
                    TextTrimming="CharacterEllipsis"
                    Width="180"/>
     </Grid>

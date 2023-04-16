@@ -61,19 +61,15 @@ namespace CPSC481.FinalProject
             if (!Global_Data.routine_dict.ContainsKey(aRoutine))
             {
                 Global_Data.Add_routine(aRoutine, "No Date");
-                Global_Data.Add_rep_exercise(aRoutine, 1, "Dumbbell Curls", 5, 8);
+                Global_Data.Add_rep_exercise(aRoutine, 1, "Dumbbell Curls", 1, 1);
                 Global_Data.Add_timed_exercise(aRoutine, 2, "Farmer's Walk");
 
-                Global_Data.Add_rep_exercise(aRoutine, 3, "Hammer Curls", 8, 8);
-                Global_Data.Add_rep_exercise(aRoutine, 4, "Concentrated Biceps Curls", 8, 8);
-                Global_Data.Add_rep_exercise(aRoutine, 5, "Dumbbell Curls", 8, 8);
+                Global_Data.Add_rep_exercise(aRoutine, 3, "Hammer Curls", 2, 2);
+                Global_Data.Add_rep_exercise(aRoutine, 4, "Barbell Curls", 3, 3);
+                Global_Data.Add_rep_exercise(aRoutine, 5, "Dumbbell Curls", 4, 4);
                 Global_Data.Add_timed_exercise(aRoutine, 6, "Farmer's Walk");
-                Global_Data.Add_rep_exercise(aRoutine, 7, "Hammer Curls", 8, 8);
-                Global_Data.Add_rep_exercise(aRoutine, 8, "Concentrated Biceps Curls", 8, 8);
-                Global_Data.Add_rep_exercise(aRoutine, 9, "Dumbbell Curls", 8, 8);
-                Global_Data.Add_timed_exercise(aRoutine, 10, "Farmer's Walk");
-                Global_Data.Add_rep_exercise(aRoutine, 11, "Hammer Curls", 8, 8);
-                Global_Data.Add_rep_exercise(aRoutine, 12, "Concentrated Biceps Curls EX", 8, 8);
+                Global_Data.Add_rep_exercise(aRoutine, 7, "Hammer Curls", 5, 5);
+                Global_Data.Add_rep_exercise(aRoutine, 8, "Barbell Curls", 8, 8);              
             }
 
             foreach (KeyValuePair<string, string> entry in Global_Data.routine_schedule)

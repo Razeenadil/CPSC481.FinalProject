@@ -53,6 +53,19 @@ namespace CPSC481.FinalProject
 
         private void CreateSlice()
         {
+            if (completion_rate >= 0.75)
+            {
+                CompletionCircle.Fill = new SolidColorBrush(Colors.DarkGreen);
+            }
+            else if (completion_rate >= 0.5 && completion_rate < 0.75)
+            {
+                CompletionCircle.Fill = new SolidColorBrush(Color.FromRgb(246,190,0));
+            }
+            else
+            {
+                CompletionCircle.Fill = new SolidColorBrush(Colors.Tomato);
+            }
+
             double radAngle = (incompletion_rate * 360);
             Point centerPoint = new Point();
             centerPoint.X = 100;
