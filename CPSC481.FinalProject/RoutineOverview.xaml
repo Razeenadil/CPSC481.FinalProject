@@ -92,9 +92,6 @@
 
         </StackPanel>
 
-        
-
-
         <Button x:Name="NavigationButton"
                 Grid.Row="0"
                 Grid.Column="0"

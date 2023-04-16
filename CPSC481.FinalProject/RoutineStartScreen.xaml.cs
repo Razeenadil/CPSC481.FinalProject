@@ -27,25 +27,6 @@ namespace CPSC481.FinalProject
             this.DataContext = this;
 
             navigationIsClicked = false;
-
-            // hardcoded dummy data - this is usually already set in create routine screen - REMOVE LATER**
-            if (!Global_Data.routine_dict.ContainsKey(Global_Data.routine_chosen))
-            {
-                Global_Data.Add_routine(Global_Data.routine_chosen);
-                Global_Data.Add_rep_exercise(Global_Data.routine_chosen, 1, "Dumbbell Curls", 5, 8);
-                Global_Data.Add_timed_exercise(Global_Data.routine_chosen, 2, "Farmer's Walk");
-                
-                //Global_Data.Add_rep_exercise(Global_Data.routine_chosen, 2, "Hammer Curls", 5, 8);
-                Global_Data.Add_rep_exercise(Global_Data.routine_chosen, 3, "Concentrated Biceps Curls", 5, 8);
-                //Global_Data.Add_rep_exercise(Global_Data.routine_chosen, 5, "Dumbbell Curls", 8, 8);
-                //Global_Data.Add_timed_exercise(Global_Data.routine_chosen, 6, "Farmer's Walk");
-                //Global_Data.Add_rep_exercise(Global_Data.routine_chosen, 7, "Hammer Curls", 8, 8);
-                //Global_Data.Add_rep_exercise(Global_Data.routine_chosen, 8, "Concentrated Biceps Curls", 8, 8);
-                //Global_Data.Add_rep_exercise(Global_Data.routine_chosen, 9, "Dumbbell Curls", 8, 8);
-                //Global_Data.Add_timed_exercise(Global_Data.routine_chosen, 10, "Farmer's Walk");
-                //Global_Data.Add_rep_exercise(Global_Data.routine_chosen, 11, "Hammer Curls", 8, 8);
-                //Global_Data.Add_rep_exercise(Global_Data.routine_chosen, 12, "Concentrated Biceps Curls EX", 8, 8);
-            }
             
             List<ExerciseItem> exercises = new List<ExerciseItem>();
 
