@@ -34,28 +34,48 @@ namespace CPSC481.FinalProject
             this.DataContext = this;
             navigationIsClicked = false;
 
-          
-            // Test Data
-            string[,] routines_and_dates = new string[7, 2]
-            {
-                { "Arm Day", "Apr 11" },
-                { "Back Day", "Apr 12" },
-                { "Leg Day", "Apr 13" },
-                { "Rest Day", "Apr 14" },
-                { "Arm Day 2", "Apr 15" },
-                { "Back Day 2", "Apr 16" },
-                { "Leg Day 2", "Apr 17" }
-            };
 
-            for (int i = 0; i < routines_and_dates.GetLength(0); i++)
+            string routine1 = "Glutes Day";
+            if (!Global_Data.routine_dict.ContainsKey(routine1))
             {
-                if (!Global_Data.routine_schedule.ContainsKey(routines_and_dates[i, 0]))
-                {
-                    Global_Data.Add_routine(routines_and_dates[i, 0], routines_and_dates[i, 1]);
-                }
+                Global_Data.Add_routine(routine1, "Apr 3");
+                Global_Data.Add_rep_exercise_random(routine1, 1, "Squates", 2, 5);
+                Global_Data.Add_rep_exercise(routine1, 2, "Lunges", 3, 5);
+                Global_Data.Add_rep_exercise(routine1, 3, "Calf Rasies", 4, 5);
+                Global_Data.Add_rep_exercise(routine1, 4, "Hack Squates", 5, 5);
             }
 
-            data = Global_Data.routine_names;
+            string routine2 = "Back Day";
+            if (!Global_Data.routine_dict.ContainsKey(routine2))
+            {
+                Global_Data.Add_routine(routine2, "Apr 7");
+                Global_Data.Add_rep_exercise_random(routine2, 1, "Lat Pull Downs", 2, 5);
+                Global_Data.Add_rep_exercise(routine2, 2, "Deadlift", 3, 5);
+                Global_Data.Add_rep_exercise(routine2, 3, "Seated Rows", 4, 5);
+                Global_Data.Add_rep_exercise(routine2, 4, "Standing Rows", 5, 5);
+                Global_Data.Add_rep_exercise(routine2, 5, "Cabel Rows", 5, 5);
+                Global_Data.Add_rep_exercise(routine2, 6, "Pullups", 5, 5);
+
+            }
+
+            string routine3 = "Chest Day";
+            if (!Global_Data.routine_dict.ContainsKey(routine3))
+            {
+                Global_Data.Add_routine(routine3, "Apr 1");
+                Global_Data.Add_rep_exercise_random(routine3, 1, "Flat Bench Press", 2, 5);
+                Global_Data.Add_rep_exercise(routine3, 2, "Incline Bench Press", 3, 5);
+                Global_Data.Add_rep_exercise(routine3, 3, "Cabel Flys", 4, 5);
+                Global_Data.Add_rep_exercise(routine3, 4, "Dips", 5, 5);
+                Global_Data.Add_rep_exercise(routine3, 5, "Incline Flys", 5, 5);
+                Global_Data.Add_rep_exercise(routine3, 6, "Dumbell Press", 5, 5);
+                Global_Data.Add_rep_exercise(routine3, 7, "Incline Dumbell Press", 5, 5);
+
+            }
+
+            data.Add(routine1);
+            data.Add(routine2);
+            data.Add(routine3);
+
             routineCombo.ItemsSource = data;
             comboBoxSelection = null;
         }
