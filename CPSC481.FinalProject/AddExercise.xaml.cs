@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,13 +22,24 @@ namespace CPSC481.FinalProject
     public partial class AddExercise : Page
     {
 
+
         private bool navigationIsClicked;
 
+        private string newRoutineBodyParts;
+        private bool arms, legs, chest, back, abs;
+        public List<Global_Data.exercise_info> exerciseList;
 
-        public AddExercise()
+        public AddExercise(string newRoutineBodyParts, bool arms, bool legs, bool back, bool chest, bool abs)
         {
             InitializeComponent();
             navigationIsClicked = false;
+
+            this.newRoutineBodyParts = newRoutineBodyParts;
+            this.arms = arms;
+            this.legs = legs;
+            this.back = back;
+            this.chest = chest;
+            this.abs = abs;
         }
 
         private void NavigationButton_Click(object sender, RoutedEventArgs e)
@@ -101,5 +113,15 @@ namespace CPSC481.FinalProject
             var mainWindow = (MainWindow)Application.Current.MainWindow;
             mainWindow?.ChangeView(new CreateWorkoutRoutine());
         }
+
+        private void AddExerciseButton_Click(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = (MainWindow)Application.Current.MainWindow;
+            mainWindow?.ChangeView(new DemoVideoPage(newRoutineBodyParts, arms, legs, back, chest, abs, true, this, ExercisesStackPanel));
+
+            //ExercisesStackPanel.Children.Add(new AddExerciseItem(ExercisesStackPanel, "test"));
+        }
+
+        
     }
 }

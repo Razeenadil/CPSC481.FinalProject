@@ -23,7 +23,8 @@ namespace CPSC481.FinalProject
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public static bool cameFromCreateWorkout = false;
+        private bool cameFromCreateWorkout = false;
+        private CreateWorkoutRoutine createWorkoutCaller;
 
         public BodyPartSelectorPage()
         {
@@ -36,6 +37,22 @@ namespace CPSC481.FinalProject
             absIsClicked = false;
             chestIsClicked = false;
             backIsClicked = false;
+        }
+
+        public BodyPartSelectorPage(bool cameFromCreateWorkout, CreateWorkoutRoutine caller)
+        {
+            InitializeComponent();
+            this.DataContext = this;
+
+            navigationIsClicked = false;
+            armIsClicked = false;
+            legIsClicked = false;
+            absIsClicked = false;
+            chestIsClicked = false;
+            backIsClicked = false;
+
+            this.cameFromCreateWorkout = cameFromCreateWorkout;
+            this.createWorkoutCaller = caller;
         }
 
 
@@ -92,24 +109,28 @@ namespace CPSC481.FinalProject
         //this is the logout button was to lazy to rename
         private void InfoButton_Click(object sender, RoutedEventArgs e)
         {
+            cameFromCreateWorkout = false;
             var mainWindow = (MainWindow)Application.Current.MainWindow;
             mainWindow?.ChangeView(new Welcome());
         }
 
         private void ProgressButton_Click(object sender, RoutedEventArgs e)
         {
+            cameFromCreateWorkout = false;
             var mainWindow = (MainWindow)Application.Current.MainWindow;
             mainWindow?.ChangeView(new ProgressPageWeekly());
         }
 
         private void DemoButton_Click(object sender, RoutedEventArgs e)
         {
+            cameFromCreateWorkout = false;
             var mainWindow = (MainWindow)Application.Current.MainWindow;
             mainWindow?.ChangeView(new BodyPartSelectorPage());
         }
 
         private void RoutineButton_Click(object sender, RoutedEventArgs e)
         {
+            cameFromCreateWorkout = false;
             var mainWindow = (MainWindow)Application.Current.MainWindow;
             mainWindow?.ChangeView(new ViewRoutines());
         }
@@ -122,7 +143,12 @@ namespace CPSC481.FinalProject
             {
                 cameFromCreateWorkout = false;
                 CreateWorkoutRoutine.newRoutineBodyParts = "Choose Body Part";
-                mainWindow?.ChangeView(new CreateWorkoutRoutine());
+                createWorkoutCaller.arms = false;
+                createWorkoutCaller.legs = false;
+                createWorkoutCaller.back = false;
+                createWorkoutCaller.chest = false;
+                createWorkoutCaller.abs = false;
+                mainWindow?.ChangeView(createWorkoutCaller);
             }
             else
             {
@@ -150,7 +176,12 @@ namespace CPSC481.FinalProject
             {
                 cameFromCreateWorkout = false;
                 CreateWorkoutRoutine.newRoutineBodyParts = selectionParameter;
-                mainWindow?.ChangeView(new CreateWorkoutRoutine());
+                createWorkoutCaller.arms = arms;
+                createWorkoutCaller.legs = legs;
+                createWorkoutCaller.back = back;
+                createWorkoutCaller.chest = chest;
+                createWorkoutCaller.abs = abs;
+                mainWindow?.ChangeView(createWorkoutCaller);
             }
             else
             {

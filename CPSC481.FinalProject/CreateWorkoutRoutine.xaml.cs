@@ -28,6 +28,8 @@ namespace CPSC481.FinalProject
         public static string newRoutineOccurence = "Choose occurrence";
         public static string newRoutineBodyParts = "Choose Body Part";
 
+        public bool arms, legs, chest, back, abs;
+
         public CreateWorkoutRoutine()
         {
             InitializeComponent();
@@ -131,14 +133,12 @@ namespace CPSC481.FinalProject
             newRoutineDateTime = new();
             newRoutineOccurence = "Choose Occurrence";
             newRoutineBodyParts = "Choose Body Part";
-            BodyPartSelectorPage.cameFromCreateWorkout = false;
-
         }
 
         private void AddExercises_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = (MainWindow)Application.Current.MainWindow;
-            mainWindow?.ChangeView(new AddExercise());
+            mainWindow?.ChangeView(new AddExercise(newRoutineBodyParts, arms, legs, back, chest, abs));
         }
 
         private void routineNameChange(object sender, TextChangedEventArgs e)
@@ -164,10 +164,9 @@ namespace CPSC481.FinalProject
         {
             // Connect to razeen page
 
-            BodyPartSelectorPage.cameFromCreateWorkout = true;
-
+            
             var mainWindow = (MainWindow)Application.Current.MainWindow;
-            mainWindow?.ChangeView(new BodyPartSelectorPage());
+            mainWindow?.ChangeView(new BodyPartSelectorPage(true, this));
         }
     }
 }
