@@ -33,8 +33,8 @@ namespace CPSC481.FinalProject
         {
             InitializeComponent();
             this.DataContext = this;
+            SetTimer();
 
-            curr_seconds = default_time;
             SecondsText.Text = curr_seconds.ToString();
             timer = new System.Timers.Timer(1000);
             timer.Elapsed += OnTimerElapsed;
@@ -52,6 +52,18 @@ namespace CPSC481.FinalProject
             else
             {
                 TransitionButton.Content = "Next";
+            }
+        }
+
+        private void SetTimer()
+        {
+            if (Global_Data.routine_dict[Global_Data.routine_chosen][Global_Data.exercise_number].rep_results.Count > 0)
+            {
+                curr_seconds = default_time - Global_Data.routine_dict[Global_Data.routine_chosen][Global_Data.exercise_number].rep_results[0];
+            }
+            else
+            {
+                curr_seconds = default_time;
             }
         }
 
@@ -188,6 +200,20 @@ namespace CPSC481.FinalProject
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = (MainWindow)Application.Current.MainWindow;
+
+            if (timer.Enabled)
+            {
+                timer.Stop();
+            }
+            // lazily adding time elapsed into the rep list
+            if (Global_Data.routine_dict[Global_Data.routine_chosen][Global_Data.exercise_number].rep_results.Count > 0)
+            {
+                Global_Data.routine_dict[Global_Data.routine_chosen][Global_Data.exercise_number].rep_results[0] = default_time - curr_seconds;
+            }
+            else
+            {
+                Global_Data.routine_dict[Global_Data.routine_chosen][Global_Data.exercise_number].rep_results.Add(default_time - curr_seconds);
+            }
 
             // if it's the first exercise in the list
             if (Global_Data.exercise_number == 1)

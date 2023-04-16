@@ -6,16 +6,21 @@
              xmlns:local="clr-namespace:CPSC481.FinalProject"
              mc:Ignorable="d" 
              d:DesignHeight="100" d:DesignWidth="400">
-    <Grid>
+    <Grid Margin="10">
         <Button Name="Routine_Button" 
-                Background="Transparent"
-                BorderThickness="0,0,0,1"
+                Background="#EBE8E2"
+                BorderThickness="2,2,2,2"
                 Click="Routine_Button_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="7"/>
+                </Style>
+            </Button.Resources>
             <Button.Content>
                 <Grid Width="400"
                       Height="100">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="300"/>
+                        <ColumnDefinition Width="250"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
@@ -37,6 +42,7 @@
                                Text="Date"
                                HorizontalAlignment="Center"
                                VerticalAlignment="Center"
+                               TextAlignment="Center"
                                TextWrapping="Wrap"/>
 
                 </Grid>

@@ -34,50 +34,54 @@ namespace CPSC481.FinalProject
             routineLabel1Name.Content = Global_Data.routine_chosen;
             */
 
-            // Test Data
-            string[,] routines_and_dates = new string[8, 2]
+            // Premade Data
+            string routine1 = "Arm Day";
+            if (!Global_Data.routine_dict.ContainsKey(routine1))
             {
-                { "Arm Day", "Apr 11\n2023" },
-                { "Back Day", "Apr 12\n2023" },
-                { "Leg Day", "Apr 13\n2023" },
-                { "Rest Day", "Apr 14\n2023" },
-                { "Arm Day 2", "Apr 15\n2023" },
-                { "Back Day 2", "Apr 16\n2023" },
-                { "Leg Day 2", "Apr 17\n2023" },
-                { "A Very Long Workout Day Today", "Apr 18\n2023" }
-            };
-
-            for (int i = 0; i < routines_and_dates.GetLength(0); i++)
-            {
-                if (!Global_Data.routine_schedule.ContainsKey(routines_and_dates[i, 0]))
-                {
-                    Global_Data.Add_routine(routines_and_dates[i, 0], routines_and_dates[i, 1]);
-                }
+                Global_Data.Add_routine(routine1, "Apr 20");
+                Global_Data.Add_rep_exercise(routine1, 1, "Dumbbell Curls", 2, 5);
+                Global_Data.Add_rep_exercise(routine1, 2, "Hammer Curls", 3, 5);
+                Global_Data.Add_rep_exercise(routine1, 3, "Barbell Curls", 4, 5);
+                Global_Data.Add_rep_exercise(routine1, 4, "Dumbbell Curls", 5, 5);
+                Global_Data.Add_rep_exercise(routine1, 5, "Hammer Curls", 6, 5);
+                Global_Data.Add_rep_exercise(routine1, 6, "Barbell Curls", 8, 5);
             }
 
-            // hardcoded dummy data - this is usually already set in create routine screen - REMOVE LATER**
-            string aRoutine = "My Routine!";
-
-            if (!Global_Data.routine_dict.ContainsKey(aRoutine))
+            string routine2 = "Leg Day";
+            if (!Global_Data.routine_dict.ContainsKey(routine2))
             {
-                Global_Data.Add_routine(aRoutine, "No Date");
-                Global_Data.Add_rep_exercise(aRoutine, 1, "Dumbbell Curls", 1, 1);
-                Global_Data.Add_timed_exercise(aRoutine, 2, "Farmer's Walk");
+                Global_Data.Add_routine(routine2, "Apr 21");
+                Global_Data.Add_rep_exercise(routine2, 1, "Lunges", 8, 10);
+                Global_Data.Add_rep_exercise(routine2, 2, "Barbell Squats", 5, 8);
+                Global_Data.Add_rep_exercise(routine2, 3, "Dumbbell Squats", 5, 8);
+                Global_Data.Add_rep_exercise(routine2, 4, "Calf Raises", 5, 10);
+                Global_Data.Add_rep_exercise(routine2, 5, "Barbell Squats", 5, 8);
+                Global_Data.Add_rep_exercise(routine2, 6, "Dumbbell Squats", 5, 8);
+                Global_Data.Add_rep_exercise(routine2, 7, "Calf Raises", 5, 10);
+                Global_Data.Add_rep_exercise(routine2, 8, "Lunges", 5, 5);
+                Global_Data.Add_timed_exercise(routine2, 9, "Quad Stretch");
+                Global_Data.Add_timed_exercise(routine2, 10, "Calf Stretch");
+                Global_Data.Add_timed_exercise(routine2, 11, "Lunge Stretch");
+            }
 
-                Global_Data.Add_rep_exercise(aRoutine, 3, "Hammer Curls", 2, 2);
-                Global_Data.Add_rep_exercise(aRoutine, 4, "Barbell Curls", 3, 3);
-                Global_Data.Add_rep_exercise(aRoutine, 5, "Dumbbell Curls", 4, 4);
-                Global_Data.Add_timed_exercise(aRoutine, 6, "Farmer's Walk");
-                Global_Data.Add_rep_exercise(aRoutine, 7, "Hammer Curls", 5, 5);
-                Global_Data.Add_rep_exercise(aRoutine, 8, "Barbell Curls", 8, 8);              
+            string routine3 = "Week-Ender";
+            if (!Global_Data.routine_dict.ContainsKey(routine3))
+            {
+                Global_Data.Add_routine(routine3, "Apr 22");
+                Global_Data.Add_timed_exercise(routine3, 1, "Farmer's Walk");
+                Global_Data.Add_rep_exercise(routine3, 2, "Dumbbell Curls", 4, 5);
+                Global_Data.Add_rep_exercise(routine3, 3, "Hammer Curls", 4, 5);
+                Global_Data.Add_rep_exercise(routine3, 4, "Barbell Curls", 4, 5);
+                Global_Data.Add_rep_exercise(routine3, 5, "Dumbbell Curls", 4, 5);
+                Global_Data.Add_rep_exercise(routine3, 6, "Hammer Curls", 5, 5);
+                Global_Data.Add_rep_exercise(routine3, 7, "Barbell Curls", 8, 8);
+                Global_Data.Add_timed_exercise(routine3, 8, "Farmer's Walk");
             }
 
             foreach (KeyValuePair<string, string> entry in Global_Data.routine_schedule)
             {
                 RoutineListPanel.Children.Add(new RoutineItem() { RoutineName = entry.Key, RoutineDate = entry.Value });
             }
-            // end of test data
-
         }
 
         private void NavigationButton_Click(object sender, RoutedEventArgs e)
