@@ -19,7 +19,7 @@ namespace CPSC481.FinalProject
     // On button click from view routine screen, remember to set the routine chosen
     public static class Global_Data
     {
-        public static string routine_chosen = "My Routine!";
+        public static string routine_chosen = "";
         public static int exercise_number = 1;
         public struct exercise_info
         {
@@ -39,15 +39,20 @@ namespace CPSC481.FinalProject
         }
 
         public static Dictionary<string, Dictionary<int, exercise_info>> routine_dict = new Dictionary<string, Dictionary<int, exercise_info>>();
+        
+        public static Dictionary<string, string> routine_schedule = new Dictionary<string, string>();
 
-        public static void Add_routine(string routine_name)
+
+        public static void Add_routine(string routine_name, string routine_date)
         {
             routine_dict.Add(routine_name, new Dictionary<int, exercise_info>());
+            routine_schedule.Add(routine_name, routine_date);
         }
 
         public static void Remove_routine(string routine_name)
         {
             routine_dict.Remove(routine_name);
+            routine_schedule.Remove(routine_name);
         }
 
         public static void Add_rep_exercise(string routine, int num, string name, int set_total, int rep_total)

@@ -11,30 +11,81 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="15"/>
-            <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="15"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="15"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="600"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="15"/>
         </Grid.RowDefinitions>
 
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Height="60">
+            
+            <Button Name="NavBackButton"
+                    Margin="10,0,0,0" 
+                    Height="50" 
+                    Width="50" 
+                    Background="Transparent" 
+                    BorderBrush="Transparent"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"  
+                    Click="Back_Button_Click" 
+                    Cursor="Hand" 
+                    Visibility="Visible">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Image Source="/Images/HeaderNavIcons/left-arrow.png"></Image>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Label Name="routineLabel"
+                   Width="300"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center"
+                   FontSize="32"
+                   FontWeight="Bold"
+                   Content="View Routines"/>
+
+            <Image Margin="0,0,10,0"
+                   Height="45"
+                   Width="45"
+                   Source="/Images/RadialNavigationIcons/RoutineIcon.png"/>
+        </StackPanel>
+
+        <Separator Grid.Row="2" Grid.Column="1" VerticalAlignment="Top"/>
+
+        <ScrollViewer Margin="0,10,0,30"
+                      Grid.Row="2"
+                      Grid.Column="1"
+                      HorizontalContentAlignment="Stretch"
+                      VerticalScrollBarVisibility="Hidden">
+            <StackPanel Name="RoutineListPanel"
+                        Orientation="Vertical"
+                        Width="400">
+                
+            </StackPanel>
+        </ScrollViewer>
+
         <Button x:Name="NavigationButton"
-                Grid.Row="4" 
-                Grid.Column="2" 
-                Width="100" 
-                Height="100" 
-                Margin="385,735,-50,-50" 
-                Grid.ColumnSpan="2" 
-                Grid.RowSpan="2"
-                Cursor="Hand"
-                >
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Grid.RowSpan="5"
+                    Grid.ColumnSpan="3"
+                    Width="150" 
+                    Height="150"
+                    Margin="350,670,0,0"
+                    Cursor="Hand"                    
+                    Click="NavigationButton_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Grid>
@@ -45,17 +96,32 @@
             </Button.Template>
         </Button>
 
-        <Button x:Name="InfoButton"
-                Grid.Row="4" 
-                Grid.Column="2"
-                Grid.ColumnSpan="2" 
-                Grid.RowSpan="2"
-                Width="44" 
-                Height="44"
-                Margin="285,700,91,2"
-                Cursor="Hand"                
-                Visibility="Hidden">
+        <Ellipse 
+            Name="ellipseHack"
+            Fill="White"
+            Grid.Row="0" 
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Grid.RowSpan="5"
+            Width="55" 
+            Height="55"
+            Margin="190,690,85,6"
+            Panel.ZIndex="1"
+            Visibility="Hidden">
+        </Ellipse>
 
+        <Button x:Name="InfoButton"
+            Grid.Row="0" 
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Grid.RowSpan="5"
+            Width="55" 
+            Height="55"
+            Margin="190,690,85,6"
+            Cursor="Hand"                
+            Visibility="Hidden"
+            Panel.ZIndex="2"
+            Click="InfoButton_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Grid>
@@ -69,16 +135,32 @@
             </Button.Template>
         </Button>
 
+        <Ellipse 
+            Name="ellipseHack1"
+            Fill="White"
+            Grid.Row="0" 
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Grid.RowSpan="5"
+            Width="55" 
+            Height="55"
+            Margin="250,630,64,51"
+            Panel.ZIndex="1"
+            Visibility="Hidden">
+        </Ellipse>
+
         <Button x:Name="ProgressButton"
-                Grid.Row="4" 
-                Grid.Column="2"
-                Grid.ColumnSpan="2" 
-                Grid.RowSpan="2"
-                Width="44" 
-                Height="44"
-                Margin="299,658,73,45"
-                Cursor="Hand"                
-                Visibility="Hidden">
+            Grid.Row="0" 
+            Grid.Column="0" 
+            Grid.ColumnSpan="3"
+            Grid.RowSpan="5"
+            Width="55" 
+            Height="55"
+            Margin="250,630,64,51"
+            Cursor="Hand"                
+            Visibility="Hidden"
+            Panel.ZIndex="2"
+            Click="ProgressButton_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Grid>
@@ -92,16 +174,32 @@
             </Button.Template>
         </Button>
 
+        <Ellipse 
+            Name="ellipseHack2"
+            Fill="White"
+            Grid.Row="0" 
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Grid.RowSpan="5"
+            Width="55" 
+            Height="55"
+            Margin="270,480,0,0"
+            Panel.ZIndex="1"
+            Visibility="Hidden">
+        </Ellipse>
+
         <Button x:Name="DemoButton"
-                Grid.Row="4" 
-                Grid.Column="2"
-                Grid.ColumnSpan="2" 
-                Grid.RowSpan="2"
-                Width="44" 
-                Height="44"
-                Margin="332,624,44,80"
-                Cursor="Hand"                                
-                Visibility="Hidden">
+            Grid.Row="0" 
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Grid.RowSpan="5"
+            Width="55" 
+            Height="55"
+            Margin="270,480,0,0"
+            Cursor="Hand"                                
+            Visibility="Hidden"
+            Panel.ZIndex="2"
+            Click="DemoButton_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Grid>
@@ -115,23 +213,38 @@
             </Button.Template>
         </Button>
 
+        <Ellipse 
+            Name="ellipseHack3"
+            Fill="White"
+            Grid.Row="0" 
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Grid.RowSpan="5"
+            Width="55" 
+            Height="55"
+            Margin="370,400,0,0"
+            Panel.ZIndex="1"
+            Visibility="Hidden">
+        </Ellipse>
+
         <Button x:Name="RoutineButton"
-                Grid.Row="4" 
-                Grid.Column="2"
-                Grid.ColumnSpan="2" 
-                Grid.RowSpan="2"
-                Width="44" 
-                Height="44"
-                Margin="372,597,4,103"
-                Cursor="Hand"                                
-                Visibility="Hidden">
+            Grid.Row="0" 
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Grid.RowSpan="5"
+            Width="55" 
+            Height="55"
+            Margin="370,400,0,0"
+            Cursor="Hand"                                
+            Visibility="Hidden"
+            Panel.ZIndex="2"
+            Click="RoutineButton_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Grid>
                         <Ellipse Stroke="Black" StrokeThickness="2">
                             <Ellipse.Fill>
                                 <ImageBrush ImageSource="Images/RadialNavigationIcons/RoutineIcon.png" Stretch="None"></ImageBrush>
-
                             </Ellipse.Fill>
                         </Ellipse>
                     </Grid>
@@ -139,20 +252,26 @@
             </Button.Template>
         </Button>
 
-        <Image Grid.Column="2" HorizontalAlignment="Left" Height="40" Grid.Row="4" VerticalAlignment="Top" Width="40" Source="/Images/HeaderNavIcons/left-arrow.png" Margin="10,15,0,0"/>
-        <Image Grid.Column="2" HorizontalAlignment="Right" Height="45" Margin="0,15,10,0" Grid.Row="4" VerticalAlignment="Top" Width="45" Source="/Images/RadialNavigationIcons/RoutineIcon.png"/>
-        <Label Grid.Column="2" Content="Routines" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Top" FontSize="24" Margin="0,12,0,0" FontWeight="Bold"/>
-        <Separator Grid.Column="2" Margin="0,140,0,570" Grid.Row="4"/>
-        <Label Content="Monday, Mar 6" HorizontalAlignment="Left" Margin="10,100,0,0" Grid.Row="4" VerticalAlignment="Top" Grid.Column="2" FontSize="16"/>
-        <Label Grid.Column="2" Content="Tuesday, Mar 7" HorizontalAlignment="Left" Margin="10,200,0,0" Grid.Row="4" VerticalAlignment="Top" RenderTransformOrigin="-0.126,0.502" FontSize="16"/>
-        <Label Grid.Column="2" Content="Wednesday, Mar 8" HorizontalAlignment="Left" Margin="10,300,0,0" Grid.Row="4" VerticalAlignment="Top" RenderTransformOrigin="-0.126,0.502" FontSize="16"/>
-        <Separator Grid.Column="2" Margin="0,240,0,470" Grid.Row="4"/>
-        <Separator Grid.Column="2" Margin="0,340,0,370" Grid.Row="4"/>
-        <Separator Grid.Column="2" Margin="0,40,0,670" Grid.Row="4"/>
-        <Label Content="Back Day" HorizontalAlignment="Right" Margin="0,100,10,0" Grid.Row="4" VerticalAlignment="Top" Grid.Column="2" FontSize="16"/>
-        <Label Content="Cardio" HorizontalAlignment="Right" Margin="0,200,10,0" Grid.Row="4" VerticalAlignment="Top" Grid.Column="2" FontSize="16"/>
-        <Label Content="Back 2" HorizontalAlignment="Right" Margin="0,300,10,0" Grid.Row="4" VerticalAlignment="Top" Grid.Column="2" FontSize="16"/>
-        <Image Grid.Column="2" HorizontalAlignment="Left" Height="40" Grid.Row="4" VerticalAlignment="Bottom" Width="40" Source="/Images/Icons/more.png" Margin="30,0,0,31"/>
 
+        <Button Name="Create_Workout_Routine"
+                Margin="0,0,0,0"
+                Grid.Column="1"
+                Grid.Row="3" 
+                Grid.ColumnSpan="2" 
+                Height="50" 
+                Width="50" 
+                BorderThickness="0"
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Center" 
+                Background="Transparent"  
+                Click="Create_Workout_Routine_Click" 
+                Cursor="Hand" 
+                Visibility="Visible">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image Source="/Images/Icons/more.png"></Image>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
     </Grid>
 </Page>

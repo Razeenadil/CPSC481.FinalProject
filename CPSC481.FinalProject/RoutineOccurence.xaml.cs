@@ -1,6 +1,6 @@
-﻿using Microsoft.VisualBasic;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,27 +17,18 @@ using System.Windows.Shapes;
 namespace CPSC481.FinalProject
 {
     /// <summary>
-    /// Interaction logic for RoutineStartScreen.xaml
+    /// Interaction logic for RoutineOccurence.xaml
     /// </summary>
-    public partial class RoutineStartScreen : Page
+    public partial class RoutineOccurence : Page
     {
         private bool navigationIsClicked;
-        public RoutineStartScreen()
+
+
+        public RoutineOccurence()
         {
             InitializeComponent();
-            this.DataContext = this;
-
             navigationIsClicked = false;
-            
-            List<ExerciseItem> exercises = new List<ExerciseItem>();
 
-            foreach (KeyValuePair<int, Global_Data.exercise_info> entry in Global_Data.routine_dict[Global_Data.routine_chosen])
-            {
-                exercises.Add(new ExerciseItem() { Num = entry.Key, Name = entry.Value.exercise_name });
-            }
-
-            routineListBox.ItemsSource = exercises;
-            routineLabel.Content = Global_Data.routine_chosen;
         }
 
         private void NavigationButton_Click(object sender, RoutedEventArgs e)
@@ -56,8 +47,7 @@ namespace CPSC481.FinalProject
                 RoutineButton.Visibility = Visibility.Visible;
                 ellipseHack.Visibility = Visibility.Visible;
                 ellipseHack1.Visibility = Visibility.Visible;
-                ellipseHack2.Visibility = Visibility.Visible;
-                ellipseHack3.Visibility = Visibility.Visible;
+
 
                 navigationIsClicked = true;
             }
@@ -73,21 +63,15 @@ namespace CPSC481.FinalProject
                 ProgressButton.Visibility = Visibility.Hidden;
                 RoutineButton.Visibility = Visibility.Hidden;
                 ellipseHack.Visibility = Visibility.Hidden;
-                ellipseHack2.Visibility = Visibility.Hidden;
-                ellipseHack3.Visibility = Visibility.Hidden;
                 ellipseHack1.Visibility = Visibility.Hidden;
+
 
                 navigationIsClicked = false;
             }
+
         }
 
-        private void Back_Button_Click(object sender, RoutedEventArgs e)
-        {
-            var mainWindow = (MainWindow)Application.Current.MainWindow;
-            mainWindow?.ChangeView(new ViewRoutines());
-        }
 
-        //this is the logout button was to lazy to rename
         private void InfoButton_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = (MainWindow)Application.Current.MainWindow;
@@ -109,30 +93,29 @@ namespace CPSC481.FinalProject
         private void RoutineButton_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = (MainWindow)Application.Current.MainWindow;
-            //mainWindow?.ChangeView(new ViewRoutines());
-            mainWindow?.ChangeView(new RoutineStartScreen());
+            mainWindow?.ChangeView(new ViewRoutines());
         }
 
-        private void StartRoutine(object sender, RoutedEventArgs e)
+
+        private void Back_Button_Click(object sender, RoutedEventArgs e)
         {
-            Global_Data.exercise_number = 1;
             var mainWindow = (MainWindow)Application.Current.MainWindow;
-            // if first exercise is rep based
-            if (Global_Data.routine_dict[Global_Data.routine_chosen][Global_Data.exercise_number].exercise_type == 0)
+            mainWindow?.ChangeView(new CreateWorkoutRoutine());
+        }
+
+        private void Save_Click(object sender, RoutedEventArgs e)
+        {
+            Debug.WriteLine(occurenceSelect.Text);
+            CreateWorkoutRoutine.newRoutineOccurence = occurenceSelect.Text;
+            if (occurenceSelect.Text != "")
             {
-                mainWindow?.ChangeView(new ExerciseRepScreen());
-            }
-            // else it must be time based
-            else
+                var mainWindow = (MainWindow)Application.Current.MainWindow;
+                mainWindow?.ChangeView(new CreateWorkoutRoutine());
+
+            } else
             {
-                mainWindow?.ChangeView(new ExerciseTimerScreen());
+                CreateWorkoutRoutine.newRoutineOccurence = "Choose Occurrence";
             }
         }
-    }
-
-    public class ExerciseItem
-    {
-        public int Num { get; set; }
-        public string? Name { get; set; }
     }
 }

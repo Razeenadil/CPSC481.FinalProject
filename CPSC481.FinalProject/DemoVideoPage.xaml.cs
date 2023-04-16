@@ -28,6 +28,9 @@ namespace CPSC481.FinalProject
         private bool _chest;
         private bool _abs;
 
+        private bool cameFromAddExercise = false;
+        private AddExercise AddExerciseCaller;
+        private StackPanel AddExercisePanel;
 
         public class Exercises
         {
@@ -42,9 +45,9 @@ namespace CPSC481.FinalProject
         {
             InitializeComponent();
             this.DataContext = this;
-            
+
             _filter = filterSelection;
-            if(!arms && !legs && !back && !chest && !abs)
+            if (!arms && !legs && !back && !chest && !abs)
             {
                 _arms = true;
                 _legs = true;
@@ -56,7 +59,7 @@ namespace CPSC481.FinalProject
             {
                 _arms = arms;
                 _legs = legs;
-                _back = back;   
+                _back = back;
                 _chest = chest;
                 _abs = abs;
             }
@@ -67,11 +70,44 @@ namespace CPSC481.FinalProject
             PopulateListBox(arms, legs, back, chest, abs);
         }
 
+        public DemoVideoPage(string filterSelection, bool arms, bool legs, bool back, bool chest, bool abs, bool cameFromAddExercise, AddExercise parentCaller, StackPanel parentPanel)
+        {
+            InitializeComponent();
+            this.DataContext = this;
+
+            _filter = filterSelection;
+            if (!arms && !legs && !back && !chest && !abs)
+            {
+                _arms = true;
+                _legs = true;
+                _back = true;
+                _chest = true;
+                _abs = true;
+            }
+            else
+            {
+                _arms = arms;
+                _legs = legs;
+                _back = back;
+                _chest = chest;
+                _abs = abs;
+            }
+
+            SetSelection(filterSelection);
+            navigationIsClicked = false;
+
+            PopulateListBox(arms, legs, back, chest, abs);
+
+            this.cameFromAddExercise = cameFromAddExercise;
+            this.AddExerciseCaller = parentCaller;
+            this.AddExercisePanel = parentPanel;
+        }
+
         private void PopulateListBox(bool arms, bool legs, bool back, bool chest, bool abs)
         {
-            
 
-            if(!arms && !legs && !back && !chest && !abs)
+
+            if (!arms && !legs && !back && !chest && !abs)
             {
                 arms = true;
                 legs = true;
@@ -80,7 +116,7 @@ namespace CPSC481.FinalProject
                 abs = true;
             }
 
-            if(arms)
+            if (arms)
             {
                 exercises.Add(new Exercises()
                 {
@@ -103,7 +139,7 @@ namespace CPSC481.FinalProject
                 });
             }
 
-            if(legs)
+            if (legs)
             {
                 exercises.Add(new Exercises()
                 {
@@ -126,7 +162,7 @@ namespace CPSC481.FinalProject
                 });
             }
 
-            if(chest)
+            if (chest)
             {
                 exercises.Add(new Exercises()
                 {
@@ -149,7 +185,7 @@ namespace CPSC481.FinalProject
                 });
             }
 
-            if(abs)
+            if (abs)
             {
                 exercises.Add(new Exercises()
                 {
@@ -161,7 +197,7 @@ namespace CPSC481.FinalProject
                     Equipment = "Equipment Required: None"
                 });
 
-                 exercises.Add(new Exercises()
+                exercises.Add(new Exercises()
                 {
                     BodyPart = "Abs",
                     TargetMuscleGroup = "Target Body Part: Oblique, Pelvis, Lower Back, and Hips",
@@ -169,10 +205,10 @@ namespace CPSC481.FinalProject
                     Description = "The crunch is a classic core exercise. It specifically trains your abdominal muscles, which are part of your core.",
                     Level = "Level: Beginner",
                     Equipment = "Equipment Required: None"
-                 });
+                });
             }
 
-            if(back)
+            if (back)
             {
                 exercises.Add(new Exercises()
                 {
@@ -298,7 +334,15 @@ namespace CPSC481.FinalProject
         private void Back_Button_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = (MainWindow)Application.Current.MainWindow;
-            mainWindow?.ChangeView(new BodyPartSelectorPage());
+
+            if (cameFromAddExercise)
+            {
+                mainWindow?.ChangeView(AddExerciseCaller);
+            }
+            else
+            {
+                mainWindow?.ChangeView(new BodyPartSelectorPage());
+            }
         }
 
 
@@ -312,7 +356,21 @@ namespace CPSC481.FinalProject
             Exercises ss = (Exercises)view.CurrentItem;
 
             var mainWindow = (MainWindow)Application.Current.MainWindow;
-            mainWindow?.ChangeView(new DemoExerciseScreen(_filter, _arms, _legs, _back, _chest, _abs, ss.Name, ss.Description, ss.Level, ss.TargetMuscleGroup, ss.Equipment));
+
+
+            if (cameFromAddExercise)
+            {
+                AddExerciseItem exerciseToAdd = new AddExerciseItem(AddExerciseCaller, AddExercisePanel, AddExerciseCaller.exerciseList.Count, ss.Name, ss.Description, ss.Level, ss.TargetMuscleGroup, ss.Equipment);
+                AddExercisePanel.Children.Add(exerciseToAdd);
+                AddExerciseCaller.exerciseList.Add(exerciseToAdd);
+                mainWindow?.ChangeView(AddExerciseCaller);
+            }
+
+            else
+            {
+                mainWindow?.ChangeView(new DemoExerciseScreen(_filter, _arms, _legs, _back, _chest, _abs, ss.Name, ss.Description, ss.Level, ss.TargetMuscleGroup, ss.Equipment));
+            }
+
         }
     }
 }

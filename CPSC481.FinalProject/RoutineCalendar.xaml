@@ -1,0 +1,238 @@
+﻿<Page x:Class="CPSC481.FinalProject.RoutineCalendar"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CPSC481.FinalProject"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="450"
+      Title="RoutineCalendar"
+      Background="White"
+      >
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="15"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="15"/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="NavigationButton"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Grid.RowSpan="6"
+                        Grid.ColumnSpan="4"
+                        Width="150" 
+                        Height="150"
+                        Margin="350,670,0,0"
+                        Cursor="Hand"
+                        Click="NavigationButton_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Fill="ForestGreen"/>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button x:Name="InfoButton"
+                Grid.Row="0" 
+                Grid.Column="0"
+                Grid.ColumnSpan="4"
+                Grid.RowSpan="6"
+                Width="55" 
+                Height="55"
+                Margin="197,673,85,6"
+                Cursor="Hand"                
+                Visibility="Hidden"
+                Click="InfoButton_Click"
+                Panel.ZIndex="2">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Stroke="Black" StrokeThickness="2">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="Images/RadialNavigationIcons/InformationIcon.png" Stretch="None"></ImageBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Ellipse 
+            Name="ellipseHack"
+            Fill="White"
+            Grid.Row="0" 
+            Grid.Column="0"
+            Grid.ColumnSpan="4"
+            Grid.RowSpan="6"
+            Width="55" 
+            Height="55"
+            Margin="197,673,85,6"
+            Panel.ZIndex="1"
+            Visibility="Hidden">
+        </Ellipse>
+
+        <Button x:Name="ProgressButton"
+                Grid.Row="0" 
+                Grid.Column="0" 
+                Grid.ColumnSpan="4"
+                Grid.RowSpan="6"
+                Width="55" 
+                Height="55"
+                Margin="250,625,64,51"
+                Cursor="Hand"                
+                Visibility="Hidden"
+                Click="ProgressButton_Click"
+                Panel.ZIndex="2">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Stroke="Black" StrokeThickness="2">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="Images/RadialNavigationIcons/ProgressIcon.png" Stretch="None"></ImageBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Ellipse 
+            Name="ellipseHack1"
+            Fill="White"
+            Grid.Row="0" 
+            Grid.Column="0"
+            Grid.ColumnSpan="4"
+            Grid.RowSpan="6"
+            Width="55" 
+            Height="55"
+            Margin="250,625,64,51"
+            Panel.ZIndex="1"
+            Visibility="Hidden">
+        </Ellipse>
+
+        <Button x:Name="DemoButton"
+                Grid.Row="0" 
+                Grid.Column="0"
+                Grid.ColumnSpan="4"
+                Grid.RowSpan="6"
+                Width="55" 
+                Height="55"
+                Margin="270,480,0,0"
+                Cursor="Hand"                                
+                Visibility="Hidden"
+                Panel.ZIndex="2"
+                Click="DemoButton_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Stroke="Black" StrokeThickness="2">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="Images/RadialNavigationIcons/DemoIcon.png" Stretch="None"></ImageBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+
+        <Button x:Name="RoutineButton"
+                Grid.Row="0" 
+                Grid.Column="0"
+                Grid.ColumnSpan="4"
+                Grid.RowSpan="6"
+                Width="55" 
+                Height="55"
+                Margin="370,400,10,0"
+                Cursor="Hand"                                
+                Visibility="Hidden"
+                Panel.ZIndex="2"                
+                Click="RoutineButton_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Stroke="Black" StrokeThickness="2">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="Images/RadialNavigationIcons/RoutineIcon.png" Stretch="None"></ImageBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button
+            Name="NavBackButton"
+            Grid.Column="2" 
+            HorizontalAlignment="Left" 
+            Grid.Row="4" 
+            VerticalAlignment="Top" 
+            Height="50" Width="50" 
+            Margin="5 15 0 0"  
+            Click="Back_Button_Click" 
+            Cursor="Hand" 
+            Visibility="Visible" 
+            Grid.RowSpan="3" 
+            Grid.ColumnSpan="3">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image Source="/Images/HeaderNavIcons/left-arrow.png"></Image>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Label Grid.Column="2" Content="Choose Date" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Top" FontSize="32" Margin="0,12,0,0" FontWeight="Bold"/>
+        <Image Grid.Column="2" HorizontalAlignment="Right" Height="45" Margin="0,15,10,0" Grid.Row="4" VerticalAlignment="Top" Width="45" Source="/Images/RadialNavigationIcons/RoutineIcon.png"/>
+        <Separator Grid.Column="2" Margin="0,60,0,650" Grid.Row="4"/>
+
+
+        <Label Content="Calendar" HorizontalAlignment="Center" Margin="0,100,0,0" Grid.Row="4" VerticalAlignment="Top" Grid.Column="2" FontSize="24"/>
+        <Viewbox Grid.Column="2" Grid.Row="4" Stretch="Fill" Width="250" Height="250" Margin="70,150,70,330">
+            <Calendar
+                Name="routineDatePicker"   
+            />
+        </Viewbox>
+        <Label Content="Selected date:" HorizontalAlignment="Center" Margin="0,450,0,0" Grid.Row="4" VerticalAlignment="Top" Grid.Column="2" FontSize="24"/>
+        <TextBox Text="{Binding ElementName=routineDatePicker, Path=SelectedDate, StringFormat=d, UpdateSourceTrigger=PropertyChanged}" Grid.Column="2" HorizontalAlignment="Center" Margin="0,500,0,0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="35" TextAlignment="Center" FontSize="24"/>
+
+        <Button 
+                        Name="Save"
+                        Click="Save_Click"
+                        Height="50"
+                        FontSize="26"
+                        FontWeight="Medium"
+                        Grid.Column="2"
+                        BorderBrush="Transparent"
+                        Foreground="White" Margin="163,660,163,20" Grid.Row="4">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                    <GradientStop Color="#003622" Offset="0"/>
+                    <GradientStop Color="#008F5A" Offset="0.5"/>
+                    <GradientStop Color="#003622" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            Save
+        </Button>
+
+    </Grid>
+</Page>

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -23,20 +24,35 @@ namespace CPSC481.FinalProject
         private string _equipment;
         private string _description;
 
+        private bool cameFromAddExercise = false;
+        private AddExercise AddExerciseCaller;
+
         public DemoExerciseScreen(string filterSelection, bool arms, bool legs, bool back, bool chest, bool abs, string Name, string Description, string Level, string TargetMuscleGroup, string Equipment)
         {
             InitializeComponent();
             this.DataContext = this;
             navigationIsClicked = false;
 
-            SetExerciseDetails( Name,  Description,  Level,  TargetMuscleGroup,  Equipment);
-            
+            SetExerciseDetails(Name, Description, Level, TargetMuscleGroup, Equipment);
+
             _filter = filterSelection;
             _arms = arms;
             _legs = legs;
             _back = back;
             _chest = chest;
             _abs = abs;
+        }
+
+        // Constructor for when coming from AddExercise
+        public DemoExerciseScreen(string Name, string Description, string Level, string TargetMuscleGroup, string Equipment, AddExercise parentCaller)
+        {
+            InitializeComponent();
+            this.DataContext = this;
+            navigationIsClicked = false;
+
+            SetExerciseDetails(Name, Description, Level, TargetMuscleGroup, Equipment);
+            this.cameFromAddExercise = true;
+            this.AddExerciseCaller = parentCaller;
         }
 
 
@@ -121,7 +137,14 @@ namespace CPSC481.FinalProject
         private void Back_Button_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = (MainWindow)Application.Current.MainWindow;
-            mainWindow?.ChangeView(new DemoVideoPage(_filter, _arms, _legs, _back, _chest, _abs));
+            if (cameFromAddExercise)
+            {
+                mainWindow?.ChangeView(AddExerciseCaller);
+            }
+            else
+            {
+                mainWindow?.ChangeView(new DemoVideoPage(_filter, _arms, _legs, _back, _chest, _abs));
+            }
         }
 
         protected void OnPropertyChanged(string propertyName)

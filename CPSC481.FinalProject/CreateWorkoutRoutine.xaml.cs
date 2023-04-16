@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,76 +13,40 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Diagnostics;
 
 namespace CPSC481.FinalProject
 {
     /// <summary>
-    /// Interaction logic for ViewRoutines.xaml
+    /// Interaction logic for CreateWorkoutRoutine.xaml
     /// </summary>
-    public partial class ViewRoutines : Page
+    public partial class CreateWorkoutRoutine : Page
     {
 
         private bool navigationIsClicked;
+        public static string newRoutineName = "";
+        public static DateTime newRoutineDateTime = new();
+        public static string newRoutineOccurence = "Choose occurrence";
+        public static string newRoutineBodyParts = "Choose Body Part";
 
+        public static bool arms, legs, chest, back, abs;
 
-        public ViewRoutines()
+        public CreateWorkoutRoutine()
         {
             InitializeComponent();
             navigationIsClicked = false;
-            /*
-            routineLabel1Date.Content = "Today";
-            routineLabel1Name.Content = Global_Data.routine_chosen;
-            */
-
-            // Test Data
-            string[,] routines_and_dates = new string[8, 2]
+            routineNameTextBox.Text = newRoutineName;
+            if (newRoutineDateTime != new DateTime())
             {
-                { "Arm Day", "Apr 11\n2023" },
-                { "Back Day", "Apr 12\n2023" },
-                { "Leg Day", "Apr 13\n2023" },
-                { "Rest Day", "Apr 14\n2023" },
-                { "Arm Day 2", "Apr 15\n2023" },
-                { "Back Day 2", "Apr 16\n2023" },
-                { "Leg Day 2", "Apr 17\n2023" },
-                { "A Very Long Workout Day Today", "Apr 18\n2023" }
-            };
-
-            for (int i = 0; i < routines_and_dates.GetLength(0); i++)
-            {
-                if (!Global_Data.routine_schedule.ContainsKey(routines_and_dates[i, 0]))
-                {
-                    Global_Data.Add_routine(routines_and_dates[i, 0], routines_and_dates[i, 1]);
-                }
+                dateLabel.Content = newRoutineDateTime.ToString().Split(' ')[0];
             }
-
-            // hardcoded dummy data - this is usually already set in create routine screen - REMOVE LATER**
-            string aRoutine = "My Routine!";
-
-            if (!Global_Data.routine_dict.ContainsKey(aRoutine))
+            if (newRoutineOccurence != "Choose occurrence")
             {
-                Global_Data.Add_routine(aRoutine, "No Date");
-                Global_Data.Add_rep_exercise(aRoutine, 1, "Dumbbell Curls", 5, 8);
-                Global_Data.Add_timed_exercise(aRoutine, 2, "Farmer's Walk");
-
-                Global_Data.Add_rep_exercise(aRoutine, 3, "Hammer Curls", 8, 8);
-                Global_Data.Add_rep_exercise(aRoutine, 4, "Concentrated Biceps Curls", 8, 8);
-                Global_Data.Add_rep_exercise(aRoutine, 5, "Dumbbell Curls", 8, 8);
-                Global_Data.Add_timed_exercise(aRoutine, 6, "Farmer's Walk");
-                Global_Data.Add_rep_exercise(aRoutine, 7, "Hammer Curls", 8, 8);
-                Global_Data.Add_rep_exercise(aRoutine, 8, "Concentrated Biceps Curls", 8, 8);
-                Global_Data.Add_rep_exercise(aRoutine, 9, "Dumbbell Curls", 8, 8);
-                Global_Data.Add_timed_exercise(aRoutine, 10, "Farmer's Walk");
-                Global_Data.Add_rep_exercise(aRoutine, 11, "Hammer Curls", 8, 8);
-                Global_Data.Add_rep_exercise(aRoutine, 12, "Concentrated Biceps Curls EX", 8, 8);
+                occurrenceLabel.Content = newRoutineOccurence;
             }
-
-            foreach (KeyValuePair<string, string> entry in Global_Data.routine_schedule)
+            if (newRoutineBodyParts != "Choose Body Part")
             {
-                RoutineListPanel.Children.Add(new RoutineItem() { RoutineName = entry.Key, RoutineDate = entry.Value });
+                bodyPartLabel.Text = newRoutineBodyParts;
             }
-            // end of test data
-
         }
 
         private void NavigationButton_Click(object sender, RoutedEventArgs e)
@@ -100,8 +65,7 @@ namespace CPSC481.FinalProject
                 RoutineButton.Visibility = Visibility.Visible;
                 ellipseHack.Visibility = Visibility.Visible;
                 ellipseHack1.Visibility = Visibility.Visible;
-                ellipseHack2.Visibility = Visibility.Visible;
-                ellipseHack3.Visibility = Visibility.Visible;
+
 
                 navigationIsClicked = true;
             }
@@ -117,9 +81,8 @@ namespace CPSC481.FinalProject
                 ProgressButton.Visibility = Visibility.Hidden;
                 RoutineButton.Visibility = Visibility.Hidden;
                 ellipseHack.Visibility = Visibility.Hidden;
-                ellipseHack2.Visibility = Visibility.Hidden;
-                ellipseHack3.Visibility = Visibility.Hidden;
                 ellipseHack1.Visibility = Visibility.Hidden;
+
 
                 navigationIsClicked = false;
             }
@@ -129,24 +92,29 @@ namespace CPSC481.FinalProject
 
         private void InfoButton_Click(object sender, RoutedEventArgs e)
         {
+            Reset_Fields();
             var mainWindow = (MainWindow)Application.Current.MainWindow;
             mainWindow?.ChangeView(new Welcome());
         }
 
         private void ProgressButton_Click(object sender, RoutedEventArgs e)
         {
+            Reset_Fields();
             var mainWindow = (MainWindow)Application.Current.MainWindow;
             mainWindow?.ChangeView(new ProgressPageWeekly());
         }
 
         private void DemoButton_Click(object sender, RoutedEventArgs e)
         {
+
+            Reset_Fields();
             var mainWindow = (MainWindow)Application.Current.MainWindow;
             mainWindow?.ChangeView(new BodyPartSelectorPage());
         }
 
         private void RoutineButton_Click(object sender, RoutedEventArgs e)
         {
+            Reset_Fields();
             var mainWindow = (MainWindow)Application.Current.MainWindow;
             mainWindow?.ChangeView(new ViewRoutines());
         }
@@ -154,15 +122,51 @@ namespace CPSC481.FinalProject
 
         private void Back_Button_Click(object sender, RoutedEventArgs e)
         {
+            Reset_Fields();
             var mainWindow = (MainWindow)Application.Current.MainWindow;
-            mainWindow?.ChangeView(new LandingScreen());
+            mainWindow?.ChangeView(new ViewRoutines());
         }
 
-        private void Create_Workout_Routine_Click(object sender, RoutedEventArgs e)
+        private void Reset_Fields()
+        {
+            newRoutineName = "";
+            newRoutineDateTime = new();
+            newRoutineOccurence = "Choose Occurrence";
+            newRoutineBodyParts = "Choose Body Part";
+        }
+
+        private void AddExercises_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = (MainWindow)Application.Current.MainWindow;
-            mainWindow?.ChangeView(new CreateWorkoutRoutine());
+            mainWindow?.ChangeView(new AddExercise(newRoutineBodyParts, arms, legs, back, chest, abs));
+        }
 
+        private void routineNameChange(object sender, TextChangedEventArgs e)
+        {
+            newRoutineName = routineNameTextBox.Text;
+            Debug.WriteLine(newRoutineName);
+        }
+
+
+        private void DateTimeButton_Click(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = (MainWindow)Application.Current.MainWindow;
+            mainWindow?.ChangeView(new RoutineCalendar());
+        }
+
+        private void OccurenceButton_Click(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = (MainWindow)Application.Current.MainWindow;
+            mainWindow?.ChangeView(new RoutineOccurence());
+        }
+
+        private void BodyPartButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Connect to razeen page
+
+            
+            var mainWindow = (MainWindow)Application.Current.MainWindow;
+            mainWindow?.ChangeView(new BodyPartSelectorPage(true, this));
         }
     }
 }

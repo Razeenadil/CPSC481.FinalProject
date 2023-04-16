@@ -23,6 +23,8 @@ namespace CPSC481.FinalProject
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        private bool cameFromCreateWorkout = false;
+        private CreateWorkoutRoutine createWorkoutCaller;
 
         public BodyPartSelectorPage()
         {
@@ -36,6 +38,23 @@ namespace CPSC481.FinalProject
             chestIsClicked = false;
             backIsClicked = false;
         }
+
+        public BodyPartSelectorPage(bool cameFromCreateWorkout, CreateWorkoutRoutine caller)
+        {
+            InitializeComponent();
+            this.DataContext = this;
+
+            navigationIsClicked = false;
+            armIsClicked = false;
+            legIsClicked = false;
+            absIsClicked = false;
+            chestIsClicked = false;
+            backIsClicked = false;
+
+            this.cameFromCreateWorkout = cameFromCreateWorkout;
+            this.createWorkoutCaller = caller;
+        }
+
 
         protected void OnPropertyChanged(string propertyName)
         {
@@ -90,24 +109,28 @@ namespace CPSC481.FinalProject
         //this is the logout button was to lazy to rename
         private void InfoButton_Click(object sender, RoutedEventArgs e)
         {
+            cameFromCreateWorkout = false;
             var mainWindow = (MainWindow)Application.Current.MainWindow;
             mainWindow?.ChangeView(new Welcome());
         }
 
         private void ProgressButton_Click(object sender, RoutedEventArgs e)
         {
+            cameFromCreateWorkout = false;
             var mainWindow = (MainWindow)Application.Current.MainWindow;
             mainWindow?.ChangeView(new ProgressPageWeekly());
         }
 
         private void DemoButton_Click(object sender, RoutedEventArgs e)
         {
+            cameFromCreateWorkout = false;
             var mainWindow = (MainWindow)Application.Current.MainWindow;
             mainWindow?.ChangeView(new BodyPartSelectorPage());
         }
 
         private void RoutineButton_Click(object sender, RoutedEventArgs e)
         {
+            cameFromCreateWorkout = false;
             var mainWindow = (MainWindow)Application.Current.MainWindow;
             mainWindow?.ChangeView(new ViewRoutines());
         }
@@ -115,12 +138,29 @@ namespace CPSC481.FinalProject
         private void Back_Button_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = (MainWindow)Application.Current.MainWindow;
-            mainWindow?.ChangeView(new LandingScreen());
+
+            if (cameFromCreateWorkout)
+            {
+                cameFromCreateWorkout = false;
+                CreateWorkoutRoutine.newRoutineBodyParts = "Choose Body Part";
+                CreateWorkoutRoutine.arms = false;
+                CreateWorkoutRoutine.legs = false;
+                CreateWorkoutRoutine.back = false;
+                CreateWorkoutRoutine.chest = false;
+                CreateWorkoutRoutine.abs = false;
+                mainWindow?.ChangeView(new CreateWorkoutRoutine());
+            }
+            else
+            {
+                mainWindow?.ChangeView(new LandingScreen());
+
+            }
+
         }
 
         private void Apply_Filter_Button(object sender, RoutedEventArgs e)
         {
-            if(string.IsNullOrEmpty(selectionParameter))
+            if (string.IsNullOrEmpty(selectionParameter))
             {
                 selectionParameter = "Selection: No filters applied";
             }
@@ -130,10 +170,23 @@ namespace CPSC481.FinalProject
                 selectionParameter = selectionParameter.TrimEnd('/');
             }
 
-
-
             var mainWindow = (MainWindow)Application.Current.MainWindow;
-            mainWindow?.ChangeView(new DemoVideoPage(selectionParameter, arms, legs, back, chest, abs));
+
+            if (cameFromCreateWorkout)
+            {
+                cameFromCreateWorkout = false;
+                CreateWorkoutRoutine.newRoutineBodyParts = selectionParameter;
+                CreateWorkoutRoutine.arms = arms;
+                CreateWorkoutRoutine.legs = legs;
+                CreateWorkoutRoutine.back = back;
+                CreateWorkoutRoutine.chest = chest;
+                CreateWorkoutRoutine.abs = abs;
+                mainWindow?.ChangeView(new CreateWorkoutRoutine());
+            }
+            else
+            {
+                mainWindow?.ChangeView(new DemoVideoPage(selectionParameter, arms, legs, back, chest, abs));
+            }
         }
 
         public string Selection
