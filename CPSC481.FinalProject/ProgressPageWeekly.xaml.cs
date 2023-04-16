@@ -149,6 +149,7 @@ namespace CPSC481.FinalProject
 
         private void routineCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            //dic key this is the routine name Ex. "Arm Day"
             comboBoxSelection = routineCombo.SelectedItem.ToString();
         }
     }
