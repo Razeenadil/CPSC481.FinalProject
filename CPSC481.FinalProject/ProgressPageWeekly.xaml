@@ -5,10 +5,271 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:CPSC481.FinalProject"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="ProgressPageWeekly">
+      d:DesignHeight="800" d:DesignWidth="450"
+      Title="ProgressPageWeekly"
+      Background="White">
 
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="15"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="15"/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="NavigationButton"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Grid.RowSpan="6"
+                        Grid.ColumnSpan="4"
+                        Width="150" 
+                        Height="150"
+                        Margin="350,670,0,0"
+                        Cursor="Hand"
+                        Click="NavigationButton_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Fill="ForestGreen"/>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button x:Name="InfoButton"
+                Grid.Row="0" 
+                Grid.Column="0"
+                Grid.ColumnSpan="4"
+                Grid.RowSpan="6"
+                Width="55" 
+                Height="55"
+                Margin="195,675,85,6"
+                Cursor="Hand"                
+                Visibility="Hidden"
+                Click="InfoButton_Click"
+                Panel.ZIndex="2">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Stroke="Black" StrokeThickness="2">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="Images/RadialNavigationIcons/InformationIcon.png" Stretch="None"></ImageBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Ellipse 
+            Name="ellipseHack"
+            Fill="White"
+            Grid.Row="0" 
+            Grid.Column="0"
+            Grid.ColumnSpan="4"
+            Grid.RowSpan="6"
+            Width="55" 
+            Height="55"
+            Margin="195,675,85,6"
+            Panel.ZIndex="1"
+            Visibility="Hidden">
+        </Ellipse>
+
+        <Button x:Name="ProgressButton"
+                Grid.Row="0" 
+                Grid.Column="0" 
+                Grid.ColumnSpan="4"
+                Grid.RowSpan="6"
+                Width="55" 
+                Height="55"
+                Margin="250,630,64,51"
+                Cursor="Hand"                
+                Visibility="Hidden"
+                Click="ProgressButton_Click"
+                Panel.ZIndex="2">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Stroke="Black" StrokeThickness="2">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="Images/RadialNavigationIcons/ProgressIcon.png" Stretch="None"></ImageBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Ellipse 
+            Name="ellipseHack1"
+            Fill="White"
+            Grid.Row="0" 
+            Grid.Column="0"
+            Grid.ColumnSpan="4"
+            Grid.RowSpan="6"
+            Width="55" 
+            Height="55"
+            Margin="250,630,64,51"
+            Panel.ZIndex="1"
+            Visibility="Hidden">
+        </Ellipse>
+
+        <Button x:Name="DemoButton"
+                Grid.Row="0" 
+                Grid.Column="0"
+                Grid.ColumnSpan="4"
+                Grid.RowSpan="6"
+                Width="55" 
+                Height="55"
+                Margin="270,480,0,0"
+                Cursor="Hand"                                
+                Visibility="Hidden"
+                Click="DemoButton_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Stroke="Black" StrokeThickness="2">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="Images/RadialNavigationIcons/DemoIcon.png" Stretch="None"></ImageBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+
+        <Button x:Name="RoutineButton"
+                Grid.Row="0" 
+                Grid.Column="0"
+                Grid.ColumnSpan="4"
+                Grid.RowSpan="6"
+                Width="55" 
+                Height="55"
+                Margin="370,400,10,0"
+                Cursor="Hand"                                
+                Visibility="Hidden"
+                Click="RoutineButton_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Stroke="Black" StrokeThickness="2">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="Images/RadialNavigationIcons/RoutineIcon.png" Stretch="None"></ImageBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+
+        <Label Grid.Column="2" Content="Progress Overview" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Top" FontSize="32" Margin="0,5,0,0" FontWeight="Bold"/>
+        <Separator Grid.Column="2" Margin="0,55,10,0" Grid.Row="4" VerticalAlignment="Top"/>
+        <Image Grid.Column="2" HorizontalAlignment="Right" Height="44" Margin="0,12,10,0" Grid.Row="4" VerticalAlignment="Top" Width="46" Source="/Images/RadialNavigationIcons/ProgressIcon.png"/>
+
+
+        <Button
+            Name="NavBackButton"
+            Grid.Column="2" 
+            HorizontalAlignment="Left" 
+            Grid.Row="4" 
+            VerticalAlignment="Top" 
+            Height="50" Width="50" 
+            Margin="5 10 0 0"  
+            Click="Back_Button_Click" 
+            Cursor="Hand" 
+            Visibility="Visible" 
+            Grid.RowSpan="3" 
+            Grid.ColumnSpan="3">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image Source="/Images/HeaderNavIcons/left-arrow.png"></Image>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+
+        <TextBlock Grid.Row="4"
+                   Grid.Column="2"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Center"
+                   Margin="0 -550 0 0"
+                   FontSize="22"
+                   FontWeight="Medium">
+            Routine Name
+        </TextBlock>
+
+        <ComboBox Name="routineCombo"
+                  Grid.Row="4"
+                  Grid.Column="2"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Center"
+                  Width="250"
+                  Height="35"
+                  Margin="0 -480 0 0"
+                  FontSize="19"
+                  SelectionChanged="routineCombo_SelectionChanged">
+        </ComboBox>
+
+        <ListBox Name="exerciseListBox" 
+                     Grid.Row="4"
+                     Grid.Column="1"
+                     Grid.ColumnSpan="2"
+                     Margin="0,184,0,151"
+                     HorizontalContentAlignment="Stretch"
+                     ScrollViewer.VerticalScrollBarVisibility="Visible"
+                     IsSynchronizedWithCurrentItem="True"
+                     SelectedItem="{Binding Exercises}">
+            <ListBox.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </ListBox.Resources>
+
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="75"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Border Grid.Column="1"
+                                    Margin="-29,10,10,10"
+                                    Height="50"
+                                    Width="250"
+                                    HorizontalAlignment="Left"
+                                    CornerRadius="5"
+                                    BorderBrush="Black"
+                                    BorderThickness="3"
+                                    Background="Black">
+                            <TextBlock Text="{Binding Name}"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           Foreground="White"
+                                           FontSize="26"
+                                           TextTrimming="CharacterEllipsis"/>
+                        </Border>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+
+        </ListBox>
+
+
+
+
+
     </Grid>
 </Page>
