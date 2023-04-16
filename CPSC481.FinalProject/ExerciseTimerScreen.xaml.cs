@@ -24,7 +24,7 @@ namespace CPSC481.FinalProject
     /// </summary>
     public partial class ExerciseTimerScreen : Page
     {
-        private int default_time = 30;
+        private int default_time = 20;
         private int curr_seconds;
         private System.Timers.Timer timer;
 
@@ -60,7 +60,6 @@ namespace CPSC481.FinalProject
             if (curr_seconds > 0)
             {
                 curr_seconds--;
-                
                 SecondsText.Dispatcher.Invoke(() =>
                 {
                     SecondsText.Text = curr_seconds.ToString();
@@ -149,27 +148,17 @@ namespace CPSC481.FinalProject
 
         private void TransitionButton_Click(object sender, RoutedEventArgs e)
         {
-            // lazily adding time elapsed into the rep list
-            Global_Data.routine_dict[Global_Data.routine_chosen][Global_Data.exercise_number].rep_results.Add(default_time - curr_seconds);
+            Global_Data.exercise_number++;
             var mainWindow = (MainWindow)Application.Current.MainWindow;
-            if (Global_Data.exercise_number == Global_Data.routine_dict[Global_Data.routine_chosen].Count)
+            // check what type of exercise then go to next exercise
+            if (Global_Data.routine_dict[Global_Data.routine_chosen][Global_Data.exercise_number].exercise_type == 0)
             {
-                // go to the overview screen
-                mainWindow?.ChangeView(new RoutineOverview());
+                mainWindow?.ChangeView(new ExerciseRepScreen());
             }
+            // else it must be time based
             else
             {
-                Global_Data.exercise_number++;
-                // check what type of exercise then go to next exercise
-                if (Global_Data.routine_dict[Global_Data.routine_chosen][Global_Data.exercise_number].exercise_type == 0)
-                {
-                    mainWindow?.ChangeView(new ExerciseRepScreen());
-                }
-                // else it must be time based
-                else
-                {
-                    mainWindow?.ChangeView(new ExerciseTimerScreen());
-                }
+                mainWindow?.ChangeView(new ExerciseTimerScreen());
             }
         }
 
