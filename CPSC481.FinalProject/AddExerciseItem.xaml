@@ -29,7 +29,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <TextBlock Name="ExerciseNameTextBlock" Grid.Column="1" Text="Dumbell Curls" TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="24"/>
+        <TextBlock Name="ExerciseNameTextBlock" Grid.Column="1" Text="" TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="24"/>
         <Button 
                     Name="ShowDemoInfoButton"
                     Grid.Column="2" 
@@ -45,7 +45,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <TextBox Grid.Column="3" HorizontalAlignment="Center" TextWrapping="Wrap" Text="4" VerticalAlignment="Center" Width="40" FontSize="24" Height="35" TextAlignment="Center"/>
-        <TextBox Grid.Column="4" HorizontalAlignment="Center" TextWrapping="Wrap" Text="4" VerticalAlignment="Center" Width="40"  FontSize="24" Height="35" TextAlignment="Center"/>
+        <TextBox Name="RepsTextBox" TextChanged="RepsTextBox_TextChanged" Grid.Column="3" HorizontalAlignment="Center" TextWrapping="Wrap" Text="1" VerticalAlignment="Center" Width="40" FontSize="24" Height="35" TextAlignment="Center"/>
+        <TextBox Name="SetsTextBox" TextChanged="SetsTextBox_TextChanged" Grid.Column="4" HorizontalAlignment="Center" TextWrapping="Wrap" Text="1" VerticalAlignment="Center" Width="40"  FontSize="24" Height="35" TextAlignment="Center"/>
     </Grid>
 </UserControl>

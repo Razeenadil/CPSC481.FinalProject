@@ -252,7 +252,10 @@
 
 
 
-        <Button Height="50"
+        <Button 
+                        Name="DoneButton"
+                        Click="DoneButton_Click"
+                        Height="50"
                         FontSize="26"
                         FontWeight="Medium"
                         Grid.Column="2"

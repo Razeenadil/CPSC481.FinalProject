@@ -28,7 +28,7 @@ namespace CPSC481.FinalProject
         public static string newRoutineOccurence = "Choose occurrence";
         public static string newRoutineBodyParts = "Choose Body Part";
 
-        public bool arms, legs, chest, back, abs;
+        public static bool arms, legs, chest, back, abs;
 
         public CreateWorkoutRoutine()
         {

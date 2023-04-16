@@ -334,7 +334,15 @@ namespace CPSC481.FinalProject
         private void Back_Button_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = (MainWindow)Application.Current.MainWindow;
-            mainWindow?.ChangeView(new BodyPartSelectorPage());
+
+            if (cameFromAddExercise)
+            {
+                mainWindow?.ChangeView(AddExerciseCaller);
+            }
+            else
+            {
+                mainWindow?.ChangeView(new BodyPartSelectorPage());
+            }
         }
 
 
@@ -352,7 +360,9 @@ namespace CPSC481.FinalProject
 
             if (cameFromAddExercise)
             {
-                AddExercisePanel.Children.Add(new AddExerciseItem(AddExercisePanel, ss.Name));
+                AddExerciseItem exerciseToAdd = new AddExerciseItem(AddExerciseCaller, AddExercisePanel, AddExerciseCaller.exerciseList.Count, ss.Name, ss.Description, ss.Level, ss.TargetMuscleGroup, ss.Equipment);
+                AddExercisePanel.Children.Add(exerciseToAdd);
+                AddExerciseCaller.exerciseList.Add(exerciseToAdd);
                 mainWindow?.ChangeView(AddExerciseCaller);
             }
 

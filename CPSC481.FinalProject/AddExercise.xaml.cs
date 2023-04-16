@@ -22,12 +22,11 @@ namespace CPSC481.FinalProject
     public partial class AddExercise : Page
     {
 
-
         private bool navigationIsClicked;
 
         private string newRoutineBodyParts;
         private bool arms, legs, chest, back, abs;
-        public List<Global_Data.exercise_info> exerciseList;
+        public List<AddExerciseItem> exerciseList = new List<AddExerciseItem>();
 
         public AddExercise(string newRoutineBodyParts, bool arms, bool legs, bool back, bool chest, bool abs)
         {
@@ -95,6 +94,7 @@ namespace CPSC481.FinalProject
             mainWindow?.ChangeView(new ProgressPageWeekly());
         }
 
+
         private void DemoButton_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = (MainWindow)Application.Current.MainWindow;
@@ -122,6 +122,19 @@ namespace CPSC481.FinalProject
             //ExercisesStackPanel.Children.Add(new AddExerciseItem(ExercisesStackPanel, "test"));
         }
 
-        
+        private void DoneButton_Click(object sender, RoutedEventArgs e)
+        {
+            Global_Data.Add_routine(CreateWorkoutRoutine.newRoutineName, CreateWorkoutRoutine.newRoutineDateTime.ToString("m"));
+
+
+            for (int i = 0; i < exerciseList.Count; i++)
+            {
+                Global_Data.Add_rep_exercise(CreateWorkoutRoutine.newRoutineName, i+1, exerciseList[i].name, exerciseList[i].sets, exerciseList[i].reps);
+            }
+
+            var mainWindow = (MainWindow)Application.Current.MainWindow;
+            mainWindow?.ChangeView(new ViewRoutines());
+        }
+
     }
 }

@@ -143,12 +143,12 @@ namespace CPSC481.FinalProject
             {
                 cameFromCreateWorkout = false;
                 CreateWorkoutRoutine.newRoutineBodyParts = "Choose Body Part";
-                createWorkoutCaller.arms = false;
-                createWorkoutCaller.legs = false;
-                createWorkoutCaller.back = false;
-                createWorkoutCaller.chest = false;
-                createWorkoutCaller.abs = false;
-                mainWindow?.ChangeView(createWorkoutCaller);
+                CreateWorkoutRoutine.arms = false;
+                CreateWorkoutRoutine.legs = false;
+                CreateWorkoutRoutine.back = false;
+                CreateWorkoutRoutine.chest = false;
+                CreateWorkoutRoutine.abs = false;
+                mainWindow?.ChangeView(new CreateWorkoutRoutine());
             }
             else
             {
@@ -176,12 +176,12 @@ namespace CPSC481.FinalProject
             {
                 cameFromCreateWorkout = false;
                 CreateWorkoutRoutine.newRoutineBodyParts = selectionParameter;
-                createWorkoutCaller.arms = arms;
-                createWorkoutCaller.legs = legs;
-                createWorkoutCaller.back = back;
-                createWorkoutCaller.chest = chest;
-                createWorkoutCaller.abs = abs;
-                mainWindow?.ChangeView(createWorkoutCaller);
+                CreateWorkoutRoutine.arms = arms;
+                CreateWorkoutRoutine.legs = legs;
+                CreateWorkoutRoutine.back = back;
+                CreateWorkoutRoutine.chest = chest;
+                CreateWorkoutRoutine.abs = abs;
+                mainWindow?.ChangeView(new CreateWorkoutRoutine());
             }
             else
             {
