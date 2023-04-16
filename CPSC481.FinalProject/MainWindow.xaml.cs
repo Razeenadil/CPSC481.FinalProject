@@ -26,6 +26,7 @@ namespace CPSC481.FinalProject
             //this.DataContext = this;
             Application.Current.MainWindow = this;
             Loaded += OnMainWindowLoaded;
+            Global_Data.hardcoded_routine_progress();
         }
 
         private void OnMainWindowLoaded(object sender, RoutedEventArgs e)
