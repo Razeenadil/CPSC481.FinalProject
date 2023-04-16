@@ -26,7 +26,7 @@ namespace CPSC481.FinalProject
         {
             get { return exercise_name; }
             set
-            { 
+            {
                 exercise_name = value;
                 this.ExerciseNameText.Text = exercise_name;
             }
