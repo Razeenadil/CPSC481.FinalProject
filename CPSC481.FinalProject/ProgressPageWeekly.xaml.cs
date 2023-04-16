@@ -28,9 +28,6 @@ namespace CPSC481.FinalProject
 
 
 
-
-
-
         public ProgressPageWeekly()
         {
             InitializeComponent();
@@ -61,9 +58,6 @@ namespace CPSC481.FinalProject
             data = Global_Data.routine_names;
             routineCombo.ItemsSource = data;
             comboBoxSelection = null;
-           
-            
-            
         }
 
 

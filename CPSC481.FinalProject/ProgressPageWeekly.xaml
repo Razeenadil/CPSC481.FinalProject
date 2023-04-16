@@ -222,7 +222,7 @@
                   SelectionChanged="routineCombo_SelectionChanged">
         </ComboBox>
 
-        <ListBox Name="exerciseListBox" 
+        <ListBox Name="progressListBox" 
                      Grid.Row="4"
                      Grid.Column="1"
                      Grid.ColumnSpan="2"
@@ -230,7 +230,7 @@
                      HorizontalContentAlignment="Stretch"
                      ScrollViewer.VerticalScrollBarVisibility="Visible"
                      IsSynchronizedWithCurrentItem="True"
-                     SelectedItem="{Binding Exercises}">
+                     >
             <ListBox.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"/>
@@ -254,7 +254,7 @@
                                     BorderBrush="Black"
                                     BorderThickness="3"
                                     Background="Black">
-                            <TextBlock Text="{Binding Name}"
+                            <TextBlock Text="{Binding RoutineName}"
                                            HorizontalAlignment="Center"
                                            VerticalAlignment="Center"
                                            Foreground="White"
