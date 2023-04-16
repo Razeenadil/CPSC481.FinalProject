@@ -39,20 +39,38 @@ namespace CPSC481.FinalProject
         }
 
         public static Dictionary<string, Dictionary<int, exercise_info>> routine_dict = new Dictionary<string, Dictionary<int, exercise_info>>();
-        
+
         public static Dictionary<string, string> routine_schedule = new Dictionary<string, string>();
 
+        public static List<string> routine_names = new();      
 
         public static void Add_routine(string routine_name, string routine_date)
         {
             routine_dict.Add(routine_name, new Dictionary<int, exercise_info>());
             routine_schedule.Add(routine_name, routine_date);
+            routine_names.Add(routine_name);
         }
 
         public static void Remove_routine(string routine_name)
         {
             routine_dict.Remove(routine_name);
             routine_schedule.Remove(routine_name);
+        }
+
+        public static void Add_rep_exercise_random(string routine, int num, string name, int set_total, int rep_total)
+        {
+            Random rnd = new Random();
+
+            exercise_info Info = new exercise_info();
+            Info.exercise_name = name;
+            Info.exercise_type = 0;
+            Info.rep_total = rep_total;
+            Info.set_total = set_total;
+            for (int i = 0; i < set_total; i++)
+            {
+                Info.rep_results.Add(rnd.Next(0, rep_total + 1));
+            }
+            routine_dict[routine].Add(num, Info);
         }
 
         public static void Add_rep_exercise(string routine, int num, string name, int set_total, int rep_total)
