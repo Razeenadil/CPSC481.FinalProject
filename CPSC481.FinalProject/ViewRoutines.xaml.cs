@@ -33,7 +33,55 @@ namespace CPSC481.FinalProject
             routineLabel1Date.Content = "Today";
             routineLabel1Name.Content = Global_Data.routine_chosen;
             */
-            foreach (var routine in Global_Data.routine_dict) { }
+
+            // Test Data
+            string[,] routines_and_dates = new string[8, 2]
+            {
+                { "Arm Day", "Apr 11\n2023" },
+                { "Back Day", "Apr 12\n2023" },
+                { "Leg Day", "Apr 13\n2023" },
+                { "Rest Day", "Apr 14\n2023" },
+                { "Arm Day 2", "Apr 15\n2023" },
+                { "Back Day 2", "Apr 16\n2023" },
+                { "Leg Day 2", "Apr 17\n2023" },
+                { "A Very Long Workout Day Today", "Apr 18\n2023" }
+            };
+
+            for (int i = 0; i < routines_and_dates.GetLength(0); i++)
+            {
+                if (!Global_Data.routine_schedule.ContainsKey(routines_and_dates[i, 0]))
+                {
+                    Global_Data.Add_routine(routines_and_dates[i, 0], routines_and_dates[i, 1]);
+                }
+            }
+
+            // hardcoded dummy data - this is usually already set in create routine screen - REMOVE LATER**
+            string aRoutine = "My Routine!";
+
+            if (!Global_Data.routine_dict.ContainsKey(aRoutine))
+            {
+                Global_Data.Add_routine(aRoutine, "No Date");
+                Global_Data.Add_rep_exercise(aRoutine, 1, "Dumbbell Curls", 5, 8);
+                Global_Data.Add_timed_exercise(aRoutine, 2, "Farmer's Walk");
+
+                Global_Data.Add_rep_exercise(aRoutine, 3, "Hammer Curls", 8, 8);
+                Global_Data.Add_rep_exercise(aRoutine, 4, "Concentrated Biceps Curls", 8, 8);
+                Global_Data.Add_rep_exercise(aRoutine, 5, "Dumbbell Curls", 8, 8);
+                Global_Data.Add_timed_exercise(aRoutine, 6, "Farmer's Walk");
+                Global_Data.Add_rep_exercise(aRoutine, 7, "Hammer Curls", 8, 8);
+                Global_Data.Add_rep_exercise(aRoutine, 8, "Concentrated Biceps Curls", 8, 8);
+                Global_Data.Add_rep_exercise(aRoutine, 9, "Dumbbell Curls", 8, 8);
+                Global_Data.Add_timed_exercise(aRoutine, 10, "Farmer's Walk");
+                Global_Data.Add_rep_exercise(aRoutine, 11, "Hammer Curls", 8, 8);
+                Global_Data.Add_rep_exercise(aRoutine, 12, "Concentrated Biceps Curls EX", 8, 8);
+            }
+
+            foreach (KeyValuePair<string, string> entry in Global_Data.routine_schedule)
+            {
+                RoutineListPanel.Children.Add(new RoutineItem() { RoutineName = entry.Key, RoutineDate = entry.Value });
+            }
+            // end of test data
+
         }
 
         private void NavigationButton_Click(object sender, RoutedEventArgs e)
@@ -52,7 +100,8 @@ namespace CPSC481.FinalProject
                 RoutineButton.Visibility = Visibility.Visible;
                 ellipseHack.Visibility = Visibility.Visible;
                 ellipseHack1.Visibility = Visibility.Visible;
-
+                ellipseHack2.Visibility = Visibility.Visible;
+                ellipseHack3.Visibility = Visibility.Visible;
 
                 navigationIsClicked = true;
             }
@@ -68,8 +117,9 @@ namespace CPSC481.FinalProject
                 ProgressButton.Visibility = Visibility.Hidden;
                 RoutineButton.Visibility = Visibility.Hidden;
                 ellipseHack.Visibility = Visibility.Hidden;
+                ellipseHack2.Visibility = Visibility.Hidden;
+                ellipseHack3.Visibility = Visibility.Hidden;
                 ellipseHack1.Visibility = Visibility.Hidden;
-
 
                 navigationIsClicked = false;
             }
