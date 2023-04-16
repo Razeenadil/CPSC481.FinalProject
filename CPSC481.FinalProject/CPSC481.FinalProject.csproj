@@ -18,6 +18,7 @@
     <None Remove="Images\Icons\minus.png" />
     <None Remove="Images\Icons\more.png" />
     <None Remove="Images\Icons\edit-button.png" />
+    <None Remove="Images\Icons\more.png" />
     <None Remove="Images\Icons\muscles.png" />
     <None Remove="Images\Icons\repeat-button.png" />
     <None Remove="Images\Icons\search-interface-symbol.png" />
@@ -39,6 +40,7 @@
     <Resource Include="Images\Icons\minus.png" />
     <Resource Include="Images\Icons\more.png" />
     <Resource Include="Images\Icons\edit-button.png" />
+    <Resource Include="Images\Icons\more.png" />
     <Resource Include="Images\Icons\muscles.png" />
     <Resource Include="Images\Icons\repeat-button.png" />
     <Resource Include="Images\Icons\search-interface-symbol.png" />

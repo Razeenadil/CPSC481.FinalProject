@@ -26,6 +26,61 @@ namespace CPSC481.FinalProject
             InitializeComponent();
             this.DataContext = this;
 
+            for (int i = 1; i <= Global_Data.routine_dict[Global_Data.routine_chosen].Count; i++)
+            {
+                // check type of exercise
+                if (Global_Data.routine_dict[Global_Data.routine_chosen][i].exercise_type == 0)
+                {
+                    double total_reps = Global_Data.routine_dict[Global_Data.routine_chosen][i].set_total * Global_Data.routine_dict[Global_Data.routine_chosen][i].rep_total;
+                    double reps_done = 0;
+                    foreach (int reps in Global_Data.routine_dict[Global_Data.routine_chosen][i].rep_results)
+                    {
+                        reps_done += reps;
+                    }
+
+                    double completion_rate = (double) (reps_done / total_reps);
+
+                    if (completion_rate >= 0.75)
+                    {
+                        Highlights.Children.Add(new RoutineOverviewItem()
+                        {
+                            ExerciseName = Global_Data.routine_dict[Global_Data.routine_chosen][i].exercise_name,
+                            CompletionRate = completion_rate
+                        });
+                    }
+                    else
+                    {
+                        Lowlights.Children.Add(new RoutineOverviewItem()
+                        {
+                            ExerciseName = Global_Data.routine_dict[Global_Data.routine_chosen][i].exercise_name,
+                            CompletionRate = completion_rate
+                        });
+                    }
+                }
+                else if (Global_Data.routine_dict[Global_Data.routine_chosen][i].exercise_type == 1)
+                {
+                    double total_time = 30;
+                    double time_elapse = Global_Data.routine_dict[Global_Data.routine_chosen][i].rep_results[0];
+                    double completion_rate = (double) (time_elapse / total_time);
+                    if (completion_rate >= 0.75)
+                    {
+                        Highlights.Children.Add(new RoutineOverviewItem()
+                        {
+                            ExerciseName = Global_Data.routine_dict[Global_Data.routine_chosen][i].exercise_name,
+                            CompletionRate = completion_rate
+                        });
+                    }
+                    else
+                    {
+                        Lowlights.Children.Add(new RoutineOverviewItem()
+                        {
+                            ExerciseName = Global_Data.routine_dict[Global_Data.routine_chosen][i].exercise_name,
+                            CompletionRate = completion_rate
+                        });
+                    }
+                }
+            }
+
             navigationIsClicked = false;
         }
 
@@ -106,7 +161,6 @@ namespace CPSC481.FinalProject
             }
             else
             {
-                Global_Data.exercise_number--;
                 // check what type of exercise then go to next exercise
                 if (Global_Data.routine_dict[Global_Data.routine_chosen][Global_Data.exercise_number].exercise_type == 0)
                 {

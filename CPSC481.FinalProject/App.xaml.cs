@@ -27,14 +27,16 @@ namespace CPSC481.FinalProject
             public int exercise_type;  // rep = 0, timed = 1
             public int set_total;
             public int rep_total;
+            public int time_elapsed;
             public List<int> rep_results = new List<int>();
 
             public exercise_info()
             {
                 exercise_name = "";
                 exercise_type = 0;
-                set_total = 0;
+                set_total = 0;                
                 rep_total = 0;
+                time_elapsed = 0;
             }
         }
 

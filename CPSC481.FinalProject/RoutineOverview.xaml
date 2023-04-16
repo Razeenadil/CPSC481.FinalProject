@@ -12,8 +12,8 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="15"/>
             <RowDefinition Height="50"/>
-            <RowDefinition Height="350"/>
-            <RowDefinition Height="250"/>
+            <RowDefinition Height="300"/>
+            <RowDefinition Height="300"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="15"/>
         </Grid.RowDefinitions>
@@ -38,12 +38,11 @@
                 <Image Source="/Images/HeaderNavIcons/left-arrow.png"/>
             </Button>
 
-            <Label Name="routineLabel"
+            <TextBlock Text="Routine Overview"
                        Width="300"
+                       TextAlignment="Center"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"
-                       HorizontalContentAlignment="Center"
-                       VerticalContentAlignment="Center"
                        FontSize="32"
                        FontWeight="Bold"/>
 
@@ -53,10 +52,44 @@
                    Source="/Images/RadialNavigationIcons/RoutineIcon.png"/>
         </StackPanel>
 
-        <StackPanel Orientation="Vertical"
-                        Grid.Row="2"
-                        Grid.Column="1">
-            <Separator/>
+        <Separator Grid.Row="2" Grid.Column="1" VerticalAlignment="Top"/>
+
+        <StackPanel Grid.Row="2"
+                    Grid.Column="1">
+            <TextBlock Text="Highlights"
+                       Margin="10,10,0,0"
+                       FontSize="24"
+                       FontWeight="Bold"/>
+            <ScrollViewer Grid.Row="2"
+                      Grid.Column="1"
+                      VerticalContentAlignment="Stretch"
+                      VerticalScrollBarVisibility="Hidden">
+                <StackPanel Name="Highlights"
+                        Orientation="Horizontal"
+                        Width="390"
+                        Height="255"
+                        Margin="0,10,0,25">
+                </StackPanel>
+            </ScrollViewer>
+        </StackPanel>
+            
+
+        <StackPanel Grid.Row="3"
+                    Grid.Column="1">
+            <Separator Margin="0,0,0,0"/>
+            <TextBlock Text="Needs Improvement"
+                       Margin="10,10,0,0"
+                       FontSize="24"
+                       FontWeight="Bold"/>
+            <ScrollViewer>
+                <StackPanel Name="Lowlights"
+                        Orientation="Horizontal"
+                        Width="390"
+                        Height="250"
+                        Margin="0,10,0,25">
+                </StackPanel>
+            </ScrollViewer>
+
         </StackPanel>
 
         <Button x:Name="NavigationButton"
