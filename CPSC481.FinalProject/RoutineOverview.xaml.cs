@@ -66,7 +66,7 @@ namespace CPSC481.FinalProject
                     {
                         Highlights.Children.Add(new RoutineOverviewItem()
                         {
-                            ExerciseName = Global_Data.routine_dict[Global_Data.routine_chosen][i].exercise_name,
+                            ExerciseName = i.ToString() + ". " + Global_Data.routine_dict[Global_Data.routine_chosen][i].exercise_name,
                             CompletionRate = completion_rate
                         });
                     }
@@ -74,7 +74,7 @@ namespace CPSC481.FinalProject
                     {
                         Lowlights.Children.Add(new RoutineOverviewItem()
                         {
-                            ExerciseName = Global_Data.routine_dict[Global_Data.routine_chosen][i].exercise_name,
+                            ExerciseName = i.ToString() + ". " + Global_Data.routine_dict[Global_Data.routine_chosen][i].exercise_name,
                             CompletionRate = completion_rate
                         });
                     }

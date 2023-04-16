@@ -59,11 +59,12 @@
         <TextBlock Name="ExerciseNameText"
                    Text="Exercise Name"
                    Margin="0,195,0,0"
-                   FontSize="24"
+                   FontSize="20"
                    FontWeight="Medium"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Top"
                    TextTrimming="CharacterEllipsis"
-                   Width="180"/>
+                   TextAlignment="Center"
+                   Width="200"/>
     </Grid>
 </UserControl>

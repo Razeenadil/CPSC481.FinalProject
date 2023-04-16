@@ -52,15 +52,16 @@
                     </Button.Resources>
                 </Button>
                 <TextBlock Name="RepsComplete"
-                           Margin="20,0,20,0"
+                           Margin="20,0,0,0"
                            HorizontalAlignment="Center"
                            VerticalAlignment="Center"
                            Foreground="Black"
                            FontSize="32"
+                           Width="40"
                            FontWeight="Medium">
                 </TextBlock>
                 <Button Name="PlusButton"
-                        Margin="0,0,0,0"
+                        Margin="-5,0,0,0"
                         Width="50"
                         Height="50"
                         HorizontalAlignment="Right"

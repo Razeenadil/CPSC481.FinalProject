@@ -149,8 +149,20 @@ namespace CPSC481.FinalProject
 
         private void TransitionButton_Click(object sender, RoutedEventArgs e)
         {
+            if (timer.Enabled)
+            {
+                timer.Stop();
+            }
             // lazily adding time elapsed into the rep list
-            Global_Data.routine_dict[Global_Data.routine_chosen][Global_Data.exercise_number].rep_results.Add(default_time - curr_seconds);
+            if (Global_Data.routine_dict[Global_Data.routine_chosen][Global_Data.exercise_number].rep_results.Count > 0)
+            {
+                Global_Data.routine_dict[Global_Data.routine_chosen][Global_Data.exercise_number].rep_results[0] = default_time - curr_seconds;
+            }
+            else
+            {
+                Global_Data.routine_dict[Global_Data.routine_chosen][Global_Data.exercise_number].rep_results.Add(default_time - curr_seconds);
+            }
+            
             var mainWindow = (MainWindow)Application.Current.MainWindow;
             if (Global_Data.exercise_number == Global_Data.routine_dict[Global_Data.routine_chosen].Count)
             {

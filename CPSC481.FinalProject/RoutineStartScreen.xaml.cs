@@ -37,7 +37,7 @@ namespace CPSC481.FinalProject
             }
 
             routineListBox.ItemsSource = exercises;
-            routineLabel.Content = Global_Data.routine_chosen;
+            routineLabel.Text = Global_Data.routine_chosen;
         }
 
         private void NavigationButton_Click(object sender, RoutedEventArgs e)
