@@ -42,7 +42,7 @@ namespace CPSC481.FinalProject
 
         public static Dictionary<string, string> routine_schedule = new Dictionary<string, string>();
 
-        public static List<string> routine_names = new();      
+        public static List<string> routine_names = new();
 
         public static void Add_routine(string routine_name, string routine_date)
         {
