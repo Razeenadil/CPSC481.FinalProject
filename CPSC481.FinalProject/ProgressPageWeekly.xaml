@@ -234,22 +234,34 @@
                    HorizontalAlignment="Left"
                    VerticalAlignment="Center"
                    Margin="0 -550 0 0"
-                   FontSize="22"
+                   FontSize="24"
                    FontWeight="Medium">
-            Routine Name
+            Routine Name:
         </TextBlock>
 
         <ComboBox Name="routineCombo"
                   Grid.Row="4"
                   Grid.Column="2"
-                  HorizontalAlignment="Left"
+                  HorizontalAlignment="Right"
                   VerticalAlignment="Center"
-                  Width="250"
+                  Width="240"
                   Height="35"
-                  Margin="0 -480 0 0"
+                  Margin="0 -550 0 0"
                   FontSize="19"
                   SelectionChanged="routineCombo_SelectionChanged">
         </ComboBox>
+
+        <TextBlock Grid.Row="4"
+                   Grid.Column="2"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Center"
+                   Margin="0 -450 0 0"
+                   FontSize="22"
+                   FontWeight="Medium">
+            Completion Rate(%)
+        </TextBlock>
+
+        <Separator Grid.Column="2" Margin="0,-400,10,0" Grid.Row="4" VerticalAlignment="Center"/>
 
         <ScrollViewer Name="progressScrollViewer"
                       Grid.Row="4"
