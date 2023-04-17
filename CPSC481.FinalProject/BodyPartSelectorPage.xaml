@@ -382,10 +382,10 @@
                 Grid.Row="4" 
                 HorizontalAlignment="Right" 
                 VerticalAlignment="Top"
-                Width="25"
-                Height="25"
+                Width="40"
+                Height="40"
                 Click="NextButton_Click"
-                Margin="0,281,21,0"
+                Margin="0,271,21,0"
                 Cursor="Hand" 
                 RenderTransformOrigin="0.5,0.5"
                 Opacity="1"
@@ -408,10 +408,10 @@
                 Grid.Row="4"               
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Top"
-                Width="25"
-                Height="25"
+                Width="40"
+                Height="40"
                 Click="BackButton_Click"
-                Margin="21,281,0,0"
+                Margin="21,271,0,0"
                 Cursor="Hand"
                 Opacity="0.365"
                 IsEnabled="False">
@@ -476,10 +476,10 @@
         <TextBlock 
             Grid.Column="2" 
             HorizontalAlignment="Left" 
-            Margin="325,502,0,0" Grid.Row="4" 
+            Margin="300,502,0,0" Grid.Row="4" 
             TextWrapping="Wrap" 
             VerticalAlignment="Top"
-            FontSize="17">
+            FontSize="20">
             <Hyperlink
                 Name="ResetFilter"
                 Click="ResetFilter_Click">Reset Filters</Hyperlink>
