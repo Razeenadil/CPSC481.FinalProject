@@ -42,11 +42,13 @@ namespace CPSC481.FinalProject
         
         public static Dictionary<string, string> routine_schedule = new Dictionary<string, string>();
 
+        public static List<string> routine_names = new();
 
         public static void Add_routine(string routine_name, string routine_date)
         {
             routine_dict.Add(routine_name, new Dictionary<int, exercise_info>());
             routine_schedule.Add(routine_name, routine_date);
+            routine_names.Add(routine_name);
         }
 
         public static void Remove_routine(string routine_name)
