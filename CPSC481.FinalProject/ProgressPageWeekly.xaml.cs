@@ -36,10 +36,10 @@ namespace CPSC481.FinalProject
             if (!Global_Data.routine_dict.ContainsKey(routine1))
             {
                 Global_Data.Add_routine(routine1, "Apr 3");
-                Global_Data.Add_rep_exercise_random(routine1, 1, "Squates", 2, 5);
+                Global_Data.Add_rep_exercise_random(routine1, 1, "Squats", 2, 5);
                 Global_Data.Add_rep_exercise(routine1, 2, "Lunges", 3, 5);
-                Global_Data.Add_rep_exercise(routine1, 3, "Calf Rasies", 4, 5);
-                Global_Data.Add_rep_exercise(routine1, 4, "Hack Squates", 5, 5);
+                Global_Data.Add_rep_exercise(routine1, 3, "Calf Raises", 4, 5);
+                Global_Data.Add_rep_exercise(routine1, 4, "Hack Squats", 5, 5);
             }
 
             string routine2 = "Back Day";
@@ -50,7 +50,7 @@ namespace CPSC481.FinalProject
                 Global_Data.Add_rep_exercise(routine2, 2, "Deadlift", 3, 5);
                 Global_Data.Add_rep_exercise(routine2, 3, "Seated Rows", 4, 5);
                 Global_Data.Add_rep_exercise(routine2, 4, "Standing Rows", 5, 5);
-                Global_Data.Add_rep_exercise(routine2, 5, "Cabel Rows", 5, 5);
+                Global_Data.Add_rep_exercise(routine2, 5, "Cable Rows", 5, 5);
                 Global_Data.Add_rep_exercise(routine2, 6, "Pullups", 5, 5);
 
             }
@@ -58,10 +58,10 @@ namespace CPSC481.FinalProject
             string routine3 = "Chest Day";
             if (!Global_Data.routine_dict.ContainsKey(routine3))
             {
-                Global_Data.Add_routine(routine3, "Apr 1");
+                Global_Data.Add_routine(routine3, "Apr 8");
                 Global_Data.Add_rep_exercise_random(routine3, 1, "Flat Bench Press", 2, 5);
                 Global_Data.Add_rep_exercise(routine3, 2, "Incline Bench Press", 3, 5);
-                Global_Data.Add_rep_exercise(routine3, 3, "Cabel Flys", 4, 5);
+                Global_Data.Add_rep_exercise(routine3, 3, "Cable Flys", 4, 5);
                 Global_Data.Add_rep_exercise(routine3, 4, "Dips", 5, 5);
                 Global_Data.Add_rep_exercise(routine3, 5, "Incline Flys", 5, 5);
                 Global_Data.Add_rep_exercise(routine3, 6, "Dumbell Press", 5, 5);

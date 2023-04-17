@@ -117,7 +117,14 @@ namespace CPSC481.FinalProject
         private void AddExerciseButton_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = (MainWindow)Application.Current.MainWindow;
-            mainWindow?.ChangeView(new DemoVideoPage(newRoutineBodyParts, arms, legs, back, chest, abs, true, this, ExercisesStackPanel));
+            if (newRoutineBodyParts == "Choose Body Part")
+            {
+                mainWindow?.ChangeView(new DemoVideoPage("Selection: No filters applied", arms, legs, back, chest, abs, true, this, ExercisesStackPanel));
+            }
+            else
+            {
+                mainWindow?.ChangeView(new DemoVideoPage(newRoutineBodyParts, arms, legs, back, chest, abs, true, this, ExercisesStackPanel));
+            }
 
             //ExercisesStackPanel.Children.Add(new AddExerciseItem(ExercisesStackPanel, "test"));
         }
@@ -133,7 +140,7 @@ namespace CPSC481.FinalProject
 
             for (int i = 0; i < exerciseList.Count; i++)
             {
-                Global_Data.Add_rep_exercise(CreateWorkoutRoutine.newRoutineName, i+1, exerciseList[i].name, exerciseList[i].sets, exerciseList[i].reps);
+                Global_Data.Add_rep_exercise(CreateWorkoutRoutine.newRoutineName, i + 1, exerciseList[i].name, exerciseList[i].sets, exerciseList[i].reps);
             }
 
             var mainWindow = (MainWindow)Application.Current.MainWindow;
