@@ -52,8 +52,7 @@ Here is the list of fully working features that our app presents to users:
 - User can check new exercises, watch their tutorials and add them to their routine.
 - User can track their daily, weekly and monthly progress based on their workout and exercise history.
 
-## Walkthrough 
-((HAVE TO BE UPDATED))
+## Walkthrough
 
 Please follow the instructions below to navigate throughout the app:
 - **Welcome Page** 
@@ -84,8 +83,10 @@ Please follow the instructions below to navigate throughout the app:
 
 
 - **Create Routine Page**
-    + On the View Routines page, the user is able to begin the routine creation process by pressing the + button in the bottom left of the screen. Once pressed, the user will be directed to the screen where they can enter some basic information about the routine, which includes the name of the routine, the date they want to do the routine, how often they want to do the routine, and the body parts they want to target during the routine. All of these can be configured by simply pressing on their corresponding button which brings the user to its respective page.
-    + After entering in this information, the user can press the “Add Exercises” to be directed to the next screen where they may begin adding exercises to the routine. On the “Add Exercises” screen, the user can add a new exercise by pressing “Find Exercises” to bring up the filtered list of exercises. The filtered list is based on the body parts that the user selected on the previous page. To add an exercise from the list, the user can simply click on the exercise name to add it. Users are also able to remove exercises by clicking the minus button to the left of the exercise name. If the user wants more information about any exercise, they are able to press the “i” button to the right of the exercise name, which will bring them to a description and demo of the exercise. The user is then able to specify the number of sets per exercise and the number of reps per set for each of the exercises. When the user wants to confirm their list and finalize it, they can click the “Done” button at the bottom of the page to save the entire routine, bringing them back to the View 
+    + Once user is logged in and on the main landing page, they can click on the `Navigation button` which is on the bottom right of the screen. 
+        + Once the button is clicked, four other buttons will be displayed on the radial navigation button. In order to navigate to the `Create Routine Page` user must click on the notebook/clip board icon. 
+            + On the View Routines page, the user is able to begin the routine creation process by pressing the `+` button in the bottom left of the screen. Once pressed, the user will be directed to the screen where they can enter some basic information about the routine, which includes the name of the routine, the date they want to do the routine, how often they want to do the routine, and the body parts they want to target during the routine. All of these can be configured by simply pressing on their corresponding button which brings the user to its respective page.
+            + After entering in this information, the user can press the `Add Exercises` to be directed to the next screen where they may begin adding exercises to the routine. On the `Add Exercises Page`, the user can add a new exercise by pressing `Find Exercises` to bring up the filtered list of exercises. The filtered list is based on the body parts that the user selected on the previous page. To add an exercise from the list, the user can simply click on the exercise name to add it. Users are also able to remove exercises by clicking the `Minus` button to the left of the exercise name. If the user wants more information about any exercise, they are able to press the `i` button to the right of the exercise name, which will bring them to a description and demo of the exercise. The user is then able to specify the number of sets per exercise and the number of reps per set for each of the exercises. When the user wants to confirm their list and finalize it, they can click the `Done` button at the bottom of the page to save the entire routine, bringing them back to the View 
 
 
 ## AUTHORS:
