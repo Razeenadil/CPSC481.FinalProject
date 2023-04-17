@@ -161,8 +161,8 @@ namespace CPSC481.FinalProject
         private void Create_Workout_Routine_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = (MainWindow)Application.Current.MainWindow;
+            CreateWorkoutRoutine.Reset_Fields();
             mainWindow?.ChangeView(new CreateWorkoutRoutine());
-
         }
     }
 }

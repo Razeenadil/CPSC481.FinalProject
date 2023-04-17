@@ -124,7 +124,11 @@ namespace CPSC481.FinalProject
 
         private void DoneButton_Click(object sender, RoutedEventArgs e)
         {
-            Global_Data.Add_routine(CreateWorkoutRoutine.newRoutineName, CreateWorkoutRoutine.newRoutineDateTime.ToString("m"));
+            string[] formattedDate = CreateWorkoutRoutine.newRoutineDateTime.ToString("m").Split(" ");
+            string formattedMonth = formattedDate[0].Substring(0, 3);
+            string finalFormattedDate = formattedMonth + " " + formattedDate[1];
+
+            Global_Data.Add_routine(CreateWorkoutRoutine.newRoutineName, finalFormattedDate);
 
 
             for (int i = 0; i < exerciseList.Count; i++)

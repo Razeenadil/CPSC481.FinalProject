@@ -127,12 +127,17 @@ namespace CPSC481.FinalProject
             mainWindow?.ChangeView(new ViewRoutines());
         }
 
-        private void Reset_Fields()
+        public static void Reset_Fields()
         {
             newRoutineName = "";
             newRoutineDateTime = new();
             newRoutineOccurence = "Choose Occurrence";
             newRoutineBodyParts = "Choose Body Part";
+            arms = false;
+            legs = false;
+            back = false;
+            chest = false;
+            abs = false;
         }
 
         private void AddExercises_Click(object sender, RoutedEventArgs e)
