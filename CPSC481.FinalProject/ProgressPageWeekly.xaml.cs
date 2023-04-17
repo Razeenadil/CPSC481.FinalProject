@@ -41,8 +41,6 @@ namespace CPSC481.FinalProject
             data.Add("Chest Day");
             routineCombo.ItemsSource = data;
 
-            comboBoxSelection = Global_Data.routine_names[2];
-
             GenerateOverview();            
         }
 
