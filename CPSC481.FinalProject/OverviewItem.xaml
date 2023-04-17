@@ -89,11 +89,25 @@
                 VerticalAlignment="Bottom"
                 Margin="10,0,40,50"
                 Click="ResultButton_Click"
-                Content="Variations"
                 FontSize="20"
-                FontWeight="Medium"
-                Background="ForestGreen">
+                FontWeight="Medium">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                    <GradientStop Color="#003622" Offset="0"/>
+                    <GradientStop Color="#008F5A" Offset="0.5"/>
+                    <GradientStop Color="#003622" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            Variations
         </Button>
+
+
+ 
 
         <Separator VerticalAlignment="Bottom" Margin="10,0,0,10"></Separator>
     </Grid>

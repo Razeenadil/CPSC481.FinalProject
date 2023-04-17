@@ -62,7 +62,7 @@ namespace CPSC481.FinalProject
             else if (completion_rate >= 0.5 && completion_rate < 0.75)
             {
                 CompletionCircle.Fill = new SolidColorBrush(Color.FromRgb(246, 190, 0));
-                Message.Text = "Try adjusting exercise";
+                Message.Text = "Try adjusting the weight or reps";
             }
             else
             {
@@ -160,7 +160,7 @@ namespace CPSC481.FinalProject
 
         private void ResultButton_Click(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("This feature is under development", "Under Development", MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 }

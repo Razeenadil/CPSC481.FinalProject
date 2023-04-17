@@ -251,7 +251,8 @@
                   SelectionChanged="routineCombo_SelectionChanged">
         </ComboBox>
 
-        <ScrollViewer Grid.Row="4"
+        <ScrollViewer Name="progressScrollViewer"
+                      Grid.Row="4"
                       Grid.Column="2"
                       Margin="0,175,0,75"
                       VerticalScrollBarVisibility="Hidden"
