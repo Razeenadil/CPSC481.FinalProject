@@ -101,6 +101,7 @@ namespace CPSC481.FinalProject
             this.cameFromAddExercise = cameFromAddExercise;
             this.AddExerciseCaller = parentCaller;
             this.AddExercisePanel = parentPanel;
+            TitleLabel.Content = "Choose exercise";
         }
 
         private void PopulateListBox(bool arms, bool legs, bool back, bool chest, bool abs)
