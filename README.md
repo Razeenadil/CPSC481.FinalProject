@@ -15,7 +15,7 @@
 This project was made by Computer Science Undergraduate students from the University of Calgary for the CPSC 481 Winter 2023 - Human Computer Interactions course.
 
 ## Project Demo
-Demo of the project can be found [here](https://youtu.be/xxxxxxx).
+Demo of the project can be found [here](https://www.youtube.com/watch?v=AVQHuxLJRxE).
 
 ## Requirements:
 The following technologies and tools were used to build our project:
