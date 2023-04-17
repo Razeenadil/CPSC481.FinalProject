@@ -75,6 +75,10 @@ Please follow the instructions below to navigate throughout the app:
                 + On the Exercise Tutorial page, the user will be able to see the exercise name, equipment needed, a video tutorial of the exercise and a description of the exercise.     
                 + The user can click on the `back` button to be taken to previous page where the selected exercises will be remembered based on the selected filters from the `Body Part Selector Page`. 
 - **Progress Page** 
+    + Once user is logged in and on the main landing page, they can click on the `Navigation button` which is on the bottom right of the screen. 
+        + Once the button is clicked, four other buttons will be displayed on the radial navigation button. In order to navigate to the `Progress Overview Page` user must click on the graph icon. 
+            + On this page there is a drop down menu that is labeled `Routine Name`. These are the past routines the user has completed.  Initially the information for the first routine in the drop down will be shown. Information included on this page will contain progress circles showing the rate of completion of sets for all exercises in the selected routine. Depending on the completion rate an appropriate message will be displayed to the user. If the complete rate is greater than 75% it will display a motivational message like “Good Job” or “Keep going”. If the completion rate is between 75% and 50%, there will be a suggestion displayed to improve the completion rate. If the completion rate is less than 50% the app will suggest an easier variation of the exercise, in this case a button labeled `Variations` will be displayed. When this button is clicked easier variations of the same exercise will be shown to the user. Note this feature is currently under development.
+
 
 - **Routine Page** 
 
