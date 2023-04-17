@@ -149,7 +149,8 @@
                     BorderThickness="0"
                     HorizontalAlignment="Left" 
                     VerticalAlignment="Center" 
-                    Background="Transparent">
+                    Background="Transparent"
+                    Click="Edit_Routine_Button_Click">
                 <Image Source="/Images/Icons/edit-button.png"/>
             </Button>
         </Grid>

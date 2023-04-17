@@ -128,6 +128,12 @@ namespace CPSC481.FinalProject
                 mainWindow?.ChangeView(new ExerciseTimerScreen());
             }
         }
+
+        private void Edit_Routine_Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("This feature is under development", "Under Development", MessageBoxButton.OK, MessageBoxImage.Information);
+
+        }
     }
 
     public class ExerciseItem
